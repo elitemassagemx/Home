@@ -104,4 +104,16 @@ if (contactForm) {
         alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
         contactForm.reset();
     });
+    // Manejo del formulario de newsletter
+const newsletterForm = document.getElementById('newsletter-form');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = this.email.value;
+        // Aquí puedes agregar el código para procesar la suscripción
+        // Por ahora, solo mostraremos un mensaje de éxito
+        alert(`Gracias por suscribirte con el correo: ${email}. Recibirás nuestras novedades pronto.`);
+        this.reset();
+    });
+}
 }
