@@ -336,7 +336,53 @@ if (newsletterForm) {
       duration: "60 minutos de masaje + 30 minutos para degustar.",
       benefits: "Relajación, degustación, y un toque especial."
     }
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceList = document.getElementById('service-list');
+    const packageList = document.getElementById('package-list');
+    const serviceBtns = document.querySelectorAll('.service-toggle button');
 
+    function displayServices(type) {
+        serviceList.innerHTML = '';
+        spaServices[type].forEach(service => {
+            const serviceElement = document.createElement('div');
+            serviceElement.classList.add('service-item');
+            serviceElement.innerHTML = `
+                <h3>${service.title}</h3>
+                <p>${service.description}</p>
+                <p><strong>Beneficios:</strong> ${service.benefits}</p>
+                <p><strong>Duración:</strong> ${service.duration}</p>
+            `;
+            serviceList.appendChild(serviceElement);
+        });
+    }
+
+    function displayPackages() {
+        spaServices.paquetes.forEach(pkg => {
+            const packageElement = document.createElement('div');
+            packageElement.classList.add('package-item');
+            packageElement.innerHTML = `
+                <h3>${pkg.title}</h3>
+                <p>${pkg.description}</p>
+                <p><strong>Incluye:</strong> ${pkg.includes}</p>
+                <p><strong>Duración:</strong> ${pkg.duration}</p>
+                <p><strong>Beneficios:</strong> ${pkg.benefits}</p>
+            `;
+            packageList.appendChild(packageElement);
+        });
+    }
+
+    serviceBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            serviceBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            displayServices(this.dataset.type);
+        });
+    });
+
+    // Mostrar servicios individuales por defecto
+    displayServices('individual');
+    displayPackages();
+});
   ]
 };
     });
