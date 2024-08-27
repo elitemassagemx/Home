@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const services = {
-individual: [
+        individual: [
     {
         title: "Masaje de Aromaterapia Individual",
         description: "Disfruta de un masaje relajante con aceites esenciales personalizados para ti. Este masaje combina técnicas suaves y aromaterapia para promover la relajación y el bienestar.",
@@ -218,23 +217,10 @@ individual: [
         duration: "60 minutos de masaje + 30 minutos para degustar.",
         benefits: "Relajación, degustación, y un toque especial."
     }
-            ]
+        
     };
 
-document.addEventListener('DOMContentLoaded', () => {
-    const services = {
-        individual: [
-            // ... (aquí van los servicios individuales)
-        ],
-        pareja: [
-            // ... (aquí van los servicios en pareja)
-        ],
-        paquetes: [
-            // ... (aquí van los paquetes)
-        ]
-    };
-
-    const servicesList = document.getElementById('services-list');
+const servicesList = document.getElementById('services-list');
     const packageList = document.getElementById('package-list');
     const choiceChips = document.querySelectorAll('.choice-chip');
 
@@ -292,8 +278,3 @@ document.addEventListener('DOMContentLoaded', () => {
     renderServices('individual');
     renderPackages();
 });
-
-
-
-    +++++
-    
