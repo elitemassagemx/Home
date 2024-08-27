@@ -218,7 +218,8 @@ individual: [
         duration: "60 minutos de masaje + 30 minutos para degustar.",
         benefits: "Relajación, degustación, y un toque especial."
     }
-]
+    };
+});
 document.addEventListener('DOMContentLoaded', () => {
     const services = {
         individual: [
