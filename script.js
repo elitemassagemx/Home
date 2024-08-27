@@ -278,6 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
 
+ 
     const servicesList = document.getElementById('services-list');
     const packageList = document.getElementById('package-list');
     const choiceChips = document.querySelectorAll('.choice-chip');
@@ -286,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         servicesList.innerHTML = '';
         services[category].forEach(service => {
             const li = document.createElement('li');
+            li.className = 'service-item';
             li.innerHTML = `
                 <h3>${service.title}</h3>
                 <p>${service.description}</p>
@@ -304,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
         packageList.innerHTML = '';
         services.paquetes.forEach(pkg => {
             const packageElement = document.createElement('div');
-            packageElement.className = 'package';
+            packageElement.className = 'package-item';
             packageElement.innerHTML = `
                 <h3>${pkg.title}</h3>
                 <p>${pkg.description}</p>
@@ -325,33 +327,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Función para enviar mensaje a WhatsApp
     window.sendWhatsAppMessage = function(action, serviceTitle) {
         const message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
         const url = `https://wa.me/5215640020305?text=${message}`;
         window.open(url, '_blank');
     };
-
-    // Manejo del formulario de contacto
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
-            contactForm.reset();
-        });
-    }
-
-    // Manejo del formulario de newsletter
-    const newsletterForm = document.getElementById('newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const email = this.email.value;
-            alert(`Gracias por suscribirte con el correo: ${email}. Recibirás nuestras novedades pronto.`);
-            this.reset();
-        });
-    }
 
     // Inicialización
     renderServices('individual');
