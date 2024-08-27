@@ -1,130 +1,37 @@
-/* Estilos generales */
-body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F5F5F5;
-    color: #333;
-    line-height: 1.6;
+:root {
+  --primary-color: #D4AF37; /* Dorado para lujo */
+  --secondary-color: #8B4513; /* Marrón para calidez */
+  --text-color: #333333; /* Gris oscuro para legibilidad */
+  --background-color: #F5F5F5; /* Gris claro para el fondo */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+body {
+  font-family: 'Serif', serif; /* Fuente elegante */
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 header {
-    background-color: #FFFFFF;
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 20px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 nav a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
+  color: var(--secondary-color);
 }
 
-nav a:hover {
-    color: #C0A062;
-}
-
-/* Estilos para la sección hero */
 .hero {
-    background: url('hero-image.jpg') center/cover no-repeat;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('path-to-your-hero-image.jpg');
+  background-size: cover;
+  color: white;
 }
 
-.hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+.btn {
+  background-color: var(--primary-color);
+  color: white;
 }
 
-/* Estilos para las secciones */
-section {
-    padding: 4rem 0;
-}
-
-/* Estilos para la sección de servicios */
-.services .category-selector {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.choice-chip {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    background-color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.choice-chip.active {
-    background-color: #C0A062;
-    color: #fff;
-    border-color: #C0A062;
-}
-
-#services-list {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-#services-list li {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos para la sección de testimonios */
-.testimonials {
-    background-color: #f9f9f9;
-}
-
-.testimonial {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial cite {
-    font-style: normal;
-    font-weight: bold;
-}
-
+/* Añade más estilos según sea necesario */
 /* Estilos para el formulario de contacto */
 .contact form {
     display: grid;
