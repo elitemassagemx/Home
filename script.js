@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM loaded");
+    console.log("Services object:", services);
+    
+    const servicesList = document.getElementById('services-list');
+    console.log("Services list element:", servicesList);
+
     const services = {
         individual: [
     {
