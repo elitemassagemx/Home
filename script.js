@@ -195,8 +195,6 @@ if (newsletterForm) {
     "duration": "90 min"
   }
 ]
-
-  ],
   pareja: [
   {
     "title": "Masaje en Pareja de Aromaterapia",
