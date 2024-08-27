@@ -275,8 +275,6 @@ if (newsletterForm) {
     "duration": "90 min"
   }
 ]
-
-  ],
   paquetes: [
     {
       title: "Paquete Romance Total",
@@ -334,6 +332,9 @@ if (newsletterForm) {
       duration: "60 minutos de masaje + 30 minutos para degustar.",
       benefits: "Relajación, degustación, y un toque especial."
     }
+       ]
+}; 
+      
 document.addEventListener('DOMContentLoaded', function() {
     const serviceList = document.getElementById('service-list');
     const packageList = document.getElementById('package-list');
