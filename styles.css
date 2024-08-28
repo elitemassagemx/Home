@@ -1,67 +1,126 @@
 :root {
-  --primary-color: #D4AF37; /* Dorado para lujo */
-  --secondary-color: #8B4513; /* Marrón para calidez */
-  --text-color: #ffffff; /* Blanco para legibilidad */
-  --background-color: #1a1a2e; /* Azul oscuro para el fondo */
-  --item-background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para items */
+    --primary-color: #D4AF37; /* Dorado para lujo */
+    --secondary-color: #8B4513; /* Marrón para calidez */
+    --text-color: #ffffff; /* Blanco para legibilidad */
+    --background-color: #1a1a1a; /* Negro para el fondo */
+    --item-background: #2a2a2a; /* Gris oscuro para items */
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-/* Asegurarse de que todas las secciones tengan el fondo correcto */
-.services, .packages, .testimonials, .contact, .gallery {
-  background-color: var(--background-color);
-  color: var(--text-color);
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-/* Ajustar los colores de los elementos de servicio y paquete */
-.service-item, .package-item {
-  background: var(--item-background);
-  color: var(--text-color);
-  border: 2px solid var(--primary-color);
+/* Estilos para la sección de servicios */
+.services {
+    padding: 2rem 0;
 }
 
-.service-item h3, .package-item h3 {
-  color: var(--primary-color);
+.category-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
-/* Ajustar los colores de los botones */
-.service-buttons button, .package-item button {
-  background-color: var(--primary-color);
-  color: var(--background-color);
+.choice-chip {
+    background-color: var(--item-background);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.service-buttons button:hover, .package-item button:hover {
-  background-color: var(--secondary-color);
+.choice-chip.active {
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
-/* Ajustar el color de fondo del formulario de contacto */
-.contact form {
-  background-color: var(--item-background);
-  padding: 20px;
-  border-radius: 8px;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-/* Ajustar los colores del boletín */
-.newsletter {
-  background-color: var(--background-color);
-  color: var(--text-color);
+.service-item {
+    background-color: var(--item-background);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#newsletter-form input[type="email"] {
-  background-color: var(--item-background);
-  color: var(--text-color);
-  border: 1px solid var(--primary-color);
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
+.service-item h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    margin-bottom: 1rem;
+}
+
+.service-buttons {
+    margin-top: auto;
+}
+
+.service-buttons button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.service-buttons button:hover {
+    background-color: #e5c158;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mantén los estilos existentes para otros elementos como header, footer, etc. */
 /* Mantener los estilos existentes para otros elementos... */
 
 /* Asegurarse de que el footer tenga el fondo correcto */
