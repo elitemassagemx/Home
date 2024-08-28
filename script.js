@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const packageList = document.getElementById('package-list');
     const choiceChips = document.querySelectorAll('.choice-chip');
 
-   function renderServices(category) {
+ function renderServices(category) {
     servicesList.innerHTML = '';
     services[category].forEach(service => {
         const serviceElement = document.createElement('div');
