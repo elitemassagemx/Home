@@ -248,23 +248,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function renderPackages() {
-        packageList.innerHTML = '';
-        services.paquetes.forEach(pkg => {
-            const packageElement = document.createElement('div');
-            packageElement.className = 'package-item';
-            packageElement.innerHTML = `
-                <h3>${pkg.title}</h3>
-                <p>${pkg.description}</p>
-                <p><strong>Incluye:</strong> ${pkg.includes}</p>
-                <p><strong>Duración:</strong> ${pkg.duration}</p>
-                <p><strong>Beneficios:</strong> ${pkg.benefits}</p>
-                <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
-            `;
-            packageList.appendChild(packageElement);
-        });
-    }
-
+function renderPackages() {
+    packageList.innerHTML = '';
+    services.paquetes.forEach(pkg => {
+        const packageElement = document.createElement('div');
+        packageElement.className = 'package-item';
+        packageElement.innerHTML = `
+            <h3>${pkg.title}</h3>
+            <p>${pkg.description}</p>
+            <p><strong>Incluye:</strong> ${pkg.includes}</p>
+            <p><strong>Duración:</strong> ${pkg.duration}</p>
+            <p><strong>Beneficios:</strong> ${pkg.benefits}</p>
+            <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
+        `;
+        packageList.appendChild(packageElement);
+    });
+}
     choiceChips.forEach(chip => {
         chip.addEventListener('click', () => {
             choiceChips.forEach(c => c.classList.remove('active'));
