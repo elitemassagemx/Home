@@ -229,24 +229,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const packageList = document.getElementById('package-list');
     const choiceChips = document.querySelectorAll('.choice-chip');
 
-    function renderServices(category) {
-        servicesList.innerHTML = '';
-        services[category].forEach(service => {
-            const li = document.createElement('li');
-            li.className = 'service-item';
-            li.innerHTML = `
-                <h3>${service.title}</h3>
-                <p>${service.description}</p>
-                <p><strong>Beneficios:</strong> ${service.benefits}</p>
-                <p><strong>Duración:</strong> ${service.duration}</p>
-                <div class="service-buttons">
-                    <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
-                    <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
-                </div>
-            `;
-            servicesList.appendChild(li);
-        });
-    }
+function renderServices(category) {
+    servicesList.innerHTML = '';
+    services[category].forEach(service => {
+        const li = document.createElement('div');
+        li.className = 'service-item';
+        li.innerHTML = `
+            <h3>${service.title}</h3>
+            <p>${service.description}</p>
+            <p><strong>Beneficios:</strong> ${service.benefits}</p>
+            <p><strong>Duración:</strong> ${service.duration}</p>
+            <div class="service-buttons">
+                <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
+            </div>
+        `;
+        servicesList.appendChild(li);
+    });
+}
 
 function renderPackages() {
     packageList.innerHTML = '';
