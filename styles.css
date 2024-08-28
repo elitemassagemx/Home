@@ -364,19 +364,63 @@ footer .container {
     background-color: #F5DEB3;
 }
 
-/* Eliminar el punto blanco */
+/* Estilos comunes para servicios y paquetes */
 #services-list, #package-list {
     list-style-type: none;
     padding-left: 0;
 }
 
+#services-list .service-item, #package-list .package-item {
+    background: #1a1a1a;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 2px solid #D4AF37;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+#services-list .service-item:hover, #package-list .package-item:hover {
+    box-shadow: 0 0 15px #D4AF37;
+    transform: translateY(-5px);
+}
+
+#services-list .service-item h3, #package-list .package-item h3 {
+    color: #D4AF37;
+    margin-top: 0;
+}
+
+#services-list .service-item p, #package-list .package-item p {
+    margin-bottom: 10px;
+}
+
+#services-list .service-buttons, #package-list .package-item button {
+    margin-top: 15px;
+}
+
+#services-list .service-buttons button, #package-list .package-item button {
+    background-color: #D4AF37;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#services-list .service-buttons button:hover, #package-list .package-item button:hover {
+    background-color: #F5DEB3;
+}
+
 /* Ajustes para el diseño responsivo */
 @media (max-width: 768px) {
-    .service-item, .package-item {
+    #services-list .service-item, #package-list .package-item {
         padding: 15px;
     }
 
-    .service-buttons button, .package-item button {
+    #services-list .service-buttons button, #package-list .package-item button {
         padding: 8px 12px;
         margin-bottom: 10px;
     }
