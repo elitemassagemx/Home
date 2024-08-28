@@ -226,7 +226,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
     };
 
-const servicesList = document.getElementById('services-list');
+
+    const servicesList = document.getElementById('services-list');
     const packageList = document.getElementById('package-list');
     const choiceChips = document.querySelectorAll('.choice-chip');
 
