@@ -1,35 +1,100 @@
 :root {
   --primary-color: #D4AF37; /* Dorado para lujo */
   --secondary-color: #8B4513; /* Marrón para calidez */
-  --text-color: #333333; /* Gris oscuro para legibilidad */
-  --background-color: #F5F5F5; /* Gris claro para el fondo */
+  --text-color: #ffffff; /* Blanco para legibilidad */
+  --background-color: #1a1a2e; /* Azul oscuro para el fondo */
+  --item-background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para items */
 }
 
 body {
-  font-family: 'Serif', serif; /* Fuente elegante */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
   background-color: var(--background-color);
   color: var(--text-color);
 }
 
+.container {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 header {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--background-color);
+  padding: 1rem 0;
 }
 
 nav a {
-  color: var(--secondary-color);
+  color: var(--background-color);
 }
 
 .hero {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('path-to-your-hero-image.jpg');
   background-size: cover;
-  color: white;
+  color: var(--text-color);
+  padding: 3rem 0;
+  text-align: center;
 }
 
-.btn {
-  background-color: var(--primary-color);
-  color: white;
+/* Estilos para servicios y paquetes */
+#services-list, #package-list {
+  list-style-type: none;
+  padding-left: 0;
 }
+
+.service-item, .package-item {
+  background: var(--item-background);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 2px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.service-item:hover, .package-item:hover {
+  box-shadow: 0 0 15px var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.service-item h3, .package-item h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.service-buttons button, .package-item button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-buttons button:hover, .package-item button:hover {
+  background-color: #F5DEB3;
+  color: var(--background-color);
+}
+
+/* Ajustes para el diseño responsivo */
+@media (max-width: 768px) {
+  .service-item, .package-item {
+    padding: 15px;
+  }
+
+  .service-buttons button, .package-item button {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Mantén los estilos existentes para otros elementos como footer, galería, etc. */
 
 /* Añade más estilos según sea necesario */
 /* Estilos para el formulario de contacto */
