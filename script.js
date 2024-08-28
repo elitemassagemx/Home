@@ -219,51 +219,58 @@ const services = {
     ]
 };
 
+const services = {
+    // ... (tu objeto services completo aquí)
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM loaded");
     console.log("Services object:", services);
 
     const servicesList = document.getElementById('services-list');
-    servicesList.style.display = 'grid';
-servicesList.style.gridTemplateColumns = 'repeat(2, 1fr)';
-servicesList.style.gap = '1rem';
-servicesList.style.padding = '1rem';
-servicesList.style.backgroundColor = '#1a202c';
-servicesList.style.color = 'white';
     console.log("Services list element:", servicesList);
+
+    // Aplicar estilos al contenedor de servicios
+    servicesList.style.display = 'grid';
+    servicesList.style.gridTemplateColumns = 'repeat(2, 1fr)';
+    servicesList.style.gap = '1rem';
+    servicesList.style.padding = '1rem';
+    servicesList.style.backgroundColor = '#1a202c';
+    servicesList.style.color = 'white';
 
     const packageList = document.getElementById('package-list');
     const choiceChips = document.querySelectorAll('.choice-chip');
 
-   function renderServices(category) {
-    servicesList.innerHTML = '';
-    services[category].forEach(service => {
-        const serviceElement = document.createElement('div');
-        serviceElement.className = 'service-item';
-        serviceElement.style.border = '1px solid #eab308';
-        serviceElement.style.borderRadius = '0.5rem';
-        serviceElement.style.padding = '1rem';
-        serviceElement.style.backgroundColor = '#2d3748';
-        serviceElement.style.marginBottom = '1rem';
-        serviceElement.innerHTML = `
-            <h3 style="color: #eab308; margin-top: 0;">${service.title}</h3>
-            <p>${service.description}</p>
-            <p><strong style="color: #eab308;">Beneficios:</strong> ${service.benefits}</p>
-            <p><strong style="color: #eab308;">Duración:</strong> ${service.duration}</p>
-            <div class="service-buttons">
-                <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')" 
-                        style="width: 100%; background-color: #eab308; color: black; padding: 0.5rem; border: none; border-radius: 0.25rem; cursor: pointer; font-weight: bold; margin-top: 0.5rem;">
-                    Reservar Ahora
-                </button>
-                <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')"
-                        style="width: 100%; background-color: transparent; color: #eab308; padding: 0.5rem; border: 1px solid #eab308; border-radius: 0.25rem; cursor: pointer; font-weight: bold; margin-top: 0.5rem;">
-                    Saber más
-                </button>
-            </div>
-        `;
-        servicesList.appendChild(serviceElement);
-    });
-}
+    function renderServices(category) {
+        servicesList.innerHTML = '';
+        services[category].forEach(service => {
+            const serviceElement = document.createElement('div');
+            serviceElement.className = 'service-item';
+            serviceElement.style.border = '1px solid #eab308';
+            serviceElement.style.borderRadius = '0.5rem';
+            serviceElement.style.padding = '1rem';
+            serviceElement.style.backgroundColor = '#2d3748';
+            serviceElement.style.marginBottom = '1rem';
+            serviceElement.innerHTML = `
+                <h3 style="color: #eab308; margin-top: 0;">${service.title}</h3>
+                <p>${service.description}</p>
+                <p><strong style="color: #eab308;">Beneficios:</strong> ${service.benefits}</p>
+                <p><strong style="color: #eab308;">Duración:</strong> ${service.duration}</p>
+                <div class="service-buttons">
+                    <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')" 
+                            style="width: 100%; background-color: #eab308; color: black; padding: 0.5rem; border: none; border-radius: 0.25rem; cursor: pointer; font-weight: bold; margin-top: 0.5rem;">
+                        Reservar Ahora
+                    </button>
+                    <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')"
+                            style="width: 100%; background-color: transparent; color: #eab308; padding: 0.5rem; border: 1px solid #eab308; border-radius: 0.25rem; cursor: pointer; font-weight: bold; margin-top: 0.5rem;">
+                        Saber más
+                    </button>
+                </div>
+            `;
+            servicesList.appendChild(serviceElement);
+        });
+    }
+
     function renderPackages() {
         packageList.innerHTML = '';
         services.paquetes.forEach(pkg => {
