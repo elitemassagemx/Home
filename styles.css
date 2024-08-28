@@ -407,3 +407,54 @@ footer .container {
     color: #eab308;
     border: 1px solid #eab308;
 }
+  .services {
+    background-color: #1a202c;
+    color: white;
+    padding: 2rem 0;
+}
+
+.category-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.choice-chip {
+    background-color: #2d3748;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+}
+
+.choice-chip.active {
+    background-color: #eab308;
+    color: black;
+}
+
+#services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.service-item {
+    background-color: #2d3748;
+    border: 1px solid #eab308;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.service-title {
+    color: #eab308;
+    margin-top: 0;
+}
+
+.service-description, .service-details {
+    color: white;
+    margin-bottom: 0.5rem;
+}
