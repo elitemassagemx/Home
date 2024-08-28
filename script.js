@@ -1,5 +1,5 @@
 const services = {
-     individual: [
+    individual: [
         {
             title: "Masaje de Aromaterapia Individual",
             description: "Disfruta de un masaje relajante con aceites esenciales personalizados para ti. Este masaje combina técnicas suaves y aromaterapia para promover la relajación y el bienestar.",
@@ -219,33 +219,32 @@ const services = {
     ]
 };
 
-};
-
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM loaded");
+    console.log("Services object:", services);
+
     const servicesList = document.getElementById('services-list');
+    console.log("Services list element:", servicesList);
+
     const packageList = document.getElementById('package-list');
     const choiceChips = document.querySelectorAll('.choice-chip');
 
     function renderServices(category) {
         servicesList.innerHTML = '';
         services[category].forEach(service => {
-            const serviceElement = document.createElement('div');
-            serviceElement.className = 'service-item';
-            serviceElement.innerHTML = `
-                <h3 class="service-title">${service.title}</h3>
-                <p class="service-description">${service.description}</p>
-                <p class="service-details"><strong>Beneficios:</strong> ${service.benefits}</p>
-                <p class="service-details"><strong>Duración:</strong> ${service.duration}</p>
+            const li = document.createElement('li');
+            li.className = 'service-item';
+            li.innerHTML = `
+                <h3>${service.title}</h3>
+                <p>${service.description}</p>
+                <p><strong>Beneficios:</strong> ${service.benefits}</p>
+                <p><strong>Duración:</strong> ${service.duration}</p>
                 <div class="service-buttons">
-                    <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')" class="btn-primary">
-                        Reservar Ahora
-                    </button>
-                    <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')" class="btn-secondary">
-                        Saber más
-                    </button>
+                    <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
+                    <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
                 </div>
             `;
-            servicesList.appendChild(serviceElement);
+            servicesList.appendChild(li);
         });
     }
 
@@ -280,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open(url, '_blank');
     };
 
-    // Inicialización: mostrar servicios individuales y paquetes al cargar la página
+    // Inicialización
     renderServices('individual');
     renderPackages();
 });
