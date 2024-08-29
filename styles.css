@@ -1,228 +1,115 @@
-:root {
-    --primary-color: #D4AF37; /* Dorado para lujo */
-    --secondary-color: #8B4513; /* Marrón para calidez */
-    --text-color: #ffffff; /* Blanco para legibilidad */
-    --background-color: #1a1a1a; /* Negro para el fondo */
-    --item-background: #2a2a2a; /* Gris oscuro para items */
-}
+import React, { useState } from 'react';
+import { Card, CardHeader, CardContent } from '@/components/ui/card';
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* Estilos para la sección de servicios */
-.services {
-    padding: 2rem 0;
-}
-
-.category-selector {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.choice-chip {
-    background-color: var(--item-background);
-    color: var(--text-color);
-    border: 1px solid var(--primary-color);
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.choice-chip.active {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.service-item {
-    background-color: var(--item-background);
-    border: 2px solid var(--primary-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-}
-
-.service-item h3 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-.service-item p {
-    margin-bottom: 1rem;
-}
-
-.service-buttons {
-    margin-top: auto;
-}
-
-.service-buttons button {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-}
-
-.service-buttons button:hover {
-    background-color: #e5c158;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1025px) {
-    .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Mantén los estilos existentes para otros elementos como header, footer, etc. */
-/* Mantener los estilos existentes para otros elementos... */
-
-/* Asegurarse de que el footer tenga el fondo correcto */
-footer {
-  background-color: #333;
-  color: var(--text-color);
-}
-
-
-/* Media Queries */
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
+const services = [
+  {
+    title: "Masaje de Aromaterapia Individual",
+    description: "Disfruta de un masaje relajante con aceites esenciales personalizados para ti. Este masaje combina técnicas suaves y aromaterapia para promover la relajación y el bienestar.",
+    benefits: "Reducción del estrés, mejora del estado de ánimo, y alivio de tensiones musculares.",
+    duration: "60 min",
+    type: "individual"
+  },
+  {
+    title: "Masaje de Piedras Calientes Individual",
+    description: "Relájate con el calor reconfortante de piedras lisas y calientes colocadas sobre el cuerpo mientras el terapeuta realiza un masaje profundo. Ideal para aliviar tensiones y mejorar la circulación.",
+    benefits: "Alivio de dolores musculares, mejora de la circulación sanguínea, y profundo estado de relajación.",
+    duration: "75 min",
+    type: "individual"
+  },
+  {
+    title: "Masaje de Espalda y Cuello Individual",
+    description: "Un enfoque especial en la espalda y el cuello, ideal para liberar tensiones acumuladas y relajarse profundamente.",
+    benefits: "Reducción de rigidez, alivio de dolores en la espalda y el cuello, y sensación de relajación.",
+    duration: "45 min",
+    type: "individual"
+  },
+  {
+    title: "Masaje en Pareja Relajante",
+    description: "Disfruten juntos de un masaje relajante en la misma sala. Perfecto para parejas que buscan una experiencia de bienestar compartida.",
+    benefits: "Relajación mutua, fortalecimiento del vínculo, y reducción del estrés.",
+    duration: "60 min",
+    type: "pareja"
   }
+];
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+const packages = [
+  {
+    title: "Paquete de Relajación Total",
+    description: "Una experiencia completa de relajación que incluye un masaje de cuerpo completo, exfoliación y un facial express.",
+    benefits: "Rejuvenecimiento total, piel radiante, y profunda relajación.",
+    duration: "120 min",
+    type: "individual"
+  },
+  {
+    title: "Paquete Romántico en Pareja",
+    description: "Disfruten de un masaje en pareja, seguido de un baño de burbujas y una copa de champagne.",
+    benefits: "Conexión íntima, relajación compartida, y momentos memorables.",
+    duration: "90 min",
+    type: "pareja"
   }
+];
 
-  .hero {
-    height: 300px;
-  }
+const ServicePackageItem = ({ item }) => (
+  <Card className="service-item">
+    <CardHeader>
+      <h3>{item.title}</h3>
+    </CardHeader>
+    <CardContent>
+      <p>{item.description}</p>
+      <p><strong>Beneficios:</strong> {item.benefits}</p>
+      <p><strong>Duración:</strong> {item.duration}</p>
+      <div className="service-buttons">
+        <button>Reservar</button>
+      </div>
+    </CardContent>
+  </Card>
+);
 
-  .hero h2 {
-    font-size: 2rem;
-  }
+const Dashboard = () => {
+  const [activeTab, setActiveTab] = useState('services');
+  const [activeType, setActiveType] = useState('individual');
 
-  #services-list, #package-list {
-    grid-template-columns: 1fr;
-  }
+  const items = activeTab === 'services' ? services : packages;
+  const filteredItems = items.filter(item => item.type === activeType);
 
-  footer .container {
-    flex-direction: column;
-    text-align: center;
-  }
+  return (
+    <div className="container">
+      <h2>Nuestros {activeTab === 'services' ? 'Servicios' : 'Paquetes'}</h2>
+      <div className="category-selector">
+        <button 
+          className={`choice-chip ${activeTab === 'services' ? 'active' : ''}`}
+          onClick={() => setActiveTab('services')}
+        >
+          Servicios
+        </button>
+        <button 
+          className={`choice-chip ${activeTab === 'packages' ? 'active' : ''}`}
+          onClick={() => setActiveTab('packages')}
+        >
+          Paquetes
+        </button>
+      </div>
+      <div className="category-selector">
+        <button 
+          className={`choice-chip ${activeType === 'individual' ? 'active' : ''}`}
+          onClick={() => setActiveType('individual')}
+        >
+          Individual
+        </button>
+        <button 
+          className={`choice-chip ${activeType === 'pareja' ? 'active' : ''}`}
+          onClick={() => setActiveType('pareja')}
+        >
+          En Pareja
+        </button>
+      </div>
+      <div className="services-grid">
+        {filteredItems.map((item, index) => (
+          <ServicePackageItem key={index} item={item} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-  .service-item, .package-item {
-    padding: 15px;
-  }
-
-  .service-buttons button, .package-item button {
-    padding: 8px 12px;
-    margin-bottom: 10px;
-  }
-
-  #newsletter-form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #newsletter-form input[type="email"] {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
-@media (min-width: 768px) {
-  header .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  nav ul {
-    flex-direction: row;
-  }
-
-  .hero {
-    height: 500px;
-  }
-
-  .hero h2 {
-    font-size: 3rem;
-  }
-
-  #services-list, #package-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-
-  .newsletter form {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .newsletter input[type="email"] {
-    margin-bottom: 0;
-    margin-right: 1rem;
-  }
-
-  footer .container {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-}
-
-@media (min-width: 1024px) {
-  #services-list, #package-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
+export default Dashboard;
