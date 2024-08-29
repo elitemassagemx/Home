@@ -237,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderServices(category) {
         servicesList.innerHTML = '';
         services[category].forEach(service => {
+             console.log("Rendering service:", service.title);
             const li = document.createElement('div');
             li.className = 'service-item';
             li.innerHTML = `
@@ -256,6 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderPackages() {
         packageList.innerHTML = '';
         services.paquetes.forEach(pkg => {
+            console.log("Rendering package:", pkg.title);
             const packageElement = document.createElement('div');
             packageElement.className = 'package-item';
             packageElement.innerHTML = `
