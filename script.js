@@ -34,7 +34,7 @@ const services = {
         {
             title: "Chocolaterapia",
             description: "Disfruta de sus propiedades antioxidantes con nuestra selección de lociones hechas de chocolate. Experiencia sensorial completa.",
-            benefits: "Hidratará tu Piel, Multi Sensaciones, Relajación Profunda.",
+            benefits: "Hidratará tu Piel, Multisensorial, Relajación Profunda.",
             duration: "45 min"
         },
         {
@@ -51,38 +51,38 @@ const services = {
         },
         {
             title: "Aromas y Cera",
-            description: "Acompañado de ceras aromáticas que se derriten para ser aplicados en aceites tibios sobre tu piel, dando así una experiencia sensorial completa.",
-            benefits: "Hirataráa tu piel, relajación profunda, y un cumulo de sensaciones únicas.",
+            description: "Disfruta de manos expertas con ceras aromáticas que se derriten para ser aplicados en aceites tibios sobre tu piel. Experiencia sensorial completa.",
+            benefits: "Hiratará tu piel, Relajación Profunda, Multisensorial",
             duration: "60 min"
         },
         {
-            title: "Lomi Lomi ",
-            description: "Masaje hawaiano con movimientos largos y fluidos, combinandos técnicas de estiramiento para relajar y revitalizar tu cuerpo.",
-            benefits: "Relajación profunda, Aumentarás energía, Mejora de la circulación.",
+            title: "Lomi Lomi",
+            description: "Masaje hawaiano con movimientos largos y fluidos, combinando técnicas especiales de estiramiento para relajar y revitalizar tu cuerpo.",
+            benefits: "Relajación Profunda, Aumento de Energía, Mejora Circulación.",
             duration: "60 min"
         },
         {
-            title: "Masaje Shiatsu",
-            description: "Basado en la medicina tradicional japonesa, este masaje utiliza la presión de los dedos y técnicas de estiramiento para equilibrar la energía del cuerpo.",
-            benefits: "Estimulación de la energía vital, alivio de tensiones, mejora del bienestar general",
+            title: "Shiatsu",
+            description: "Inspirado y fiel a la medicina tradicional japonesa, este masaje utiliza la presión de los dedos y técnicas de estiramiento para equilibrar la energía del cuerpo.",
+            benefits: "Estimulación de la Energía Vital, Alivio de Tensiones, Bienestar Integral",
             duration: "90 min"
         },
         {
-            title: "Masaje con Aceites de CBD Individual",
-            description: "Un masaje que utiliza aceites infundidos con cannabidiol (CBD) para reducir la inflamación, aliviar el dolor y promover la relajación.",
-            benefits: "Alivio del dolor muscular y articular, reducción de la ansiedad, relajación profunda",
+            title: "Aceites de CBD",
+            description: "Experimenta de un masaje que utiliza aceites infundidos con cannabidiol (CBD) para reducir la inflamación, aliviar el dolor y promover la relajación.",
+            benefits: "Alivio Dolor Muscular y Articular, Reduce Ansiedad, Calma profunda",
             duration: "60 min"
         },
         {
-            title: "Masaje de Cuerpo Completo con Técnicas de Ventosas Individual",
-            description: "Un masaje que combina técnicas tradicionales de masaje con ventosas para mejorar la circulación y aliviar la tensión muscular.",
-            benefits: "Mejora de la circulación sanguínea, alivio de tensiones, desintoxicación",
+            title: "Cuerpo Completo con Ventosas",
+            description: "La succión de las ventosas en puntos específicos estimularán tu cirulación sanguinea y linfática, liberando toxinas.",
+            benefits: "Mejora Circulación, Alivio de Tensiones, Desintoxicante,
             duration: "90 min"
         }
     ],
     pareja: [
         {
-            title: "Masaje en Pareja de Aromaterapia",
+            title: "Aromaterapia para 2",
             description: "Disfruta de un masaje relajante mientras ambos se sumergen en una atmósfera de calma con aceites esenciales personalizados. Este masaje combina técnicas suaves y aromaterapia para promover la relajación y el bienestar.",
             benefits: "Reducción del estrés, mejora del estado de ánimo, y alivio de tensiones musculares.",
             duration: "60 min"
