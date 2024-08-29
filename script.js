@@ -2,13 +2,13 @@ const services = {
     individual: [
         {
             title: "Aromaterapia",
-            description: "Elige de nuestra selección de aceites esenciales especialmente pensados en relajación total. Nuestras terapeutas combinan técnicas suaves que promueven relajación y bienestar.",
+            description: "Elige de nuestra selección de aceites esenciales pensados en tu relajación. Nuestras terapeutas combinan técnicas suaves que no te puedes perder.",
             benefits: "Bajará tu Estrés, Cambiará tu Ánimo, Aliviarás Tensiones.",
             duration: "60 min"
         },
        {
             title: "Piedras Calientes",
-            description: "Relájate con el calor reconfortante de nuestra selección de piedras lisas de Origen Volcánico, mientras tanto tu terapeuta hará un masaje profundo. Ideal para aliviar tensiones y mejorar tu circulación.",
+            description: "Disfruta el calor de nuestras piedras lisas de Origen Volcánico, mientras tu terapeuta hace un masaje profundo. Ideal para aliviar tensiones y mejorar tu circulación.",
             benefits: "Aliviarás Dolores Musculares, Mejorarás tu Circulación, Relajación Profunda.",
             duration: "60 min"
         },
@@ -83,36 +83,36 @@ const services = {
     pareja: [
         {
             title: "Aromaterapia para 2",
-            description: "Disfruta de un masaje relajante mientras ambos se sumergen en una atmósfera de calma con aceites esenciales personalizados. Este masaje combina técnicas suaves y aromaterapia para promover la relajación y el bienestar.",
-            benefits: "Reducción del estrés, mejora del estado de ánimo, y alivio de tensiones musculares.",
+            description: "Disfruten de un masaje relajante mientras se sumergen en una atmósfera de calma con aceites esenciales que eligieron previamente. Este masaje combina técnicas suaves y aromaterapia promoviendo la relajación y el bienestar.",
+            benefits: "Reducirán Estrés, Mejora en Estado de Ánimo, y Alivia Tensiones Musculares.",
             duration: "60 min"
         },
       {
-            title: "Masaje de Piedras Calientes en Pareja",
-            description: "Relájate con el calor reconfortante de piedras lisas y calientes colocadas sobre el cuerpo mientras los terapeutas realizan un masaje profundo. Ideal para aliviar tensiones y mejorar la circulación.",
+            title: "Experiencia Piedras Calientes en Pareja",
+            description: "Comparte el calor y relajación de un masaje con piedras lisas de Origen Volcánico colocadas sobre el cuerpo mientras reciben un masaje profundo. Ideal para momentos de unión, liberar tensiones y mejorar la circulación.",
             benefits: "Alivio de dolores musculares, mejora de la circulación sanguínea, y profundo estado de relajación.",
             duration: "60 min"
         },
         {
-            title: "Masaje de Espalda y Cuello en Pareja",
-            description: "Un enfoque especial en la espalda y el cuello, donde ambos reciben un masaje simultáneo. Perfecto para liberar tensiones acumuladas y relajarse en conjunto.",
-            benefits: "Reducción de rigidez, alivio de dolores en la espalda y el cuello, y sensación de relajación compartida.",
+            title: "Liberan Cuello y espalda",
+            description: "Perfecto para liberar estrés y tensiones acumuladas. Masaje focalizado donde disfrutan y crean conexión.",
+            benefits: "Reducirán Rigidez, Alivia Dolores Espalda y Cuello, Sensación Relajación Compartida.",
             duration: "45 min"
         },
         {
             title: "Masaje de Piedras Frías en Pareja",
-            description: "Utiliza piedras frías para estimular la circulación y reducir la inflamación, seguido de técnicas de masaje que promueven la relajación. Ideal para una experiencia de enfriamiento y revitalización.",
-            benefits: "Reducción de inflamación y estrés, alivio de dolores musculares, y sensación de frescura.",
+            description: "Revitaliza su piel y estimula la circulación seguido de técnicas de masaje que promueven la relajación. Ideal para una experiencia memorable de revitalización.",
+            benefits: "Mejoras en la Piel, Reduce Inflamación Estrés, Alivio de Dolores Musculares.",
             duration: "60 min"
         },
         {
-            title: "Masaje Sueco o Relajante en Pareja",
-            description: "Un masaje clásico que utiliza técnicas de presión y fricción suaves para aliviar el estrés y mejorar la circulación. Este masaje se realiza simultáneamente en dos camas para una experiencia compartida.",
-            benefits: "Relajación general, mejora de la circulación sanguínea, y reducción del estrés.",
+            title: "Sueco Relajante para 2",
+            description: "Masaje con técnicas de presión y fricción suaves que alivian el estrés y mejoran tu circulación. Experiencia simultánea que refuerza vínculos.",
+            benefits: "Relajación General, Mejora la Circulación, Reduce Estrés.",
             duration: "80 min"
         },
         {
-            title: "Masaje con Chocolaterapia en Pareja",
+            title: "Chocolaterapia en Pareja",
             description: "Disfruta de un masaje indulgente con lociones a base de chocolate, conocido por sus propiedades antioxidantes. Este tratamiento es ideal para una experiencia sensorial completa.",
             benefits: "Hidratación de la piel, sensación de lujo, y relajación profunda.",
             duration: "45 min"
