@@ -1,33 +1,34 @@
 const services = {
     individual: [
         {
-            title: "Masaje de Aromaterapia Individual",
-            description: "Disfruta de un masaje relajante con aceites esenciales personalizados para ti. Este masaje combina técnicas suaves y aromaterapia para promover la relajación y el bienestar.",
-            benefits: "Reducción del estrés, mejora del estado de ánimo, y alivio de tensiones musculares.",
+            title: "Aromaterapia",
+            description: "Disfruta de un masaje relajante con aceites esenciales elegidos por ti. Este masaje combina técnicas suaves y aromaterapia que promueve la relajación y el bienestar.",
+            benefits: "Bajará tu estrés, mejorarás de ánimo, aliviara tensiones.",
             duration: "60 min"
         },
        {
-            title: "Masaje de Piedras Calientes Individual",
-            description: "Relájate con el calor reconfortante de piedras lisas y calientes colocadas sobre el cuerpo mientras el terapeuta realiza un masaje profundo. Ideal para aliviar tensiones y mejorar la circulación.",
-            benefits: "Alivio de dolores musculares, mejora de la circulación sanguínea, y profundo estado de relajación.",
+            title: "Piedras Calientes",
+            description: "Relájate con el calor reconfortante de nuestra selección de piedras lisas de Origen Volcánico colocadas sobre el cuerpo mientras tu terapeuta realiza un masaje profundo. Ideal para aliviar tensiones y mejorar la circulación.",
+            benefits: "Alivio de dolores musculares, mejora la circulación sanguínea, y te lleva a un estado de relajación profunda.",
             duration: "60 min"
         },
         {
-            title: "Masaje de Espalda y Cuello Individual",
-            description: "Un enfoque especial en la espalda y el cuello, ideal para liberar tensiones acumuladas y relajarse profundamente.",
-            benefits: "Reducción de rigidez, alivio de dolores en la espalda y el cuello, y sensación de relajación.",
+            title: "Piedras Frías",
+            description: "Las manos expertas de nuestras terapeutas usarán piedras frías para estimular la circulación y reducir la inflamación.",
+            benefits: "Reducirás la inflamación y estrés, dolores musculares, con una sensacion de frescura.",
+            duration: "60 min"
+        },
+        {
+            title: "Espalda y Cuello",
+            description: "Un enfoque especial para liberar tensiones acumuladas y relajarse profundamente.",
+            benefits: "Reduirás la rigidez, sentirás relajación y alivio de dolores en la espalda y el cuello.",
             duration: "45 min"
+            
         },
         {
-            title: "Masaje de Piedras Frías Individual",
-            description: "Utiliza piedras frías para estimular la circulación y reducir la inflamación, seguido de técnicas de masaje que promueven la relajación.",
-            benefits: "Reducción de inflamación y estrés, alivio de dolores musculares, y sensación de frescura.",
-            duration: "60 min"
-        },
-        {
-            title: "Masaje Sueco o Relajante Individual",
-            description: "Un masaje clásico que utiliza técnicas de presión y fricción suaves para aliviar el estrés y mejorar la circulación. Ideal para una relajación completa.",
-            benefits: "Relajación general, mejora de la circulación sanguínea, y reducción del estrés.",
+            title: "Sueco Relajante",
+            description: "Ideal para una relajación completa, brinda técnicas de presión y fricción suaves para calmar el estrés y mejorar la circulación.",
+            benefits: "Relajación total, mejora de la circulación sanguínea, y reducirás el estrés.",
             duration: "80 min"
         },
         {
@@ -37,31 +38,31 @@ const services = {
             duration: "45 min"
         },
         {
-            title: "Masaje de Reflexología Individual",
-            description: "Un enfoque en los pies que utiliza puntos de presión específicos para estimular la salud general del cuerpo.",
-            benefits: "Mejora del equilibrio corporal, alivio del estrés, y mejora de la salud general.",
+            title: "Reflexología  ",
+            description: "Enfoque en pies con puntos de presión para estimular la salud general.",
+            benefits: "Mejorarás tu equilibrio corporal, calmarás el estrés, y sentiras mejoras en tu salud general.",
             duration: "45 min"
         },
         {
-            title: "Masaje de Envoltura Corporal Individual",
+            title: "Envoltura Corporal",
             description: "Un masaje combinado con una envoltura corporal nutritiva. Disfruta de un masaje seguido de una envoltura terapéutica basada en algas, barro u otros ingredientes naturales.",
             benefits: "Hidratación y nutrición de la piel, desintoxicación y relajación profunda.",
             duration: "90 min"
         },
         {
-            title: "Masaje con Aromas y Cera Individual",
-            description: "Un masaje acompañado de ceras aromáticas que se derriten en aceites tibios aplicados sobre la piel, proporcionando una experiencia sensorial completa.",
-            benefits: "Hidratación de la piel, relajación profunda, y experiencia sensorial enriquecida.",
+            title: "Aromas y Cera",
+            description: "Acompañado de ceras aromáticas que se derriten para ser aplicados en aceites tibios sobre tu piel, dando así una experiencia sensorial completa.",
+            benefits: "Hirataráa tu piel, relajación profunda, y un cumulo de sensaciones únicas.",
             duration: "60 min"
         },
         {
-            title: "Masaje Lomi Lomi Individual",
-            description: "Un masaje hawaiano que utiliza movimientos largos y fluidos, combinados con técnicas de estiramiento para relajar y revitalizar el cuerpo.",
-            benefits: "Relajación profunda, aumento de la energía, y mejora de la circulación.",
+            title: "Lomi Lomi ",
+            description: "Masaje hawaiano con movimientos largos y fluidos, combinandos técnicas de estiramiento para relajar y revitalizar tu cuerpo.",
+            benefits: "Relajación profunda, Aumentarás energía, Mejora de la circulación.",
             duration: "60 min"
         },
         {
-            title: "Masaje Shiatsu Individual",
+            title: "Masaje Shiatsu",
             description: "Basado en la medicina tradicional japonesa, este masaje utiliza la presión de los dedos y técnicas de estiramiento para equilibrar la energía del cuerpo.",
             benefits: "Estimulación de la energía vital, alivio de tensiones, mejora del bienestar general",
             duration: "90 min"
