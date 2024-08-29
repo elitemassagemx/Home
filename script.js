@@ -2,51 +2,51 @@ const services = {
     individual: [
         {
             title: "Aromaterapia",
-            description: "Disfruta de un masaje relajante con aceites esenciales elegidos por ti. Este masaje combina técnicas suaves y aromaterapia que promueve la relajación y el bienestar.",
-            benefits: "Bajará tu estrés, mejorarás de ánimo, aliviara tensiones.",
+            description: "Elige de nuestra selección de aceites esenciales especialmente pensados en relajación total. Nuestras terapeutas combinan técnicas suaves que promueven relajación y bienestar.",
+            benefits: "Bajará tu Estrés, Cambiará tu Ánimo, Aliviarás Tensiones.",
             duration: "60 min"
         },
        {
             title: "Piedras Calientes",
-            description: "Relájate con el calor reconfortante de nuestra selección de piedras lisas de Origen Volcánico colocadas sobre el cuerpo mientras tu terapeuta realiza un masaje profundo. Ideal para aliviar tensiones y mejorar la circulación.",
-            benefits: "Alivio de dolores musculares, mejora la circulación sanguínea, y te lleva a un estado de relajación profunda.",
+            description: "Relájate con el calor reconfortante de nuestra selección de piedras lisas de Origen Volcánico, mientras tanto tu terapeuta hará un masaje profundo. Ideal para aliviar tensiones y mejorar tu circulación.",
+            benefits: "Aliviarás Dolores Musculares, Mejorarás tu Circulación, Relajación Profunda.",
             duration: "60 min"
         },
         {
             title: "Piedras Frías",
             description: "Las manos expertas de nuestras terapeutas usarán piedras frías para estimular la circulación y reducir la inflamación.",
-            benefits: "Reducirás la inflamación y estrés, dolores musculares, con una sensacion de frescura.",
+            benefits: "Reducirás: Inflamación, Estrés, Dolores Musculares con una sensacion de frescura.",
             duration: "60 min"
         },
         {
             title: "Espalda y Cuello",
             description: "Un enfoque especial para liberar tensiones acumuladas y relajarse profundamente.",
-            benefits: "Reduirás la rigidez, sentirás relajación y alivio de dolores en la espalda y el cuello.",
+            benefits: "Relajación, Alivio de Dolores en Espalda y Cuello y Reduirás Rigidez,",
             duration: "45 min"
             
         },
         {
             title: "Sueco Relajante",
-            description: "Ideal para una relajación completa, brinda técnicas de presión y fricción suaves para calmar el estrés y mejorar la circulación.",
-            benefits: "Relajación total, mejora de la circulación sanguínea, y reducirás el estrés.",
+            description: "Ideal para una relajación completa, nuestras especialistas usarán técnicas de presión y fricción suaves para calmar el estrés y mejorar tu circulación.",
+            benefits: "Relajación Total, Mejora Circulación Sanguínea, y Reducirás el Estrés.",
             duration: "80 min"
         },
         {
-            title: "Masaje con Chocolaterapia Individual",
-            description: "Un masaje indulgente con lociones a base de chocolate, conocido por sus propiedades antioxidantes. Proporciona una experiencia sensorial completa.",
-            benefits: "Hidratación de la piel, sensación de lujo, y relajación profunda.",
+            title: "Chocolaterapia",
+            description: "Disfruta de sus propiedades antioxidantes con nuestra selección de lociones hechas de chocolate. Experiencia sensorial completa.",
+            benefits: "Hidratará tu Piel, Multi Sensaciones, Relajación Profunda.",
             duration: "45 min"
         },
         {
-            title: "Reflexología  ",
-            description: "Enfoque en pies con puntos de presión para estimular la salud general.",
-            benefits: "Mejorarás tu equilibrio corporal, calmarás el estrés, y sentiras mejoras en tu salud general.",
+            title: "Reflexología",
+            description: "Centrado en tu centro: tus pies, apliando puntos de presión para estimular la salud general.",
+            benefits: "Mejorarás tu Equilibrio, Reducirás el Estrés, y Bienestar Integral.",
             duration: "45 min"
         },
         {
             title: "Envoltura Corporal",
-            description: "Un masaje combinado con una envoltura corporal nutritiva. Disfruta de un masaje seguido de una envoltura terapéutica basada en algas, barro u otros ingredientes naturales.",
-            benefits: "Hidratación y nutrición de la piel, desintoxicación y relajación profunda.",
+            description: "Disfruta de un masaje completo seguido de una envoltura terapéutica de nuestras selección de algas, barro y otros ingredientes naturales del mejor origen.",
+            benefits: "Nutrición e Hidratación para tu Piel, Desintoxicante y Relajación Profunda.",
             duration: "90 min"
         },
         {
