@@ -76,7 +76,7 @@ const services = {
         {
             title: "Cuerpo Completo con Ventosas",
             description: "La succión de las ventosas en puntos específicos estimularán tu cirulación sanguinea y linfática, liberando toxinas.",
-            benefits: "Mejora Circulación, Alivio de Tensiones, Desintoxicante,
+            benefits: "Mejora Circulación, Alivio de Tensiones, Desintoxicante",
             duration: "90 min"
         }
     ],
