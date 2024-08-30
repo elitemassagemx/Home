@@ -315,3 +315,22 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: auto;
+    height: 40px;
+    margin-right: 10px;
+    display: block; /* Asegura que la imagen se muestre como un elemento de bloque */
+}
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+    .logo {
+        height: 30px; /* Reduce ligeramente el tamaño en pantallas pequeñas */
+    }
+}
