@@ -334,3 +334,10 @@ footer {
         height: 30px; /* Reduce ligeramente el tamaño en pantallas pequeñas */
     }
 }
+.logo {
+    width: 40px; /* Fuerza un ancho específico */
+    height: 40px;
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    margin-right: 10px;
+    display: block;
+}
