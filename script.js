@@ -1,3 +1,31 @@
+// Funcionalidad para el selector de idioma
+document.addEventListener('DOMContentLoaded', () => {
+    const languageSelector = document.querySelector('.language-selector');
+    const languageOptions = document.querySelector('.language-options');
+
+    languageSelector.addEventListener('click', () => {
+        languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', (e) => {
+            const lang = e.currentTarget.dataset.lang;
+            // Aquí puedes añadir la lógica para cambiar el idioma
+            console.log(`Cambiando idioma a: ${lang}`);
+            languageOptions.style.display = 'none';
+        });
+    });
+
+    // Cerrar el menú de idiomas si se hace clic fuera de él
+    document.addEventListener('click', (e) => {
+        if (!languageSelector.contains(e.target)) {
+            languageOptions.style.display = 'none';
+        }
+    });
+});
+
+// Resto de tu código JavaScript existente...
+
 const services = {
     individual: [
         {
