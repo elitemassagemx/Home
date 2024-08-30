@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #D4AF37; /* Dorado para lujo */
-    --secondary-color: #8B4513; /* Marrón para calidez */
-    --text-color: #ffffff; /* Blanco para legibilidad */
-    --background-color: #1a1a1a; /* Negro para el fondo */
-    --item-background: #2a2a2a; /* Gris oscuro para items */
-    --header-background: #003580; /* Azul de Booking.com */
+    --primary-color: #D4AF37;
+    --secondary-color: #8B4513;
+    --text-color: #ffffff;
+    --background-color: #1a1a1a;
+    --item-background: #2a2a2a;
+    --header-background: #003580;
 }
 
 body {
@@ -27,11 +27,11 @@ body {
     box-sizing: border-box;
 }
 
-/* Estilos para el header */
+/* Header Styles */
 header {
     background-color: var(--header-background);
-    color: var(--text-color);
-    padding: 1rem 0;
+    color: white;
+    padding: 10px 20px;
 }
 
 .header-top {
@@ -43,10 +43,9 @@ header {
 
 h1 {
     margin: 0;
+    font-size: 24px;
     font-family: 'Avenir Next', 'Open Sans', sans-serif;
     font-weight: 700;
-    font-size: 24px;
-    color: white;
     letter-spacing: -0.5px;
 }
 
@@ -96,7 +95,7 @@ h1 {
     margin-right: 5px;
 }
 
-/* Estilos para la navegación principal */
+/* Navigation Styles */
 .main-nav {
     width: 100%;
     overflow-x: auto;
@@ -105,7 +104,6 @@ h1 {
 
 .main-nav ul {
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     list-style-type: none;
     padding: 0;
@@ -124,6 +122,7 @@ h1 {
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 25px;
+    border: 1px solid white;
     white-space: nowrap;
     transition: background-color 0.3s;
 }
@@ -132,7 +131,7 @@ h1 {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Estilos para la sección de servicios */
+/* Services Section */
 .services {
     padding: 2rem 0;
 }
@@ -215,18 +214,22 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* Transición de colores al hacer scroll */
-@keyframes gradientTransition {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Other Sections */
+.hero, .testimonials, .contact, .newsletter, .gallery {
+    padding: 2rem 0;
 }
 
-/* Estilos adicionales */
 footer {
     background-color: #333;
     color: var(--text-color);
     padding: 2rem 0;
+}
+
+/* Animations */
+@keyframes gradientTransition {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Media Queries */
@@ -244,21 +247,8 @@ footer {
         justify-content: flex-start;
     }
 
-    .hero {
-        height: 300px;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
     #services-list, #package-list {
         grid-template-columns: 1fr;
-    }
-
-    footer .container {
-        flex-direction: column;
-        text-align: center;
     }
 
     .service-item, .package-item {
