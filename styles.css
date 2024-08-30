@@ -194,3 +194,32 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.main-nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.main-nav li {
+    flex: 0 0 auto;
+}
+
+.main-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    margin-right: 10px;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
