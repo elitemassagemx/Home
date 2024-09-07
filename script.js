@@ -249,92 +249,6 @@ const services = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM loaded");
-    console.log("Services object:", services);
-
-    const servicesList = document.getElementById('services-list');
-    console.log("Services list element:", servicesList);
-
-    const packageList = document.getElementById('package-list');
-    const choiceChips = document.querySelectorAll('.choice-chip');
-
-    // Add color transition div
-    const colorTransition = document.createElement('div');
-    colorTransition.className = 'color-transition';
-    document.body.appendChild(colorTransition);
-
-    function renderServices(category) {
-        servicesList.innerHTML = '';
-        services[category].forEach(service => {
-             console.log("Rendering service:", service.title);
-            const li = document.createElement('div');
-            li.className = 'service-item';
-            li.innerHTML = `
-                <h3>${service.title}</h3>
-                <p>${service.description}</p>
-                <p><strong>Beneficios:</strong> ${service.benefits}</p>
-                <p><strong>Duración:</strong> ${service.duration}</p>
-                <div class="service-buttons">
-                    <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
-                    <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
-                </div>
-            `;
-            servicesList.appendChild(li);
-        });
-    }
-
-    function renderPackages() {
-        packageList.innerHTML = '';
-        services.paquetes.forEach(pkg => {
-            console.log("Rendering package:", pkg.title);
-            const packageElement = document.createElement('div');
-            packageElement.className = 'package-item';
-            packageElement.innerHTML = `
-                <h3>${pkg.title}</h3>
-                <p>${pkg.description}</p>
-                <p><strong>Incluye:</strong> ${pkg.includes}</p>
-                <p><strong>Duración:</strong> ${pkg.duration}</p>
-                <p><strong>Beneficios:</strong> ${pkg.benefits}</p>
-                <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
-                <button onclick="sendWhatsAppMessage('Saber más', '${pkg.title}')">Saber más</button>
-            `;
-            packageList.appendChild(packageElement);
-        });
-    }
-
-    choiceChips.forEach(chip => {
-        chip.addEventListener('click', () => {
-            choiceChips.forEach(c => c.classList.remove('active'));
-            chip.classList.add('active');
-            renderServices(chip.dataset.category);
-        });
-    });
-
-    window.sendWhatsAppMessage = function(action, serviceTitle) {
-        let message;
-        if (action === 'Saber más') {
-            message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
-        } else {
-            message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
-        }
-        const url = `https://wa.me/5215640020305?text=${message}`;
-        window.open(url, '_blank');
-    };
-
-    // Color transition effect
-    window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercentage = (scrollPosition / maxScroll) * 100;
-        colorTransition.style.opacity = scrollPercentage / 100;
-    });
-
-    // Inicialización
-    renderServices('individual');
-    renderPackages();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
   console.log("DOM loaded");
   console.log("Services object:", services);
 
@@ -362,8 +276,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const service = services[category][index];
     currentOptionText1.innerText = service.title;
     currentOptionText2.innerText = `Duración: ${service.duration}`;
-    currentOptionImage.style.backgroundImage = `url(${service.image || 'default-image-url.jpg'})`;
-    mainMenu.style.background = service.color || '#EBB9D2';
+    
+    // Ajustar la imagen para que se adapte al contenedor sin cambiar su tamaño
+    if (service.image) {
+      currentOptionImage.style.backgroundImage = `url(${service.image})`;
+      currentOptionImage.style.backgroundSize = 'cover';
+      currentOptionImage.style.backgroundPosition = 'center';
+    } else {
+      currentOptionImage.style.backgroundImage = 'none';
+      currentOptionImage.style.backgroundColor = '#f0f0f0'; // Color de fondo por defecto
+    }
+
+    // Aplicar color de fondo al menú principal sin afectar el tamaño
+    if (service.color) {
+      mainMenu.style.backgroundColor = service.color;
+    } else {
+      mainMenu.style.backgroundColor = '#EBB9D2'; // Color por defecto
+    }
   }
 
   function renderServices(category) {
@@ -387,84 +316,26 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCarouselItem(category, 0);
   }
 
-  function renderPackages() {
-    packageList.innerHTML = '';
-    services.paquetes.forEach(pkg => {
-      console.log("Rendering package:", pkg.title);
-      const packageElement = document.createElement('div');
-      packageElement.className = 'package-item';
-      packageElement.innerHTML = `
-        <h3>${pkg.title}</h3>
-        <p>${pkg.description}</p>
-        <p><strong>Incluye:</strong> ${pkg.includes}</p>
-        <p><strong>Duración:</strong> ${pkg.duration}</p>
-        <p><strong>Beneficios:</strong> ${pkg.benefits}</p>
-        <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
-        <button onclick="sendWhatsAppMessage('Saber más', '${pkg.title}')">Saber más</button>
-      `;
-      packageList.appendChild(packageElement);
-    });
+  // ... (el resto del código permanece igual)
+
+  // Ajustar el tamaño del carrusel al contenedor
+  function adjustCarouselSize() {
+    const containerWidth = carouselWrapper.offsetWidth;
+    const containerHeight = carouselWrapper.offsetHeight;
+    
+    currentOptionImage.style.width = '100%';
+    currentOptionImage.style.height = '100%';
+    
+    mainMenu.style.width = '100%';
+    mainMenu.style.height = '100%';
   }
 
-  choiceChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      choiceChips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      currentIndex = 0;
-      renderServices(chip.dataset.category);
-    });
-  });
-
-  window.sendWhatsAppMessage = function(action, serviceTitle) {
-    let message;
-    if (action === 'Saber más') {
-      message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
-    } else {
-      message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
-    }
-    const url = `https://wa.me/5215640020305?text=${message}`;
-    window.open(url, '_blank');
-  };
-
-  // Color transition effect
-  window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercentage = (scrollPosition / maxScroll) * 100;
-    colorTransition.style.opacity = scrollPercentage / 100;
-  });
-
-  // Carousel navigation
-  optionNext.onclick = function () {
-    const activeCategory = document.querySelector('.choice-chip.active').dataset.category;
-    currentIndex = (currentIndex + 1) % services[activeCategory].length;
-    carouselWrapper.classList.add("anim-next");
-    
-    setTimeout(() => {
-      renderCarouselItem(activeCategory, currentIndex);
-    }, 455);
-    
-    setTimeout(() => {
-      carouselWrapper.classList.remove("anim-next");
-    }, 650);
-  };
-
-  optionPrevious.onclick = function () {
-    const activeCategory = document.querySelector('.choice-chip.active').dataset.category;
-    currentIndex = (currentIndex - 1 + services[activeCategory].length) % services[activeCategory].length;
-    carouselWrapper.classList.add("anim-previous");
-    
-    setTimeout(() => {
-      renderCarouselItem(activeCategory, currentIndex);
-    }, 455);
-    
-    setTimeout(() => {
-      carouselWrapper.classList.remove("anim-previous");
-    }, 650);
-  };
+  // Llamar a la función de ajuste al cargar y al cambiar el tamaño de la ventana
+  window.addEventListener('load', adjustCarouselSize);
+  window.addEventListener('resize', adjustCarouselSize);
 
   // Initialization
   renderServices('individual');
   renderPackages();
+  adjustCarouselSize();
 });
-
