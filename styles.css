@@ -349,3 +349,53 @@ footer {
     margin-right: 10px;
     display: block;
 }
+
+:root {
+    --main-blue: #00008B;
+    --light-blue: #4169E1;
+    --gold: #FFD700;
+}
+
+.main-nav {
+    background-color: var(--main-blue);
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-nav li {
+    margin: 0 5px;
+}
+
+.main-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.nav-icon {
+    width: 40px;  /* Aumentado el tamaño del GIF */
+    height: 40px; /* Aumentado el tamaño del GIF */
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: var(--light-blue);
+}
+
+.main-nav a:hover .nav-icon {
+    transform: scale(1.1);
+}
