@@ -131,7 +131,9 @@ h1 {
 }
 
 .main-nav a {
-    display: block;
+    display: flex;  /* Cambiado de 'block' a 'flex' */
+    align-items: center;  /* Alinea verticalmente el icono y el texto */
+    justify-content: center;  /* Centra horizontalmente el contenido */
     color: white;
     text-decoration: none;
     padding: 10px 15px;
@@ -146,6 +148,12 @@ h1 {
 
 .main-nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;  /* Espacio entre el icono y el texto */
 }
 
 /* Services Section */
