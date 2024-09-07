@@ -399,3 +399,62 @@ footer {
 .main-nav a:hover .nav-icon {
     transform: scale(1.1);
 }
+
+.main-nav {
+    background-color: #00008B; /* Azul oscuro */
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-nav li {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.main-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-icon {
+    width: 100%;
+    height: auto;
+    max-height: 40px;
+    object-fit: contain;
+    margin-bottom: 5px;
+    mix-blend-mode: lighten;
+    filter: brightness(0) invert(1);
+}
+
+.main-nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00008B; /* Mismo color que el fondo */
+    z-index: -1;
+}
+
+.main-nav a:hover {
+    transform: scale(1.05);
+}
+
+.main-nav a:hover .nav-icon {
+    filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255,255,255,0.5));
+}
