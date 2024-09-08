@@ -315,26 +315,25 @@ document.addEventListener('DOMContentLoaded', () => {
     colorTransition.className = 'color-transition';
     document.body.appendChild(colorTransition);
 
-    function renderServices(category) {
-        servicesList.innerHTML = '';
-        services[category].forEach(service => {
-             console.log("Rendering service:", service.title);
-            const li = document.createElement('div');
-            li.className = 'service-item';
-            li.innerHTML = `
-                <h3>${service.title}</h3>
-                <p>${service.description}</p>
-                <p><strong>Beneficios:</strong> ${service.benefits}</p>
-                <p><strong>Duración:</strong> ${service.duration}</p>
-                <div class="service-buttons">
-                    <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
-                    <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
-                </div>
-            `;
-            servicesList.appendChild(li);
-        });
-    }
-
+function renderServices(category) {
+    servicesList.innerHTML = '';
+    services[category].forEach(service => {
+        const li = document.createElement('div');
+        li.className = 'service-item';
+        li.innerHTML = `
+            <h3>${service.title} <img src="${service.icon}" alt="${service.title} icon" class="service-icon"></h3>
+            <p>${service.description}</p>
+            <p><strong>Beneficios:</strong> <img src="${service.benefitsIcon}" alt="Beneficios" class="icon"> ${service.benefits}</p>
+            <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
+            <div class="service-buttons">
+                <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
+                <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
+            </div>
+        `;
+        li.addEventListener('click', () => showPopup(service));
+        servicesList.appendChild(li);
+    });
+}
     function renderPackages() {
         packageList.innerHTML = '';
         services.paquetes.forEach(pkg => {
