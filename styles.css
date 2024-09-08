@@ -175,6 +175,13 @@ h1 {
 }
 
 /* Services Section */
+.service-icon, .icon {
+    width: 20px; /* Ajusta esto al tamaño que prefieras */
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
 .services {
     padding: 2rem 0;
 }
