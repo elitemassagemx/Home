@@ -29,85 +29,137 @@ document.addEventListener('DOMContentLoaded', () => {
 const services = {
     individual: [
         {
-            title: "Aromaterapia",
-            description: "Elige de nuestra selección de aceites esenciales pensados en tu relajación. Nuestras terapeutas combinan técnicas suaves que no te puedes perder.",
-            benefits: "Bajará tu Estrés, Cambiará tu Ánimo, Aliviarás Tensiones.",
-            duration: "60 min"
-        },
-       {
-            title: "Piedras Calientes",
-            description: "Disfruta el calor de nuestras piedras lisas de Origen Volcánico, mientras tu terapeuta hace un masaje profundo. Ideal para aliviar tensiones y mejorar tu circulación.",
-            benefits: "Aliviarás Dolores Musculares, Mejorarás tu Circulación, Relajación Profunda.",
-            duration: "60 min"
-        },
-        {
-            title: "Piedras Frías",
-            description: "Las manos expertas de nuestras terapeutas usarán piedras frías para estimular la circulación y reducir la inflamación.",
-            benefits: "Reducirás: Inflamación, Estrés, Dolores Musculares con una sensacion de frescura.",
-            duration: "60 min"
-        },
-        {
-            title: "Espalda y Cuello",
-            description: "Un enfoque especial para liberar tensiones acumuladas y relajarse profundamente.",
-            benefits: "Relajación, Alivio de Dolores en Espalda y Cuello y Reduirás Rigidez,",
-            duration: "45 min"
-            
-        },
-        {
-            title: "Sueco Relajante",
-            description: "Ideal para una relajación completa, nuestras especialistas usarán técnicas de presión y fricción suaves para calmar el estrés y mejorar tu circulación.",
-            benefits: "Relajación Total, Mejora Circulación Sanguínea, y Reducirás el Estrés.",
-            duration: "80 min"
-        },
-        {
-            title: "Chocolaterapia",
-            description: "Disfruta de sus propiedades antioxidantes con nuestra selección de lociones hechas de chocolate. Experiencia sensorial completa.",
-            benefits: "Hidratará tu Piel, Multisensorial, Relajación Profunda.",
-            duration: "45 min"
-        },
-        {
-            title: "Reflexología",
-            description: "Centrado en tu centro: tus pies, apliando puntos de presión para estimular la salud general.",
-            benefits: "Mejorarás tu Equilibrio, Reducirás el Estrés, y Bienestar Integral.",
-            duration: "45 min"
-        },
-        {
-            title: "Envoltura Corporal",
-            description: "Disfruta de un masaje completo seguido de una envoltura terapéutica de nuestras selección de algas, barro y otros ingredientes naturales del mejor origen.",
-            benefits: "Nutrición e Hidratación para tu Piel, Desintoxicante y Relajación Profunda.",
-            duration: "90 min"
-        },
-        {
-            title: "Aromas y Cera",
-            description: "Disfruta de manos expertas con ceras aromáticas que se derriten para ser aplicados en aceites tibios sobre tu piel. Experiencia sensorial completa.",
-            benefits: "Hiratará tu piel, Relajación Profunda, Multisensorial",
-            duration: "60 min"
-        },
-        {
-            title: "Lomi Lomi",
-            description: "Masaje hawaiano con movimientos largos y fluidos, combinando técnicas especiales de estiramiento para relajar y revitalizar tu cuerpo.",
-            benefits: "Relajación Profunda, Aumento de Energía, Mejora Circulación.",
-            duration: "60 min"
-        },
-        {
-            title: "Shiatsu",
-            description: "Inspirado y fiel a la medicina tradicional japonesa, este masaje utiliza la presión de los dedos y técnicas de estiramiento para equilibrar la energía del cuerpo.",
-            benefits: "Estimulación de la Energía Vital, Alivio de Tensiones, Bienestar Integral",
-            duration: "90 min"
-        },
-        {
-            title: "Aceites de CBD",
-            description: "Experimenta de un masaje que utiliza aceites infundidos con cannabidiol (CBD) para reducir la inflamación, aliviar el dolor y promover la relajación.",
-            benefits: "Alivio Dolor Muscular y Articular, Reduce Ansiedad, Calma profunda",
-            duration: "60 min"
-        },
-        {
-            title: "Cuerpo Completo con Ventosas",
-            description: "La succión de las ventosas en puntos específicos estimularán tu cirulación sanguinea y linfática, liberando toxinas.",
-            benefits: "Mejora Circulación, Alivio de Tensiones, Desintoxicante",
-            duration: "90 min"
-        }
+        "title": "Aromaterapia",
+        "description": "Elige de nuestra selección de aceites esenciales pensados en tu relajación. Nuestras terapeutas combinan técnicas suaves que no te puedes perder.",
+        "benefits": "Bajará tu Estrés, Cambiará tu Ánimo, Aliviarás Tensiones.",
+        "duration": "60 min",
+        "icon": "aromaterapia-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "aromaterapia-image.jpg"
+    },
+    {
+        "title": "Piedras Calientes",
+        "description": "Disfruta el calor de nuestras piedras lisas de Origen Volcánico, mientras tu terapeuta hace un masaje profundo.",
+        "benefits": "Aliviarás Dolores Musculares, Mejorarás tu Circulación, Relajación Profunda.",
+        "duration": "60 min",
+        "icon": "piedras-calientes-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "piedras-calientes-image.jpg"
+    },
+    {
+        "title": "Piedras Frías",
+        "description": "Las manos expertas de nuestras terapeutas usarán piedras frías para estimular la circulación y reducir la inflamación.",
+        "benefits": "Reducirás: Inflamación, Estrés, Dolores Musculares.",
+        "duration": "60 min",
+        "icon": "piedras-frias-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "piedras-frias-image.jpg"
+    },
+    {
+        "title": "Espalda y Cuello",
+        "description": "Un enfoque especial para liberar tensiones acumuladas y relajarse profundamente.",
+        "benefits": "Relajación, Alivio de Dolores en Espalda y Cuello.",
+        "duration": "45 min",
+        "icon": "espalda-cuello-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "espalda-cuello-image.jpg"
+    },
+    {
+        "title": "Sueco Relajante",
+        "description": "Ideal para una relajación completa, nuestras especialistas usarán técnicas de presión suaves para calmar el estrés.",
+        "benefits": "Relajación Total, Mejora Circulación Sanguínea.",
+        "duration": "80 min",
+        "icon": "sueco-relajante-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "sueco-relajante-image.jpg"
+    },
+    {
+        "title": "Chocolaterapia",
+        "description": "Disfruta de sus propiedades antioxidantes con nuestra selección de lociones hechas de chocolate.",
+        "benefits": "Hidratará tu Piel, Multisensorial, Relajación Profunda.",
+        "duration": "45 min",
+        "icon": "chocolaterapia-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "chocolaterapia-image.jpg"
+    },
+    {
+        "title": "Reflexología",
+        "description": "Centrado en tus pies, aplicando puntos de presión para estimular la salud general.",
+        "benefits": "Mejorarás tu Equilibrio, Reducirás el Estrés.",
+        "duration": "45 min",
+        "icon": "reflexologia-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "reflexologia-image.jpg"
+    },
+    {
+        "title": "Envoltura Corporal",
+        "description": "Disfruta de un masaje completo seguido de una envoltura terapéutica con algas, barro y otros ingredientes naturales.",
+        "benefits": "Nutrición e Hidratación para tu Piel, Desintoxicante.",
+        "duration": "90 min",
+        "icon": "envoltura-corporal-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "envoltura-corporal-image.jpg"
+    },
+    {
+        "title": "Aromas y Cera",
+        "description": "Disfruta de ceras aromáticas que se derriten y se aplican como aceites tibios sobre tu piel.",
+        "benefits": "Hidratará tu Piel, Relajación Profunda, Multisensorial.",
+        "duration": "60 min",
+        "icon": "aromas-cera-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "aromas-cera-image.jpg"
+    },
+    {
+        "title": "Lomi Lomi",
+        "description": "Masaje hawaiano con movimientos largos y fluidos, combinando estiramientos para relajar y revitalizar.",
+        "benefits": "Relajación Profunda, Aumento de Energía, Mejora Circulación.",
+        "duration": "60 min",
+        "icon": "lomi-lomi-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "lomi-lomi-image.jpg"
+    },
+    {
+        "title": "Shiatsu",
+        "description": "Inspirado en la medicina japonesa, este masaje utiliza presión de dedos y estiramientos para equilibrar la energía.",
+        "benefits": "Estimulación de la Energía Vital, Alivio de Tensiones.",
+        "duration": "90 min",
+        "icon": "shiatsu-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "shiatsu-image.jpg"
+    },
+    {
+        "title": "Aceites de CBD",
+        "description": "Masaje con aceites de CBD para reducir la inflamación, aliviar el dolor y promover la relajación.",
+        "benefits": "Alivio Dolor Muscular, Reduce Ansiedad, Calma Profunda.",
+        "duration": "60 min",
+        "icon": "cbd-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "cbd-image.jpg"
+    },
+    {
+        "title": "Cuerpo Completo con Ventosas",
+        "description": "Las ventosas en puntos específicos estimularán tu circulación sanguínea y linfática, liberando toxinas.",
+        "benefits": "Mejora Circulación, Alivio de Tensiones, Desintoxicante.",
+        "duration": "90 min",
+        "icon": "ventosas-icon.png",
+        "benefitsIcon": "benefits-icon.png",
+        "durationIcon": "duration-icon.png",
+        "image": "ventosas-image.jpg"
+    }
     ],
+    
     pareja: [
         {
             title: "Aromaterapia para 2",
