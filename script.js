@@ -1,4 +1,5 @@
-const services = {
++
+    const services = {
     individual: [
         {
             "title": "Aromaterapia",
@@ -202,159 +203,159 @@ const services = {
             "durationIcon": "duration-icon.png",
             "image": "reflexologia-image.jpg"
         },
-    {
-        "title": "Masaje de Envoltura Corporal en Pareja",
-        "description": "Un masaje combinado con una envoltura corporal nutritiva. Ambos recibirán un masaje y luego serán envueltos en una envoltura terapéutica que puede estar basada en algas, barro o ingredientes naturales.",
-        "benefits": "Hidratación y nutrición de la piel, desintoxicación y relajación profunda.",
-        "duration": "90 min",
-        "icon": "envoltura-corporal-icon.png",
-        "benefitsIcon": "benefits-icon.png",
-        "durationIcon": "duration-icon.png",
-        "image": "envoltura-corporal-image.jpg"
-      },
-      {
-        "title": "Masaje con Aromas y Cera en Pareja",
-        "description": "Disfruta de un masaje acompañado de ceras aromáticas que se derriten en aceites tibios aplicados sobre la piel. Proporciona una experiencia sensorial completa con aroma, calor y tacto.",
-        "benefits": "Hidratación de la piel, relajación profunda, y experiencia sensorial enriquecida.",
-        "duration": "60 min",
-        "icon": "aromas-cera-icon.png",
-        "benefitsIcon": "benefits-icon.png",
-        "durationIcon": "duration-icon.png",
-        "image": "aromas-cera-image.jpg"
-      },
-      {
-        "title": "Masaje Lomi Lomi en Pareja",
-        "description": "Este masaje hawaiano utiliza movimientos largos y fluidos, combinados con técnicas de estiramiento para relajar y revitalizar el cuerpo. Disfruta de una experiencia de conexión y armonía mientras ambos reciben el masaje simultáneamente.",
-        "benefits": "Relajación profunda, aumento de la energía, y mejora de la circulación.",
-        "duration": "60 min",
-        "icon": "lomi-lomi-icon.png",
-        "benefitsIcon": "benefits-icon.png",
-        "durationIcon": "duration-icon.png",
-        "image": "lomi-lomi-image.jpg"
-      },
-      {
-        "title": "Masaje Shiatsu en Pareja",
-        "description": "Basado en la medicina tradicional japonesa, este masaje utiliza la presión de los dedos y técnicas de estiramiento para equilibrar la energía del cuerpo. Se realiza en dos camillas o en una cama de masaje doble.",
-        "benefits": "Estimulación de la energía vital, alivio de tensiones, y mejora del bienestar general.",
-        "duration": "90 min",
-        "icon": "shiatsu-icon.png",
-        "benefitsIcon": "benefits-icon.png",
-        "durationIcon": "duration-icon.png",
-        "image": "shiatsu-image.jpg"
-      },
-      {
-        "title": "Masaje con Aceites de CBD en Pareja",
-        "description": "Un masaje que utiliza aceites infundidos con cannabidiol (CBD) para ayudar a reducir la inflamación, aliviar el dolor y promover la relajación.",
-        "benefits": "Alivio del dolor muscular y articular, reducción de la ansiedad, y relajación profunda.",
-        "duration": "60 min",
-        "icon": "cbd-icon.png",
-        "benefitsIcon": "benefits-icon.png",
-        "durationIcon": "duration-icon.png",
-        "image": "cbd-image.jpg"
-      },
-      {
-        "title": "Masaje de Cuerpo Completo con Técnicas de Ventosas en Pareja",
-        "description": "Un masaje que combina técnicas tradicionales de masaje con ventosas para mejorar la circulación y aliviar la tensión muscular.",
-        "benefits": "Mejora de la circulación sanguínea, alivio de tensiones, y desintoxicación.",
-        "duration": "90 min",
-        "icon": "ventosas-icon.png",
-        "benefitsIcon": "benefits-icon.png",
-        "durationIcon": "duration-icon.png",
-        "image": "ventosas-image.jpg"
-      }
+        {
+            "title": "Masaje de Envoltura Corporal en Pareja",
+            "description": "Un masaje combinado con una envoltura corporal nutritiva. Ambos recibirán un masaje y luego serán envueltos en una envoltura terapéutica que puede estar basada en algas, barro o ingredientes naturales.",
+            "benefits": "Hidratación y nutrición de la piel, desintoxicación y relajación profunda.",
+            "duration": "90 min",
+            "icon": "envoltura-corporal-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "envoltura-corporal-image.jpg"
+        },
+        {
+            "title": "Masaje con Aromas y Cera en Pareja",
+            "description": "Disfruta de un masaje acompañado de ceras aromáticas que se derriten en aceites tibios aplicados sobre la piel. Proporciona una experiencia sensorial completa con aroma, calor y tacto.",
+            "benefits": "Hidratación de la piel, relajación profunda, y experiencia sensorial enriquecida.",
+            "duration": "60 min",
+            "icon": "aromas-cera-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "aromas-cera-image.jpg"
+        },
+        {
+            "title": "Masaje Lomi Lomi en Pareja",
+            "description": "Este masaje hawaiano utiliza movimientos largos y fluidos, combinados con técnicas de estiramiento para relajar y revitalizar el cuerpo. Disfruta de una experiencia de conexión y armonía mientras ambos reciben el masaje simultáneamente.",
+            "benefits": "Relajación profunda, aumento de la energía, y mejora de la circulación.",
+            "duration": "60 min",
+            "icon": "lomi-lomi-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "lomi-lomi-image.jpg"
+        },
+     {
+            "title": "Masaje Shiatsu en Pareja",
+            "description": "Basado en la medicina tradicional japonesa, este masaje utiliza la presión de los dedos y técnicas de estiramiento para equilibrar la energía del cuerpo. Se realiza en dos camillas o en una cama de masaje doble.",
+            "benefits": "Estimulación de la energía vital, alivio de tensiones, y mejora del bienestar general.",
+            "duration": "90 min",
+            "icon": "shiatsu-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "shiatsu-image.jpg"
+        },
+        {
+            "title": "Masaje con Aceites de CBD en Pareja",
+            "description": "Un masaje que utiliza aceites infundidos con cannabidiol (CBD) para ayudar a reducir la inflamación, aliviar el dolor y promover la relajación.",
+            "benefits": "Alivio del dolor muscular y articular, reducción de la ansiedad, y relajación profunda.",
+            "duration": "60 min",
+            "icon": "cbd-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "cbd-image.jpg"
+        },
+        {
+            "title": "Masaje de Cuerpo Completo con Técnicas de Ventosas en Pareja",
+            "description": "Un masaje que combina técnicas tradicionales de masaje con ventosas para mejorar la circulación y aliviar la tensión muscular.",
+            "benefits": "Mejora de la circulación sanguínea, alivio de tensiones, y desintoxicación.",
+            "duration": "90 min",
+            "icon": "ventosas-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "ventosas-image.jpg"
+        }
     ],
     "paquetes": [
-      {
-        "title": "Paquete Romance Total",
-        "description": "Vivan una experiencia de masaje en pareja completa, con atención especial al detalle para un día inolvidable.",
-        "includes": "Masaje en Pareja de Aromaterapia, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos Gourmet.",
-        "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
-        "benefits": "Relajación profunda, experiencia sensorial completa, y momentos de disfrute compartido.",
-        "icon": "romance-total-icon.png",
-        "benefitsIcon": ["benefit1-icon.png", "benefit2-icon.png"],
-        "durationIcon": "duration-romance-icon.png",
-        "image": "romance-total-image.jpg"
-      },
-      {
-        "title": "Paquete Romance Total 2",
-        "description": "Vivan una experiencia de masaje en pareja completa, con atención especial al detalle para un día inolvidable.",
-        "includes": "Masaje en Pareja de Aromaterapia, Sabor de Café (Latte, Capuchino, Expreso), y Pastel o Tarta.",
-        "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
-        "benefits": "Relajación profunda, experiencia sensorial completa, y momentos de disfrute compartido.",
-        "icon": "romance-total2-icon.png",
-        "benefitsIcon": ["benefit1-icon.png", "benefit2-icon.png"],
-        "durationIcon": "duration-romance2-icon.png",
-        "image": "romance-total2-image.jpg"
-      },
-      {
-        "title": "Paquete Lujo y Sabor",
-        "description": "Un paquete que combina técnicas de masaje de lujo con sabores exquisitos para un día de indulgencia.",
-        "includes": "Masaje de Piedras Calientes en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos y Vino.",
-        "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
-        "benefits": "Alivio de tensiones, degustación de sabores refinados, y una experiencia de lujo.",
-        "icon": "lujo-sabor-icon.png",
-        "benefitsIcon": ["benefit-lujo1-icon.png", "benefit-lujo2-icon.png"],
-        "durationIcon": "duration-lujo-icon.png",
-        "image": "lujo-sabor-image.jpg"
-      },
-      {
-        "title": "Paquete Sensaciones Inolvidables",
-        "description": "Un paquete pensado para ofrecer una experiencia sensorial completa con masajes, vino y sabores exquisitos.",
-        "includes": "Masaje de Cuerpo Completo en Pareja, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos Artísticos.",
-        "duration": "90 minutos de masaje + 45 minutos para disfrutar de las delicias.",
-        "benefits": "Relajación total, degustación gourmet, y experiencia romántica.",
-        "icon": "sensaciones-icon.png",
-        "benefitsIcon": ["benefit-sensaciones1-icon.png", "benefit-sensaciones2-icon.png"],
-        "durationIcon": "duration-sensaciones-icon.png",
-        "image": "sensaciones-image.jpg"
-      },
-      {
-        "title": "Paquete Escape de Lujo",
-        "description": "Una escapada lujosa para parejas que buscan un día de relajación y disfrute.",
-        "includes": "Masaje con Aromaterapia y Envoltura de Algas en Pareja, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos y Frutas.",
-        "duration": "90 minutos de masaje + 30 minutos para degustar las delicias.",
-        "benefits": "Relajación profunda, desintoxicación, y una experiencia culinaria exquisita.",
-        "icon": "escape-lujo-icon.png",
-        "benefitsIcon": ["benefit-escape1-icon.png", "benefit-escape2-icon.png"],
-        "durationIcon": "duration-escape-icon.png",
-        "image": "escape-lujo-image.jpg"
-      },
-      {
-        "title": "Paquete Relax y Sabores",
-        "description": "Disfruta de un masaje relajante seguido de una experiencia gourmet para cerrar el día.",
-        "includes": "Masaje de Reflexología en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos.",
-        "duration": "60 minutos de masaje + 30 minutos para degustar.",
-        "benefits": "Alivio del estrés, disfrute sensorial, y conexión íntima.",
-        "icon": "relax-sabores-icon.png",
-        "benefitsIcon": ["benefit-relax1-icon.png", "benefit-relax2-icon.png"],
-        "durationIcon": "duration-relax-icon.png",
-        "image": "relax-sabores-image.jpg"
-      },
-      {
-        "title": "Paquete Tranquilidad Gourmet",
-        "description": "Un paquete diseñado para ofrecer relajación total y sabores exquisitos en un entorno lujoso.",
-        "includes": "Masaje con Aceites de CBD en Pareja, Sabor de Café (Latte, Capuchino, Expreso), y Pastel o Tarta.",
-        "duration": "60 minutos de masaje + 30 minutos para disfrutar.",
-        "benefits": "Alivio del dolor, relajación, y experiencia gourmet.",
-        "icon": "tranquilidad-gourmet-icon.png",
-        "benefitsIcon": ["benefit-tranquilidad1-icon.png", "benefit-tranquilidad2-icon.png"],
-        "durationIcon": "duration-tranquilidad-icon.png",
-        "image": "tranquilidad-gourmet-image.jpg"
-      },
-      {
-        "title": "Paquete Relajación y Gourmet",
-        "description": "Un paquete que combina técnicas de masaje para una relajación total con un toque gourmet.",
-        "includes": "Masaje Sueco en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos.",
-        "duration": "60 minutos de masaje + 30 minutos para degustar.",
-        "benefits": "Relajación, degustación, y un toque especial.",
-        "icon": "relajacion-gourmet-icon.png",
-        "benefitsIcon": ["benefit-relajacion1-icon.png", "benefit-relajacion2-icon.png"],
-        "durationIcon": "duration-relajacion-icon.png",
-        "image": "relajacion-gourmet-image.jpg"
-      }
+        {
+            "title": "Paquete Romance Total",
+            "description": "Vivan una experiencia de masaje en pareja completa, con atención especial al detalle para un día inolvidable.",
+            "includes": "Masaje en Pareja de Aromaterapia, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos Gourmet.",
+            "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
+            "benefits": ["Relajación profunda", "experiencia sensorial completa", "momentos de disfrute compartido"],
+            "icon": "romance-total-icon.png",
+            "benefitsIcon": ["benefit1-icon.png", "benefit2-icon.png"],
+            "durationIcon": "duration-romance-icon.png",
+            "image": "romance-total-image.jpg"
+        },
+        {
+            "title": "Paquete Romance Total 2",
+            "description": "Vivan una experiencia de masaje en pareja completa, con atención especial al detalle para un día inolvidable.",
+            "includes": "Masaje en Pareja de Aromaterapia, Sabor de Café (Latte, Capuchino, Expreso), y Pastel o Tarta.",
+            "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
+            "benefits": ["Relajación profunda", "experiencia sensorial completa", "momentos de disfrute compartido"],
+            "icon": "romance-total2-icon.png",
+            "benefitsIcon": ["benefit1-icon.png", "benefit2-icon.png"],
+            "durationIcon": "duration-romance2-icon.png",
+            "image": "romance-total2-image.jpg"
+        },
+        {
+            "title": "Paquete Lujo y Sabor",
+            "description": "Un paquete que combina técnicas de masaje de lujo con sabores exquisitos para un día de indulgencia.",
+            "includes": "Masaje de Piedras Calientes en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos y Vino.",
+            "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
+            "benefits": ["Alivio de tensiones", "degustación de sabores refinados", "experiencia de lujo"],
+            "icon": "lujo-sabor-icon.png",
+            "benefitsIcon": ["benefit-lujo1-icon.png", "benefit-lujo2-icon.png"],
+            "durationIcon": "duration-lujo-icon.png",
+            "image": "lujo-sabor-image.jpg"
+        },
+        {
+            "title": "Paquete Sensaciones Inolvidables",
+            "description": "Un paquete pensado para ofrecer una experiencia sensorial completa con masajes, vino y sabores exquisitos.",
+            "includes": "Masaje de Cuerpo Completo en Pareja, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos Artísticos.",
+            "duration": "90 minutos de masaje + 45 minutos para disfrutar de las delicias.",
+            "benefits": ["Relajación total", "degustación gourmet", "experiencia romántica"],
+            "icon": "sensaciones-icon.png",
+            "benefitsIcon": ["benefit-sensaciones1-icon.png", "benefit-sensaciones2-icon.png"],
+            "durationIcon": "duration-sensaciones-icon.png",
+            "image": "sensaciones-image.jpg"
+        },
+        {
+            "title": "Paquete Escape de Lujo",
+            "description": "Una escapada lujosa para parejas que buscan un día de relajación y disfrute.",
+            "includes": "Masaje con Aromaterapia y Envoltura de Algas en Pareja, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos y Frutas.",
+            "duration": "90 minutos de masaje + 30 minutos para degustar las delicias.",
+            "benefits": ["Relajación profunda", "desintoxicación", "experiencia culinaria exquisita"],
+            "icon": "escape-lujo-icon.png",
+            "benefitsIcon": ["benefit-escape1-icon.png", "benefit-escape2-icon.png"],
+            "durationIcon": "duration-escape-icon.png",
+            "image": "escape-lujo-image.jpg"
+        },
+        {
+            "title": "Paquete Relax y Sabores",
+            "description": "Disfruta de un masaje relajante seguido de una experiencia gourmet para cerrar el día.",
+            "includes": "Masaje de Reflexología en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos.",
+            "duration": "60 minutos de masaje + 30 minutos para degustar.",
+            "benefits": ["Alivio del estrés", "disfrute sensorial", "conexión íntima"],
+            "icon": "relax-sabores-icon.png",
+            "benefitsIcon": ["benefit-relax1-icon.png", "benefit-relax2-icon.png"],
+            "durationIcon": "duration-relax-icon.png",
+            "image": "relax-sabores-image.jpg"
+        },
+        {
+            "title": "Paquete Tranquilidad Gourmet",
+            "description": "Un paquete diseñado para ofrecer relajación total y sabores exquisitos en un entorno lujoso.",
+            "includes": "Masaje con Aceites de CBD en Pareja, Sabor de Café (Latte, Capuchino, Expreso), y Pastel o Tarta.",
+            "duration": "60 minutos de masaje + 30 minutos para disfrutar.",
+            "benefits": ["Alivio del dolor", "relajación", "experiencia gourmet"],
+            "icon": "tranquilidad-gourmet-icon.png",
+            "benefitsIcon": ["benefit-tranquilidad1-icon.png", "benefit-tranquilidad2-icon.png"],
+            "durationIcon": "duration-tranquilidad-icon.png",
+            "image": "tranquilidad-gourmet-image.jpg"
+        },
+        {
+            "title": "Paquete Relajación y Gourmet",
+            "description": "Un paquete que combina técnicas de masaje para una relajación total con un toque gourmet.",
+            "includes": "Masaje Sueco en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos.",
+            "duration": "60 minutos de masaje + 30 minutos para degustar.",
+            "benefits": ["Relajación", "degustación", "toque especial"],
+            "icon": "relajacion-gourmet-icon.png",
+            "benefitsIcon": ["benefit-relajacion1-icon.png", "benefit-relajacion2-icon.png"],
+            "durationIcon": "duration-relajacion-icon.png",
+            "image": "relajacion-gourmet-image.jpg"
+        }
     ]
-  }
-}
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM loaded");
     console.log("Services object:", services);
@@ -420,7 +421,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>${pkg.description}</p>
                 <p><strong>Incluye:</strong> ${pkg.includes}</p>
                 <p><strong>Duración:</strong> <img src="${pkg.durationIcon}" alt="Duración" class="icon"> ${pkg.duration}</p>
-                <p><strong>Beneficios:</strong> ${pkg.benefits.map(benefit => `<img src="${benefit}" alt="Beneficio" class="icon">`).join(' ')}</p>
+                <p><strong>Beneficios:</strong> ${pkg.benefits.map(benefit => `<img src="${pkg.benefitsIcon[0]}" alt="Beneficio" class="icon"> ${benefit}`).join(', ')}</p>
                 <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
                 <button onclick="sendWhatsAppMessage('Saber más', '${pkg.title}')">Saber más</button>
             `;
@@ -432,7 +433,15 @@ document.addEventListener('DOMContentLoaded', () => {
         chip.addEventListener('click', () => {
             choiceChips.forEach(c => c.classList.remove('active'));
             chip.classList.add('active');
-            renderServices(chip.dataset.category);
+            if (chip.dataset.category === 'paquetes') {
+                servicesList.style.display = 'none';
+                packageList.style.display = 'block';
+                renderPackages();
+            } else {
+                servicesList.style.display = 'block';
+                packageList.style.display = 'none';
+                renderServices(chip.dataset.category);
+            }
         });
     });
 
