@@ -32,6 +32,7 @@
             </nav>
         </div>
     </header>
+    
     <main>
         <section id="inicio" class="section hero">
             <div class="container">
@@ -39,6 +40,7 @@
                 <p>Descubre el poder de la relajación y el bienestar en nuestro exclusivo spa de masajes.</p>
             </div>
         </section>
+
         <section id="servicios" class="section services">
             <div class="container">
                 <h2>Nuestros Servicios</h2>
@@ -49,12 +51,16 @@
                 <div id="services-list" class="services-grid"></div>
             </div>
         </section>
+
         <section id="paquetes" class="section packages">
             <div class="container">
                 <h2>Paquetes Especiales</h2>
-                <div id="package-list"></div>
+                <div id="package-list">
+                    <!-- Aquí puedes agregar contenido del paquete -->
+                </div>
             </div>
         </section>
+
         <section id="testimonios" class="section testimonials">
             <div class="container">
                 <h2>Lo que dicen nuestros clientes</h2>
@@ -68,6 +74,27 @@
                 </div>
             </div>
         </section>
+
+        <section id="galeria" class="section gallery">
+            <div class="container">
+                <h2>Galería de Imágenes</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="spa-interior.jpg" alt="Interior del Spa" width="250" height="250">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="masaje-evento.jpg" alt="Evento de Masajes" width="250" height="250">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="productos-spa.jpg" alt="Productos de Spa" width="250" height="250">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="equipo-spa.jpg" alt="Nuestro Equipo" width="250" height="250">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section id="contacto" class="section contact">
             <div class="container">
                 <h2>Contáctanos</h2>
@@ -88,6 +115,7 @@
                 </form>
             </div>
         </section>
+
         <section id="newsletter" class="section newsletter">
             <div class="container">
                 <h2>Suscríbete a nuestro boletín</h2>
@@ -98,26 +126,8 @@
                 </form>
             </div>
         </section>
-        <section id="galeria" class="section gallery">
-            <div class="container">
-                <h2>Galería de Imágenes</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="spa-interior.jpg" alt="Interior del Spa" width="250" height="250">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="masaje-evento.jpg" alt="Evento de Masajes" width="250" height="250">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="productos-spa.jpg" alt="Productos de Spa" width="250" height="250">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="equipo-spa.jpg" alt="Nuestro Equipo" width="250" height="250">
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
+
     <footer>
         <div class="container">
             <p>&copy; 2023 Elite Massage. Todos los derechos reservados.</p>
@@ -132,6 +142,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Barra de navegación fija al estilo WhatsApp -->
+    <nav class="fixed-menu">
+        <ul>
+            <li><a href="#chats"><img src="icono-chats.png" alt="Icono Chats" class="nav-icon">Chats</a></li>
+            <li><a href="#novedades"><img src="icono-novedades.png" alt="Icono Novedades" class="nav-icon">Novedades</a></li>
+            <li><a href="#comunidades"><img src="icono-comunidades.png" alt="Icono Comunidades" class="nav-icon">Comunidades</a></li>
+            <li><a href="#llamadas"><img src="icono-llamadas.png" alt="Icono Llamadas" class="nav-icon">Llamadas</a></li>
+        </ul>
+    </nav>
+
     <script src="script.js"></script>
 </body>
 </html>
