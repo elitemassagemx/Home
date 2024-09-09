@@ -1,97 +1,47 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Massage</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        .header {
-            background-color: #4a0e31;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        .logo {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
-        .nav-bar {
-            background-color: #1a2b47;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px 0;
-        }
-        .nav-item {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .nav-icon {
-            width: 24px;
-            height: 24px;
-            margin-bottom: 5px;
-        }
-        .language-selector {
-            cursor: pointer;
-        }
-        #translate-icon {
-            width: 30px;
-            height: 30px;
-            vertical-align: middle;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo-container">
-            <img src="logo.png" alt="Elite Massage Logo" class="logo">
-            <h1>Elite Massage</h1>
-        </div>
-        <div class="language-selector">
-            IDIOMA <img src="trad.png" id="translate-icon" alt="Traducir">
+    <header id="sticky-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-container">
+                    <img src="logo.png" alt="Elite Massage Logo" class="logo">
+                    <h1>Elite Massage</h1>
+                </div>
+                <div class="language-selector">
+                    IDIOMA <img src="trad.png" id="translate-icon" alt="Traducir">
+                    <div class="language-options">
+                        <button class="lang-option" data-lang="es"><img src="mx.png" alt="Bandera de México"> Español</button>
+                        <button class="lang-option" data-lang="en"><img src="us.png" alt="Bandera de Estados Unidos"> English</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <nav class="nav-bar">
-        <a href="#servicios" class="nav-item">
-            <img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">
-            Servicios
-        </a>
-        <a href="#paquetes" class="nav-item">
-            <img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">
-            Paquetes
-        </a>
-        <a href="#testimonios" class="nav-item">
-            <img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">
-            Testimonios
-        </a>
-        <a href="#galeria" class="nav-item">
-            <img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">
-            Galería
-        </a>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
+            <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
+            <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
+            <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
+        </ul>
     </nav>
 
-    <main>
-        <section id="inicio">
-            <h2>Bienvenido a tu Oasis de Tranquilidad</h2>
-            <p>Descubre el poder de la relajación y el bienestar en nuestro exclusivo spa de masajes.</p>
+    <main role="main">
+        <section id="inicio" class="section hero">
+            <div class="container">
+                <h2>Bienvenido a tu Oasis de Tranquilidad</h2>
+                <p>Descubre el poder de la relajación y el bienestar en nuestro exclusivo spa de masajes.</p>
+            </div>
         </section>
-        
+
         <section id="servicios" class="section services">
             <div class="container">
                 <h2>Nuestros Servicios</h2>
