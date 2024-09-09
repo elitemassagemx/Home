@@ -1,13 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM loaded");
 
+    const topBar = document.getElementById('top-bar');
+    const fixedBar = document.getElementById('fixed-bar');
     const languageSelector = document.querySelector('.language-selector');
     const languageOptions = document.querySelector('.language-options');
     const servicesList = document.getElementById('services-list');
     const packageList = document.getElementById('package-list');
     const choiceChips = document.querySelectorAll('.choice-chip');
 
-        const services = {
+    let lastScrollTop = 0;
+    const delta = 5;
+    const navbarHeight = topBar.offsetHeight;
+
+    const services = {
         individual: [
             {
                 "title": "Aromaterapia",
@@ -451,42 +457,38 @@ document.addEventListener('DOMContentLoaded', () => {
         colorTransition.style.opacity = scrollPercentage / 100;
     });
 
+    // Barra de navegación dinámica
+    window.addEventListener('scroll', function() {
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (Math.abs(lastScrollTop - st) <= delta)
+            return;
+        
+        if (st > lastScrollTop && st > navbarHeight){
+            // Scroll Down
+            topBar.classList.add('hidden');
+            fixedBar.classList.add('visible');
+        } else {
+            // Scroll Up
+            if(st + window.innerHeight < document.documentElement.scrollHeight) {
+                topBar.classList.remove('hidden');
+                fixedBar.classList.remove('visible');
+            }
+        }
+        
+        lastScrollTop = st;
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
     // Inicialización
-    renderServices('individual');
-    renderPackages();
-});
-
-// Función global para enviar mensajes de WhatsApp
-window.sendWhatsAppMessage = function(action, serviceTitle) {
-    let message;
-    if (action === 'Saber más') {
-        message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
-    } else {
-        message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
-    }
-    const url = `https://wa.me/5215640020305?text=${message}`;
-    window.open(url, '_blank');
-};
-
-// Función para mostrar un popup con detalles del servicio
-function showPopup(service) {
-    const popup = document.createElement('div');
-    popup.className = 'service-popup';
-    popup.innerHTML = `
-        <h3>${service.title}</h3>
-        <p>${service.description}</p>
-        <p><strong>Beneficios:</strong> ${service.benefits}</p>
-        <p><strong>Duración:</strong> ${service.duration}</p>
-        <button onclick="closePopup()">Cerrar</button>
-    `;
-    document.body.appendChild(popup);
-}
-
-// Función para cerrar el popup
-function closePopup() {
-    const popup = document.querySelector('.service-popup');
-    if (popup) {
-        popup.remove();
-    }
-}
     
