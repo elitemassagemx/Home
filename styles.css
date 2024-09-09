@@ -351,7 +351,8 @@ footer {
     }
 }
 
-.fixed-menu {
+/* Estilos para la barra de navegación fija al estilo WhatsApp */
+.whatsapp-nav {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -361,32 +362,30 @@ footer {
     z-index: 999; /* Asegura que esté por encima de otros elementos */
 }
 
-.fixed-menu ul {
+.whatsapp-nav .main-nav {
+    padding: 10px 0;
+}
+
+.whatsapp-nav .main-nav ul {
     display: flex;
     justify-content: space-around;
-    padding: 10px;
-    margin: 0;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.fixed-menu li {
-    flex-grow: 1;
-    text-align: center;
+.whatsapp-nav .main-nav ul li {
+    display: inline-block;
 }
 
-.fixed-menu a {
-    color: var(--text-color);
+.whatsapp-nav .main-nav ul li a {
     text-decoration: none;
-    font-size: 14px;
-    display: block;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.fixed-menu a:hover {
-    color: var(--primary-color);
-}
-
-.fixed-menu .nav-icon {
-    width: 24px;
-    height: 24px;
+.whatsapp-nav .main-nav ul li a img {
     margin-bottom: 5px;
 }
