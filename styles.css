@@ -8,7 +8,7 @@
     --main-vino: #4c0026;
     --blue: #082032;
     --gold: #FFD700;
-    --light-blue: #1e3540;
+    --main-blue: #082032;
 }
 
 body {
@@ -16,42 +16,35 @@ body {
     font-size: 16px;
     line-height: 1.6;
     margin: 0;
-    padding: 60px 0;
+    padding: 0;
     background: linear-gradient(270deg, #1a1a1a, #2c2c2c, #3a3a3a);
     background-size: 600% 600%;
     animation: gradientTransition 15s ease infinite;
     color: var(--text-color);
+    padding-bottom: 80px; /* Espacio para la barra fija inferior */
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
 }
 
 /* Header Styles */
-#sticky-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+header {
     background-color: var(--header-background);
-    color: var(--text-color);
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-}
-
-#sticky-header.sticky {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    flex-wrap: wrap;
 }
 
 .logo-container {
@@ -60,15 +53,16 @@ body {
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    margin-right: 10px;
+    margin-right: 15px;
+    display: block;
 }
 
 h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 36px;
     font-family: 'Avenir Next', 'Open Sans', sans-serif;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -86,13 +80,18 @@ h1 {
     border-radius: 5px;
 }
 
+.language-selector span {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 #translate-icon {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     background-color: #e3c093;
     border-radius: 50%;
     padding: 3px;
-    margin-left: 5px;
 }
 
 .language-options {
@@ -110,31 +109,40 @@ h1 {
 .lang-option {
     display: flex;
     align-items: center;
-    padding: 5px 10px;
+    padding: 8px 15px;
     border: none;
     background-color: white;
     width: 100%;
     text-align: left;
     cursor: pointer;
     color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.lang-option:hover {
+    background-color: #f0f0f0;
 }
 
 .lang-option img {
-    margin-right: 5px;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
 }
 
 /* Navigation Styles */
 .main-nav {
     width: 100%;
-    background-color: var(--blue);
-    padding: 10px 0;
+    margin-top: 10px;
+    background-color: var(--main-blue);
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .main-nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style-type: none;
-    padding: 0;
+    padding: 0 15px;
     margin: 0;
 }
 
@@ -149,24 +157,25 @@ h1 {
     justify-content: center;
     color: white;
     text-decoration: none;
-    padding: 10px 5px;
+    padding: 15px 10px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     text-align: center;
     white-space: nowrap;
-    font-size: 14px;
+    font-size: 16px;
     transition: all 0.3s ease;
-    height: 60px;
+    height: auto;
 }
 
 .main-nav a:hover {
-    background-color: var(--light-blue);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
 }
 
 .nav-icon {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 5px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
     transition: all 0.3s ease;
     display: inline-block;
     vertical-align: middle;
@@ -182,10 +191,10 @@ h1 {
 
 /* Services Section */
 .service-icon, .icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .services {
@@ -201,15 +210,19 @@ h1 {
 .choice-chip {
     background-color: var(--item-background);
     color: var(--text-color);
-    border: 1px solid var(--primary-color);
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
+    border: 2px solid var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.75rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
 }
 
 .choice-chip:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
 }
 
 .choice-chip.active {
@@ -226,27 +239,28 @@ h1 {
 .service-item, .package-item {
     background: linear-gradient(135deg, var(--item-background) 0%, #3a3a3a 100%);
     border: 2px solid var(--primary-color);
-    border-radius: 8px;
-    padding: 1.5rem;
+    border-radius: 15px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .service-item:hover, .package-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.4);
 }
 
 .service-item h3, .package-item h3 {
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .service-item p, .package-item p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .service-buttons, .package-item button {
@@ -257,23 +271,76 @@ h1 {
     background-color: var(--primary-color);
     color: var(--background-color);
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
     font-weight: bold;
-    margin-right: 0.5rem;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .service-buttons button:hover, .package-item button:hover {
     background-color: #e5c158;
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Other Sections */
+.hero, .testimonials, .contact, .newsletter, .gallery {
+    padding: 3rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: var(--text-color);
+    padding: 2rem 0;
 }
 
 /* Animations */
 @keyframes gradientTransition {
-    0%, 100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fixed Bottom Navigation Bar */
+.fixed-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-blue);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.fixed-bar.visible {
+    transform: translateY(0);
+}
+
+.fixed-bar .main-nav {
+    margin-top: 0;
+    padding: 10px 0;
+}
+
+.fixed-bar .main-nav ul {
+    justify-content: space-around;
+}
+
+.fixed-bar .main-nav a {
+    font-size: 14px;
+    padding: 8px 5px;
+}
+
+.fixed-bar .nav-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
 }
 
 /* Media Queries */
@@ -284,13 +351,15 @@ h1 {
     }
 
     .language-selector {
-        margin: 10px 0;
+        margin: 15px 0;
     }
 
     .main-nav ul {
         flex-wrap: nowrap;
         justify-content: flex-start;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 10px;
     }
 
     .main-nav li {
@@ -298,14 +367,8 @@ h1 {
     }
 
     .main-nav a {
-        padding: 8px 12px;
-        font-size: 12px;
-        height: 50px;
-    }
-
-    .nav-icon {
-        width: 25px;
-        height: 25px;
+        padding: 10px 15px;
+        font-size: 14px;
     }
 
     .services-grid, #package-list {
@@ -313,15 +376,40 @@ h1 {
     }
 
     .service-item, .package-item {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .service-buttons button, .package-item button {
-        padding: 0.4rem 0.8rem;
-        font-size: 14px;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    #newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #newsletter-form input[type="email"] {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
     }
 
     .logo {
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .fixed-bar .main-nav a {
+        font-size: 12px;
+        padding: 5px 3px;
+    }
+
+    .fixed-bar .nav-icon {
+        width: 30px;
         height: 30px;
     }
 }
@@ -334,7 +422,7 @@ h1 {
 
 @media (min-width: 1025px) {
     .container {
-        padding: 0 20px;
+        padding: 0 30px;
     }
 
     .services-grid, #package-list {
