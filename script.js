@@ -44,7 +44,7 @@ const services = {
         "benefits": "Aliviarás Dolores Musculares, Mejorarás tu Circulación, Relajación Profunda.",
         "duration": "60 min",
         "icon": "piedras-calientes-icon.png",
-        "benefitsIcon": "benefits-icon.png",
+        "benefitsIcon": "cdolorespalda.png",
         "durationIcon": "duration-icon.png",
         "image": "piedras-calientes-image.jpg"
     },
@@ -73,7 +73,7 @@ const services = {
         "description": "Ideal para una relajación completa, nuestras especialistas usarán técnicas de presión suaves para calmar el estrés.",
         "benefits": "Relajación Total, Mejora Circulación Sanguínea.",
         "duration": "80 min",
-        "icon": "sueco-relajante-icon.png",
+        "icon": "pinsuecia.png","rhsuecia.png"
         "benefitsIcon": "benefits-icon.png",
         "durationIcon": "duration-icon.png",
         "image": "sueco-relajante-image.jpg"
@@ -84,7 +84,7 @@ const services = {
         "benefits": "Hidratará tu Piel, Multisensorial, Relajación Profunda.",
         "duration": "45 min",
         "icon": "chocolaterapia-icon.png",
-        "benefitsIcon": "benefits-icon.png",
+        "benefitsIcon": "chidratacion.png",
         "durationIcon": "duration-icon.png",
         "image": "chocolaterapia-image.jpg"
     },
@@ -103,7 +103,7 @@ const services = {
         "description": "Disfruta de un masaje completo seguido de una envoltura terapéutica con algas, barro y otros ingredientes naturales.",
         "benefits": "Nutrición e Hidratación para tu Piel, Desintoxicante.",
         "duration": "90 min",
-        "icon": "envoltura-corporal-icon.png",
+        "icon": "algas.png",
         "benefitsIcon": "benefits-icon.png",
         "durationIcon": "duration-icon.png",
         "image": "envoltura-corporal-image.jpg"
@@ -123,7 +123,7 @@ const services = {
         "description": "Masaje hawaiano con movimientos largos y fluidos, combinando estiramientos para relajar y revitalizar.",
         "benefits": "Relajación Profunda, Aumento de Energía, Mejora Circulación.",
         "duration": "60 min",
-        "icon": "lomi-lomi-icon.png",
+        "icon": "cmasaje lomi.png",
         "benefitsIcon": "benefits-icon.png",
         "durationIcon": "duration-icon.png",
         "image": "lomi-lomi-image.jpg"
