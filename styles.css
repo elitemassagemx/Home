@@ -4,8 +4,8 @@
     --text-color: #ffffff;
     --background-color: #1a1a1a;
     --item-background: #2a2a2a;
-    --header-background: #4c00267;
-    --main-vino: #4c00267;
+    --header-background: #4c0026;
+    --main-vino: #4c0026;
     --blue: #082032;
     --gold: #FFD700;
     --light-blue: #1e3540;
@@ -16,7 +16,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
     margin: 0;
-    padding: 60px 0; /* Ajustado para las barras fijas superior e inferior */
+    padding: 60px 0;
     background: linear-gradient(270deg, #1a1a1a, #2c2c2c, #3a3a3a);
     background-size: 600% 600%;
     animation: gradientTransition 15s ease infinite;
@@ -25,16 +25,15 @@ body {
 
 .container {
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
 }
 
 /* Header Styles */
-.top-bar {
+.top-bar, .fixed-bar {
     position: fixed;
-    top: 0;
     left: 0;
     width: 100%;
     background-color: var(--header-background);
@@ -44,8 +43,22 @@ body {
     padding: 10px 0;
 }
 
+.top-bar {
+    top: 0;
+}
+
 .top-bar.hidden {
     transform: translateY(-100%);
+}
+
+.fixed-bar {
+    bottom: 0;
+    transform: translateY(100%);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fixed-bar.visible {
+    transform: translateY(0);
 }
 
 .logo-container {
@@ -58,7 +71,6 @@ body {
     height: 40px;
     object-fit: contain;
     margin-right: 10px;
-    display: block;
 }
 
 h1 {
@@ -175,28 +187,6 @@ h1 {
     transform: scale(1.1);
 }
 
-/* Fixed Bottom Bar */
-.fixed-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    z-index: 1000;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.fixed-bar.visible {
-    transform: translateY(0);
-}
-
-.fixed-bar .main-nav {
-    margin-top: 0;
-}
-
 /* Services Section */
 .service-icon, .icon {
     width: 20px;
@@ -287,23 +277,10 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* Other Sections */
-.hero, .testimonials, .contact, .newsletter, .gallery {
-    padding: 2rem 0;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: var(--text-color);
-    padding: 2rem 0;
-}
-
 /* Animations */
 @keyframes gradientTransition {
-    0% { background-position: 0% 50%; }
+    0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 /* Media Queries */
@@ -320,6 +297,7 @@ footer {
     .main-nav ul {
         flex-wrap: nowrap;
         justify-content: flex-start;
+        overflow-x: auto;
     }
 
     .main-nav li {
@@ -350,17 +328,6 @@ footer {
     .service-buttons button, .package-item button {
         padding: 0.4rem 0.8rem;
         font-size: 14px;
-    }
-
-    #newsletter-form {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #newsletter-form input[type="email"] {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 10px;
     }
 
     .logo {
