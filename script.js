@@ -1,5 +1,9 @@
 // Funcionalidad para el selector de idioma
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM loaded");
+    console.log("Services object:", services);
+
+document.addEventListener('DOMContentLoaded', () => {
     const languageSelector = document.querySelector('.language-selector');
     const languageOptions = document.querySelector('.language-options');
 
@@ -385,9 +389,7 @@ const services = {
        }
     ]
 };
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM loaded");
-    console.log("Services object:", services);
+
 
     const servicesList = document.getElementById('services-list');
     console.log("Services list element:", servicesList);
