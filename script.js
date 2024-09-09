@@ -264,9 +264,7 @@ const services = {
             "image": "ventosas-image.jpg"
     
           }
-    ]
-}
-{
+    ],
     "paquetes": [
         {
             "title": "Paquete Romance Total",
@@ -358,7 +356,6 @@ const services = {
        }
     ]
 };
-
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM loaded");
     console.log("Services object:", services);
@@ -420,11 +417,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const packageElement = document.createElement('div');
             packageElement.className = 'package-item';
             packageElement.innerHTML = `
-                <h3>${pkg.title}</h3>
+                <h3>${pkg.title} <img src="${pkg.icon}" alt="${pkg.title} icon" class="package-icon"></h3>
                 <p>${pkg.description}</p>
                 <p><strong>Incluye:</strong> ${pkg.includes}</p>
-                <p><strong>Duración:</strong> ${pkg.duration}</p>
-                <p><strong>Beneficios:</strong> ${pkg.benefits}</p>
+                <p><strong>Duración:</strong> <img src="${pkg.durationIcon}" alt="Duración" class="icon"> ${pkg.duration}</p>
+                <p><strong>Beneficios:</strong> ${pkg.benefits.map(benefit => `<img src="${benefit}" alt="Beneficio" class="icon">`).join(' ')}</p>
                 <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
                 <button onclick="sendWhatsAppMessage('Saber más', '${pkg.title}')">Saber más</button>
             `;
