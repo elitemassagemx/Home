@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM loaded");
-    console.log("Services object:", services);
 
     const languageSelector = document.querySelector('.language-selector');
     const languageOptions = document.querySelector('.language-options');
@@ -8,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const packageList = document.getElementById('package-list');
     const choiceChips = document.querySelectorAll('.choice-chip');
 
-    const services = {
+        const services = {
         individual: [
             {
                 "title": "Aromaterapia",
@@ -490,3 +489,4 @@ function closePopup() {
         popup.remove();
     }
 }
+    
