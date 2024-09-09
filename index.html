@@ -3,163 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Massage</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Servicios de Masajes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 60px; /* Ajusta este valor según la altura de tu barra de navegación */
+        }
+        #top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            transition: top 0.3s;
+            z-index: 1000;
+        }
+        #top-bar.hidden {
+            top: -60px; /* Ajusta este valor según la altura de tu barra de navegación */
+        }
+        #fixed-bar {
+            position: fixed;
+            top: -60px; /* Inicialmente oculto */
+            left: 0;
+            width: 100%;
+            background-color: #444;
+            color: white;
+            padding: 10px 0;
+            transition: top 0.3s;
+            z-index: 999;
+        }
+        #fixed-bar.visible {
+            top: 0;
+        }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .nav-menu {
+            display: flex;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .choice-chips {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .choice-chip {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .choice-chip.active {
+            background-color: #007bff;
+            color: white;
+        }
+        #services-list, #package-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .service-item, .package-item {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .language-selector {
+            position: relative;
+            cursor: pointer;
+        }
+        .language-options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        .lang-option {
+            cursor: pointer;
+            padding: 5px;
+        }
+        .lang-option:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
-    <header id="top-bar" class="top-bar">
-        <div class="container">
-            <div class="header-top">
-                <div class="logo-container">
-                    <img src="logo.png" alt="Elite Massage Logo" class="logo">
-                    <h1>Elite Massage</h1>
-                </div>
+    <nav id="top-bar">
+        <div class="nav-content">
+            <div class="nav-logo">Servicios de Masajes</div>
+            <div class="nav-menu">
+                <a href="#servicios">Servicios</a>
+                <a href="#paquetes">Paquetes</a>
+                <a href="#contacto">Contacto</a>
                 <div class="language-selector">
-                    IDIOMA <img src="trad.png" id="translate-icon" alt="Traducir">
+                    Idioma
                     <div class="language-options">
-                        <button class="lang-option" data-lang="es"><img src="mx.png" alt="Bandera de México"> Español</button>
-                        <button class="lang-option" data-lang="en"><img src="us.png" alt="Bandera de Estados Unidos"> English</button>
+                        <div class="lang-option" data-lang="es">Español</div>
+                        <div class="lang-option" data-lang="en">English</div>
                     </div>
                 </div>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
-                    <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
-                    <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
-                    <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <main>
-        <section id="inicio" class="section hero">
-            <div class="container">
-                <h2>Bienvenido a tu Oasis de Tranquilidad</h2>
-                <p>Descubre el poder de la relajación y el bienestar en nuestro exclusivo spa de masajes.</p>
-            </div>
-        </section>
-
-        <section id="servicios" class="section services">
-            <div class="container">
-                <h2>Nuestros Servicios</h2>
-                <div class="category-selector">
-                    <button class="choice-chip active" data-category="individual">Individual</button>
-                    <button class="choice-chip" data-category="pareja">En Pareja</button>
-                </div>
-                <div id="services-list" class="services-grid"></div>
-            </div>
-        </section>
-
-        <section id="paquetes" class="section packages">
-            <div class="container">
-                <h2>Paquetes Especiales</h2>
-                <div id="package-list"></div>
-            </div>
-        </section>
-
-        <section id="testimonios" class="section testimonials">
-            <div class="container">
-                <h2>Lo que dicen nuestros clientes</h2>
-                <div class="testimonial">
-                    <p>"Una experiencia increíble. El masaje de aromaterapia fue justo lo que necesitaba para relajarme completamente. ¡Volveré pronto!"</p>
-                    <p class="author">- María G.</p>
-                </div>
-                <div class="testimonial">
-                    <p>"El paquete en pareja fue maravilloso. El ambiente, el servicio y los masajes superaron nuestras expectativas. Totalmente recomendado."</p>
-                    <p class="author">- Carlos y Ana</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="galeria" class="section gallery">
-            <div class="container">
-                <h2>Galería de Imágenes</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="spa-interior.jpg" alt="Interior del Spa" width="250" height="250">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="masaje-evento.jpg" alt="Evento de Masajes" width="250" height="250">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="productos-spa.jpg" alt="Productos de Spa" width="250" height="250">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="equipo-spa.jpg" alt="Nuestro Equipo" width="250" height="250">
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="contacto" class="section contact">
-            <div class="container">
-                <h2>Contáctanos</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </section>
-
-        <section id="newsletter" class="section newsletter">
-            <div class="container">
-                <h2>Suscríbete a nuestro boletín</h2>
-                <p>Recibe ofertas especiales y noticias directamente en tu correo.</p>
-                <form id="newsletter-form">
-                    <input type="email" placeholder="Tu correo electrónico" required>
-                    <button type="submit">Suscribirse</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Elite Massage. Todos los derechos reservados.</p>
-            <nav>
-                <a href="/politica-privacidad">Política de Privacidad</a> |
-                <a href="/terminos-condiciones">Términos y Condiciones</a>
-            </nav>
-            <div class="social-media">
-                <a href="https://facebook.com/elitemassage" target="_blank" rel="noopener noreferrer">Facebook</a> |
-                <a href="https://instagram.com/elitemassage" target="_blank" rel="noopener noreferrer">Instagram</a> |
-                <a href="https://twitter.com/elitemassage" target="_blank" rel="noopener noreferrer">Twitter</a>
             </div>
         </div>
-    </footer>
-
-    <!-- Barra de navegación fija -->
-    <div id="fixed-bar" class="fixed-bar visible">
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+    </nav>
+    <nav id="fixed-bar">
+        <div class="nav-content">
+            <div class="nav-logo">SM</div>
+            <div class="nav-menu">
+                <a href="#servicios">Servicios</a>
+                <a href="#paquetes">Paquetes</a>
+                <a href="#contacto">Contacto</a>
             </div>
-            <div class="form-group">
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
+        </div>
+    </nav>
+    <div class="choice-chips">
+        <button class="choice-chip active" data-category="individual">Individual</button>
+        <button class="choice-chip" data-category="pareja">Pareja</button>
+        <button class="choice-chip" data-category="paquetes">Paquetes</button>
     </div>
-
+    <div id="services-list"></div>
+    <div id="package-list" style="display: none;"></div>
+    <script>
     <script src="script.js"></script>
+    </script>
+</body>
+</html>
+
 </body>
 </html>
