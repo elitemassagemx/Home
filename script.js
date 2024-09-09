@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 "description": "Disfruta de sus propiedades antioxidantes con nuestra selección de lociones hechas de chocolate.",
                 "benefits": "Hidratará tu Piel, Multisensorial, Relajación Profunda.",
                 "duration": "45 min",
-                "icon": "chocolaterapia-icon.png",
-                "benefitsIcon": "benefits-icon.png",
+                "icon": "choco.png",
+                "benefitsIcon": "chidratacion.png",
                 "durationIcon": "duration-icon.png",
                 "image": "chocolaterapia-image.jpg"
             },
