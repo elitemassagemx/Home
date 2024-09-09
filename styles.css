@@ -117,8 +117,6 @@ h1 {
 /* Navigation Styles */
 .main-nav {
     width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
     margin-top: 10px;
     background-color: var(--main-blue);
     padding: 10px 0;
@@ -351,4 +349,44 @@ footer {
     .services-grid, #package-list {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+.fixed-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+}
+
+.fixed-menu ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+}
+
+.fixed-menu li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.fixed-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+.fixed-menu a:hover {
+    color: var(--primary-color);
+}
+
+.fixed-menu .nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
 }
