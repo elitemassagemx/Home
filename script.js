@@ -1,47 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const header = document.getElementById('sticky-header');
-    const headerHeight = header.offsetHeight;
-    let lastScrollTop = 0;
-
-    window.addEventListener('scroll', () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > headerHeight) {
-            if (scrollTop > lastScrollTop) {
-                header.style.transform = 'translateY(-100%)';
-            } else {
-                header.style.transform = 'translateY(0)';
-                header.classList.add('sticky');
-            }
-        } else {
-            header.classList.remove('sticky');
-            header.style.transform = 'translateY(0)';
-        }
-
-        lastScrollTop = scrollTop;
-    });
-
-    const languageSelector = document.querySelector('.language-selector');
-    const languageOptions = document.querySelector('.language-options');
-
-    languageSelector.addEventListener('click', () => {
-        languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
-    });
-
-    document.querySelectorAll('.lang-option').forEach(option => {
-        option.addEventListener('click', (e) => {
-            const lang = e.currentTarget.dataset.lang;
-            console.log(`Cambiando idioma a: ${lang}`);
-            languageOptions.style.display = 'none';
-        });
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!languageSelector.contains(e.target)) {
-            languageOptions.style.display = 'none';
-        }
-    });
-
     const services = {
         individual: [
             {
@@ -398,21 +355,58 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ]
     };
+    const header = document.getElementById('sticky-header');
+    const headerHeight = header.offsetHeight;
+    let lastScrollTop = 0;
 
-    const servicesList = document.getElementById('services-list');
-    const packageList = document.getElementById('package-list');
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > headerHeight) {
+            if (scrollTop > lastScrollTop) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+                header.classList.add('sticky');
+            }
+        } else {
+            header.classList.remove('sticky');
+            header.style.transform = 'translateY(0)';
+        }
+
+        lastScrollTop = scrollTop;
+    });
+
+    const languageSelector = document.querySelector('.language-selector');
+    const languageOptions = document.querySelector('.language-options');
+
+    languageSelector.addEventListener('click', () => {
+        languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', (e) => {
+            const lang = e.currentTarget.dataset.lang;
+            console.log(`Cambiando idioma a: ${lang}`);
+            languageOptions.style.display = 'none';
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!languageSelector.contains(e.target)) {
+            languageOptions.style.display = 'none';
+        }
+    });
+
     const choiceChips = document.querySelectorAll('.choice-chip');
-
-    const colorTransition = document.createElement('div');
-    colorTransition.className = 'color-transition';
-    document.body.appendChild(colorTransition);
+    const servicesList = document.getElementById('services-list');
 
     function renderServices(category) {
         servicesList.innerHTML = '';
         services[category].forEach(service => {
-            const li = document.createElement('div');
-            li.className = 'service-item';
-            li.innerHTML = `
+            const serviceElement = document.createElement('div');
+            serviceElement.className = 'service-item';
+            serviceElement.innerHTML = `
                 <h3>${service.title} <img src="${service.icon}" alt="${service.title} icon" class="service-icon"></h3>
                 <p>${service.description}</p>
                 <p><strong>Beneficios:</strong> <img src="${service.benefitsIcon}" alt="Beneficios" class="icon"> ${service.benefits}</p>
@@ -422,26 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
                 </div>
             `;
-            li.addEventListener('click', () => showPopup(service));
-            servicesList.appendChild(li);
-        });
-    }
-
-    function renderPackages() {
-        packageList.innerHTML = '';
-        services.paquetes.forEach(pkg => {
-            const packageElement = document.createElement('div');
-            packageElement.className = 'package-item';
-            packageElement.innerHTML = `
-                <h3>${pkg.title}</h3>
-                <p>${pkg.description}</p>
-                <p><strong>Incluye:</strong> ${pkg.includes}</p>
-                <p><strong>Duración:</strong> ${pkg.duration}</p>
-                <p><strong>Beneficios:</strong> ${pkg.benefits}</p>
-                <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
-                <button onclick="sendWhatsAppMessage('Saber más', '${pkg.title}')">Saber más</button>
-            `;
-            packageList.appendChild(packageElement);
+            servicesList.appendChild(serviceElement);
         });
     }
 
@@ -453,29 +428,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    window.sendWhatsAppMessage = function(action, serviceTitle) {
-        let message;
-        if (action === 'Saber más') {
-            message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
-        } else {
-            message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
-        }
-        const url = `https://wa.me/5215640020305?text=${message}`;
-        window.open(url, '_blank');
-    };
-
-    window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercentage = (scrollPosition / maxScroll) * 100;
-        colorTransition.style.opacity = scrollPercentage / 100;
-    });
-
+    // Render initial services (individual)
     renderServices('individual');
-    renderPackages();
+
+    // Render packages
+    const packageList = document.getElementById('package-list');
+    services.paquetes.forEach(pkg => {
+        const packageElement = document.createElement('div');
+        packageElement.className = 'package-item';
+        packageElement.innerHTML = `
+            <h3>${pkg.title}</h3>
+            <p>${pkg.description}</p>
+            <p><strong>Incluye:</strong> ${pkg.includes}</p>
+            <p><strong>Duración:</strong> ${pkg.duration}</p>
+            <p><strong>Beneficios:</strong> ${pkg.benefits.join(', ')}</p>
+            <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
+            <button onclick="sendWhatsAppMessage('Saber más', '${pkg.title}')">Saber más</button>
+        `;
+        packageList.appendChild(packageElement);
+    });
 });
 
-function showPopup(service) {
-    // Implementa la lógica para mostrar un popup con los detalles del servicio
-    console.log("Mostrando popup para:", service.title);
+function sendWhatsAppMessage(action, serviceTitle) {
+    let message;
+    if (action === 'Saber más') {
+        message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
+    } else {
+        message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
+    }
+    const url = `https://wa.me/5215640020305?text=${message}`;
+    window.open(url, '_blank');
 }
+    
