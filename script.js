@@ -274,51 +274,31 @@ const services = {
 };
 
 
+const services = {
+    // ... (tu objeto services aquí)
+};
 
-// Código principal
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM loaded");
+    console.log("Services object:", services);
 
-    // Selector de idioma
+    // Elementos del DOM
     const languageSelector = document.querySelector('.language-selector');
     const languageOptions = document.querySelector('.language-options');
+    const servicesList = document.getElementById('services-list');
+    const packageList = document.getElementById('package-list');
+    const choiceChips = document.querySelectorAll('.choice-chip');
 
+    // Funciones
     const toggleLanguageOptions = () => {
         languageOptions.classList.toggle('show');
     };
 
-    languageSelector.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleLanguageOptions();
-    });
-
-    document.querySelectorAll('.lang-option').forEach(option => {
-        option.addEventListener('click', (e) => {
-            const lang = e.currentTarget.dataset.lang;
-            console.log(`Cambiando idioma a: ${lang}`);
-            toggleLanguageOptions();
-        });
-    });
-
-    document.addEventListener('click', () => {
-        if (languageOptions.classList.contains('show')) {
-            toggleLanguageOptions();
-        }
-    });
-
-    // Servicios y paquetes
-    console.log("Services object:", services);
-    const servicesList = document.getElementById('services-list');
-    console.log("Services list element:", servicesList);
-    const packageList = document.getElementById('package-list');
-    const choiceChips = document.querySelectorAll('.choice-chip');
-
-    // Color transition
-    const colorTransition = document.createElement('div');
-    colorTransition.className = 'color-transition';
-    document.body.appendChild(colorTransition);
-
     function renderServices(category) {
+        if (!servicesList) {
+            console.error("Services list element not found");
+            return;
+        }
         servicesList.innerHTML = '';
         services[category].forEach(service => {
             const li = document.createElement('div');
@@ -339,6 +319,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderPackages() {
+        if (!packageList) {
+            console.error("Package list element not found");
+            return;
+        }
         packageList.innerHTML = '';
         services.paquetes.forEach(pkg => {
             console.log("Rendering package:", pkg.title);
@@ -357,6 +341,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Event Listeners
+    languageSelector.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleLanguageOptions();
+    });
+
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', (e) => {
+            const lang = e.currentTarget.dataset.lang;
+            console.log(`Cambiando idioma a: ${lang}`);
+            toggleLanguageOptions();
+        });
+    });
+
+    document.addEventListener('click', () => {
+        if (languageOptions.classList.contains('show')) {
+            toggleLanguageOptions();
+        }
+    });
+
     choiceChips.forEach(chip => {
         chip.addEventListener('click', () => {
             choiceChips.forEach(c => c.classList.remove('active'));
@@ -365,110 +369,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    window.sendWhatsAppMessage = function(action, serviceTitle) {
-        let message;
-        if (action === 'Saber más') {
-            message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
-        } else {
-            message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
-        }
-        const url = `https://wa.me/5215640020305?text=${message}`;
-        window.open(url, '_blank');
-    };
-
     // Color transition effect
-    window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercentage = (scrollPosition / maxScroll) * 100;
-        colorTransition.style.opacity = scrollPercentage / 100;
-    });
-
-    // Inicialización
-    renderServices('individual');
-    renderPackages();
-});
-
-// Función para mostrar el popup (debes implementarla según tus necesidades)
-function showPopup(service) {
-    console.log("Mostrando popup para:", service.title);
-    // Implementa la lógica para mostrar el popup aquí
-}
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM loaded");
-    console.log("Services object:", services);
-
-    const servicesList = document.getElementById('services-list');
-    console.log("Services list element:", servicesList);
-
-    const packageList = document.getElementById('package-list');
-    const choiceChips = document.querySelectorAll('.choice-chip');
-
-    // Add color transition div
     const colorTransition = document.createElement('div');
     colorTransition.className = 'color-transition';
     document.body.appendChild(colorTransition);
 
-function renderServices(category) {
-    servicesList.innerHTML = '';
-    services[category].forEach(service => {
-        const li = document.createElement('div');
-        li.className = 'service-item';
-        li.innerHTML = `
-            <h3>${service.title} <img src="${service.icon}" alt="${service.title} icon" class="service-icon"></h3>
-            <p>${service.description}</p>
-            <p><strong>Beneficios:</strong> <img src="${service.benefitsIcon}" alt="Beneficios" class="icon"> ${service.benefits}</p>
-            <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
-            <div class="service-buttons">
-                <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
-                <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
-            </div>
-        `;
-        li.addEventListener('click', () => showPopup(service));
-        servicesList.appendChild(li);
-    });
-}
-    function renderPackages() {
-        packageList.innerHTML = '';
-        services.paquetes.forEach(pkg => {
-            console.log("Rendering package:", pkg.title);
-            const packageElement = document.createElement('div');
-            packageElement.className = 'package-item';
-            packageElement.innerHTML = `
-                <h3>${pkg.title}</h3>
-                <p>${pkg.description}</p>
-                <p><strong>Incluye:</strong> ${pkg.includes}</p>
-                <p><strong>Duración:</strong> ${pkg.duration}</p>
-                <p><strong>Beneficios:</strong> ${pkg.benefits}</p>
-                <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
-                <button onclick="sendWhatsAppMessage('Saber más', '${pkg.title}')">Saber más</button>
-            `;
-            packageList.appendChild(packageElement);
-        });
-    }
-
-    choiceChips.forEach(chip => {
-        chip.addEventListener('click', () => {
-            choiceChips.forEach(c => c.classList.remove('active'));
-            chip.classList.add('active');
-            renderServices(chip.dataset.category);
-        });
-    });
-
-    window.sendWhatsAppMessage = function(action, serviceTitle) {
-        let message;
-        if (action === 'Saber más') {
-            message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
-        } else {
-            message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
-        }
-        const url = `https://wa.me/5215640020305?text=${message}`;
-        window.open(url, '_blank');
-    };
-
-    // Color transition effect
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY;
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -481,3 +386,19 @@ function renderServices(category) {
     renderPackages();
 });
 
+// Funciones globales
+window.sendWhatsAppMessage = function(action, serviceTitle) {
+    let message;
+    if (action === 'Saber más') {
+        message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
+    } else {
+        message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
+    }
+    const url = `https://wa.me/5215640020305?text=${message}`;
+    window.open(url, '_blank');
+};
+
+function showPopup(service) {
+    console.log("Mostrando popup para:", service.title);
+    // Implementa la lógica para mostrar el popup aquí
+}
