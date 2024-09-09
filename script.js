@@ -353,6 +353,8 @@ const services = {
         "image": "relajacion-gourmet-image.jpg"
       }
     ]
+  }
+}
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM loaded");
     console.log("Services object:", services);
