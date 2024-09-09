@@ -34,7 +34,7 @@ const services = {
         "benefits": "Bajará tu Estrés, Cambiará tu Ánimo, Aliviarás Tensiones.",
         "duration": "60 min",
         "icon": "aromaterapia-icon.png",
-        "benefitsIcon": "benefits-icon.png",
+        "benefitsIcon": "animo2.png",
         "durationIcon": "duration-icon.png",
         "image": "aromaterapia-image.jpg"
     },
