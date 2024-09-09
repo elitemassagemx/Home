@@ -409,23 +409,22 @@ document.addEventListener('DOMContentLoaded', () => {
             servicesList.appendChild(li);
         });
     }
-
-    function renderPackages() {
-        packageList.innerHTML = '';
-        services.paquetes.forEach(pkg => {
-            console.log("Rendering package:", pkg.title);
-            const packageElement = document.createElement('div');
-            packageElement.className = 'package-item';
-            packageElement.innerHTML = `
-                <h3>${pkg.title} <img src="${pkg.icon}" alt="${pkg.title} icon" class="package-icon"></h3>
-                <p>${pkg.description}</p>
-                <p><strong>Incluye:</strong> ${pkg.includes}</p>
-                <p><strong>Duración:</strong> <img src="${pkg.durationIcon}" alt="Duración" class="icon"> ${pkg.duration}</p>
-                <p><strong>Beneficios:</strong> ${pkg.benefits.map(benefit => `<img src="${benefit}" alt="Beneficio" class="icon">`).join(' ')}</p>
-                <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
-                <button onclick="sendWhatsAppMessage('Saber más', '${pkg.title}')">Saber más</button>
-            `;
-            packageList.appendChild(packageElement);
+function renderPackages() {
+    packageList.innerHTML = '';
+    services.paquetes.forEach(pkg => {
+        console.log("Rendering package:", pkg.title);
+        const packageElement = document.createElement('div');
+        packageElement.className = 'package-item';
+        packageElement.innerHTML = `
+            <h3>${pkg.title} <img src="${pkg.icon}" alt="${pkg.title} icon" class="package-icon"></h3>
+            <p>${pkg.description}</p>
+            <p><strong>Incluye:</strong> ${pkg.includes}</p>
+            <p><strong>Duración:</strong> <img src="${pkg.durationIcon}" alt="Duración" class="icon"> ${pkg.duration}</p>
+            <p><strong>Beneficios:</strong> ${pkg.benefits.map(benefit => `<img src="${benefit}" alt="Beneficio" class="icon">`).join(' ')}</p>
+            <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
+            <button onclick="sendWhatsAppMessage('Saber más', '${pkg.title}')">Saber más</button>
+        `;
+        packageList.appendChild(packageElement);
         });
     }
 
