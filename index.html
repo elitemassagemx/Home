@@ -7,18 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="sticky-header">
+    <header id="top-bar" class="top-bar">
         <div class="container">
             <div class="header-top">
                 <div class="logo-container">
-                <img src="logo.png" alt="Elite Massage Logo" class="logo">
+                    <img src="logo.png" alt="Elite Massage Logo" class="logo">
                     <h1>Elite Massage</h1>
                 </div>
                 <div class="language-selector">
-    <span>IDIOMA</span>
-    <img src="trad.png" id="translate-icon" alt="Traducir">
-</div>
-                  <div class="language-options">
+                    IDIOMA <img src="trad.png" id="translate-icon" alt="Traducir">
+                    <div class="language-options">
                         <button class="lang-option"><img src="mx.png" alt="Bandera de México"> Español</button>
                         <button class="lang-option"><img src="us.png" alt="Bandera de Estados Unidos"> English</button>
                     </div>
@@ -42,6 +40,7 @@
                 <p>Descubre el poder de la relajación y el bienestar en nuestro exclusivo spa de masajes.</p>
             </div>
         </section>
+
         <section id="servicios" class="section services">
             <div class="container">
                 <h2>Nuestros Servicios</h2>
@@ -141,6 +140,17 @@
             </div>
         </div>
     </footer>
+
+    <div id="fixed-bar" class="fixed-bar">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
+                <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
+                <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
+                <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <script src="script.js"></script>
 </body>
