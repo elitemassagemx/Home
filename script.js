@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "benefits": "Bajará tu Estrés, Cambiará tu Ánimo, Aliviarás Tensiones.",
                 "duration": "60 min",
                 "icon": "aromaterapia-icon.png",
-                "benefitsIcon": "animo2.png",
+                "benefitsIcon": "cdolor espalda.png",
                 "durationIcon": "duration-icon.png",
                 "image": "aromaterapia-image.jpg"
             },
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "benefits": "Aliviarás Dolores Musculares, Mejorarás tu Circulación, Relajación Profunda.",
                 "duration": "60 min",
                 "icon": "piedras-calientes-icon.png",
-                "benefitsIcon": "benefits-icon.png",
+                "benefitsIcon": "ccirculacion.png",
                 "durationIcon": "duration-icon.png",
                 "image": "piedras-calientes-image.jpg"
             },
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "benefits": "Reducirás: Inflamación, Estrés, Dolores Musculares.",
                 "duration": "60 min",
                 "icon": "piedras-frias-icon.png",
-                "benefitsIcon": "benefits-icon.png",
+                "benefitsIcon": "cdolor espalda.png",
                 "durationIcon": "duration-icon.png",
                 "image": "piedras-frias-image.jpg"
             },
