@@ -297,66 +297,147 @@ const services = {
           }
     ]
 }
-
-    paquetes: [
+++++
+{
+    "paquetes": [
         {
-            title: "Paquete Romance Total",
-            description: "Vivan una experiencia de masaje en pareja completa, con atención especial al detalle para un día inolvidable.",
-            includes: "Masaje en Pareja de Aromaterapia, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos Gourmet.",
-            duration: "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
-            benefits: "Relajación profunda, experiencia sensorial completa, y momentos de disfrute compartido."
-        },
-             {
-            title: "Paquete Romance Total 2",
-            description: "Vivan una experiencia de masaje en pareja completa, con atención especial al detalle para un día inolvidable.",
-            includes: "Masaje en Pareja de Aromaterapia, Sabor de Café (Latte, Capuchino, Expreso), y Pastel o Tarta.",
-            duration: "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
-            benefits: "Relajación profunda, experiencia sensorial completa, y momentos de disfrute compartido."
+            "title": "Paquete Romance Total",
+            "description": "Vivan una experiencia de masaje en pareja completa, con atención especial al detalle para un día inolvidable.",
+            "includes": "Masaje en Pareja de Aromaterapia, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos Gourmet.",
+            "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
+            "benefits": "Relajación profunda, experiencia sensorial completa, y momentos de disfrute compartido.",
+            "icon": "romance-total-icon.png",
+            "benefitsIcon": ["benefit1-icon.png", "benefit2-icon.png"],
+            "durationIcon": "duration-romance-icon.png",
+            "image": "romance-total-image.jpg"
         },
         {
-            title: "Paquete Lujo y Sabor",
-            description: "Un paquete que combina técnicas de masaje de lujo con sabores exquisitos para un día de indulgencia.",
-            includes: "Masaje de Piedras Calientes en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos y Vino.",
-            duration: "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
-            benefits: "Alivio de tensiones, degustación de sabores refinados, y una experiencia de lujo."
+            "title": "Paquete Romance Total 2",
+            "description": "Vivan una experiencia de masaje en pareja completa, con atención especial al detalle para un día inolvidable.",
+            "includes": "Masaje en Pareja de Aromaterapia, Sabor de Café (Latte, Capuchino, Expreso), y Pastel o Tarta.",
+            "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
+            "benefits": "Relajación profunda, experiencia sensorial completa, y momentos de disfrute compartido.",
+            "icon": "romance-total2-icon.png",
+            "benefitsIcon": ["benefit1-icon.png", "benefit2-icon.png"],
+            "durationIcon": "duration-romance2-icon.png",
+            "image": "romance-total2-image.jpg"
         },
         {
-            title: "Paquete Sensaciones Inolvidables",
-            description: "Un paquete pensado para ofrecer una experiencia sensorial completa con masajes, vino y sabores exquisitos.",
-            includes: "Masaje de Cuerpo Completo en Pareja, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos Artísticos.",
-            duration: "90 minutos de masaje + 45 minutos para disfrutar de las delicias.",
-            benefits: "Relajación total, degustación gourmet, y experiencia romántica."
+            "title": "Paquete Lujo y Sabor",
+            "description": "Un paquete que combina técnicas de masaje de lujo con sabores exquisitos para un día de indulgencia.",
+            "includes": "Masaje de Piedras Calientes en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos y Vino.",
+            "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
+            "benefits": "Alivio de tensiones, degustación de sabores refinados, y una experiencia de lujo.",
+            "icon": "lujo-sabor-icon.png",
+            "benefitsIcon": ["benefit-lujo1-icon.png", "benefit-lujo2-icon.png"],
+            "durationIcon": "duration-lujo-icon.png",
+            "image": "lujo-sabor-image.jpg"
         },
         {
-            title: "Paquete Escape de Lujo",
-            description: "Una escapada lujosa para parejas que buscan un día de relajación y disfrute.",
-            includes: "Masaje con Aromaterapia y Envoltura de Algas en Pareja, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos y Frutas.",
-            duration: "90 minutos de masaje + 30 minutos para degustar las delicias.",
-            benefits: "Relajación profunda, desintoxicación, y una experiencia culinaria exquisita."
-        },
-        {
-            title: "Paquete Relax y Sabores",
-            description: "Disfruta de un masaje relajante seguido de una experiencia gourmet para cerrar el día.",
-            includes: "Masaje de Reflexología en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos.",
-            duration: "60 minutos de masaje + 30 minutos para degustar.",
-            benefits: "Alivio del estrés, disfrute sensorial, y conexión íntima."
-        },
-        {
-            title: "Paquete Tranquilidad Gourmet",
-            description: "Un paquete diseñado para ofrecer relajación total y sabores exquisitos en un entorno lujoso.",
-            includes: "Masaje con Aceites de CBD en Pareja, Sabor de Café (Latte, Capuchino, Expreso), y Pastel o Tarta.",
-            duration: "60 minutos de masaje + 30 minutos para disfrutar.",
-            benefits: "Alivio del dolor, relajación, y experiencia gourmet."
-        },
-        {
-            title: "Paquete Relajación y Gourmet",
-            description: "Un paquete que combina técnicas de masaje para una relajación total con un toque gourmet.",
-            includes: "Masaje Sueco en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos.",
-            duration: "60 minutos de masaje + 30 minutos para degustar.",
-            benefits: "Relajación, degustación, y un toque especial."
+            "title": "Paquete Sensaciones Inolvidables",
+            "description": "Un paquete pensado para ofrecer una experiencia sensorial completa con masajes, vino y sabores exquisitos.",
+            "includes": "Masaje de Cuerpo Completo en Pareja, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos Artísticos.",
+            "duration": "90 minutos de masaje + 45 minutos para disfrutar de las delicias.",
+            "benefits": "Relajación total, degustación gourmet, y experiencia romántica.",
+            "icon": "sensaciones-icon.png",
+            "benefitsIcon": ["benefit-sensaciones1-icon.png", "benefit-sensaciones2-icon.png"],
+            "durationIcon": "duration-sensaciones-icon.png",
+            "image": "sensaciones-image.jpg"
         }
     ]
-};
+}
+
+    "paquetes": [
+        {
+            "title": "Paquete Romance Total",
+            "description": "Vivan una experiencia de masaje en pareja completa, con atención especial al detalle para un día inolvidable.",
+            "includes": "Masaje en Pareja de Aromaterapia, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos Gourmet.",
+            "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
+            "benefits": "Relajación profunda, experiencia sensorial completa, y momentos de disfrute compartido.",
+            "icon": "romance-total-icon.png",
+            "benefitsIcon": ["benefit1-icon.png", "benefit2-icon.png"],
+            "durationIcon": "duration-romance-icon.png",
+            "image": "romance-total-image.jpg"
+        },
+        {
+            "title": "Paquete Romance Total 2",
+            "description": "Vivan una experiencia de masaje en pareja completa, con atención especial al detalle para un día inolvidable.",
+            "includes": "Masaje en Pareja de Aromaterapia, Sabor de Café (Latte, Capuchino, Expreso), y Pastel o Tarta.",
+            "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
+            "benefits": "Relajación profunda, experiencia sensorial completa, y momentos de disfrute compartido.",
+            "icon": "romance-total2-icon.png",
+            "benefitsIcon": ["benefit1-icon.png", "benefit2-icon.png"],
+            "durationIcon": "duration-romance2-icon.png",
+            "image": "romance-total2-image.jpg"
+        },
+        {
+            "title": "Paquete Lujo y Sabor",
+            "description": "Un paquete que combina técnicas de masaje de lujo con sabores exquisitos para un día de indulgencia.",
+            "includes": "Masaje de Piedras Calientes en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos y Vino.",
+            "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
+            "benefits": "Alivio de tensiones, degustación de sabores refinados, y una experiencia de lujo.",
+            "icon": "lujo-sabor-icon.png",
+            "benefitsIcon": ["benefit-lujo1-icon.png", "benefit-lujo2-icon.png"],
+            "durationIcon": "duration-lujo-icon.png",
+            "image": "lujo-sabor-image.jpg"
+        },
+        {
+            "title": "Paquete Sensaciones Inolvidables",
+            "description": "Un paquete pensado para ofrecer una experiencia sensorial completa con masajes, vino y sabores exquisitos.",
+            "includes": "Masaje de Cuerpo Completo en Pareja, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos Artísticos.",
+            "duration": "90 minutos de masaje + 45 minutos para disfrutar de las delicias.",
+            "benefits": "Relajación total, degustación gourmet, y experiencia romántica.",
+            "icon": "sensaciones-icon.png",
+            "benefitsIcon": ["benefit-sensaciones1-icon.png", "benefit-sensaciones2-icon.png"],
+            "durationIcon": "duration-sensaciones-icon.png",
+            "image": "sensaciones-image.jpg"
+        },
+        {
+            "title": "Paquete Escape de Lujo",
+            "description": "Una escapada lujosa para parejas que buscan un día de relajación y disfrute.",
+            "includes": "Masaje con Aromaterapia y Envoltura de Algas en Pareja, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos y Frutas.",
+            "duration": "90 minutos de masaje + 30 minutos para degustar las delicias.",
+            "benefits": "Relajación profunda, desintoxicación, y una experiencia culinaria exquisita.",
+            "icon": "escape-lujo-icon.png",
+            "benefitsIcon": ["benefit-escape1-icon.png", "benefit-escape2-icon.png"],
+            "durationIcon": "duration-escape-icon.png",
+            "image": "escape-lujo-image.jpg"
+        },
+        {
+            "title": "Paquete Relax y Sabores",
+            "description": "Disfruta de un masaje relajante seguido de una experiencia gourmet para cerrar el día.",
+            "includes": "Masaje de Reflexología en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos.",
+            "duration": "60 minutos de masaje + 30 minutos para degustar.",
+            "benefits": "Alivio del estrés, disfrute sensorial, y conexión íntima.",
+            "icon": "relax-sabores-icon.png",
+            "benefitsIcon": ["benefit-relax1-icon.png", "benefit-relax2-icon.png"],
+            "durationIcon": "duration-relax-icon.png",
+            "image": "relax-sabores-image.jpg"
+        },
+        {
+            "title": "Paquete Tranquilidad Gourmet",
+            "description": "Un paquete diseñado para ofrecer relajación total y sabores exquisitos en un entorno lujoso.",
+            "includes": "Masaje con Aceites de CBD en Pareja, Sabor de Café (Latte, Capuchino, Expreso), y Pastel o Tarta.",
+            "duration": "60 minutos de masaje + 30 minutos para disfrutar.",
+            "benefits": "Alivio del dolor, relajación, y experiencia gourmet.",
+            "icon": "tranquilidad-gourmet-icon.png",
+            "benefitsIcon": ["benefit-tranquilidad1-icon.png", "benefit-tranquilidad2-icon.png"],
+            "durationIcon": "duration-tranquilidad-icon.png",
+            "image": "tranquilidad-gourmet-image.jpg"
+        },
+        {
+            "title": "Paquete Relajación y Gourmet",
+            "description": "Un paquete que combina técnicas de masaje para una relajación total con un toque gourmet.",
+            "includes": "Masaje Sueco en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos.",
+            "duration": "60 minutos de masaje + 30 minutos para degustar.",
+            "benefits": "Relajación, degustación, y un toque especial.",
+            "icon": "relajacion-gourmet-icon.png",
+            "benefitsIcon": ["benefit-relajacion1-icon.png", "benefit-relajacion2-icon.png"],
+            "durationIcon": "duration-relajacion-icon.png",
+            "image": "relajacion-gourmet-image.jpg"
+        }
+    ]
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM loaded");
