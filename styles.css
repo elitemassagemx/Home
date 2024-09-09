@@ -8,6 +8,7 @@
     --main-vino: #4c00267;
     --blue: #082032;
     --gold: #FFD700;
+    --light-blue: #1e3540;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
+    padding: 60px 0; /* Ajustado para las barras fijas superior e inferior */
     background: linear-gradient(270deg, #1a1a1a, #2c2c2c, #3a3a3a);
     background-size: 600% 600%;
     animation: gradientTransition 15s ease infinite;
@@ -31,17 +32,20 @@ body {
 }
 
 /* Header Styles */
-header {
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: var(--header-background);
-    color: white;
+    color: var(--text-color);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
     padding: 10px 0;
 }
 
-.header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.top-bar.hidden {
+    transform: translateY(-100%);
 }
 
 .logo-container {
@@ -117,8 +121,7 @@ h1 {
 /* Navigation Styles */
 .main-nav {
     width: 100%;
-    margin-top: 10px;
-    background-color: var(--main-blue);
+    background-color: var(--blue);
     padding: 10px 0;
 }
 
@@ -148,7 +151,7 @@ h1 {
     white-space: nowrap;
     font-size: 14px;
     transition: all 0.3s ease;
-    height: 80px;
+    height: 60px;
 }
 
 .main-nav a:hover {
@@ -156,8 +159,8 @@ h1 {
 }
 
 .nav-icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin-bottom: 5px;
     transition: all 0.3s ease;
     display: inline-block;
@@ -172,9 +175,31 @@ h1 {
     transform: scale(1.1);
 }
 
+/* Fixed Bottom Bar */
+.fixed-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fixed-bar.visible {
+    transform: translateY(0);
+}
+
+.fixed-bar .main-nav {
+    margin-top: 0;
+}
+
 /* Services Section */
 .service-icon, .icon {
-    width: 20px; /* Ajusta esto al tamaño que prefieras */
+    width: 20px;
     height: 20px;
     vertical-align: middle;
     margin-right: 5px;
@@ -301,9 +326,17 @@ footer {
         flex: 0 0 auto;
     }
 
-    .main-nav a {
+    .top-bar .main-nav a,
+    .fixed-bar .main-nav a {
         padding: 8px 12px;
-        font-size: 14px;
+        font-size: 12px;
+        height: 50px;
+    }
+
+    .top-bar .nav-icon,
+    .fixed-bar .nav-icon {
+        width: 25px;
+        height: 25px;
     }
 
     .services-grid, #package-list {
@@ -349,43 +382,4 @@ footer {
     .services-grid, #package-list {
         grid-template-columns: repeat(3, 1fr);
     }
-}
-
-/* Estilos para la barra de navegación fija al estilo WhatsApp */
-.whatsapp-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--background-color);
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-    z-index: 999; /* Asegura que esté por encima de otros elementos */
-}
-
-.whatsapp-nav .main-nav {
-    padding: 10px 0;
-}
-
-.whatsapp-nav .main-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.whatsapp-nav .main-nav ul li {
-    display: inline-block;
-}
-
-.whatsapp-nav .main-nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.whatsapp-nav .main-nav ul li a img {
-    margin-bottom: 5px;
 }
