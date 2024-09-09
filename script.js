@@ -1,34 +1,3 @@
-// Funcionalidad para el selector de idioma
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM loaded");
-    console.log("Services object:", services);
-
-document.addEventListener('DOMContentLoaded', () => {
-    const languageSelector = document.querySelector('.language-selector');
-    const languageOptions = document.querySelector('.language-options');
-
-    languageSelector.addEventListener('click', () => {
-        languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
-    });
-
-    document.querySelectorAll('.lang-option').forEach(option => {
-        option.addEventListener('click', (e) => {
-            const lang = e.currentTarget.dataset.lang;
-            // Aquí puedes añadir la lógica para cambiar el idioma
-            console.log(`Cambiando idioma a: ${lang}`);
-            languageOptions.style.display = 'none';
-        });
-    });
-
-    // Cerrar el menú de idiomas si se hace clic fuera de él
-    document.addEventListener('click', (e) => {
-        if (!languageSelector.contains(e.target)) {
-            languageOptions.style.display = 'none';
-        }
-    });
-});
-
-// Resto de tu código JavaScript existente...
 
 const services = {
     individual: [
@@ -390,37 +359,60 @@ const services = {
     ]
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM loaded");
+    console.log("Services object:", services);
 
+    const languageSelector = document.querySelector('.language-selector');
+    const languageOptions = document.querySelector('.language-options');
     const servicesList = document.getElementById('services-list');
-    console.log("Services list element:", servicesList);
-
     const packageList = document.getElementById('package-list');
     const choiceChips = document.querySelectorAll('.choice-chip');
+
+    // Funcionalidad para el selector de idioma
+    languageSelector.addEventListener('click', () => {
+        languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', (e) => {
+            const lang = e.currentTarget.dataset.lang;
+            console.log(`Cambiando idioma a: ${lang}`);
+            languageOptions.style.display = 'none';
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!languageSelector.contains(e.target)) {
+            languageOptions.style.display = 'none';
+        }
+    });
 
     // Add color transition div
     const colorTransition = document.createElement('div');
     colorTransition.className = 'color-transition';
     document.body.appendChild(colorTransition);
 
-function renderServices(category) {
-    servicesList.innerHTML = '';
-    services[category].forEach(service => {
-        const li = document.createElement('div');
-        li.className = 'service-item';
-        li.innerHTML = `
-            <h3>${service.title} <img src="${service.icon}" alt="${service.title} icon" class="service-icon"></h3>
-            <p>${service.description}</p>
-            <p><strong>Beneficios:</strong> <img src="${service.benefitsIcon}" alt="Beneficios" class="icon"> ${service.benefits}</p>
-            <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
-            <div class="service-buttons">
-                <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
-                <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
-            </div>
-        `;
-        li.addEventListener('click', () => showPopup(service));
-        servicesList.appendChild(li);
-    });
-}
+    function renderServices(category) {
+        servicesList.innerHTML = '';
+        services[category].forEach(service => {
+            const li = document.createElement('div');
+            li.className = 'service-item';
+            li.innerHTML = `
+                <h3>${service.title} <img src="${service.icon}" alt="${service.title} icon" class="service-icon"></h3>
+                <p>${service.description}</p>
+                <p><strong>Beneficios:</strong> <img src="${service.benefitsIcon}" alt="Beneficios" class="icon"> ${service.benefits}</p>
+                <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
+                <div class="service-buttons">
+                    <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
+                    <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
+                </div>
+            `;
+            li.addEventListener('click', () => showPopup(service));
+            servicesList.appendChild(li);
+        });
+    }
+
     function renderPackages() {
         packageList.innerHTML = '';
         services.paquetes.forEach(pkg => {
@@ -448,17 +440,6 @@ function renderServices(category) {
         });
     });
 
-    window.sendWhatsAppMessage = function(action, serviceTitle) {
-        let message;
-        if (action === 'Saber más') {
-            message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
-        } else {
-            message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
-        }
-        const url = `https://wa.me/5215640020305?text=${message}`;
-        window.open(url, '_blank');
-    };
-
     // Color transition effect
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY;
@@ -472,4 +453,14 @@ function renderServices(category) {
     renderPackages();
 });
 
-
+// Función global para enviar mensajes de WhatsApp
+window.sendWhatsAppMessage = function(action, serviceTitle) {
+    let message;
+    if (action === 'Saber más') {
+        message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
+    } else {
+        message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
+    }
+    const url = `https://wa.me/5215640020305?text=${message}`;
+    window.open(url, '_blank');
+};
