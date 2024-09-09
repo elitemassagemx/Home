@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let lastScrollTop = 0;
     const delta = 5;
-    const navbarHeight = topBar.offsetHeight;
+    const navbarHeight = topBar ? topBar.offsetHeight : 0;
 
     const services = {
         individual: [
@@ -371,23 +371,25 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Funcionalidad para el selector de idioma
-    languageSelector.addEventListener('click', () => {
-        languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
-    });
-
-    document.querySelectorAll('.lang-option').forEach(option => {
-        option.addEventListener('click', (e) => {
-            const lang = e.currentTarget.dataset.lang;
-            console.log(`Cambiando idioma a: ${lang}`);
-            languageOptions.style.display = 'none';
+    if (languageSelector && languageOptions) {
+        languageSelector.addEventListener('click', () => {
+            languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
         });
-    });
 
-    document.addEventListener('click', (e) => {
-        if (!languageSelector.contains(e.target)) {
-            languageOptions.style.display = 'none';
-        }
-    });
+        document.querySelectorAll('.lang-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                const lang = e.currentTarget.dataset.lang;
+                console.log(`Cambiando idioma a: ${lang}`);
+                languageOptions.style.display = 'none';
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!languageSelector.contains(e.target)) {
+                languageOptions.style.display = 'none';
+            }
+        });
+    }
 
     // Add color transition div
     const colorTransition = document.createElement('div');
@@ -395,7 +397,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(colorTransition);
 
     function renderServices(category) {
+        if (!servicesList) return;
         servicesList.innerHTML = '';
+        if (!services[category]) {
+            console.error(`Category ${category} not found in services object`);
+            return;
+        }
         services[category].forEach(service => {
             const li = document.createElement('div');
             li.className = 'service-item';
@@ -409,12 +416,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
                 </div>
             `;
-            li.addEventListener('click', () => showPopup(service));
             servicesList.appendChild(li);
         });
     }
 
     function renderPackages() {
+        if (!packageList) return;
         packageList.innerHTML = '';
         services.paquetes.forEach(pkg => {
             console.log("Rendering package:", pkg.title);
@@ -491,4 +498,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Inicialización
-    
+    renderServices('individual');
+});
+
+// Función para enviar mensajes de WhatsApp
+function sendWhatsAppMessage(action, serviceTitle) {
+    let message;
+    if (action === 'Saber más') {
+        message = encodeURIComponent(`Hola!
