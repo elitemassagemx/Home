@@ -159,87 +159,145 @@ const services = {
         "image": "ventosas-image.jpg"
     }
     ],
+    ++
+
+    ++
+    aqui 
+ "pareja": [
+        {
+            "title": "Aromaterapia para 2",
+            "description": "Disfruten de un masaje relajante mientras se sumergen en una atmósfera de calma con aceites esenciales que eligieron previamente. Este masaje combina técnicas suaves y aromaterapia promoviendo la relajación y el bienestar.",
+            "benefits": "Reducirán Estrés, Mejora en Estado de Ánimo, y Alivia Tensiones Musculares.",
+            "duration": "60 min",
+            "icon": "aromaterapia-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "aromaterapia-image.jpg"
+        },
+        {
+            "title": "Experiencia Piedras Calientes en Pareja",
+            "description": "Comparte el calor y relajación de un masaje con piedras lisas de Origen Volcánico colocadas sobre el cuerpo mientras reciben un masaje profundo. Ideal para momentos de unión, liberar tensiones y mejorar la circulación.",
+            "benefits": "Alivio de dolores musculares, mejora de la circulación sanguínea, y profundo estado de relajación.",
+            "duration": "60 min",
+            "icon": "piedras-calientes-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "piedras-calientes-image.jpg"
+        },
+        {
+            "title": "Liberan Cuello y Espalda",
+            "description": "Perfecto para liberar estrés y tensiones acumuladas. Masaje focalizado donde disfrutan y crean conexión.",
+            "benefits": "Reducirán Rigidez, Alivia Dolores Espalda y Cuello, Sensación Relajación Compartida.",
+            "duration": "45 min",
+            "icon": "cuello-espalda-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "cuello-espalda-image.jpg"
+        },
+        {
+            "title": "Masaje de Piedras Frías en Pareja",
+            "description": "Revitaliza su piel y estimula la circulación seguido de técnicas de masaje que promueven la relajación. Ideal para una experiencia memorable de revitalización.",
+            "benefits": "Mejoras en la Piel, Reduce Inflamación Estrés, Alivio de Dolores Musculares.",
+            "duration": "60 min",
+            "icon": "piedras-frias-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "piedras-frias-image.jpg"
+        },
+        {
+            "title": "Sueco Relajante para 2",
+            "description": "Masaje con técnicas de presión y fricción suaves que alivian el estrés y mejoran tu circulación. Experiencia simultánea que refuerza vínculos.",
+            "benefits": "Relajación General, Mejora la Circulación, Reduce Estrés.",
+            "duration": "80 min",
+            "icon": "sueco-relajante-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "sueco-relajante-image.jpg"
+        },
+        {
+            "title": "Chocolaterapia en Pareja",
+            "description": "Disfruta de un masaje indulgente con lociones a base de chocolate, conocido por sus propiedades antioxidantes. Este tratamiento es ideal para una experiencia sensorial completa.",
+            "benefits": "Hidratación de la piel, sensación de lujo, y relajación profunda.",
+            "duration": "45 min",
+            "icon": "chocolaterapia-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "chocolaterapia-image.jpg"
+        },
+        {
+            "title": "Masaje de Reflexología en Pareja",
+            "description": "Un enfoque en los pies que utiliza puntos de presión específicos para estimular la salud general del cuerpo. Ambos disfrutarán de este tratamiento revitalizante.",
+            "benefits": "Mejora del equilibrio corporal, alivio del estrés, y mejora de la salud general.",
+            "duration": "45 min",
+            "icon": "reflexologia-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "reflexologia-image.jpg"
+        },
+        {
+            "title": "Masaje de Envoltura Corporal en Pareja",
+            "description": "Un masaje combinado con una envoltura corporal nutritiva. Ambos recibirán un masaje y luego serán envueltos en una envoltura terapéutica que puede estar basada en algas, barro o ingredientes naturales.",
+            "benefits": "Hidratación y nutrición de la piel, desintoxicación y relajación profunda.",
+            "duration": "90 min",
+            "icon": "envoltura-corporal-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "envoltura-corporal-image.jpg"
+        },
+        {
+            "title": "Masaje con Aromas y Cera en Pareja",
+            "description": "Disfruta de un masaje acompañado de ceras aromáticas que se derriten en aceites tibios aplicados sobre la piel. Proporciona una experiencia sensorial completa con aroma, calor y tacto.",
+            "benefits": "Hidratación de la piel, relajación profunda, y experiencia sensorial enriquecida.",
+            "duration": "60 min",
+            "icon": "aromas-cera-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "aromas-cera-image.jpg"
+        },
+        {
+            "title": "Masaje Lomi Lomi en Pareja",
+            "description": "Este masaje hawaiano utiliza movimientos largos y fluidos, combinados con técnicas de estiramiento para relajar y revitalizar el cuerpo. Disfruta de una experiencia de conexión y armonía mientras ambos reciben el masaje simultáneamente.",
+            "benefits": "Relajación profunda, aumento de la energía, y mejora de la circulación.",
+            "duration": "60 min",
+            "icon": "lomi-lomi-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "lomi-lomi-image.jpg"
+        },
+        {
+            "title": "Masaje Shiatsu en Pareja",
+            "description": "Basado en la medicina tradicional japonesa, este masaje utiliza la presión de los dedos y técnicas de estiramiento para equilibrar la energía del cuerpo. Se realiza en dos camillas o en una cama de masaje doble.",
+            "benefits": "Estimulación de la energía vital, alivio de tensiones, y mejora del bienestar general.",
+            "duration": "90 min",
+            "icon": "shiatsu-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "shiatsu-image.jpg"
+        },
+        {
+            "title": "Masaje con Aceites de CBD en Pareja",
+            "description": "Un masaje que utiliza aceites infundidos con cannabidiol (CBD) para ayudar a reducir la inflamación, aliviar el dolor y promover la relajación.",
+            "benefits": "Alivio del dolor muscular y articular, reducción de la ansiedad, y relajación profunda.",
+            "duration": "60 min",
+            "icon": "cbd-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "cbd-image.jpg"
+        },
+        {
+            "title": "Masaje de Cuerpo Completo con Técnicas de Ventosas en Pareja",
+            "description": "Un masaje que combina técnicas tradicionales de masaje con ventosas para mejorar la circulación y aliviar la tensión muscular.",
+            "benefits": "Mejora de la circulación sanguínea, alivio de tensiones, y desintoxicación.",
+            "duration": "90 min",
+            "icon": "ventosas-icon.png",
+            "benefitsIcon": "benefits-icon.png",
+            "durationIcon": "duration-icon.png",
+            "image": "ventosas-image.jpg"
     
-    pareja: [
-        {
-            title: "Aromaterapia para 2",
-            description: "Disfruten de un masaje relajante mientras se sumergen en una atmósfera de calma con aceites esenciales que eligieron previamente. Este masaje combina técnicas suaves y aromaterapia promoviendo la relajación y el bienestar.",
-            benefits: "Reducirán Estrés, Mejora en Estado de Ánimo, y Alivia Tensiones Musculares.",
-            duration: "60 min"
-        },
-      {
-            title: "Experiencia Piedras Calientes en Pareja",
-            description: "Comparte el calor y relajación de un masaje con piedras lisas de Origen Volcánico colocadas sobre el cuerpo mientras reciben un masaje profundo. Ideal para momentos de unión, liberar tensiones y mejorar la circulación.",
-            benefits: "Alivio de dolores musculares, mejora de la circulación sanguínea, y profundo estado de relajación.",
-            duration: "60 min"
-        },
-        {
-            title: "Liberan Cuello y espalda",
-            description: "Perfecto para liberar estrés y tensiones acumuladas. Masaje focalizado donde disfrutan y crean conexión.",
-            benefits: "Reducirán Rigidez, Alivia Dolores Espalda y Cuello, Sensación Relajación Compartida.",
-            duration: "45 min"
-        },
-        {
-            title: "Masaje de Piedras Frías en Pareja",
-            description: "Revitaliza su piel y estimula la circulación seguido de técnicas de masaje que promueven la relajación. Ideal para una experiencia memorable de revitalización.",
-            benefits: "Mejoras en la Piel, Reduce Inflamación Estrés, Alivio de Dolores Musculares.",
-            duration: "60 min"
-        },
-        {
-            title: "Sueco Relajante para 2",
-            description: "Masaje con técnicas de presión y fricción suaves que alivian el estrés y mejoran tu circulación. Experiencia simultánea que refuerza vínculos.",
-            benefits: "Relajación General, Mejora la Circulación, Reduce Estrés.",
-            duration: "80 min"
-        },
-        {
-            title: "Chocolaterapia en Pareja",
-            description: "Disfruta de un masaje indulgente con lociones a base de chocolate, conocido por sus propiedades antioxidantes. Este tratamiento es ideal para una experiencia sensorial completa.",
-            benefits: "Hidratación de la piel, sensación de lujo, y relajación profunda.",
-            duration: "45 min"
-        },
-        {
-            title: "Masaje de Reflexología en Pareja",
-            description: "Un enfoque en los pies que utiliza puntos de presión específicos para estimular la salud general del cuerpo. Ambos disfrutarán de este tratamiento revitalizante.",
-            benefits: "Mejora del equilibrio corporal, alivio del estrés, y mejora de la salud general.",
-            duration: "45 min"
-        },
-        {
-            title: "Masaje de Envoltura Corporal en Pareja",
-            description: "Un masaje combinado con una envoltura corporal nutritiva. Ambos recibirán un masaje y luego serán envueltos en una envoltura terapéutica que puede estar basada en algas, barro o ingredientes naturales.",
-            benefits: "Hidratación y nutrición de la piel, desintoxicación y relajación profunda.",
-            duration: "90 min"
-        },
-        {
-            title: "Masaje con Aromas y Cera en Pareja",
-            description: "Disfruta de un masaje acompañado de ceras aromáticas que se derriten en aceites tibios aplicados sobre la piel. Proporciona una experiencia sensorial completa con aroma, calor y tacto.",
-            benefits: "Hidratación de la piel, relajación profunda, y experiencia sensorial enriquecida.",
-            duration: "60 min"
-        },
-        {
-            title: "Masaje Lomi Lomi en Pareja",
-            description: "Este masaje hawaiano utiliza movimientos largos y fluidos, combinados con técnicas de estiramiento para relajar y revitalizar el cuerpo. Disfruta de una experiencia de conexión y armonía mientras ambos reciben el masaje simultáneamente.",
-            benefits: "Relajación profunda, aumento de la energía, y mejora de la circulación.",
-            duration: "60 min"
-        },
-        {
-            title: "Masaje Shiatsu en Pareja",
-            description: "Basado en la medicina tradicional japonesa, este masaje utiliza la presión de los dedos y técnicas de estiramiento para equilibrar la energía del cuerpo. Se realiza en dos camillas o en una cama de masaje doble.",
-            benefits: "Estimulación de la energía vital, alivio de tensiones, y mejora del bienestar general.",
-            duration: "90 min"
-        },
-        {
-            title: "Masaje con Aceites de CBD en Pareja",
-            description: "Un masaje que utiliza aceites infundidos con cannabidiol (CBD) para ayudar a reducir la inflamación, aliviar el dolor y promover la relajación.",
-            benefits: "Alivio del dolor muscular y articular, reducción de la ansiedad, y relajación profunda.",
-            duration: "60 min"
-        },
-        {
-            title: "Masaje de Cuerpo Completo con Técnicas de Ventosas en Pareja",
-            description: "Un masaje que combina técnicas tradicionales de masaje con ventosas para mejorar la circulación y aliviar la tensión muscular.",
-            benefits: "Mejora de la circulación sanguínea, alivio de tensiones, y desintoxicación.",
-            duration: "90 min"
-        }
-    ],
+          }
+    ]
+}
+
     paquetes: [
         {
             title: "Paquete Romance Total",
