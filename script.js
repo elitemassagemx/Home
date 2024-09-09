@@ -1,17 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM loaded");
+    const header = document.getElementById('sticky-header');
+    const headerHeight = header.offsetHeight;
+    let lastScrollTop = 0;
 
-    const topBar = document.getElementById('top-bar');
-    const fixedBar = document.getElementById('fixed-bar');
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > headerHeight) {
+            if (scrollTop > lastScrollTop) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+                header.classList.add('sticky');
+            }
+        } else {
+            header.classList.remove('sticky');
+            header.style.transform = 'translateY(0)';
+        }
+
+        lastScrollTop = scrollTop;
+    });
+
     const languageSelector = document.querySelector('.language-selector');
     const languageOptions = document.querySelector('.language-options');
-    const servicesList = document.getElementById('services-list');
-    const packageList = document.getElementById('package-list');
-    const choiceChips = document.querySelectorAll('.choice-chip');
 
-    let lastScrollTop = 0;
-    const delta = 5;
-    const navbarHeight = topBar ? topBar.offsetHeight : 0;
+    languageSelector.addEventListener('click', () => {
+        languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', (e) => {
+            const lang = e.currentTarget.dataset.lang;
+            console.log(`Cambiando idioma a: ${lang}`);
+            languageOptions.style.display = 'none';
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!languageSelector.contains(e.target)) {
+            languageOptions.style.display = 'none';
+        }
+    });
 
     const services = {
         individual: [
@@ -370,39 +399,16 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
 
-    // Funcionalidad para el selector de idioma
-    if (languageSelector && languageOptions) {
-        languageSelector.addEventListener('click', () => {
-            languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
-        });
+    const servicesList = document.getElementById('services-list');
+    const packageList = document.getElementById('package-list');
+    const choiceChips = document.querySelectorAll('.choice-chip');
 
-        document.querySelectorAll('.lang-option').forEach(option => {
-            option.addEventListener('click', (e) => {
-                const lang = e.currentTarget.dataset.lang;
-                console.log(`Cambiando idioma a: ${lang}`);
-                languageOptions.style.display = 'none';
-            });
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!languageSelector.contains(e.target)) {
-                languageOptions.style.display = 'none';
-            }
-        });
-    }
-
-    // Add color transition div
     const colorTransition = document.createElement('div');
     colorTransition.className = 'color-transition';
     document.body.appendChild(colorTransition);
 
     function renderServices(category) {
-        if (!servicesList) return;
         servicesList.innerHTML = '';
-        if (!services[category]) {
-            console.error(`Category ${category} not found in services object`);
-            return;
-        }
         services[category].forEach(service => {
             const li = document.createElement('div');
             li.className = 'service-item';
@@ -416,23 +422,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
                 </div>
             `;
+            li.addEventListener('click', () => showPopup(service));
             servicesList.appendChild(li);
         });
     }
 
     function renderPackages() {
-        if (!packageList) return;
         packageList.innerHTML = '';
         services.paquetes.forEach(pkg => {
-            console.log("Rendering package:", pkg.title);
             const packageElement = document.createElement('div');
             packageElement.className = 'package-item';
             packageElement.innerHTML = `
-                <h3>${pkg.title} <img src="${pkg.icon}" alt="${pkg.title} icon" class="package-icon"></h3>
+                <h3>${pkg.title}</h3>
                 <p>${pkg.description}</p>
                 <p><strong>Incluye:</strong> ${pkg.includes}</p>
-                <p><strong>Duración:</strong> <img src="${pkg.durationIcon}" alt="Duración" class="icon"> ${pkg.duration}</p>
-                <p><strong>Beneficios:</strong> ${pkg.benefits.map(benefit => `<img src="${pkg.benefitsIcon[0]}" alt="Beneficio" class="icon"> ${benefit}`).join(', ')}</p>
+                <p><strong>Duración:</strong> ${pkg.duration}</p>
+                <p><strong>Beneficios:</strong> ${pkg.benefits}</p>
                 <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
                 <button onclick="sendWhatsAppMessage('Saber más', '${pkg.title}')">Saber más</button>
             `;
@@ -444,19 +449,21 @@ document.addEventListener('DOMContentLoaded', () => {
         chip.addEventListener('click', () => {
             choiceChips.forEach(c => c.classList.remove('active'));
             chip.classList.add('active');
-            if (chip.dataset.category === 'paquetes') {
-                servicesList.style.display = 'none';
-                packageList.style.display = 'block';
-                renderPackages();
-            } else {
-                servicesList.style.display = 'block';
-                packageList.style.display = 'none';
-                renderServices(chip.dataset.category);
-            }
+            renderServices(chip.dataset.category);
         });
     });
 
-    // Color transition effect
+    window.sendWhatsAppMessage = function(action, serviceTitle) {
+        let message;
+        if (action === 'Saber más') {
+            message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
+        } else {
+            message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
+        }
+        const url = `https://wa.me/5215640020305?text=${message}`;
+        window.open(url, '_blank');
+    };
+
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY;
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -464,45 +471,11 @@ document.addEventListener('DOMContentLoaded', () => {
         colorTransition.style.opacity = scrollPercentage / 100;
     });
 
-    // Barra de navegación dinámica
-    window.addEventListener('scroll', function() {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (Math.abs(lastScrollTop - st) <= delta)
-            return;
-        
-        if (st > lastScrollTop && st > navbarHeight){
-            // Scroll Down
-            topBar.classList.add('hidden');
-            fixedBar.classList.add('visible');
-        } else {
-            // Scroll Up
-            if(st + window.innerHeight < document.documentElement.scrollHeight) {
-                topBar.classList.remove('hidden');
-                fixedBar.classList.remove('visible');
-            }
-        }
-        
-        lastScrollTop = st;
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Inicialización
     renderServices('individual');
+    renderPackages();
 });
 
-// Función para enviar mensajes de WhatsApp
-function sendWhatsAppMessage(action, serviceTitle) {
-    let message;
-    if (action === 'Saber más') {
-        message = encodeURIComponent(`Hola!
+function showPopup(service) {
+    // Implementa la lógica para mostrar un popup con los detalles del servicio
+    console.log("Mostrando popup para:", service.title);
+}
