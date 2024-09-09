@@ -1,3 +1,30 @@
+// Funcionalidad para el selector de idioma
+document.addEventListener('DOMContentLoaded', () => {
+    const languageSelector = document.querySelector('.language-selector');
+    const languageOptions = document.querySelector('.language-options');
+
+    languageSelector.addEventListener('click', () => {
+        languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', (e) => {
+            const lang = e.currentTarget.dataset.lang;
+            // Aquí puedes añadir la lógica para cambiar el idioma
+            console.log(`Cambiando idioma a: ${lang}`);
+            languageOptions.style.display = 'none';
+        });
+    });
+
+    // Cerrar el menú de idiomas si se hace clic fuera de él
+    document.addEventListener('click', (e) => {
+        if (!languageSelector.contains(e.target)) {
+            languageOptions.style.display = 'none';
+        }
+    });
+});
+
+// Resto de tu código JavaScript existente...
 
 const services = {
     individual: [
@@ -7,7 +34,7 @@ const services = {
         "benefits": "Bajará tu Estrés, Cambiará tu Ánimo, Aliviarás Tensiones.",
         "duration": "60 min",
         "icon": "aromaterapia-icon.png",
-        "benefitsIcon": "animo2.png",
+        "benefitsIcon": "benefits-icon.png",
         "durationIcon": "duration-icon.png",
         "image": "aromaterapia-image.jpg"
     },
@@ -17,7 +44,7 @@ const services = {
         "benefits": "Aliviarás Dolores Musculares, Mejorarás tu Circulación, Relajación Profunda.",
         "duration": "60 min",
         "icon": "piedras-calientes-icon.png",
-        "benefitsIcon": "cdolorespalda.png",
+        "benefitsIcon": "benefits-icon.png",
         "durationIcon": "duration-icon.png",
         "image": "piedras-calientes-image.jpg"
     },
@@ -46,7 +73,7 @@ const services = {
         "description": "Ideal para una relajación completa, nuestras especialistas usarán técnicas de presión suaves para calmar el estrés.",
         "benefits": "Relajación Total, Mejora Circulación Sanguínea.",
         "duration": "80 min",
-        "icon": "pinsuecia.png","rhsuecia.png"
+        "icon": "sueco-relajante-icon.png",
         "benefitsIcon": "benefits-icon.png",
         "durationIcon": "duration-icon.png",
         "image": "sueco-relajante-image.jpg"
@@ -57,7 +84,7 @@ const services = {
         "benefits": "Hidratará tu Piel, Multisensorial, Relajación Profunda.",
         "duration": "45 min",
         "icon": "chocolaterapia-icon.png",
-        "benefitsIcon": "chidratacion.png",
+        "benefitsIcon": "benefits-icon.png",
         "durationIcon": "duration-icon.png",
         "image": "chocolaterapia-image.jpg"
     },
@@ -76,7 +103,7 @@ const services = {
         "description": "Disfruta de un masaje completo seguido de una envoltura terapéutica con algas, barro y otros ingredientes naturales.",
         "benefits": "Nutrición e Hidratación para tu Piel, Desintoxicante.",
         "duration": "90 min",
-        "icon": "algas.png",
+        "icon": "envoltura-corporal-icon.png",
         "benefitsIcon": "benefits-icon.png",
         "durationIcon": "duration-icon.png",
         "image": "envoltura-corporal-image.jpg"
@@ -96,7 +123,7 @@ const services = {
         "description": "Masaje hawaiano con movimientos largos y fluidos, combinando estiramientos para relajar y revitalizar.",
         "benefits": "Relajación Profunda, Aumento de Energía, Mejora Circulación.",
         "duration": "60 min",
-        "icon": "cmasaje lomi.png",
+        "icon": "lomi-lomi-icon.png",
         "benefitsIcon": "benefits-icon.png",
         "durationIcon": "duration-icon.png",
         "image": "lomi-lomi-image.jpg"
@@ -273,56 +300,41 @@ const services = {
     ]
 };
 
-
-const services = {
-    // ... (tu objeto services aquí)
-};
-
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM loaded");
     console.log("Services object:", services);
 
-    // Elementos del DOM
-    const languageSelector = document.querySelector('.language-selector');
-    const languageOptions = document.querySelector('.language-options');
     const servicesList = document.getElementById('services-list');
+    console.log("Services list element:", servicesList);
+
     const packageList = document.getElementById('package-list');
     const choiceChips = document.querySelectorAll('.choice-chip');
 
-    // Funciones
-    const toggleLanguageOptions = () => {
-        languageOptions.classList.toggle('show');
-    };
+    // Add color transition div
+    const colorTransition = document.createElement('div');
+    colorTransition.className = 'color-transition';
+    document.body.appendChild(colorTransition);
 
-    function renderServices(category) {
-        if (!servicesList) {
-            console.error("Services list element not found");
-            return;
-        }
-        servicesList.innerHTML = '';
-        services[category].forEach(service => {
-            const li = document.createElement('div');
-            li.className = 'service-item';
-            li.innerHTML = `
-                <h3>${service.title} <img src="${service.icon}" alt="${service.title} icon" class="service-icon"></h3>
-                <p>${service.description}</p>
-                <p><strong>Beneficios:</strong> <img src="${service.benefitsIcon}" alt="Beneficios" class="icon"> ${service.benefits}</p>
-                <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
-                <div class="service-buttons">
-                    <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
-                    <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
-                </div>
-            `;
-            li.addEventListener('click', () => showPopup(service));
-            servicesList.appendChild(li);
-        });
-    }
-
+function renderServices(category) {
+    servicesList.innerHTML = '';
+    services[category].forEach(service => {
+        const li = document.createElement('div');
+        li.className = 'service-item';
+        li.innerHTML = `
+            <h3>${service.title} <img src="${service.icon}" alt="${service.title} icon" class="service-icon"></h3>
+            <p>${service.description}</p>
+            <p><strong>Beneficios:</strong> <img src="${service.benefitsIcon}" alt="Beneficios" class="icon"> ${service.benefits}</p>
+            <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
+            <div class="service-buttons">
+                <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
+                <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
+            </div>
+        `;
+        li.addEventListener('click', () => showPopup(service));
+        servicesList.appendChild(li);
+    });
+}
     function renderPackages() {
-        if (!packageList) {
-            console.error("Package list element not found");
-            return;
-        }
         packageList.innerHTML = '';
         services.paquetes.forEach(pkg => {
             console.log("Rendering package:", pkg.title);
@@ -341,26 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Event Listeners
-    languageSelector.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleLanguageOptions();
-    });
-
-    document.querySelectorAll('.lang-option').forEach(option => {
-        option.addEventListener('click', (e) => {
-            const lang = e.currentTarget.dataset.lang;
-            console.log(`Cambiando idioma a: ${lang}`);
-            toggleLanguageOptions();
-        });
-    });
-
-    document.addEventListener('click', () => {
-        if (languageOptions.classList.contains('show')) {
-            toggleLanguageOptions();
-        }
-    });
-
     choiceChips.forEach(chip => {
         chip.addEventListener('click', () => {
             choiceChips.forEach(c => c.classList.remove('active'));
@@ -369,11 +361,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Color transition effect
-    const colorTransition = document.createElement('div');
-    colorTransition.className = 'color-transition';
-    document.body.appendChild(colorTransition);
+    window.sendWhatsAppMessage = function(action, serviceTitle) {
+        let message;
+        if (action === 'Saber más') {
+            message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
+        } else {
+            message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
+        }
+        const url = `https://wa.me/5215640020305?text=${message}`;
+        window.open(url, '_blank');
+    };
 
+    // Color transition effect
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY;
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -386,19 +385,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderPackages();
 });
 
-// Funciones globales
-window.sendWhatsAppMessage = function(action, serviceTitle) {
-    let message;
-    if (action === 'Saber más') {
-        message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
-    } else {
-        message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
-    }
-    const url = `https://wa.me/5215640020305?text=${message}`;
-    window.open(url, '_blank');
-};
 
-function showPopup(service) {
-    console.log("Mostrando popup para:", service.title);
-    // Implementa la lógica para mostrar el popup aquí
-}
