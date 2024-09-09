@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "description": "Elige de nuestra selección de aceites esenciales pensados en tu relajación. Nuestras terapeutas combinan técnicas suaves que no te puedes perder.",
                 "benefits": "Bajará tu Estrés, Cambiará tu Ánimo, Aliviarás Tensiones.",
                 "duration": "60 min",
-                "icon": "aromaterapia-icon.png",
+                "icon": "cfragancia2.png",
                 "benefitsIcon": "cdolor espalda.png",
                 "durationIcon": "duration-icon.png",
                 "image": "aromaterapia-image.jpg"
