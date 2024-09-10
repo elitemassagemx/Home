@@ -15,7 +15,7 @@
                     <h1>Elite Massage</h1>
                 </div>
                 <div class="language-selector">
-                    IDIOMA <img src="trad.png" id="translate-icon" alt="Traducir">
+                    IDIOMA <img src="trad.png" alt="Traducir" id="translate-icon">
                     <div class="language-options">
                         <button class="lang-option" data-lang="es"><img src="mx.png" alt="Bandera de México"> Español</button>
                         <button class="lang-option" data-lang="en"><img src="us.png" alt="Bandera de Estados Unidos"> English</button>
@@ -26,7 +26,7 @@
         </div>
     </header>
 
-    <nav class="main-nav" id="top-nav">
+    <nav class="main-nav">
         <ul>
             <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
             <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
@@ -50,18 +50,14 @@
                     <button class="choice-chip active" data-category="individual">Individual</button>
                     <button class="choice-chip" data-category="pareja">En Pareja</button>
                 </div>
-                <div id="services-list" class="services-grid">
-                    <!-- Los servicios se renderizarán aquí dinámicamente -->
-                </div>
+                <div id="services-list" class="services-grid"></div>
             </div>
         </section>
 
         <section id="paquetes" class="section packages">
             <div class="container">
                 <h2>Paquetes Especiales</h2>
-                <div id="package-list">
-                    <!-- Los paquetes se renderizarán aquí dinámicamente -->
-                </div>
+                <div id="package-list"></div>
             </div>
         </section>
 
@@ -103,10 +99,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2023 Elite Massage. Todos los derechos reservados.</p>
-            <nav>
-                <a href="/politica-privacidad">Política de Privacidad</a> |
-                <a href="/terminos-condiciones">Términos y Condiciones</a>
-            </nav>
+            <p><a href="/politica-privacidad">Política de Privacidad</a> | <a href="/terminos-condiciones">Términos y Condiciones</a></p>
             <div class="social-media">
                 <a href="https://facebook.com/elitemassage" target="_blank" rel="noopener noreferrer">Facebook</a> |
                 <a href="https://instagram.com/elitemassage" target="_blank" rel="noopener noreferrer">Instagram</a> |
@@ -115,21 +108,27 @@
         </div>
     </footer>
 
-    <nav class="main-nav fixed-bar" id="bottom-nav">
-        <ul>
-            <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
-            <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
-            <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
-            <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
-        </ul>
-    </nav>
+    <div class="fixed-bar">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
+                <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
+                <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
+                <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Estructura del pop-up -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 id="popup-title"></h2>
+            <img id="popup-image" src="" alt="Imagen del servicio">
+            <p id="popup-description"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
