@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 "title": "Aromaterapia para 2",
                 "description": "Disfruten de un masaje relajante mientras se sumergen en una atmósfera de calma con aceites esenciales que eligieron previamente. Este masaje combina técnicas suaves y aromaterapia promoviendo la relajación y el bienestar.",
-                "benefits": "Reducirán Estrés, Mejora en Estado de Ánimo, y Alivia Tensiones Musculares.",
+"benefits": "Reducirán Estrés, Mejora en Estado de Ánimo, y Alivia Tensiones Musculares.",
                 "duration": "60 min",
                 "icon": "cfragancia2.png",
                 "benefitsIcon": "benefits-icon.png",
@@ -555,3 +555,5 @@ function sendWhatsAppMessage(action, serviceTitle) {
     const url = `https://wa.me/5215640020305?text=${message}`;
     window.open(url, '_blank');
 }
+
+               
