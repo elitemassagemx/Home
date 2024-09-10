@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ]
     };
-
+document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('sticky-header');
     const headerHeight = header.offsetHeight;
     let lastScrollTop = 0;
@@ -512,7 +512,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>Duración:</strong> ${pkg.duration}</p>
             <p><strong>Beneficios:</strong> ${pkg.benefits.join(', ')}</p>
             <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
-            <button onclick='showPopup(${JSON.stringify(pkg)})'>Saber más</button>
+            <button onclick="showPopup(${JSON.stringify(pkg)})">Saber más</button>
         `;
         packageList.appendChild(packageElement);
     });
@@ -520,19 +520,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Popup functionality
     const popup = document.getElementById('popup');
     const closeButton = document.querySelector('.close');
-
-    window.showPopup = function(data) {
-        const popupTitle = document.getElementById('popup-title');
-        const popupImage = document.getElementById('popup-image');
-        const popupDescription = document.getElementById('popup-description');
-
-        popupTitle.textContent = data.title;
-        popupImage.src = data.popupImage || data.image;
-        popupImage.alt = data.title;
-        popupDescription.textContent = data.popupDescription || data.description;
-
-        popup.style.display = 'block';
-    }
 
     closeButton.addEventListener('click', () => {
         popup.style.display = 'none';
@@ -545,7 +532,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function sendWhatsAppMessage(action, serviceTitle) {
+// Funciones globales
+window.showPopup = function(data) {
+    const popup = document.getElementById('popup');
+    const popupTitle = document.getElementById('popup-title');
+    const popupImage = document.getElementById('popup-image');
+    const popupDescription = document.getElementById('popup-description');
+
+    popupTitle.textContent = data.title;
+    popupImage.src = data.popupImage || data.image;
+    popupImage.alt = data.title;
+    popupDescription.textContent = data.popupDescription || data.description;
+
+    popup.style.display = 'block';
+}
+
+window.sendWhatsAppMessage = function(action, serviceTitle) {
     let message;
     if (action === 'Saber más') {
         message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
@@ -555,5 +557,3 @@ function sendWhatsAppMessage(action, serviceTitle) {
     const url = `https://wa.me/5215640020305?text=${message}`;
     window.open(url, '_blank');
 }
-
-               
