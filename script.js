@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ]
     };
-    const header = document.getElementById('sticky-header');
+        const header = document.getElementById('sticky-header');
     const headerHeight = header.offsetHeight;
     let lastScrollTop = 0;
 
@@ -413,10 +413,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
                 <div class="service-buttons">
                     <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
-                    <button onclick="sendWhatsAppMessage('Saber más', '${service.title}')">Saber más</button>
+                    <button class="more-info-btn" data-service='${JSON.stringify(service)}'>Saber más</button>
                 </div>
             `;
             servicesList.appendChild(serviceElement);
+        });
+
+        // Añadir event listeners para los botones "Saber más"
+        document.querySelectorAll('.more-info-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const serviceData = JSON.parse(e.target.dataset.service);
+                showPopup(serviceData);
+            });
         });
     }
 
@@ -443,9 +451,46 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>Duración:</strong> ${pkg.duration}</p>
             <p><strong>Beneficios:</strong> ${pkg.benefits.join(', ')}</p>
             <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
-            <button onclick="sendWhatsAppMessage('Saber más', '${pkg.title}')">Saber más</button>
+            <button class="more-info-btn" data-package='${JSON.stringify(pkg)}'>Saber más</button>
         `;
         packageList.appendChild(packageElement);
+    });
+
+    // Añadir event listeners para los botones "Saber más" de los paquetes
+    document.querySelectorAll('#package-list .more-info-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const packageData = JSON.parse(e.target.dataset.package);
+            showPopup(packageData);
+        });
+    });
+
+    // Función para mostrar el pop-up
+    function showPopup(data) {
+        const popup = document.getElementById('popup');
+        const popupTitle = document.getElementById('popup-title');
+        const popupImage = document.getElementById('popup-image');
+        const popupDescription = document.getElementById('popup-description');
+
+        popupTitle.textContent = data.title;
+        popupImage.src = data.popupImage;
+        popupImage.alt = data.title;
+        popupDescription.textContent = data.popupDescription;
+
+        popup.style.display = 'block';
+    }
+
+    // Cerrar el pop-up
+    const closeButton = document.querySelector('.close');
+    closeButton.addEventListener('click', () => {
+        document.getElementById('popup').style.display = 'none';
+    });
+
+    // Cerrar el pop-up si se hace clic fuera de él
+    window.addEventListener('click', (e) => {
+        const popup = document.getElementById('popup');
+        if (e.target === popup) {
+            popup.style.display = 'none';
+        }
     });
 });
 
@@ -459,4 +504,3 @@ function sendWhatsAppMessage(action, serviceTitle) {
     const url = `https://wa.me/5215640020305?text=${message}`;
     window.open(url, '_blank');
 }
-    
