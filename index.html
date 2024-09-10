@@ -17,11 +17,11 @@
                 <div class="language-selector">
                     <img src="trad.png" alt="Traducir" id="translate-icon">
                     <div class="language-options">
-                        <button class="lang-option" onclick="translatePage('es')" data-lang="es"><img src="omx.png" alt="Bandera de México"> Español</button>
-                        <button class="lang-option" onclick="translatePage('en')" data-lang="en"><img src="ous.png" alt="Bandera de Estados Unidos"> English</button>
-                        <button class="lang-option" onclick="translatePage('iw')" data-lang="iw"><img src="ois.png" alt="Bandera de Israel"> עברית</button>
-                        <button class="lang-option" onclick="translatePage('fr')" data-lang="fr"><img src="ofr.png" alt="Bandera de Francia"> Français</button>
-                        <button class="lang-option" onclick="translatePage('zh-CN')" data-lang="zh-CN"><img src="och.png" alt="Bandera de China"> 中文</button>
+                        <button class="lang-option" data-lang="es"><img src="omx.png" alt="Bandera de México"> Español</button>
+                        <button class="lang-option" data-lang="en"><img src="ous.png" alt="Bandera de Estados Unidos"> English</button>
+                        <button class="lang-option" data-lang="iw"><img src="ois.png" alt="Bandera de Israel"> עברית</button>
+                        <button class="lang-option" data-lang="fr"><img src="ofr.png" alt="Bandera de Francia"> Français</button>
+                        <button class="lang-option" data-lang="zh-CN"><img src="och.png" alt="Bandera de China"> 中文</button>
                     </div>
                 </div>
                 <div id="google_translate_element" style="display:none;"></div>
@@ -131,49 +131,48 @@
             <p id="popup-description"></p>
         </div>
     </div>
-<!-- ... resto de tu contenido HTML ... -->
 
     <script type="text/javascript">
-    console.log('Iniciando script de traducción');
+        console.log('Iniciando script de traducción');
 
-    function googleTranslateElementInit() {
-        console.log('Función googleTranslateElementInit llamada');
-        new google.translate.TranslateElement({
-            pageLanguage: 'es',
-            includedLanguages: 'es,en,fr,zh-CN,iw',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-        console.log('TranslateElement inicializado');
-    }
-
-    function loadGoogleTranslate() {
-        var script = document.createElement('script');
-        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-        script.async = true;
-        document.body.appendChild(script);
-    }
-
-    function translatePage(lang) {
-        console.log('Intentando traducir la página a:', lang);
-        if (window.google && window.google.translate) {
-            var translateElement = google.translate.TranslateElement.getInstance();
-            if (translateElement) {
-                translateElement.translate(lang);
-                console.log('Traducción realizada a:', lang);
-            } else {
-                console.error('Instancia de TranslateElement no encontrada');
-            }
-        } else {
-            console.error('Google Translate no está cargado');
-            loadGoogleTranslate();
+        function googleTranslateElementInit() {
+            console.log('Función googleTranslateElementInit llamada');
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'es,en,fr,zh-CN,iw',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+            console.log('TranslateElement inicializado');
         }
-    }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('DOM cargado, cargando Google Translate');
-        loadGoogleTranslate();
-    });
+        function loadGoogleTranslate() {
+            var script = document.createElement('script');
+            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            script.async = true;
+            document.body.appendChild(script);
+        }
+
+        function translatePage(lang) {
+            console.log('Intentando traducir la página a:', lang);
+            if (window.google && window.google.translate) {
+                var translateElement = google.translate.TranslateElement.getInstance();
+                if (translateElement) {
+                    translateElement.translate(lang);
+                    console.log('Traducción realizada a:', lang);
+                } else {
+                    console.error('Instancia de TranslateElement no encontrada');
+                }
+            } else {
+                console.error('Google Translate no está cargado');
+                loadGoogleTranslate();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM cargado, cargando Google Translate');
+            loadGoogleTranslate();
+        });
     </script>
 
     <!-- Aquí podrían ir otros scripts que tengas, como tu script.js -->
