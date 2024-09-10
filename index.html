@@ -132,57 +132,69 @@
         </div>
     </div>
 
+    
     <script type="text/javascript">
-        var googleTranslateScript = document.createElement('script');
-        googleTranslateScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-        googleTranslateScript.async = true;
-        googleTranslateScript.defer = true;
+    console.log('Iniciando script de traducción');
+    
+    function googleTranslateElementInit() {
+        console.log('Función googleTranslateElementInit llamada');
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'es,en,fr,zh-CN,iw',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+        console.log('TranslateElement inicializado');
+    }
 
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'es',
-                includedLanguages: 'es,en,fr,zh-CN,iw',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
+    var translateInitialized = false;
 
-        var translateInitialized = false;
-
-        function ensureTranslateIsInitialized(callback) {
-            if (translateInitialized) {
-                callback();
-            } else {
-                if (!document.querySelector('script[src*="translate.google.com"]')) {
-                    document.head.appendChild(googleTranslateScript);
-                }
-                var checkInitialization = setInterval(function() {
-                    if (window.google && window.google.translate) {
-                        clearInterval(checkInitialization);
-                        translateInitialized = true;
-                        callback();
-                    }
-                }, 100);
+    function ensureTranslateIsInitialized(callback) {
+        console.log('Asegurando que Translate esté inicializado');
+        if (translateInitialized) {
+            console.log('Translate ya estaba inicializado');
+            callback();
+        } else {
+            if (!document.querySelector('script[src*="translate.google.com"]')) {
+                console.log('Agregando script de Google Translate al documento');
+                var googleTranslateScript = document.createElement('script');
+                googleTranslateScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+                googleTranslateScript.async = true;
+                googleTranslateScript.defer = true;
+                document.body.appendChild(googleTranslateScript);
             }
-        }
-
-        function translatePage(lang) {
-            ensureTranslateIsInitialized(function() {
-                var select = document.querySelector('.goog-te-combo');
-                if (select) {
-                    select.value = lang;
-                    select.dispatchEvent(new Event('change'));
-                } else {
-                    console.error('Google Translate dropdown not found');
+            var checkInitialization = setInterval(function() {
+                console.log('Verificando inicialización de Google Translate');
+                if (window.google && window.google.translate) {
+                    clearInterval(checkInitialization);
+                    translateInitialized = true;
+                    console.log('Google Translate inicializado correctamente');
+                    callback();
                 }
-            });
+            }, 100);
         }
+    }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            ensureTranslateIsInitialized(function() {
-                console.log('Google Translate initialized');
-            });
+    function translatePage(lang) {
+        console.log('Intentando traducir la página a:', lang);
+        ensureTranslateIsInitialized(function() {
+            var select = document.querySelector('.goog-te-combo');
+            if (select) {
+                console.log('Selector de idioma encontrado, cambiando a:', lang);
+                select.value = lang;
+                select.dispatchEvent(new Event('change'));
+            } else {
+                console.error('Google Translate dropdown no encontrado');
+            }
         });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM cargado, inicializando Translate');
+        ensureTranslateIsInitialized(function() {
+            console.log('Google Translate inicializado después de DOMContentLoaded');
+        });
+    });
     </script>
     <script src="script.js"></script>
 </body>
