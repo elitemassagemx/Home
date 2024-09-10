@@ -71,7 +71,7 @@ h1 {
     white-space: nowrap;
 }
 
-/* Language Selector Styles */
+/* Language Selector Styles - Updated */
 .language-selector {
     position: absolute;
     top: 10px;
@@ -109,7 +109,7 @@ h1 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.language-selector:hover .language-options {
+.language-options.show {
     display: block;
 }
 
