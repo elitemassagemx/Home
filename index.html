@@ -15,7 +15,6 @@
                     <h1>Elite Massage</h1>
                 </div>
                 <div class="language-selector">
-                    <span>IDIOMA</span>
                     <img src="trad.png" alt="Traducir" id="translate-icon">
                     <div class="language-options">
                         <button class="lang-option" onclick="translatePage('es')" data-lang="es"><img src="omx.png" alt="Bandera de México"> Español</button>
@@ -132,32 +131,42 @@
             <p id="popup-description"></p>
         </div>
     </div>
-
     <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'es',
-                includedLanguages: 'es,en,fr,zh-CN,iw',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'es,en,fr,zh-CN,iw',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
 
-        function translatePage(lang) {
-            var select = document.querySelector('select.goog-te-combo');
+    function translatePage(lang) {
+        if (window.google && window.google.translate) {
+            var select = document.querySelector('.goog-te-combo');
             if (select) {
                 select.value = lang;
                 select.dispatchEvent(new Event('change'));
+            } else {
+                console.error('Google Translate dropdown not found');
             }
+        } else {
+            console.error('Google Translate not loaded yet');
         }
+    }
 
-        // Cargar el script de Google Translate de forma asíncrona
-        (function() {
-            var gtScript = document.createElement('script');
-            gtScript.type = 'text/javascript';
-            gtScript.async = true;
-            gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-            document.body.appendChild(gtScript);
-        })();
+    // Cargar el script de Google Translate de forma asíncrona
+    function loadGoogleTranslate() {
+        var gtScript = document.createElement('script');
+        gtScript.type = 'text/javascript';
+        gtScript.async = true;
+        gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        document.body.appendChild(gtScript);
+    }
+
+    // Esperar a que el DOM esté completamente cargado antes de inicializar
+    document.addEventListener('DOMContentLoaded', function() {
+        loadGoogleTranslate();
+    });
     </script>
     <script src="script.js"></script>
 </body>
