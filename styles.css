@@ -1,81 +1,4 @@
-:root {
-    --primary-color: #D4AF37;
-    --secondary-color: #8B4513;
-    --text-color: #ffffff;
-    --background-color: #1a1a1a;
-    --item-background: #2a2a2a;
-    --header-background: #4c0026;
-    --main-vino: #4c0026;
-    --blue: #082032;
-    --gold: #FFD700;
-    --main-blue: #082032;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(270deg, #1a1a1a, #2c2c2c, #3a3a3a);
-    background-size: 600% 600%;
-    animation: gradientTransition 15s ease infinite;
-    color: var(--text-color);
-    padding-bottom: 80px;
-}
-
-.container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
-/* Header Styles */
-header {
-    background-color: var(--header-background);
-    color: white;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    margin-right: 15px;
-    display: block;
-}
-
-h1 {
-    margin: 0;
-    font-size: 36px;
-    font-family: 'Avenir Next', 'Open Sans', sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    white-space: nowrap;
-}
-
-.language-selector {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    margin-left: auto;
-    background-color: transparent;
+background-color: transparent;
     padding: 5px;
     border-radius: 5px;
 }
@@ -248,4 +171,130 @@ h1 {
 
 .service-item:hover, .package-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(212
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.3);
+}
+
+.service-item h3, .package-item h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.service-buttons, .package-item button {
+    margin-top: auto;
+}
+
+.service-buttons button, .package-item button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.75rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.service-buttons button:hover, .package-item button:hover {
+    background-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: var(--item-background);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.close {
+    color: var(--primary-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--gold);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#popup-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#popup-title {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+#popup-description {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .language-selector {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+
+    .main-nav li {
+        flex: 1 1 50%;
+        margin-bottom: 10px;
+    }
+
+    .services-grid, #package-list {
+        grid-template-columns: 1fr;
+    }
+
+    .popup-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+}
+
+@keyframes gradientTransition {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
