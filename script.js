@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ]
     };
-  const header = document.getElementById('sticky-header');
+      const header = document.getElementById('sticky-header');
     const headerHeight = header.offsetHeight;
     let lastScrollTop = 0;
 
