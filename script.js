@@ -355,7 +355,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ]
     };
-        const header = document.getElementById('sticky-header');
+
+                          const header = document.getElementById('sticky-header');
     const headerHeight = header.offsetHeight;
     let lastScrollTop = 0;
 
@@ -413,18 +414,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
                 <div class="service-buttons">
                     <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
-                    <button class="more-info-btn" data-service='${JSON.stringify(service)}'>Saber más</button>
                 </div>
             `;
+            serviceElement.addEventListener('click', () => showPopup(service));
             servicesList.appendChild(serviceElement);
-        });
-
-        // Añadir event listeners para los botones "Saber más"
-        document.querySelectorAll('.more-info-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const serviceData = JSON.parse(e.target.dataset.service);
-                showPopup(serviceData);
-            });
         });
     }
 
@@ -451,17 +444,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>Duración:</strong> ${pkg.duration}</p>
             <p><strong>Beneficios:</strong> ${pkg.benefits.join(', ')}</p>
             <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
-            <button class="more-info-btn" data-package='${JSON.stringify(pkg)}'>Saber más</button>
         `;
+        packageElement.addEventListener('click', () => showPopup(pkg));
         packageList.appendChild(packageElement);
-    });
-
-    // Añadir event listeners para los botones "Saber más" de los paquetes
-    document.querySelectorAll('#package-list .more-info-btn').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const packageData = JSON.parse(e.target.dataset.package);
-            showPopup(packageData);
-        });
     });
 
     // Función para mostrar el pop-up
