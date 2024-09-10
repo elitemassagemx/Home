@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
 const services = {
     individual: [
         {
@@ -423,6 +422,7 @@ const services = {
         }
     ]
 };
+
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('sticky-header');
     const headerHeight = header.offsetHeight;
@@ -454,15 +454,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelectorAll('.lang-option').forEach(option => {
-        option.addEventListener('click', (e) => {
-            const lang = e.currentTarget.dataset.lang;
+        option.addEventListener('click', (event) => {
+            const lang = event.currentTarget.dataset.lang;
             console.log(`Cambiando idioma a: ${lang}`);
             languageOptions.style.display = 'none';
         });
     });
 
-    document.addEventListener('click', (e) => {
-        if (!languageSelector.contains(e.target)) {
+    document.addEventListener('click', (event) => {
+        if (!languageSelector.contains(event.target)) {
             languageOptions.style.display = 'none';
         }
     });
@@ -478,14 +478,29 @@ document.addEventListener('DOMContentLoaded', () => {
             serviceElement.innerHTML = `
                 <h3>${service.title} <img src="${service.icon}" alt="${service.title} icon" class="service-icon"></h3>
                 <p>${service.description}</p>
-                <p><strong>Beneficios:</strong> <img src="${service.benefitsIcon}" alt="Beneficios" class="icon"> ${service.benefits}</p>
+                <p><strong>Beneficios:</strong> <img src="${service.benefitsIcon}" alt="Beneficios" class="icon"> ${service.benefits.join(', ')}</p>
                 <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
                 <div class="service-buttons">
-                    <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
-                    <button onclick="showPopup(${JSON.stringify(service)})">Saber más</button>
+                    <button class="reserve-button" data-title="${service.title}">Reserva ahora</button>
+                    <button class="info-button" data-service='${JSON.stringify(service)}'>Saber más</button>
                 </div>
             `;
             servicesList.appendChild(serviceElement);
+        });
+
+        // Add event listeners to the new buttons
+        document.querySelectorAll('.reserve-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const serviceTitle = button.dataset.title;
+                sendWhatsAppMessage('Reservar Ahora', serviceTitle);
+            });
+        });
+
+        document.querySelectorAll('.info-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const service = JSON.parse(button.dataset.service);
+                showPopup(service);
+            });
         });
     }
 
@@ -508,13 +523,28 @@ document.addEventListener('DOMContentLoaded', () => {
         packageElement.innerHTML = `
             <h3>${pkg.title}</h3>
             <p>${pkg.description}</p>
-            <p><strong>Incluye:</strong> ${pkg.includes}</p>
+            <p><strong>Incluye:</strong> ${pkg.includes.join(', ')}</p>
             <p><strong>Duración:</strong> ${pkg.duration}</p>
             <p><strong>Beneficios:</strong> ${pkg.benefits.join(', ')}</p>
-            <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
-            <button onclick="showPopup(${JSON.stringify(pkg)})">Saber más</button>
+            <button class="reserve-button" data-title="${pkg.title}">Reservar</button>
+            <button class="info-button" data-service='${JSON.stringify(pkg)}'>Saber más</button>
         `;
         packageList.appendChild(packageElement);
+    });
+
+    // Add event listeners to the new buttons
+    document.querySelectorAll('.reserve-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const packageTitle = button.dataset.title;
+            sendWhatsAppMessage('Reservar', packageTitle);
+        });
+    });
+
+    document.querySelectorAll('.info-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const pkg = JSON.parse(button.dataset.service);
+            showPopup(pkg);
+        });
     });
 
     // Popup functionality
@@ -525,8 +555,8 @@ document.addEventListener('DOMContentLoaded', () => {
         popup.style.display = 'none';
     });
 
-    window.addEventListener('click', (e) => {
-        if (e.target === popup) {
+    window.addEventListener('click', (event) => {
+        if (event.target === popup) {
             popup.style.display = 'none';
         }
     });
