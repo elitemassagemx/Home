@@ -15,10 +15,14 @@
                     <h1>Elite Massage</h1>
                 </div>
                 <div class="language-selector">
-                    IDIOMA <img src="trad.png" alt="Traducir" id="translate-icon">
+                    <span>IDIOMA</span>
+                    <img src="trad.png" alt="Traducir" id="translate-icon">
                     <div class="language-options">
                         <button class="lang-option" data-lang="es"><img src="mx.png" alt="Bandera de México"> Español</button>
                         <button class="lang-option" data-lang="en"><img src="us.png" alt="Bandera de Estados Unidos"> English</button>
+                        <button class="lang-option" data-lang="fr"><img src="fr.png" alt="Bandera de Francia"> Français</button>
+                        <button class="lang-option" data-lang="zh-CN"><img src="cn.png" alt="Bandera de China"> 中文</button>
+                        <button class="lang-option" data-lang="iw"><img src="il.png" alt="Bandera de Israel"> עברית</button>
                     </div>
                 </div>
                 <div id="google_translate_element"></div>
@@ -26,109 +30,29 @@
         </div>
     </header>
 
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
-            <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
-            <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
-            <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
-        </ul>
-    </nav>
+    <!-- Rest of your HTML remains the same -->
 
-    <main role="main">
-        <section id="inicio" class="section hero">
-            <div class="container">
-                <h2>Bienvenido a tu Oasis de Tranquilidad</h2>
-                <p>Descubre el poder de la relajación y el bienestar en nuestro exclusivo spa de masajes.</p>
-            </div>
-        </section>
-
-        <section id="servicios" class="section services">
-            <div class="container">
-                <h2>Nuestros Servicios</h2>
-                <div class="category-selector">
-                    <button class="choice-chip active" data-category="individual">Individual</button>
-                    <button class="choice-chip" data-category="pareja">En Pareja</button>
-                </div>
-                <div id="services-list" class="services-grid"></div>
-            </div>
-        </section>
-
-        <section id="paquetes" class="section packages">
-            <div class="container">
-                <h2>Paquetes Especiales</h2>
-                <div id="package-list"></div>
-            </div>
-        </section>
-
-        <section id="testimonios" class="section testimonials">
-            <div class="container">
-                <h2>Lo que dicen nuestros clientes</h2>
-                <div class="testimonial">
-                    <p>"Una experiencia increíble. El masaje de aromaterapia fue justo lo que necesitaba para relajarme completamente. ¡Volveré pronto!"</p>
-                    <p class="author">- María G.</p>
-                </div>
-                <div class="testimonial">
-                    <p>"El paquete en pareja fue maravilloso. El ambiente, el servicio y los masajes superaron nuestras expectativas. Totalmente recomendado."</p>
-                    <p class="author">- Carlos y Ana</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="galeria" class="section gallery">
-            <div class="container">
-                <h2>Galería de Imágenes</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="spa-interior.jpg" alt="Interior del Spa" width="250" height="250">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="masaje-evento.jpg" alt="Evento de Masajes" width="250" height="250">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="productos-spa.jpg" alt="Productos de Spa" width="250" height="250">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="equipo-spa.jpg" alt="Nuestro Equipo" width="250" height="250">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Elite Massage. Todos los derechos reservados.</p>
-            <p><a href="/politica-privacidad">Política de Privacidad</a> | <a href="/terminos-condiciones">Términos y Condiciones</a></p>
-            <div class="social-media">
-                <a href="https://facebook.com/elitemassage" target="_blank" rel="noopener noreferrer">Facebook</a> |
-                <a href="https://instagram.com/elitemassage" target="_blank" rel="noopener noreferrer">Instagram</a> |
-                <a href="https://twitter.com/elitemassage" target="_blank" rel="noopener noreferrer">Twitter</a>
-            </div>
-        </div>
-    </footer>
-
-    <div class="fixed-bar">
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
-                <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
-                <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
-                <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <!-- Estructura del pop-up -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close">&times;</span>
-            <h2 id="popup-title"></h2>
-            <img id="popup-image" src="" alt="Imagen del servicio">
-            <p id="popup-description"></p>
-        </div>
-    </div>
-
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'es,en,fr,zh-CN,iw',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+        document.querySelectorAll('.lang-option').forEach(button => {
+            button.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                const googleTranslateFrame = document.querySelector('iframe.goog-te-banner-frame');
+                if (googleTranslateFrame) {
+                    const innerDoc = googleTranslateFrame.contentDocument || googleTranslateFrame.contentWindow.document;
+                    innerDoc.querySelector('select.goog-te-combo').value = lang;
+                    innerDoc.querySelector('select.goog-te-combo').dispatchEvent(new Event('change'));
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
 </body>
 </html>
