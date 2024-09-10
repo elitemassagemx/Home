@@ -355,8 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ]
     };
-
-                          const header = document.getElementById('sticky-header');
+  const header = document.getElementById('sticky-header');
     const headerHeight = header.offsetHeight;
     let lastScrollTop = 0;
 
@@ -414,9 +413,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
                 <div class="service-buttons">
                     <button onclick="sendWhatsAppMessage('Reservar Ahora', '${service.title}')">Reserva ahora</button>
+                    <button onclick="showPopup(${JSON.stringify(service)})">Saber más</button>
                 </div>
             `;
-            serviceElement.addEventListener('click', () => showPopup(service));
             servicesList.appendChild(serviceElement);
         });
     }
@@ -444,39 +443,38 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>Duración:</strong> ${pkg.duration}</p>
             <p><strong>Beneficios:</strong> ${pkg.benefits.join(', ')}</p>
             <button onclick="sendWhatsAppMessage('Reservar', '${pkg.title}')">Reservar</button>
+            <button onclick='showPopup(${JSON.stringify(pkg)})'>Saber más</button>
         `;
-        packageElement.addEventListener('click', () => showPopup(pkg));
         packageList.appendChild(packageElement);
     });
+});
 
-    // Función para mostrar el pop-up
-    function showPopup(data) {
-        const popup = document.getElementById('popup');
-        const popupTitle = document.getElementById('popup-title');
-        const popupImage = document.getElementById('popup-image');
-        const popupDescription = document.getElementById('popup-description');
+function showPopup(data) {
+    const popup = document.getElementById('popup');
+    const popupTitle = document.getElementById('popup-title');
+    const popupImage = document.getElementById('popup-image');
+    const popupDescription = document.getElementById('popup-description');
 
-        popupTitle.textContent = data.title;
-        popupImage.src = data.popupImage;
-        popupImage.alt = data.title;
-        popupDescription.textContent = data.popupDescription;
+    popupTitle.textContent = data.title;
+    popupImage.src = data.popupImage;
+    popupImage.alt = data.title;
+    popupDescription.textContent = data.popupDescription;
 
-        popup.style.display = 'block';
+    popup.style.display = 'block';
+}
+
+// Cerrar el pop-up
+const closeButton = document.querySelector('.close');
+closeButton.addEventListener('click', () => {
+    document.getElementById('popup').style.display = 'none';
+});
+
+// Cerrar el pop-up si se hace clic fuera de él
+window.addEventListener('click', (e) => {
+    const popup = document.getElementById('popup');
+    if (e.target === popup) {
+        popup.style.display = 'none';
     }
-
-    // Cerrar el pop-up
-    const closeButton = document.querySelector('.close');
-    closeButton.addEventListener('click', () => {
-        document.getElementById('popup').style.display = 'none';
-    });
-
-    // Cerrar el pop-up si se hace clic fuera de él
-    window.addEventListener('click', (e) => {
-        const popup = document.getElementById('popup');
-        if (e.target === popup) {
-            popup.style.display = 'none';
-        }
-    });
 });
 
 function sendWhatsAppMessage(action, serviceTitle) {
