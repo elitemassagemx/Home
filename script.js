@@ -1,3 +1,4 @@
+
 const services = {
     individual: [
         {
@@ -422,6 +423,54 @@ const services = {
         }
     ]
 };
+// Función para inicializar Google Translate
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'es,en,fr,zh-CN,iw',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+
+// Función para cargar el script de Google Translate
+function loadGoogleTranslate() {
+    var script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    document.body.appendChild(script);
+}
+
+// Función para traducir la página
+function translatePage(lang) {
+    // Asegurarse de que el elemento de Google Translate esté visible
+    var translateElement = document.getElementById('google_translate_element');
+    if (translateElement) {
+        translateElement.style.display = 'block';
+    }
+
+    // Utilizar la API de Google Translate para cambiar el idioma
+    var select = document.querySelector('select.goog-te-combo');
+    if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event('change'));
+    } else {
+        console.error('No se pudo encontrar el selector de idioma de Google Translate');
+    }
+}
+
+// Cargar Google Translate cuando se cargue la página
+document.addEventListener('DOMContentLoaded', loadGoogleTranslate);
+
+// Agregar event listeners a los botones de idioma
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.lang-option').forEach(button => {
+        button.addEventListener('click', function() {
+            var lang = this.getAttribute('data-lang');
+            translatePage(lang);
+        });
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('sticky-header');
