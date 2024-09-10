@@ -131,11 +131,11 @@
             <p id="popup-description"></p>
         </div>
     </div>
+<!-- ... resto de tu contenido HTML ... -->
 
-    
     <script type="text/javascript">
     console.log('Iniciando script de traducción');
-    
+
     function googleTranslateElementInit() {
         console.log('Función googleTranslateElementInit llamada');
         new google.translate.TranslateElement({
@@ -147,55 +147,36 @@
         console.log('TranslateElement inicializado');
     }
 
-    var translateInitialized = false;
-
-    function ensureTranslateIsInitialized(callback) {
-        console.log('Asegurando que Translate esté inicializado');
-        if (translateInitialized) {
-            console.log('Translate ya estaba inicializado');
-            callback();
-        } else {
-            if (!document.querySelector('script[src*="translate.google.com"]')) {
-                console.log('Agregando script de Google Translate al documento');
-                var googleTranslateScript = document.createElement('script');
-                googleTranslateScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-                googleTranslateScript.async = true;
-                googleTranslateScript.defer = true;
-                document.body.appendChild(googleTranslateScript);
-            }
-            var checkInitialization = setInterval(function() {
-                console.log('Verificando inicialización de Google Translate');
-                if (window.google && window.google.translate) {
-                    clearInterval(checkInitialization);
-                    translateInitialized = true;
-                    console.log('Google Translate inicializado correctamente');
-                    callback();
-                }
-            }, 100);
-        }
+    function loadGoogleTranslate() {
+        var script = document.createElement('script');
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        script.async = true;
+        document.body.appendChild(script);
     }
 
     function translatePage(lang) {
         console.log('Intentando traducir la página a:', lang);
-        ensureTranslateIsInitialized(function() {
-            var select = document.querySelector('.goog-te-combo');
-            if (select) {
-                console.log('Selector de idioma encontrado, cambiando a:', lang);
-                select.value = lang;
-                select.dispatchEvent(new Event('change'));
+        if (window.google && window.google.translate) {
+            var translateElement = google.translate.TranslateElement.getInstance();
+            if (translateElement) {
+                translateElement.translate(lang);
+                console.log('Traducción realizada a:', lang);
             } else {
-                console.error('Google Translate dropdown no encontrado');
+                console.error('Instancia de TranslateElement no encontrada');
             }
-        });
+        } else {
+            console.error('Google Translate no está cargado');
+            loadGoogleTranslate();
+        }
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        console.log('DOM cargado, inicializando Translate');
-        ensureTranslateIsInitialized(function() {
-            console.log('Google Translate inicializado después de DOMContentLoaded');
-        });
+        console.log('DOM cargado, cargando Google Translate');
+        loadGoogleTranslate();
     });
     </script>
+
+    <!-- Aquí podrían ir otros scripts que tengas, como tu script.js -->
     <script src="script.js"></script>
 </body>
 </html>
