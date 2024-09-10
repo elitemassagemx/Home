@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "cfragancia2.png",
                 "benefitsIcon": "cdolor espalda.png",
                 "durationIcon": "duration-icon.png",
-                "image": "aromaterapia-image.jpg"
+                "image": "aromaterapia-image.jpg",
+                "popupDescription": "La aromaterapia es una terapia holística que utiliza aceites esenciales naturales para promover la salud y el bienestar. Nuestras expertas terapeutas seleccionarán cuidadosamente los aceites más adecuados para ti, creando una experiencia personalizada que no solo relaja tu cuerpo, sino que también calma tu mente y eleva tu espíritu.",
+                "popupImage": "aromaterapia-popup.jpg"
             },
             {
                 "title": "Piedras Calientes",
@@ -19,7 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "piedras-calientes-icon.png",
                 "benefitsIcon": "ccirculacion.png",
                 "durationIcon": "duration-icon.png",
-                "image": "piedras-calientes-image.jpg"
+                "image": "piedras-calientes-image.jpg",
+                "popupDescription": "El masaje con piedras calientes es una terapia antigua que combina el masaje tradicional con el uso de piedras volcánicas lisas y calientes. El calor penetrante de las piedras ayuda a relajar los músculos en profundidad, permitiendo a nuestros terapeutas trabajar más efectivamente en las áreas de tensión. Esta terapia es particularmente efectiva para aliviar dolores musculares, mejorar la circulación y proporcionar una sensación de relajación profunda.",
+                "popupImage": "piedras-calientes-popup.jpg"
             },
             {
                 "title": "Piedras Frías",
@@ -29,7 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "piedras-frias-icon.png",
                 "benefitsIcon": "cdolor espalda.png",
                 "durationIcon": "duration-icon.png",
-                "image": "piedras-frias-image.jpg"
+                "image": "piedras-frias-image.jpg",
+                "popupDescription": "El masaje con piedras frías es una técnica refrescante que utiliza piedras de mármol enfriadas para reducir la inflamación, calmar los músculos y mejorar la circulación. Esta terapia es especialmente beneficiosa para aliviar el dolor muscular, reducir la hinchazón y proporcionar una sensación general de rejuvenecimiento.",
+                "popupImage": "piedras-frias-popup.jpg"
             },
             {
                 "title": "Espalda y Cuello",
@@ -39,7 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "espalda-cuello-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "espalda-cuello-image.jpg"
+                "image": "espalda-cuello-image.jpg",
+                "popupDescription": "Este masaje focalizado se centra en las áreas que más comúnmente acumulan tensión: la espalda y el cuello. Utilizando una combinación de técnicas de masaje sueco y de puntos de presión, nuestros terapeutas trabajarán para liberar los nudos musculares, mejorar la flexibilidad y proporcionar un alivio inmediato del estrés y la tensión.",
+                "popupImage": "espalda-cuello-popup.jpg"
             },
             {
                 "title": "Sueco Relajante",
@@ -49,7 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "sueco-relajante-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "sueco-relajante-image.jpg"
+                "image": "sueco-relajante-image.jpg",
+                "popupDescription": "El masaje sueco es conocido por su capacidad para inducir una relajación profunda y aliviar la tensión muscular. Nuestros terapeutas utilizan una combinación de movimientos largos y fluidos, amasamiento y fricción circular para mejorar la circulación, flexibilidad y bienestar general. Este masaje es perfecto para aquellos que buscan un escape relajante del estrés diario.",
+                "popupImage": "sueco-relajante-popup.jpg"
             },
             {
                 "title": "Chocolaterapia",
@@ -59,7 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "choco.png",
                 "benefitsIcon": "chidratacion.png",
                 "durationIcon": "duration-icon.png",
-                "image": "chocolaterapia-image.jpg"
+                "image": "chocolaterapia-image.jpg",
+                "popupDescription": "La chocolaterapia es un tratamiento lujoso que combina los beneficios del masaje con las propiedades nutritivas del chocolate. El cacao rico en antioxidantes ayuda a nutrir y rejuvenecer la piel, mientras que el aroma del chocolate induce una sensación de bienestar y relajación. Este tratamiento no solo es un placer para los sentidos, sino que también deja la piel suave, hidratada y con un brillo saludable.",
+                "popupImage": "chocolaterapia-popup.jpg"
             },
             {
                 "title": "Reflexología",
@@ -69,7 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "reflexologia-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "reflexologia-image.jpg"
+                "image": "reflexologia-image.jpg",
+                "popupDescription": "La reflexología es una técnica terapéutica que se centra en aplicar presión en puntos específicos de los pies que se corresponden con diferentes órganos y sistemas del cuerpo. Este tratamiento no solo proporciona una profunda relajación, sino que también puede ayudar a mejorar la circulación, reducir el estrés y promover un sentido general de bienestar en todo el cuerpo.",
+                "popupImage": "reflexologia-popup.jpg"
             },
             {
                 "title": "Envoltura Corporal",
@@ -79,7 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "envoltura-corporal-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "envoltura-corporal-image.jpg"
+                "image": "envoltura-corporal-image.jpg",
+                "popupDescription": "La envoltura corporal es un tratamiento de spa lujoso que comienza con un suave exfoliante para preparar la piel. Luego, se aplica una mezcla nutritiva de algas, arcilla o ingredientes botánicos en todo el cuerpo. Te envolvemos en una manta térmica para maximizar la absorción de los ingredientes beneficiosos. El tratamiento concluye con la aplicación de una loción hidratante, dejando tu piel suave, nutrida y radiante.",
+                "popupImage": "envoltura-corporal-popup.jpg"
             },
             {
                 "title": "Aromas y Cera",
@@ -89,7 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "aromas-cera-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "aromas-cera-image.jpg"
+                "image": "aromas-cera-image.jpg",
+                "popupDescription": "El tratamiento de Aromas y Cera es una experiencia sensorial única que combina los beneficios de la aromaterapia con las propiedades hidratantes de las ceras naturales. Las ceras aromáticas se calientan hasta convertirse en aceites tibios y se aplican suavemente sobre la piel, proporcionando una hidratación profunda y una relajación intensa. Los aromas cuidadosamente seleccionados ayudan a calmar la mente y elevar el espíritu.",
+                "popupImage": "aromas-cera-popup.jpg"
             },
             {
                 "title": "Lomi Lomi",
@@ -99,7 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "lomi-lomi-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "lomi-lomi-image.jpg"
+                "image": "lomi-lomi-image.jpg",
+                "popupDescription": "El Lomi Lomi es un masaje tradicional hawaiano que utiliza movimientos largos, fluidos y rítmicos de los antebrazos y las manos para masajear el cuerpo. Esta técnica única no solo relaja profundamente los músculos, sino que también se dice que ayuda a liberar patrones de pensamiento negativos almacenados en el cuerpo. El resultado es una sensación de rejuvenecimiento tanto física como mental.",
+                "popupImage": "lomi-lomi-popup.jpg"
             },
             {
                 "title": "Shiatsu",
@@ -109,7 +129,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "shiatsu-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "shiatsu-image.jpg"
+                "image": "shiatsu-image.jpg",
+                "popupDescription": "El Shiatsu es una forma de terapia de presión originaria de Japón. Utiliza presión con los dedos, palmas, codos y a veces los pies en puntos específicos del cuerpo para equilibrar el flujo de energía vital o 'chi'. Este tratamiento no solo ayuda a aliviar la tensión muscular y el estrés, sino que también puede mejorar la circulación y promover una sensación general de bienestar y vitalidad.",
+                "popupImage": "shiatsu-popup.jpg"
             },
             {
                 "title": "Aceites de CBD",
@@ -119,7 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "cbd-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "cbd-image.jpg"
+                "image": "cbd-image.jpg",
+                "popupDescription": "Nuestro masaje con aceites de CBD combina las técnicas de masaje tradicionales con los beneficios terapéuticos del cannabidiol (CBD). El CBD es conocido por sus propiedades antiinflamatorias y calmantes. Este tratamiento puede ayudar a aliviar el dolor muscular crónico, reducir la ansiedad y promover una sensación de calma y bienestar general. Es ideal para aquellos que buscan alivio del estrés y las molestias físicas.",
+                "popupImage": "cbd-popup.jpg"
             },
             {
                 "title": "Cuerpo Completo con Ventosas",
@@ -129,7 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "ventosas-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "ventosas-image.jpg"
+                "image": "ventosas-image.jpg",
+                "popupDescription": "El masaje con ventosas es una técnica antigua que utiliza copas de succión para crear un vacío en la piel. Esto ayuda a aumentar el flujo sanguíneo, liberar la fascia y promover la curación natural del cuerpo. Las ventosas pueden ayudar a aliviar el dolor muscular, reducir la inflamación y mejorar la circulación general. Este tratamiento de cuerpo completo combina las ventosas con técnicas de masaje tradicionales para una experiencia terapéutica integral.",
+                "popupImage": "ventosas-popup.jpg"
             }
         ],
         pareja: [
@@ -141,7 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "cfragancia2.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "aromaterapia-image.jpg"
+                "image": "aromaterapia-image.jpg",
+                "popupDescription": "Experimenten juntos el poder relajante de la aromaterapia. En este masaje para parejas, podrán elegir entre una variedad de aceites esenciales cuidadosamente seleccionados para crear su atmósfera perfecta. Nuestros terapeutas expertos utilizarán técnicas suaves de masaje mientras los aromas elegidos envuelven sus sentidos, proporcionando una experiencia de relajación profunda y conexión mutua.",
+                "popupImage": "aromaterapia-pareja-popup.jpg"
             },
             {
                 "title": "Experiencia Piedras Calientes en Pareja",
@@ -151,7 +179,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "piedras-calientes-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "piedras-calientes-image.jpg"
+                "image": "piedras-calientes-image.jpg",
+                "popupDescription": "Sumérjanse juntos en una experiencia de calor y relajación profunda. Las piedras volcánicas calientes se colocan estratégicamente en puntos clave del cuerpo, combinadas con un masaje profundo que alivia la tensión muscular y mejora la circulación. Este tratamiento en pareja no solo proporciona beneficios físicos, sino que también crea un momento íntimo y relajante para compartir y conectar.",
+                "popupImage": "piedras-calientes-pareja-popup.jpg"
             },
             {
                 "title": "Liberan Cuello y Espalda",
@@ -161,7 +191,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "cuello-espalda-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "cuello-espalda-image.jpg"
+                "image": "cuello-espalda-image.jpg",
+                "popupDescription": "Este masaje focalizado es ideal para parejas que buscan aliviar la tensión en las áreas que más lo necesitan. Nuestros terapeutas se centrarán en liberar el estrés acumulado en el cuello y la espalda, utilizando técnicas específicas para reducir la rigidez y aliviar el dolor. Disfruten juntos de esta experiencia relajante y salgan sintiéndose renovados y conectados.",
+                "popupImage": "cuello-espalda-pareja-popup.jpg"
             },
             {
                 "title": "Masaje de Piedras Frías en Pareja",
@@ -171,7 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "piedras-frias-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "piedras-frias-image.jpg"
+                "image": "piedras-frias-image.jpg",
+                "popupDescription": "Experimenten juntos la frescura revitalizante de nuestro masaje con piedras frías. Este tratamiento único combina el uso de piedras de mármol enfriadas con técnicas de masaje suave para estimular la circulación, reducir la inflamación y calmar los músculos cansados. Es especialmente refrescante después de un día caluroso o para aliviar el dolor muscular. Saldrán sintiéndose rejuvenecidos y con una sensación de frescura compartida.",
+                "popupImage": "piedras-frias-pareja-popup.jpg"
             },
             {
                 "title": "Sueco Relajante para 2",
@@ -181,7 +215,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "sueco-relajante-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "sueco-relajante-image.jpg"
+                "image": "sueco-relajante-image.jpg",
+                "popupDescription": "Disfruten juntos de la relajación profunda que ofrece nuestro masaje sueco en pareja. Este tratamiento utiliza movimientos largos y fluidos, amasamiento suave y fricción circular para aliviar la tensión muscular, mejorar la circulación y promover una relajación total. Es una experiencia perfecta para parejas que buscan un escape del estrés diario y un momento de conexión en un ambiente tranquilo y lujoso.",
+                "popupImage": "sueco-relajante-pareja-popup.jpg"
             },
             {
                 "title": "Chocolaterapia en Pareja",
@@ -191,7 +227,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "chocolaterapia-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "chocolaterapia-image.jpg"
+                "image": "chocolaterapia-image.jpg",
+                "popupDescription": "Sumérjanse en el lujo y el placer con nuestra chocolaterapia en pareja. Este tratamiento indulgente utiliza productos a base de chocolate rico en antioxidantes para nutrir y rejuvenecer la piel. El aroma del chocolate no solo es delicioso, sino que también estimula la liberación de endorfinas, creando una sensación de felicidad y relajación. Disfruten juntos de esta experiencia sensorial única que dejará su piel suave, hidratada y con un delicioso aroma.",
+                "popupImage": "chocolaterapia-pareja-popup.jpg"
             },
             {
                 "title": "Masaje de Reflexología en Pareja",
@@ -201,7 +239,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "reflexologia-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "reflexologia-image.jpg"
+                "image": "reflexologia-image.jpg",
+                "popupDescription": "Experimenten juntos los beneficios de la reflexología, una técnica que se centra en puntos de presión específicos en los pies que corresponden a diferentes partes del cuerpo. Este tratamiento no solo proporciona una relajación profunda, sino que también puede ayudar a mejorar la circulación, reducir el estrés y promover un sentido de bienestar en todo el cuerpo. Es una forma única y relajante de cuidarse mutuamente y disfrutar de un momento de tranquilidad compartida.",
+                "popupImage": "reflexologia-pareja-popup.jpg"
             },
             {
                 "title": "Masaje de Envoltura Corporal en Pareja",
@@ -211,7 +251,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "envoltura-corporal-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "envoltura-corporal-image.jpg"
+                "image": "envoltura-corporal-image.jpg",
+                "popupDescription": "Disfruten juntos de una experiencia de spa verdaderamente lujosa con nuestra envoltura corporal en pareja. Comenzamos con un suave exfoliante para preparar la piel, seguido de la aplicación de una mezcla nutritiva de algas, arcilla o ingredientes botánicos en todo el cuerpo. Luego, los envolvemos en mantas térmicas para maximizar la absorción de los ingredientes beneficiosos. Mientras están envueltos, disfrutarán de un relajante masaje facial. El tratamiento concluye con la aplicación de una loción hidratante, dejando su piel suave, nutrida y radiante. Es una experiencia perfecta para parejas que buscan un momento de indulgencia y cuidado mutuo.",
+                "popupImage": "envoltura-corporal-pareja-popup.jpg"
             },
             {
                 "title": "Masaje con Aromas y Cera en Pareja",
@@ -221,7 +263,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "aromas-cera-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "aromas-cera-image.jpg"
+                "image": "aromas-cera-image.jpg",
+                "popupDescription": "Sumérjanse juntos en una experiencia sensorial única con nuestro masaje de aromas y cera en pareja. Las ceras aromáticas cuidadosamente seleccionadas se calientan hasta convertirse en aceites tibios y se aplican suavemente sobre la piel, proporcionando una hidratación profunda y una relajación intensa. Los aromas envolventes crean una atmósfera de calma y bienestar, mientras que el calor de la cera ayuda a relajar los músculos tensos. Este tratamiento no solo nutre la piel, sino que también crea un momento íntimo y relajante para la pareja.",
+                "popupImage": "aromas-cera-pareja-popup.jpg"
             },
             {
                 "title": "Masaje Lomi Lomi en Pareja",
@@ -231,7 +275,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "lomi-lomi-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "lomi-lomi-image.jpg"
+                "image": "lomi-lomi-image.jpg",
+                "popupDescription": "Experimenten juntos la magia del masaje hawaiano Lomi Lomi. Este tratamiento único utiliza movimientos largos, fluidos y rítmicos que recorren todo el cuerpo, imitando las olas del océano. Los terapeutas usan no solo las manos, sino también los antebrazos para aplicar una presión profunda y relajante. El Lomi Lomi no solo relaja los músculos, sino que también se cree que ayuda a liberar patrones de pensamiento negativos almacenados en el cuerpo. Es una experiencia profundamente relajante y revitalizante que les permitirá conectar en un nivel más profundo.",
+                "popupImage": "lomi-lomi-pareja-popup.jpg"
             },
             {
                 "title": "Masaje Shiatsu en Pareja",
@@ -241,7 +287,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "shiatsu-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "shiatsu-image.jpg"
+                "image": "shiatsu-image.jpg",
+                "popupDescription": "Descubran juntos los beneficios del Shiatsu, una forma de terapia japonesa que significa 'presión con los dedos'. En este tratamiento, los terapeutas aplican presión en puntos específicos del cuerpo para equilibrar el flujo de energía vital o 'chi'. El Shiatsu se realiza a través de la ropa cómoda y no utiliza aceites. Además de aliviar la tensión muscular y el estrés, este masaje puede mejorar la circulación, aliviar dolores de cabeza y promover una sensación general de bienestar y vitalidad. Es una experiencia única que les permitirá sentirse renovados y equilibrados juntos.",
+                "popupImage": "shiatsu-pareja-popup.jpg"
             },
             {
                 "title": "Masaje con Aceites de CBD en Pareja",
@@ -251,7 +299,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "cbd-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "cbd-image.jpg"
+                "image": "cbd-image.jpg",
+                "popupDescription": "Experimenten juntos los beneficios terapéuticos del CBD con nuestro masaje en pareja. El cannabidiol (CBD) es conocido por sus propiedades antiinflamatorias y calmantes. Nuestros aceites de masaje infundidos con CBD se combinan con técnicas de masaje expertas para proporcionar un alivio profundo del dolor muscular y articular. Además de sus beneficios físicos, el CBD puede ayudar a reducir la ansiedad y promover una sensación de calma y bienestar. Este tratamiento es ideal para parejas que buscan una experiencia de relajación profunda y alivio del estrés físico y mental.",
+                "popupImage": "cbd-pareja-popup.jpg"
             },
             {
                 "title": "Masaje de Cuerpo Completo con Técnicas de Ventosas en Pareja",
@@ -261,7 +311,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "ventosas-icon.png",
                 "benefitsIcon": "benefits-icon.png",
                 "durationIcon": "duration-icon.png",
-                "image": "ventosas-image.jpg"
+                "image": "ventosas-image.jpg",
+                "popupDescription": "Descubran juntos los beneficios únicos de nuestro masaje con ventosas. Esta técnica antigua utiliza copas de succión para crear un vacío en la piel, lo que ayuda a aumentar el flujo sanguíneo, liberar la fascia y promover la curación natural del cuerpo. Combinamos las ventosas con técnicas de masaje tradicionales para una experiencia terapéutica integral. Los beneficios incluyen alivio del dolor muscular, reducción de la inflamación y mejora de la circulación general. Es una experiencia única y potente que les permitirá sentirse renovados y revitalizados juntos.",
+                "popupImage": "ventosas-pareja-popup.jpg"
             }
         ],
         "paquetes": [
@@ -274,7 +326,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "romance-total-icon.png",
                 "benefitsIcon": ["benefit1-icon.png", "benefit2-icon.png"],
                 "durationIcon": "duration-romance-icon.png",
-                "image": "romance-total-image.jpg"
+                "image": "romance-total-image.jpg",
+                "popupDescription": "El Paquete Romance Total es la experiencia definitiva para parejas que buscan un escape lujoso y relajante. Comienza con un masaje de aromaterapia en pareja de 90 minutos, donde los aceites esenciales cuidadosamente seleccionados crearán una atmósfera de relajación total. Después del masaje, disfruten de 30 minutos adicionales de indulgencia con una copa de vino selecto, fresas cubiertas de chocolate y una exquisita tabla de quesos gourmet. Este paquete está diseñado para nutrir tanto el cuerpo como el espíritu, ofreciendo un momento de conexión y lujo compartido.",
+                "popupImage": "romance-total-popup.jpg"
             },
             {
                 "title": "Paquete Romance Total 2",
@@ -285,7 +339,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "romance-total2-icon.png",
                 "benefitsIcon": ["benefit1-icon.png", "benefit2-icon.png"],
                 "durationIcon": "duration-romance2-icon.png",
-                "image": "romance-total2-image.jpg"
+                "image": "romance-total2-image.jpg",
+                "popupDescription": "El Paquete Romance Total 2 ofrece una experiencia única de relajación y placer para parejas. Comienza con un lujoso masaje de aromaterapia en pareja de 90 minutos, donde los aceites esenciales cuidadosamente seleccionados crearán un ambiente de tranquilidad y bienestar. Después del masaje, disfruten de 30 minutos adicionales de indulgencia con su elección de café gourmet (Latte, Capuchino o Expreso) acompañado de un delicioso pastel o tarta. Este paquete combina perfectamente la relajación profunda con los placeres culinarios, creando un momento especial para compartir y conectar.",
+                "popupImage": "romance-total2-popup.jpg"
             },
             {
                 "title": "Paquete Lujo y Sabor",
@@ -296,7 +352,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "lujo-sabor-icon.png",
                 "benefitsIcon": ["benefit-lujo1-icon.png", "benefit-lujo2-icon.png"],
                 "durationIcon": "duration-lujo-icon.png",
-                "image": "lujo-sabor-image.jpg"
+                "image": "lujo-sabor-image.jpg",
+                "popupDescription": "El Paquete Lujo y Sabor es una experiencia premium que combina el lujo de un masaje de piedras calientes con una degustación gourmet. Comienza con un relajante masaje de 90 minutos donde las piedras volcánicas calientes aliviarán profundamente la tensión muscular. Luego, disfruten de 30 minutos de pura indulgencia con una selección cuidadosamente curada de vinos finos, quesos artesanales y fresas bañadas en chocolate. Este paquete es perfecto para aquellos que buscan una experiencia que deleite todos los sentidos.",
+                "popupImage": "lujo-sabor-popup.jpg"
             },
             {
                 "title": "Paquete Sensaciones Inolvidables",
@@ -307,7 +365,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "sensaciones-icon.png",
                 "benefitsIcon": ["benefit-sensaciones1-icon.png", "benefit-sensaciones2-icon.png"],
                 "durationIcon": "duration-sensaciones-icon.png",
-                "image": "sensaciones-image.jpg"
+                "image": "sensaciones-image.jpg",
+                "popupDescription": "El Paquete Sensaciones Inolvidables es una experiencia diseñada para despertar todos sus sentidos. Comienza con un lujoso masaje de cuerpo completo en pareja de 90 minutos, que les dejará completamente relajados y renovados. Después, disfruten de 45 minutos de pura indulgencia con una copa de vino selecto, fresas cubiertas de chocolate y una exquisita tabla de quesos artísticos. Este paquete combina perfectamente la relajación profunda con una experiencia gastronómica refinada, creando recuerdos que perdurarán mucho después de que termine su visita.",
+                "popupImage": "sensaciones-inolvidables-popup.jpg"
             },
             {
                 "title": "Paquete Escape de Lujo",
@@ -318,7 +378,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "escape-lujo-icon.png",
                 "benefitsIcon": ["benefit-escape1-icon.png", "benefit-escape2-icon.png"],
                 "durationIcon": "duration-escape-icon.png",
-                "image": "escape-lujo-image.jpg"
+                "image": "escape-lujo-image.jpg",
+                "popupDescription": "El Paquete Escape de Lujo es la elección perfecta para parejas que buscan una experiencia de spa verdaderamente indulgente. Comienza con un masaje de aromaterapia relajante, seguido de una envoltura de algas desintoxicante. Este tratamiento de 90 minutos dejará su piel suave y su cuerpo completamente relajado. Después, disfruten de 30 minutos de placer culinario con una copa de vino selecto, fresas cubiertas de chocolate y una exquisita tabla de quesos y frutas frescas. Es la combinación perfecta de relajación, desintoxicación y placer gastronómico.",
+                "popupImage": "escape-lujo-popup.jpg"
             },
             {
                 "title": "Paquete Relax y Sabores",
@@ -329,7 +391,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "relax-sabores-icon.png",
                 "benefitsIcon": ["benefit-relax1-icon.png", "benefit-relax2-icon.png"],
                 "durationIcon": "duration-relax-icon.png",
-                "image": "relax-sabores-image.jpg"
+                "image": "relax-sabores-image.jpg",
+                "popupDescription": "El Paquete Relax y Sabores ofrece una combinación perfecta de relajación y placer culinario. Comienza con un masaje de reflexología en pareja de 60 minutos, que alivia el estrés y promueve el bienestar general a través de la estimulación de puntos específicos en los pies. Después, disfruten de 30 minutos de indulgencia con una copa de vino selecto, fresas cubiertas de chocolate y una selección de quesos gourmet. Este paquete es ideal para parejas que buscan una experiencia relajante y romántica con un toque de sofisticación culinaria.",
+                "popupImage": "relax-sabores-popup.jpg"
             },
             {
                 "title": "Paquete Tranquilidad Gourmet",
@@ -340,7 +404,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "tranquilidad-gourmet-icon.png",
                 "benefitsIcon": ["benefit-tranquilidad1-icon.png", "benefit-tranquilidad2-icon.png"],
                 "durationIcon": "duration-tranquilidad-icon.png",
-                "image": "tranquilidad-gourmet-image.jpg"
+                "image": "tranquilidad-gourmet-image.jpg",
+                "popupDescription": "El Paquete Tranquilidad Gourmet combina los beneficios terapéuticos del CBD con una experiencia de café gourmet. Comienza con un masaje de 60 minutos utilizando aceites infundidos con CBD, conocidos por sus propiedades antiinflamatorias y relajantes. Después, disfruten de 30 minutos de placer culinario con su elección de café gourmet (Latte, Capuchino o Expreso) acompañado de un delicioso pastel o tarta. Este paquete es perfecto para parejas que buscan alivio del estrés y el dolor, junto con una experiencia de café de alta calidad.",
+                "popupImage": "tranquilidad-gourmet-popup.jpg"
             },
             {
                 "title": "Paquete Relajación y Gourmet",
@@ -351,11 +417,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 "icon": "relajacion-gourmet-icon.png",
                 "benefitsIcon": ["benefit-relajacion1-icon.png", "benefit-relajacion2-icon.png"],
                 "durationIcon": "duration-relajacion-icon.png",
-                "image": "relajacion-gourmet-image.jpg"
+                "image": "relajacion-gourmet-image.jpg",
+                "popupDescription": "El Paquete Relajación y Gourmet ofrece una experiencia completa de bienestar y placer culinario. Comienza con un masaje sueco en pareja de 60 minutos, utilizando técnicas de presión suave y movimientos largos para aliviar la tensión muscular y promover la relajación. Después, disfruten de 30 minutos de indulgencia con una copa de vino selecto, fresas cubiertas de chocolate y una selección de quesos finos. Este paquete es ideal para parejas que buscan una combinación perfecta de relajación física y placer gastronómico en un ambiente lujoso y romántico.",
+                "popupImage": "relajacion-gourmet-popup.jpg"
             }
         ]
     };
-      const header = document.getElementById('sticky-header');
+
+    const header = document.getElementById('sticky-header');
     const headerHeight = header.offsetHeight;
     let lastScrollTop = 0;
 
@@ -447,34 +516,33 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         packageList.appendChild(packageElement);
     });
-});
 
-function showPopup(data) {
+    // Popup functionality
     const popup = document.getElementById('popup');
-    const popupTitle = document.getElementById('popup-title');
-    const popupImage = document.getElementById('popup-image');
-    const popupDescription = document.getElementById('popup-description');
+    const closeButton = document.querySelector('.close');
 
-    popupTitle.textContent = data.title;
-    popupImage.src = data.popupImage;
-    popupImage.alt = data.title;
-    popupDescription.textContent = data.popupDescription;
+    window.showPopup = function(data) {
+        const popupTitle = document.getElementById('popup-title');
+        const popupImage = document.getElementById('popup-image');
+        const popupDescription = document.getElementById('popup-description');
 
-    popup.style.display = 'block';
-}
+        popupTitle.textContent = data.title;
+        popupImage.src = data.popupImage || data.image;
+        popupImage.alt = data.title;
+        popupDescription.textContent = data.popupDescription || data.description;
 
-// Cerrar el pop-up
-const closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', () => {
-    document.getElementById('popup').style.display = 'none';
-});
-
-// Cerrar el pop-up si se hace clic fuera de él
-window.addEventListener('click', (e) => {
-    const popup = document.getElementById('popup');
-    if (e.target === popup) {
-        popup.style.display = 'none';
+        popup.style.display = 'block';
     }
+
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
 });
 
 function sendWhatsAppMessage(action, serviceTitle) {
