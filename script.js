@@ -423,31 +423,7 @@ const services = {
         }
     ]
 };
-// Funciones de traducción
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'es,en,fr,zh-CN,iw',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-    }, 'google_translate_element');
-}
 
-function translatePage(lang) {
-    const googleFrame = document.getElementsByClassName('goog-te-menu-frame')[0];
-    if (!googleFrame) {
-        setTimeout(() => translatePage(lang), 50);
-        return;
-    }
-    const googleFrameDoc = googleFrame.contentDocument || googleFrame.contentWindow.document;
-    const languageSelect = googleFrameDoc.getElementsByTagName('button');
-    for (let i = 0; i < languageSelect.length; i++) {
-        if (languageSelect[i].innerHTML.indexOf(lang) > -1) {
-            languageSelect[i].click();
-            break;
-        }
-    }
-}
 
 // Funciones de renderizado
 function renderServices(category) {
