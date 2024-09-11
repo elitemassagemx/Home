@@ -32,14 +32,10 @@ body {
 }
 
 /* Header Styles */
-#sticky-header {
+header {
     background-color: var(--header-background);
     color: white;
     padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .header-content {
@@ -66,37 +62,6 @@ h1 {
     font-family: 'Avenir Next', 'Open Sans', sans-serif;
     font-weight: 700;
     white-space: nowrap;
-}
-
-/* Navigation Styles */
-.main-nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.main-nav li {
-    margin: 0 10px;
-}
-
-.main-nav a {
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    transition: all 0.3s ease;
-}
-
-.main-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.nav-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 5px;
 }
 
 /* Language Selector Styles */
@@ -152,6 +117,39 @@ h1 {
     margin-right: 10px;
     width: 20px;
     height: 20px;
+}
+
+/* Navigation Styles */
+.main-nav {
+    background-color: var(--main-blue);
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
 }
 
 /* Main Content Styles */
@@ -219,6 +217,12 @@ h1 {
 .service-item h3, .package-item h3 {
     color: var(--primary-color);
     margin-top: 0;
+}
+
+.service-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
 }
 
 .service-buttons, .package-item button {
@@ -296,3 +300,8 @@ footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
