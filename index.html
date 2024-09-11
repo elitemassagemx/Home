@@ -1,3 +1,51 @@
+Para integrar la funcionalidad de Google Translate en los botones de tu página web sin usar el widget directamente, puedes seguir estos pasos:
+
+### 1. **Añadir el Script de Google Translate**
+
+Primero, necesitas añadir el script de Google Translate en tu archivo HTML. Este script inicializa el widget de traducción.
+
+```html
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+```
+
+### 2. **Crear una Función para Cambiar el Idioma**
+
+Luego, crea una función que cambie el idioma de la página cuando se hace clic en un botón. Esta función seleccionará el elemento de selección de idioma y cambiará su valor.
+
+```html
+<script type="text/javascript">
+  function changeLanguage(lang) {
+    var translateElement = document.querySelector('.goog-te-combo');
+    if (translateElement) {
+      translateElement.value = lang;
+      translateElement.dispatchEvent(new Event('change'));
+    }
+  }
+</script>
+```
+
+### 3. **Asignar la Función a Tus Botones**
+
+Finalmente, asigna la función `changeLanguage` a tus botones de selección de idioma.
+
+```html
+<button onclick="changeLanguage('es')">Español</button>
+<button onclick="changeLanguage('en')">English</button>
+<button onclick="changeLanguage('fr')">Français</button>
+<button onclick="changeLanguage('zh-CN')">中文</button>
+<button onclick="changeLanguage('iw')">עברית</button>
+```
+
+### 4. **Integrar Todo en Tu HTML**
+
+Aquí está el código completo de tu HTML con la funcionalidad de traducción integrada:
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +56,7 @@
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript">
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,fr,zh-CN,iw', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -24,11 +72,11 @@
                 <div class="language-selector">
                     <img src="trad.png" alt="Traducir" id="translate-icon">
                     <div class="language-options">
-                        <button class="lang-option" onclick="translatePage('es')" data-lang="es"><img src="omx.png" alt="Bandera de México"> Español</button>
-                        <button class="lang-option" onclick="translatePage('en')" data-lang="en"><img src="ous.png" alt="Bandera de Estados Unidos"> English</button>
-                        <button class="lang-option" onclick="translatePage('iw')" data-lang="iw"><img src="ois.png" alt="Bandera de Israel"> עברית</button>
-                        <button class="lang-option" onclick="translatePage('fr')" data-lang="fr"><img src="ofr.png" alt="Bandera de Francia"> Français</button>
-                        <button class="lang-option" onclick="translatePage('zh-CN')" data-lang="zh-CN"><img src="och.png" alt="Bandera de China"> 中文</button>
+                        <button class="lang-option" onclick="changeLanguage('es')" data-lang="es"><img src="omx.png" alt="Bandera de México"> Español</button>
+                        <button class="lang-option" onclick="changeLanguage('en')" data-lang="en"><img src="ous.png" alt="Bandera de Estados Unidos"> English</button>
+                        <button class="lang-option" onclick="changeLanguage('iw')" data-lang="iw"><img src="ois.png" alt="Bandera de Israel"> עברית</button>
+                        <button class="lang-option" onclick="changeLanguage('fr')" data-lang="fr"><img src="ofr.png" alt="Bandera de Francia"> Français</button>
+                        <button class="lang-option" onclick="changeLanguage('zh-CN')" data-lang="zh-CN"><img src="och.png" alt="Bandera de China"> 中文</button>
                     </div>
                 </div>
                 <div id="google_translate_element" style="display:none;"></div>
@@ -129,6 +177,15 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        function changeLanguage(lang) {
+            var translateElement = document.querySelector('.goog-te-combo');
+            if (translateElement) {
+                translateElement.value = lang;
+                translateElement.dispatchEvent(new Event('change'));
+            }
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
