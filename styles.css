@@ -40,6 +40,7 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    height: auto;
 }
 
 .header-top {
@@ -55,20 +56,20 @@ body {
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
-    margin-right: 15px;
+    margin-right: 10px;
     display: block;
 }
 
 h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 24px;
     font-family: 'Avenir Next', 'Open Sans', sans-serif;
     font-weight: 700;
     letter-spacing: -0.5px;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .language-selector {
@@ -132,7 +133,16 @@ h1 {
 .hero {
     background-color: var(--item-background);
     text-align: center;
-    padding: 50px 0;
+    padding: 30px 0;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
 }
 
 .category-selector {
@@ -166,8 +176,11 @@ h1 {
 
 .services-grid, #package-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 15px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .service-item, .package-item {
@@ -178,6 +191,10 @@ h1 {
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .service-item:hover, .package-item:hover {
@@ -195,6 +212,15 @@ h1 {
 .service-item p, .package-item p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.service-item .icon, .package-item .icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
 .service-buttons, .package-item button {
@@ -219,6 +245,16 @@ h1 {
     background-color: var(--gold);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.section.packages .container {
+    padding: 0;
+    max-width: 100%;
+}
+
+#package-list {
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .gallery-grid {
@@ -261,7 +297,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     background-color: var(--main-blue);
-    padding: 10px 0;
+    padding: 5px 0;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
@@ -340,15 +376,15 @@ footer a:hover {
 }
 
 .nav-icon {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 5px;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 2px;
     background-color: var(--main-blue);
 }
 
 .nav-text {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .testimonial {
@@ -368,7 +404,7 @@ footer a:hover {
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .header-top {
         flex-direction: column;
         align-items: center;
@@ -396,22 +432,31 @@ footer a:hover {
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .popup-content {
         width: 90%;
         margin: 10% auto;
     }
+
+    .category-selector {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .choice-chip {
+        margin: 5px 0;
+    }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .services-grid, #package-list {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .container {
         padding: 0 30px;
     }
