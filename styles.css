@@ -21,7 +21,7 @@ body {
     background-size: 600% 600%;
     animation: gradientTransition 15s ease infinite;
     color: var(--text-color);
-    padding-bottom: 80px; /* Espacio para la barra fija inferior */
+    padding-bottom: 80px;
 }
 
 .container {
@@ -32,7 +32,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Header Styles */
 #sticky-header {
     background-color: var(--header-background);
     color: white;
@@ -72,7 +71,6 @@ h1 {
     white-space: nowrap;
 }
 
-/* Language Selector Styles */
 .language-selector {
     display: flex;
     align-items: center;
@@ -82,12 +80,6 @@ h1 {
     background-color: transparent;
     padding: 5px;
     border-radius: 5px;
-}
-
-.language-selector span {
-    margin-right: 10px;
-    font-size: 18px;
-    font-weight: bold;
 }
 
 #translate-icon {
@@ -133,7 +125,6 @@ h1 {
     height: 20px;
 }
 
-/* Main Content Styles */
 .section {
     padding: 50px 0;
 }
@@ -144,7 +135,6 @@ h1 {
     padding: 50px 0;
 }
 
-/* Services Section */
 .category-selector {
     display: flex;
     justify-content: center;
@@ -224,6 +214,7 @@ h1 {
     margin-right: 1rem;
     margin-bottom: 0.5rem;
 }
+/* ... (estilos anteriores) ... */
 
 .service-buttons button:hover, .package-item button:hover {
     background-color: var(--gold);
@@ -231,7 +222,6 @@ h1 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Gallery Section */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -249,7 +239,6 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Footer Styles */
 footer {
     background-color: var(--header-background);
     color: white;
@@ -267,7 +256,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Fixed Bottom Bar */
 .fixed-bar {
     position: fixed;
     bottom: 0;
@@ -279,14 +267,57 @@ footer a:hover {
     z-index: 1000;
 }
 
-/* Animations */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: var(--item-background);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: var(--text-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#popup-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
 @keyframes gradientTransition {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .header-top {
         flex-direction: column;
@@ -317,6 +348,11 @@ footer a:hover {
     h1 {
         font-size: 28px;
     }
+
+    .popup-content {
+        width: 90%;
+        margin: 10% auto;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -333,4 +369,48 @@ footer a:hover {
     .services-grid, #package-list {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.testimonial {
+    background-color: var(--item-background);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial .author {
+    text-align: right;
+    font-weight: bold;
 }
