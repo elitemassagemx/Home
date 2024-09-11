@@ -423,15 +423,7 @@ const services = {
         }
     ]
 };
-// Función para cargar el script de Google Translate
-function loadGoogleTranslate() {
-    var script = document.createElement('script');
-    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    script.async = true;
-    document.body.appendChild(script);
-}
-
-// Función para inicializar Google Translate (ahora oculto)
+// Funciones de traducción
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
         pageLanguage: 'es',
@@ -441,18 +433,15 @@ function googleTranslateElementInit() {
     }, 'google_translate_element');
 }
 
-// Función para traducir la página
 function translatePage(lang) {
-    // Utilizar la API de Google Translate para cambiar el idioma
-    var googleFrame = document.getElementsByClassName('goog-te-menu-frame')[0];
+    const googleFrame = document.getElementsByClassName('goog-te-menu-frame')[0];
     if (!googleFrame) {
-        // Si el frame no existe, espera un poco y vuelve a intentar
-        setTimeout(function() { translatePage(lang); }, 50);
+        setTimeout(() => translatePage(lang), 50);
         return;
     }
-    var googleFrameDoc = googleFrame.contentDocument || googleFrame.contentWindow.document;
-    var languageSelect = googleFrameDoc.getElementsByTagName('button');
-    for (var i = 0; i < languageSelect.length; i++) {
+    const googleFrameDoc = googleFrame.contentDocument || googleFrame.contentWindow.document;
+    const languageSelect = googleFrameDoc.getElementsByTagName('button');
+    for (let i = 0; i < languageSelect.length; i++) {
         if (languageSelect[i].innerHTML.indexOf(lang) > -1) {
             languageSelect[i].click();
             break;
@@ -460,126 +449,31 @@ function translatePage(lang) {
     }
 }
 
-// Evento cuando se carga el DOM
-document.addEventListener('DOMContentLoaded', function() {
-    // Cargar Google Translate
-    loadGoogleTranslate();
-
-    // Agregar event listeners a los botones de idioma
-    document.querySelectorAll('.lang-option').forEach(button => {
-        button.addEventListener('click', function() {
-            var lang = this.getAttribute('data-lang');
-            translatePage(lang);
-        });
-    });
-
-    // Mostrar/ocultar opciones de idioma al hacer clic en el icono
-    document.getElementById('translate-icon').addEventListener('click', function() {
-        document.querySelector('.language-options').classList.toggle('show');
-    });
-});
-
-// Ocultar opciones de idioma si se hace clic fuera
-document.addEventListener('click', function(event) {
-    if (!event.target.matches('#translate-icon') && !event.target.closest('.language-options')) {
-        document.querySelector('.language-options').classList.remove('show');
-    }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const header = document.getElementById('sticky-header');
-    const headerHeight = header.offsetHeight;
-    let lastScrollTop = 0;
-
-    window.addEventListener('scroll', () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > headerHeight) {
-            if (scrollTop > lastScrollTop) {
-                header.style.transform = 'translateY(-100%)';
-            } else {
-                header.style.transform = 'translateY(0)';
-                header.classList.add('sticky');
-            }
-        } else {
-            header.classList.remove('sticky');
-            header.style.transform = 'translateY(0)';
-        }
-
-        lastScrollTop = scrollTop;
-    });
-
-    const languageSelector = document.querySelector('.language-selector');
-    const languageOptions = document.querySelector('.language-options');
-
-    languageSelector.addEventListener('click', () => {
-        languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
-    });
-
-    document.querySelectorAll('.lang-option').forEach(option => {
-        option.addEventListener('click', (event) => {
-            const lang = event.currentTarget.dataset.lang;
-            console.log(`Cambiando idioma a: ${lang}`);
-            languageOptions.style.display = 'none';
-        });
-    });
-
-    document.addEventListener('click', (event) => {
-        if (!languageSelector.contains(event.target)) {
-            languageOptions.style.display = 'none';
-        }
-    });
-
-    const choiceChips = document.querySelectorAll('.choice-chip');
+// Funciones de renderizado
+function renderServices(category) {
     const servicesList = document.getElementById('services-list');
-
-    function renderServices(category) {
-        servicesList.innerHTML = '';
-        services[category].forEach(service => {
-            const serviceElement = document.createElement('div');
-            serviceElement.className = 'service-item';
-            serviceElement.innerHTML = `
-                <h3>${service.title} <img src="${service.icon}" alt="${service.title} icon" class="service-icon"></h3>
-                <p>${service.description}</p>
-                <p><strong>Beneficios:</strong> <img src="${service.benefitsIcon}" alt="Beneficios" class="icon"> ${service.benefits.join(', ')}</p>
-                <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
-                <div class="service-buttons">
-                    <button class="reserve-button" data-title="${service.title}">Reserva ahora</button>
-                    <button class="info-button" data-service='${JSON.stringify(service)}'>Saber más</button>
-                </div>
-            `;
-            servicesList.appendChild(serviceElement);
-        });
-
-        // Add event listeners to the new buttons
-        document.querySelectorAll('.reserve-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const serviceTitle = button.dataset.title;
-                sendWhatsAppMessage('Reservar Ahora', serviceTitle);
-            });
-        });
-
-        document.querySelectorAll('.info-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const service = JSON.parse(button.dataset.service);
-                showPopup(service);
-            });
-        });
-    }
-
-    choiceChips.forEach(chip => {
-        chip.addEventListener('click', () => {
-            choiceChips.forEach(c => c.classList.remove('active'));
-            chip.classList.add('active');
-            renderServices(chip.dataset.category);
-        });
+    servicesList.innerHTML = '';
+    services[category].forEach(service => {
+        const serviceElement = document.createElement('div');
+        serviceElement.className = 'service-item';
+        serviceElement.innerHTML = `
+            <h3>${service.title} <img src="${service.icon}" alt="${service.title} icon" class="service-icon"></h3>
+            <p>${service.description}</p>
+            <p><strong>Beneficios:</strong> <img src="${service.benefitsIcon}" alt="Beneficios" class="icon"> ${service.benefits.join(', ')}</p>
+            <p><strong>Duración:</strong> <img src="${service.durationIcon}" alt="Duración" class="icon"> ${service.duration}</p>
+            <div class="service-buttons">
+                <button class="reserve-button" data-title="${service.title}">Reserva ahora</button>
+                <button class="info-button" data-service='${JSON.stringify(service)}'>Saber más</button>
+            </div>
+        `;
+        servicesList.appendChild(serviceElement);
     });
+    addEventListeners();
+}
 
-    // Render initial services (individual)
-    renderServices('individual');
-
-    // Render packages
+function renderPackages() {
     const packageList = document.getElementById('package-list');
+    packageList.innerHTML = '';
     services.paquetes.forEach(pkg => {
         const packageElement = document.createElement('div');
         packageElement.className = 'package-item';
@@ -594,39 +488,27 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         packageList.appendChild(packageElement);
     });
+    addEventListeners();
+}
 
-    // Add event listeners to the new buttons
+// Funciones de eventos
+function addEventListeners() {
     document.querySelectorAll('.reserve-button').forEach(button => {
         button.addEventListener('click', () => {
-            const packageTitle = button.dataset.title;
-            sendWhatsAppMessage('Reservar', packageTitle);
+            const title = button.dataset.title;
+            sendWhatsAppMessage('Reservar', title);
         });
     });
 
     document.querySelectorAll('.info-button').forEach(button => {
         button.addEventListener('click', () => {
-            const pkg = JSON.parse(button.dataset.service);
-            showPopup(pkg);
+            const service = JSON.parse(button.dataset.service);
+            showPopup(service);
         });
     });
+}
 
-    // Popup functionality
-    const popup = document.getElementById('popup');
-    const closeButton = document.querySelector('.close');
-
-    closeButton.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target === popup) {
-            popup.style.display = 'none';
-        }
-    });
-});
-
-// Funciones globales
-window.showPopup = function(data) {
+function showPopup(data) {
     const popup = document.getElementById('popup');
     const popupTitle = document.getElementById('popup-title');
     const popupImage = document.getElementById('popup-image');
@@ -640,13 +522,57 @@ window.showPopup = function(data) {
     popup.style.display = 'block';
 }
 
-window.sendWhatsAppMessage = function(action, serviceTitle) {
-    let message;
-    if (action === 'Saber más') {
-        message = encodeURIComponent(`Hola! Quiero saber más de ${serviceTitle}`);
-    } else {
-        message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
-    }
+function sendWhatsAppMessage(action, serviceTitle) {
+    const message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
     const url = `https://wa.me/5215640020305?text=${message}`;
     window.open(url, '_blank');
 }
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', () => {
+    const translateIcon = document.getElementById('translate-icon');
+    const languageOptions = document.querySelector('.language-options');
+
+    translateIcon.addEventListener('click', () => {
+        languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', (event) => {
+            const lang = event.currentTarget.dataset.lang;
+            translatePage(lang);
+            languageOptions.style.display = 'none';
+        });
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!translateIcon.contains(event.target) && !languageOptions.contains(event.target)) {
+            languageOptions.style.display = 'none';
+        }
+    });
+
+    const choiceChips = document.querySelectorAll('.choice-chip');
+    choiceChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            choiceChips.forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            renderServices(chip.dataset.category);
+        });
+    });
+
+    renderServices('individual');
+    renderPackages();
+
+    const popup = document.getElementById('popup');
+    const closeButton = document.querySelector('.close');
+
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+});
