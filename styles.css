@@ -66,7 +66,7 @@ h1 {
     margin: 0;
     font-size: 28px;
     color: white;
-    font-family: 'Avenir Next', 'Open Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     letter-spacing: -0.5px;
     white-space: normal;
@@ -237,14 +237,15 @@ h1 {
     background-color: var(--primary-color);
     color: var(--background-color);
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     flex: 1;
     margin: 0 5px;
+    max-width: 150px;
 }
 
 .service-buttons button:hover, .package-item button:hover {
@@ -303,7 +304,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     background-color: var(--main-blue);
-    padding: 5px 0;
+    padding: 10px 0;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
@@ -387,9 +388,9 @@ footer a:hover {
 }
 
 .nav-icon {
-    width: 28px;
-    height: 28px;
-    margin-bottom: 4px;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
     background-color: var(--main-blue);
     padding: 3px;
     border-radius: 50%;
@@ -397,7 +398,7 @@ footer a:hover {
 
 .nav-text {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .testimonial {
@@ -415,6 +416,10 @@ footer a:hover {
 .testimonial .author {
     text-align: right;
     font-weight: bold;
+}
+
+#google_translate_element {
+    display: none;
 }
 
 @media (max-width: 767px) {
@@ -460,8 +465,8 @@ footer a:hover {
     }
 
     .service-buttons button, .package-item button {
-        padding: 0.6rem 1.2rem;
-        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
     }
 
     .popup-content {
@@ -477,16 +482,6 @@ footer a:hover {
         justify-content: space-around;
     }
 
-    .nav-icon {
-        width: 35px;
-        height: 35px;
-        margin-bottom: 5px;
-    }
-
-    .nav-text {
-        font-size: 10px;
-    }
-
     .main-nav li {
         position: relative;
         flex: 1;
@@ -497,8 +492,8 @@ footer a:hover {
         content: '';
         position: absolute;
         right: 0;
-        top: 10%;
-        height: 80%;
+        top: 25%;
+        height: 50%;
         width: 1px;
         background-color: rgba(255, 255, 255, 0.3);
     }
@@ -517,20 +512,5 @@ footer a:hover {
 
     .services-grid, #package-list {
         grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-    .main-nav li:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 25%;
-        height: 50%;
-        width: 1px;
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    .fixed-bar {
-        padding: 10px 0;
     }
 }
