@@ -467,7 +467,6 @@ function renderPackages() {
     addEventListeners();
 }
 
-// Funciones de eventos
 function addEventListeners() {
     document.querySelectorAll('.reserve-button').forEach(button => {
         button.addEventListener('click', () => {
@@ -504,7 +503,14 @@ function sendWhatsAppMessage(action, serviceTitle) {
     window.open(url, '_blank');
 }
 
-// Inicialización
+function translatePage(lang) {
+    var selectField = document.querySelector("select.goog-te-combo");
+    if (selectField) {
+        selectField.value = lang;
+        selectField.dispatchEvent(new Event('change'));
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const translateIcon = document.getElementById('translate-icon');
     const languageOptions = document.querySelector('.language-options');
