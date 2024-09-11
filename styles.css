@@ -21,7 +21,7 @@ body {
     background-size: 600% 600%;
     animation: gradientTransition 15s ease infinite;
     color: var(--text-color);
-    padding-bottom: 80px;
+    padding-bottom: 60px; /* Ajustado para la barra de navegación más pequeña */
 }
 
 .container {
@@ -35,7 +35,7 @@ body {
 #sticky-header {
     background-color: var(--header-background);
     color: white;
-    padding: 10px 0;
+    padding: 5px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -45,26 +45,27 @@ body {
 
 .header-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 10px 15px;
+    padding: 5px 15px;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
+    margin-right: auto;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     margin-right: 10px;
 }
 
 h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 32px;
     color: white;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -77,15 +78,14 @@ h1 {
     align-items: center;
     cursor: pointer;
     position: relative;
-    margin-left: auto;
     background-color: transparent;
     padding: 5px;
     border-radius: 5px;
 }
 
 #translate-icon {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     background-color: #e3c093;
     border-radius: 50%;
     padding: 3px;
@@ -304,7 +304,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     background-color: var(--main-blue);
-    padding: 10px 0;
+    padding: 5px 0; /* Reducido de 10px a 5px */
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
@@ -362,7 +362,7 @@ footer a:hover {
 
 .main-nav {
     background-color: var(--main-blue);
-    padding: 10px 0;
+    padding: 5px 0; /* Reducido de 10px a 5px */
 }
 
 .main-nav ul {
@@ -379,7 +379,7 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+    padding: 2px; /* Reducido de 5px a 2px */
     transition: color 0.3s ease;
 }
 
@@ -388,9 +388,9 @@ footer a:hover {
 }
 
 .nav-icon {
-    width: 35px;
-    height: 35px;
-    margin-bottom: 5px;
+    width: 30px; /* Reducido de 35px a 30px */
+    height: 30px; /* Reducido de 35px a 30px */
+    margin-bottom: 2px; /* Reducido de 5px a 2px */
     background-color: var(--main-blue);
     padding: 3px;
     border-radius: 50%;
@@ -434,15 +434,17 @@ footer a:hover {
     }
 
     .logo {
-        height: 30px;
+        height: 40px;
+        width: 40px;
     }
 
     h1 {
-        font-size: 18px;
+        font-size: 24px;
     }
 
-    .language-selector {
-        margin-left: auto;
+    #translate-icon {
+        width: 20px;
+        height: 20px;
     }
 
     .category-selector {
@@ -475,7 +477,7 @@ footer a:hover {
     }
 
     .fixed-bar {
-        height: 70px;
+        height: 60px; /* Reducido de 70px a 60px */
     }
 
     .main-nav ul {
