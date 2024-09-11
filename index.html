@@ -37,18 +37,83 @@
     </header>
 
     <main role="main">
-        <!-- ... (el contenido del main permanece igual) ... -->
+        <section id="inicio" class="section hero">
+            <div class="container">
+                <h2>Bienvenido a tu Oasis de Tranquilidad</h2>
+                <p>Descubre el poder de la relajación y el bienestar en nuestro exclusivo spa de masajes.</p>
+            </div>
+        </section>
+
+        <section id="servicios" class="section services">
+            <div class="container">
+                <h2>Nuestros Servicios</h2>
+                <div class="category-selector">
+                    <button class="choice-chip active" data-category="individual">Individual</button>
+                    <button class="choice-chip" data-category="pareja">En Pareja</button>
+                </div>
+                <div id="services-list" class="services-grid"></div>
+            </div>
+        </section>
+
+        <section id="paquetes" class="section packages">
+            <div class="container">
+                <h2>Paquetes Especiales</h2>
+                <div id="package-list"></div>
+            </div>
+        </section>
+
+        <section id="testimonios" class="section testimonials">
+            <div class="container">
+                <h2>Lo que dicen nuestros clientes</h2>
+                <div class="testimonial">
+                    <p>"Una experiencia increíble. El masaje de aromaterapia fue justo lo que necesitaba para relajarme completamente. ¡Volveré pronto!"</p>
+                    <p class="author">- María G.</p>
+                </div>
+                <div class="testimonial">
+                    <p>"El paquete en pareja fue maravilloso. El ambiente, el servicio y los masajes superaron nuestras expectativas. Totalmente recomendado."</p>
+                    <p class="author">- Carlos y Ana</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="section gallery">
+            <div class="container">
+                <h2>Galería de Imágenes</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/spa-interior.jpg" alt="Interior del Spa" width="250" height="250">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/masaje-evento.jpg" alt="Evento de Masajes" width="250" height="250">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/productos-spa.jpg" alt="Productos de Spa" width="250" height="250">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/equipo-spa.jpg" alt="Nuestro Equipo" width="250" height="250">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <!-- ... (el contenido del footer permanece igual) ... -->
+        <div class="container">
+            <p>&copy; 2023 Elite Massage. Todos los derechos reservados.</p>
+            <p><a href="/politica-privacidad">Política de Privacidad</a> | <a href="/terminos-condiciones">Términos y Condiciones</a></p>
+            <div class="social-media">
+                <a href="https://facebook.com/elitemassage" target="_blank" rel="noopener noreferrer">Facebook</a> |
+                <a href="https://instagram.com/elitemassage" target="_blank" rel="noopener noreferrer">Instagram</a> |
+                <a href="https://twitter.com/elitemassage" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </div>
+        </div>
     </footer>
 
     <div class="fixed-bar">
         <nav class="main-nav">
             <ul>
                 <li><a href="#servicios"><img src="https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon"><span class="nav-text">Masajes</span></a></li>
-                <li><a href="#paquetes"><img src="https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/animo2.png.gif" alt="Icono Paquetes" class="nav-icon"><span class="nav-text">Paquetes</span></a></li>
+                <li><a href="#paquetes"><img src="https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/animo2.gif" alt="Icono Paquetes" class="nav-icon"><span class="nav-text">Paquetes</span></a></li>
                 <li><a href="#testimonios"><img src="https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/Ccomentario.gif" alt="Icono Testimonios" class="nav-icon"><span class="nav-text">Testimonios</span></a></li>
                 <li><a href="#galeria"><img src="https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon"><span class="nav-text">Galería</span></a></li>
             </ul>
