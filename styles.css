@@ -519,3 +519,18 @@ footer a:hover {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+    .main-nav li:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 25%;
+        height: 50%;
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .fixed-bar {
+        padding: 10px 0;
+    }
+}
