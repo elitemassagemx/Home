@@ -47,7 +47,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 10px 15px;
 }
 
 .logo-container {
@@ -56,16 +56,16 @@ body {
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     margin-right: 10px;
-    display: block;
 }
 
 h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
+    color: white;
     font-family: 'Avenir Next', 'Open Sans', sans-serif;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -84,8 +84,8 @@ h1 {
 }
 
 #translate-icon {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     background-color: #e3c093;
     border-radius: 50%;
     padding: 3px;
@@ -217,13 +217,19 @@ h1 {
 }
 
 .service-item .icon, .package-item .icon {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 10px;
+    background-color: var(--main-blue);
+    border-radius: 50%;
+    padding: 3px;
+    margin-top: -3px;
 }
 
-.service-buttons, .package-item button {
+.service-buttons, .package-item .button-container {
+    display: flex;
+    justify-content: space-between;
     margin-top: auto;
 }
 
@@ -237,8 +243,8 @@ h1 {
     transition: all 0.3s ease;
     font-weight: bold;
     font-size: 1.1rem;
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
+    flex: 1;
+    margin: 0 5px;
 }
 
 .service-buttons button:hover, .package-item button:hover {
@@ -353,6 +359,11 @@ footer a:hover {
     100% { background-position: 0% 50%; }
 }
 
+.main-nav {
+    background-color: var(--main-blue);
+    padding: 10px 0;
+}
+
 .main-nav ul {
     display: flex;
     justify-content: space-around;
@@ -371,20 +382,22 @@ footer a:hover {
     transition: color 0.3s ease;
 }
 
-.main-nav a:hover {
+.main-nav a:hover, .main-nav a.active {
     color: var(--primary-color);
 }
 
 .nav-icon {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 2px;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
     background-color: var(--main-blue);
+    padding: 3px;
+    border-radius: 50%;
 }
 
 .nav-text {
     font-weight: bold;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .testimonial {
