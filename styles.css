@@ -501,6 +501,30 @@ footer a:hover {
     }
 }
 
+.boton {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.boton:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+}
+.boton {
+    position: relative;
+}
+.boton::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+.boton:hover::after {
+    width: 100%;
+}
+
+
 @media (min-width: 768px) and (max-width: 1023px) {
     .services-grid, #package-list {
         grid-template-columns: repeat(2, 1fr);
