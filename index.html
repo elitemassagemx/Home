@@ -5,33 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Massage</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-    <header>
+    <div id="sticky-header">
         <div class="container">
-            <div class="header-content">
+            <div class="header-top">
                 <div class="logo-container">
                     <img src="logo.png" alt="Elite Massage Logo" class="logo">
                     <h1>Elite Massage</h1>
                 </div>
                 <div class="language-selector">
+                    <span>IDIOMA</span>
                     <img src="trad.png" alt="Traducir" id="translate-icon">
                     <div class="language-options">
-                        <button class="lang-option" data-lang="es"><img src="omx.png" alt="Bandera de México"> Español</button>
-                        <button class="lang-option" data-lang="en"><img src="ous.png" alt="Bandera de Estados Unidos"> English</button>
-                        <button class="lang-option" data-lang="iw"><img src="ois.png" alt="Bandera de Israel"> עברית</button>
-                        <button class="lang-option" data-lang="fr"><img src="ofr.png" alt="Bandera de Francia"> Français</button>
-                        <button class="lang-option" data-lang="zh-CN"><img src="och.png" alt="Bandera de China"> 中文</button>
+                        <button class="lang-option" data-lang="es"><img src="mx.png" alt="Bandera de México"> Español</button>
+                        <button class="lang-option" data-lang="en"><img src="us.png" alt="Bandera de Estados Unidos"> English</button>
                     </div>
                 </div>
+                <div id="google_translate_element"></div>
             </div>
         </div>
-    </header>
+    </div>
 
     <nav class="main-nav">
         <div class="container">
             <ul>
-                <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Masajes</a></li>
+                <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
                 <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
                 <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
                 <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
@@ -61,22 +66,20 @@
         <section id="paquetes" class="section packages">
             <div class="container">
                 <h2>Paquetes Especiales</h2>
-                <div id="package-list" class="packages-grid"></div>
+                <div id="package-list"></div>
             </div>
         </section>
 
         <section id="testimonios" class="section testimonials">
             <div class="container">
                 <h2>Lo que dicen nuestros clientes</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial">
-                        <p>"Una experiencia increíble. El masaje de aromaterapia fue justo lo que necesitaba para relajarme completamente. ¡Volveré pronto!"</p>
-                        <p class="author">- María G.</p>
-                    </div>
-                    <div class="testimonial">
-                        <p>"El paquete en pareja fue maravilloso. El ambiente, el servicio y los masajes superaron nuestras expectativas. Totalmente recomendado."</p>
-                        <p class="author">- Carlos y Ana</p>
-                    </div>
+                <div class="testimonial">
+                    <p>"Una experiencia increíble. El masaje de aromaterapia fue justo lo que necesitaba para relajarme completamente. ¡Volveré pronto!"</p>
+                    <p class="author">- María G.</p>
+                </div>
+                <div class="testimonial">
+                    <p>"El paquete en pareja fue maravilloso. El ambiente, el servicio y los masajes superaron nuestras expectativas. Totalmente recomendado."</p>
+                    <p class="author">- Carlos y Ana</p>
                 </div>
             </div>
         </section>
@@ -86,16 +89,16 @@
                 <h2>Galería de Imágenes</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="spa-interior.jpg" alt="Interior del Spa" loading="lazy">
+                        <img src="spa-interior.jpg" alt="Interior del Spa" width="250" height="250">
                     </div>
                     <div class="gallery-item">
-                        <img src="masaje-evento.jpg" alt="Evento de Masajes" loading="lazy">
+                        <img src="masaje-evento.jpg" alt="Evento de Masajes" width="250" height="250">
                     </div>
                     <div class="gallery-item">
-                        <img src="productos-spa.jpg" alt="Productos de Spa" loading="lazy">
+                        <img src="productos-spa.jpg" alt="Productos de Spa" width="250" height="250">
                     </div>
                     <div class="gallery-item">
-                        <img src="equipo-spa.jpg" alt="Nuestro Equipo" loading="lazy">
+                        <img src="equipo-spa.jpg" alt="Nuestro Equipo" width="250" height="250">
                     </div>
                 </div>
             </div>
@@ -113,6 +116,17 @@
             </div>
         </div>
     </footer>
+
+    <div class="fixed-bar">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
+                <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
+                <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
+                <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <script src="script.js"></script>
 </body>
