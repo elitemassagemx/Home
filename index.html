@@ -122,7 +122,6 @@
         </nav>
     </div>
 
-    <!-- Estructura del pop-up -->
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close">&times;</span>
@@ -131,52 +130,8 @@
             <p id="popup-description"></p>
         </div>
     </div>
-<!-- ... resto de tu contenido HTML ... -->
 
-    <script type="text/javascript">
-    console.log('Iniciando script de traducción');
-
-    function googleTranslateElementInit() {
-        console.log('Función googleTranslateElementInit llamada');
-        new google.translate.TranslateElement({
-            pageLanguage: 'es',
-            includedLanguages: 'es,en,fr,zh-CN,iw',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-        console.log('TranslateElement inicializado');
-    }
-
-    function loadGoogleTranslate() {
-        var script = document.createElement('script');
-        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-        script.async = true;
-        document.body.appendChild(script);
-    }
-
-    function translatePage(lang) {
-        console.log('Intentando traducir la página a:', lang);
-        if (window.google && window.google.translate) {
-            var translateElement = google.translate.TranslateElement.getInstance();
-            if (translateElement) {
-                translateElement.translate(lang);
-                console.log('Traducción realizada a:', lang);
-            } else {
-                console.error('Instancia de TranslateElement no encontrada');
-            }
-        } else {
-            console.error('Google Translate no está cargado');
-            loadGoogleTranslate();
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('DOM cargado, cargando Google Translate');
-        loadGoogleTranslate();
-    });
-    </script>
-
-    <!-- Aquí podrían ir otros scripts que tengas, como tu script.js -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
 </body>
 </html>
