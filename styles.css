@@ -214,7 +214,6 @@ h1 {
     margin-right: 1rem;
     margin-bottom: 0.5rem;
 }
-/* ... (estilos anteriores) ... */
 
 .service-buttons button:hover, .package-item button:hover {
     background-color: var(--gold);
@@ -318,6 +317,57 @@ footer a:hover {
     100% { background-position: 0% 50%; }
 }
 
+.main-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+.nav-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    background-color: var(--main-blue);
+}
+
+.nav-text {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.testimonial {
+    background-color: var(--item-background);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial .author {
+    text-align: right;
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
     .header-top {
         flex-direction: column;
@@ -369,48 +419,4 @@ footer a:hover {
     .services-grid, #package-list {
         grid-template-columns: repeat(3, 1fr);
     }
-}
-
-.main-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.main-nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    transition: color 0.3s ease;
-}
-
-.main-nav a:hover {
-    color: var(--primary-color);
-}
-
-.nav-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-}
-
-.testimonial {
-    background-color: var(--item-background);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.testimonial p {
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.testimonial .author {
-    text-align: right;
-    font-weight: bold;
 }
