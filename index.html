@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Massage</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-    <div id="sticky-header">
+    <header id="sticky-header">
         <div class="container">
             <div class="header-top">
                 <div class="logo-container">
@@ -21,27 +15,27 @@
                     <h1>Elite Massage</h1>
                 </div>
                 <div class="language-selector">
-                    <span>IDIOMA</span>
                     <img src="trad.png" alt="Traducir" id="translate-icon">
                     <div class="language-options">
-                        <button class="lang-option" data-lang="es"><img src="mx.png" alt="Bandera de México"> Español</button>
-                        <button class="lang-option" data-lang="en"><img src="us.png" alt="Bandera de Estados Unidos"> English</button>
+                        <button class="lang-option" onclick="translatePage('es')" data-lang="es"><img src="omx.png" alt="Bandera de México"> Español</button>
+                        <button class="lang-option" onclick="translatePage('en')" data-lang="en"><img src="ous.png" alt="Bandera de Estados Unidos"> English</button>
+                        <button class="lang-option" onclick="translatePage('iw')" data-lang="iw"><img src="ois.png" alt="Bandera de Israel"> עברית</button>
+                        <button class="lang-option" onclick="translatePage('fr')" data-lang="fr"><img src="ofr.png" alt="Bandera de Francia"> Français</button>
+                        <button class="lang-option" onclick="translatePage('zh-CN')" data-lang="zh-CN"><img src="och.png" alt="Bandera de China"> 中文</button>
                     </div>
                 </div>
-                <div id="google_translate_element"></div>
+                <div id="google_translate_element" style="display:none;"></div>
             </div>
         </div>
-    </div>
+    </header>
 
     <nav class="main-nav">
-        <div class="container">
-            <ul>
-                <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
-                <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
-                <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
-                <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
-            </ul>
-        </div>
+        <ul>
+            <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
+            <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
+            <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
+            <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
+        </ul>
     </nav>
 
     <main role="main">
@@ -128,6 +122,61 @@
         </nav>
     </div>
 
+    <!-- Estructura del pop-up -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 id="popup-title"></h2>
+            <img id="popup-image" src="" alt="Imagen del servicio">
+            <p id="popup-description"></p>
+        </div>
+    </div>
+<!-- ... resto de tu contenido HTML ... -->
+
+    <script type="text/javascript">
+    console.log('Iniciando script de traducción');
+
+    function googleTranslateElementInit() {
+        console.log('Función googleTranslateElementInit llamada');
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'es,en,fr,zh-CN,iw',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+        console.log('TranslateElement inicializado');
+    }
+
+    function loadGoogleTranslate() {
+        var script = document.createElement('script');
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        script.async = true;
+        document.body.appendChild(script);
+    }
+
+    function translatePage(lang) {
+        console.log('Intentando traducir la página a:', lang);
+        if (window.google && window.google.translate) {
+            var translateElement = google.translate.TranslateElement.getInstance();
+            if (translateElement) {
+                translateElement.translate(lang);
+                console.log('Traducción realizada a:', lang);
+            } else {
+                console.error('Instancia de TranslateElement no encontrada');
+            }
+        } else {
+            console.error('Google Translate no está cargado');
+            loadGoogleTranslate();
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM cargado, cargando Google Translate');
+        loadGoogleTranslate();
+    });
+    </script>
+
+    <!-- Aquí podrían ir otros scripts que tengas, como tu script.js -->
     <script src="script.js"></script>
 </body>
 </html>
