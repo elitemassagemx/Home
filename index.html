@@ -9,11 +9,19 @@
 <body>
     <header id="sticky-header">
         <div class="container">
-            <div class="header-top">
+            <div class="header-content">
                 <div class="logo-container">
                     <img src="logo.png" alt="Elite Massage Logo" class="logo">
                     <h1>Elite Massage</h1>
                 </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Masajes</a></li>
+                        <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
+                        <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
+                        <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
+                    </ul>
+                </nav>
                 <div class="language-selector">
                     <img src="trad.png" alt="Traducir" id="translate-icon">
                     <div class="language-options">
@@ -27,15 +35,6 @@
             </div>
         </div>
     </header>
-
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Masajes</a></li>
-            <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
-            <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
-            <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
-        </ul>
-    </nav>
 
     <main role="main">
         <section id="inicio" class="section hero">
@@ -59,20 +58,22 @@
         <section id="paquetes" class="section packages">
             <div class="container">
                 <h2>Paquetes Especiales</h2>
-                <div id="package-list"></div>
+                <div id="package-list" class="packages-grid"></div>
             </div>
         </section>
 
         <section id="testimonios" class="section testimonials">
             <div class="container">
                 <h2>Lo que dicen nuestros clientes</h2>
-                <div class="testimonial">
-                    <p>"Una experiencia increíble. El masaje de aromaterapia fue justo lo que necesitaba para relajarme completamente. ¡Volveré pronto!"</p>
-                    <p class="author">- María G.</p>
-                </div>
-                <div class="testimonial">
-                    <p>"El paquete en pareja fue maravilloso. El ambiente, el servicio y los masajes superaron nuestras expectativas. Totalmente recomendado."</p>
-                    <p class="author">- Carlos y Ana</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <p>"Una experiencia increíble. El masaje de aromaterapia fue justo lo que necesitaba para relajarme completamente. ¡Volveré pronto!"</p>
+                        <p class="author">- María G.</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"El paquete en pareja fue maravilloso. El ambiente, el servicio y los masajes superaron nuestras expectativas. Totalmente recomendado."</p>
+                        <p class="author">- Carlos y Ana</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -82,16 +83,16 @@
                 <h2>Galería de Imágenes</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="spa-interior.jpg" alt="Interior del Spa" width="250" height="250">
+                        <img src="spa-interior.jpg" alt="Interior del Spa" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="masaje-evento.jpg" alt="Evento de Masajes" width="250" height="250">
+                        <img src="masaje-evento.jpg" alt="Evento de Masajes" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="productos-spa.jpg" alt="Productos de Spa" width="250" height="250">
+                        <img src="productos-spa.jpg" alt="Productos de Spa" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="equipo-spa.jpg" alt="Nuestro Equipo" width="250" height="250">
+                        <img src="equipo-spa.jpg" alt="Nuestro Equipo" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -110,28 +111,6 @@
         </div>
     </footer>
 
-    <div class="fixed-bar">
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#servicios"><img src="lista-de-regalos.gif" alt="Icono Servicios" class="nav-icon">Servicios</a></li>
-                <li><a href="#paquetes"><img src="regalo.gif" alt="Icono Paquetes" class="nav-icon">Paquetes</a></li>
-                <li><a href="#testimonios"><img src="comentario.gif" alt="Icono Testimonios" class="nav-icon">Testimonios</a></li>
-                <li><a href="#galeria"><img src="galeria-de-fotos.gif" alt="Icono Galería" class="nav-icon">Galería</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <!-- Estructura del pop-up -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close">&times;</span>
-            <h2 id="popup-title"></h2>
-            <img id="popup-image" src="" alt="Imagen del servicio">
-            <p id="popup-description"></p>
-        </div>
-    </div>
-
-    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
