@@ -4,14 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Massage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
     <header id="sticky-header">
@@ -129,28 +123,34 @@
         </div>
     </div>
 
-<template id="service-template">
-    <div class="service-item">
-        <div class="icon-text-container service-header">
-            <img class="service-icon" alt="Icono del servicio" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
-            <h3 class="service-title"></h3>
+    <template id="service-template">
+        <div class="service-item">
+            <div class="icon-text-container service-header">
+                <img class="service-icon" alt="Icono del servicio" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
+                <h3 class="service-title"></h3>
+            </div>
+            <p class="service-description"></p>
+            <div class="icon-text-container">
+                <img class="benefits-icon" alt="Icono de beneficios" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
+                <p><strong>Beneficios:</strong> <span class="service-benefits"></span></p>
+            </div>
+            <div class="icon-text-container">
+                <img class="duration-icon" alt="Icono de duración" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
+                <p><strong>Duración:</strong> <span class="service-duration"></span></p>
+            </div>
+            <div class="service-buttons">
+                <button class="reserve-button">Reserva ahora</button>
+                <button class="info-button">Saber más</button>
+            </div>
         </div>
-        <p class="service-description"></p>
-        <div class="icon-text-container">
-            <img class="benefits-icon" alt="Icono de beneficios" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
-            <p><strong>Beneficios:</strong> <span class="service-benefits"></span></p>
-        </div>
-        <div class="icon-text-container">
-            <img class="duration-icon" alt="Icono de duración" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
-            <p><strong>Duración:</strong> <span class="service-duration"></span></p>
-        </div>
-        <div class="service-buttons">
-            <button class="reserve-button">Reserva ahora</button>
-            <button class="info-button">Saber más</button>
-        </div>
-    </div>
-</template>
+    </template>
 
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
 </body>
 </html>
