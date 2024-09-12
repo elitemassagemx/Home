@@ -413,6 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
 
+
     function renderServices(category) {
         const servicesList = document.getElementById('services-list');
         if (!servicesList) {
