@@ -414,7 +414,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 };
 
-   function renderServices(category) {
+
+    function renderServices(category) {
         const servicesList = document.getElementById('services-list');
         if (!servicesList) {
             console.error('Element with id "services-list" not found');
