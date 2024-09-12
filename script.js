@@ -414,10 +414,18 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 };
 
-     function renderServices(category) {
+   function renderServices(category) {
         const servicesList = document.getElementById('services-list');
+        if (!servicesList) {
+            console.error('Element with id "services-list" not found');
+            return;
+        }
         servicesList.innerHTML = '';
         const template = document.getElementById('service-template');
+        if (!template) {
+            console.error('Element with id "service-template" not found');
+            return;
+        }
 
         services[category].forEach(service => {
             const serviceElement = template.content.cloneNode(true);
@@ -442,6 +450,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderPackages() {
         const packageList = document.getElementById('package-list');
+        if (!packageList) {
+            console.error('Element with id "package-list" not found');
+            return;
+        }
         packageList.innerHTML = '';
         services.paquetes.forEach(pkg => {
             const packageElement = document.createElement('div');
@@ -533,7 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Inicialización
+    // Initialization
     renderServices('individual');
     renderPackages();
 });
