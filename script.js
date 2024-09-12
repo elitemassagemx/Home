@@ -9,7 +9,7 @@ const services = {
             icon: "cfragancia2.png",
             benefitsIcon: ["cdolor espalda.png"],
             durationIcon: "duration-icon.png",
-            image: "aromaterapia-image.jpg",
+            image: "aroma.jpg",
             popupDescription: "La aromaterapia es una terapia holística que utiliza aceites esenciales naturales para promover la salud y el bienestar. Nuestras expertas terapeutas seleccionarán cuidadosamente los aceites más adecuados para ti, creando una experiencia personalizada que no solo relaja tu cuerpo, sino que también calma tu mente y eleva tu espíritu.",
             popupImage: "aromaterapia-popup.jpg"
         },
@@ -45,7 +45,7 @@ const services = {
             icon: "espalda-cuello-icon.png",
             benefitsIcon: ["benefits-icon.png"],
             durationIcon: "duration-icon.png",
-            image: "espalda-cuello-image.jpg",
+            image: "noche.jpg",
             popupDescription: "Este masaje focalizado se centra en las áreas que más comúnmente acumulan tensión: la espalda y el cuello. Utilizando una combinación de técnicas de masaje sueco y de puntos de presión, nuestros terapeutas trabajarán para liberar los nudos musculares, mejorar la flexibilidad y proporcionar un alivio inmediato del estrés y la tensión.",
             popupImage: "espalda-cuello-popup.jpg"
         },
@@ -263,7 +263,7 @@ const services = {
             icon: "aromas-cera-icon.png",
             benefitsIcon: ["benefits-icon.png"],
             durationIcon: "duration-icon.png",
-            image: "aromas-cera-image.jpg",
+            image: "dif.jpg",
             popupDescription: "Sumérjanse juntos en una experiencia sensorial única con nuestro masaje de aromas y cera en pareja. Las ceras aromáticas cuidadosamente seleccionadas se calientan hasta convertirse en aceites tibios y se aplican suavemente sobre la piel, proporcionando una hidratación profunda y una relajación intensa. Los aromas envolventes crean una atmósfera de calma y bienestar, mientras que el calor de la cera ayuda a relajar los músculos tensos. Este tratamiento no solo nutre la piel, sino que también crea un momento íntimo y relajante para la pareja.",
             popupImage: "aromas-cera-pareja-popup.jpg"
         },
@@ -275,7 +275,7 @@ const services = {
             icon: "lomi-lomi-icon.png",
             benefitsIcon: ["benefits-icon.png"],
             durationIcon: "duration-icon.png",
-            image: "lomi-lomi-image.jpg",
+            image: "bat.jpg",
             popupDescription: "Experimenten juntos la magia del masaje hawaiano Lomi Lomi. Este tratamiento único utiliza movimientos largos, fluidos y rítmicos que recorren todo el cuerpo, imitando las olas del océano. Los terapeutas usan no solo las manos, sino también los antebrazos para aplicar una presión profunda y relajante. El Lomi Lomi no solo relaja los músculos, sino que también se cree que ayuda a liberar patrones de pensamiento negativos almacenados en el cuerpo. Es una experiencia profundamente relajante y revitalizante que les permitirá conectar en un nivel más profundo.",
             popupImage: "lomi-lomi-pareja-popup.jpg"
         },
@@ -287,7 +287,7 @@ const services = {
             icon: "shiatsu-icon.png",
             benefitsIcon: ["benefits-icon.png"],
             durationIcon: "duration-icon.png",
-            image: "shiatsu-image.jpg",
+            image: "camas2.jpg",
             popupDescription: "Descubran juntos los beneficios del Shiatsu, una forma de terapia japonesa que significa 'presión con los dedos'. En este tratamiento, los terapeutas aplican presión en puntos específicos del cuerpo para equilibrar el flujo de energía vital o 'chi'. El Shiatsu se realiza a través de la ropa cómoda y no utiliza aceites. Además de aliviar la tensión muscular y el estrés, este masaje puede mejorar la circulación, aliviar dolores de cabeza y promover una sensación general de bienestar y vitalidad. Es una experiencia única que les permitirá sentirse renovados y equilibrados juntos.",
             popupImage: "shiatsu-pareja-popup.jpg"
         },
@@ -311,7 +311,7 @@ const services = {
             icon: "ventosas-icon.png",
             benefitsIcon: ["benefits-icon.png"],
             durationIcon: "duration-icon.png",
-            image: "ventosas-image.jpg",
+            image: "bat.jpg",
             popupDescription: "Descubran juntos los beneficios únicos de nuestro masaje con ventosas. Esta técnica antigua utiliza copas de succión para crear un vacío en la piel, lo que ayuda a aumentar el flujo sanguíneo, liberar la fascia y promover la curación natural del cuerpo. Combinamos las ventosas con técnicas de masaje tradicionales para una experiencia terapéutica integral. Los beneficios incluyen alivio del dolor muscular, reducción de la inflamación y mejora de la circulación general. Es una experiencia única y potente que les permitirá sentirse renovados y revitalizados juntos.",
             popupImage: "ventosas-pareja-popup.jpg"
         }
@@ -326,7 +326,7 @@ const services = {
             icon: "romance-total-icon.png",
             benefitsIcon: ["benefit1-icon.png", "benefit2-icon.png"],
             durationIcon: "duration-romance-icon.png",
-            image: "romance-total-image.jpg",
+            image: "paq1.jpg",
             popupDescription: "El Paquete Romance Total es la experiencia definitiva para parejas que buscan un escape lujoso y relajante. Comienza con un masaje de aromaterapia en pareja de 90 minutos, donde los aceites esenciales cuidadosamente seleccionados crearán una atmósfera de relajación total. Después del masaje, disfruten de 30 minutos adicionales de indulgencia con una copa de vino selecto, fresas cubiertas de chocolate y una exquisita tabla de quesos gourmet. Este paquete está diseñado para nutrir tanto el cuerpo como el espíritu, ofreciendo un momento de conexión y lujo compartido.",
             popupImage: "romance-total-popup.jpg"
         },
@@ -339,7 +339,7 @@ const services = {
             icon: "romance-total2-icon.png",
             benefitsIcon: ["benefit1-icon.png", "benefit2-icon.png"],
             durationIcon: "duration-romance2-icon.png",
-            image: "romance-total2-image.jpg",
+            image: "rosao.jpg",
             popupDescription: "El Paquete Romance Total 2 ofrece una experiencia única de relajación y placer para parejas. Comienza con un lujoso masaje de aromaterapia en pareja de 90 minutos, donde los aceites esenciales cuidadosamente seleccionados crearán un ambiente de tranquilidad y bienestar. Después del masaje, disfruten de 30 minutos adicionales de indulgencia con su elección de café gourmet (Latte, Capuchino o Expreso) acompañado de un delicioso pastel o tarta. Este paquete combina perfectamente la relajación profunda con los placeres culinarios, creando un momento especial para compartir y conectar.",
             popupImage: "romance-total2-popup.jpg"
         },
@@ -352,7 +352,7 @@ const services = {
             icon: "lujo-sabor-icon.png",
             benefitsIcon: ["benefit-lujo1-icon.png", "benefit-lujo2-icon.png"],
             durationIcon: "duration-lujo-icon.png",
-            image: "lujo-sabor-image.jpg",
+            image: "copasg.jpg",
             popupDescription: "El Paquete Lujo y Sabor es una experiencia premium que combina el lujo de un masaje de piedras calientes con una degustación gourmet. Comienza con un relajante masaje de 90 minutos donde las piedras volcánicas calientes aliviarán profundamente la tensión muscular. Luego, disfruten de 30 minutos de pura indulgencia con una selección cuidadosamente curada de vinos finos, quesos artesanales y fresas bañadas en chocolate. Este paquete es perfecto para aquellos que buscan una experiencia que deleite todos los sentidos.",
             popupImage: "lujo-sabor-popup.jpg"
         },
@@ -365,7 +365,7 @@ const services = {
             icon: "sensaciones-icon.png",
             benefitsIcon: ["benefit-sensaciones1-icon.png", "benefit-sensaciones2-icon.png"],
             durationIcon: "duration-sensaciones-icon.png",
-            image: "sensaciones-image.jpg",
+            image: "chen.jpg",
             popupDescription: "El Paquete Sensaciones Inolvidables es una experiencia diseñada para despertar todos sus sentidos. Comienza con un lujoso masaje de cuerpo completo en pareja de 90 minutos, que les dejará completamente relajados y renovados. Después, disfruten de 45 minutos de pura indulgencia con una copa de vino selecto, fresas cubiertas de chocolate y una exquisita tabla de quesos artísticos. Este paquete combina perfectamente la relajación profunda con una experiencia gastronómica refinada, creando recuerdos que perdurarán mucho después de que termine su visita.",
             popupImage: "sensaciones-inolvidables-popup.jpg"
         },
@@ -378,7 +378,7 @@ const services = {
             icon: "escape-lujo-icon.png",
             benefitsIcon: ["benefit-escape1-icon.png", "benefit-escape2-icon.png"],
             durationIcon: "duration-escape-icon.png",
-            image: "escape-lujo-image.jpg",
+            image: "copas.jpg",
             popupDescription: "El Paquete Escape de Lujo es la elección perfecta para parejas que buscan una experiencia de spa verdaderamente indulgente. Comienza con un masaje de aromaterapia relajante, seguido de una envoltura de algas desintoxicante. Este tratamiento de 90 minutos dejará su piel suave y su cuerpo completamente relajado. Después, disfruten de 30 minutos de placer culinario con una copa de vino selecto, fresas cubiertas de chocolate y una exquisita tabla de quesos y frutas frescas. Es la combinación perfecta de relajación, desintoxicación y placer gastronómico.",
             popupImage: "escape-lujo-popup.jpg"
         },
@@ -391,7 +391,7 @@ const services = {
             icon: "relax-sabores-icon.png",
             benefitsIcon: ["benefit-relax1-icon.png", "benefit-relax2-icon.png"],
             durationIcon: "duration-relax-icon.png",
-            image: "relax-sabores-image.jpg",
+            image: "jamc.jpg",
             popupDescription: "El Paquete Relax y Sabores ofrece una combinación perfecta de relajación y placer culinario. Comienza con un masaje de reflexología en pareja de 60 minutos, que alivia el estrés y promueve el bienestar general a través de la estimulación de puntos específicos en los pies. Después, disfruten de 30 minutos de indulgencia con una copa de vino selecto, fresas cubiertas de chocolate y una selección de quesos gourmet. Este paquete es ideal para parejas que buscan una experiencia relajante y romántica con un toque de sofisticación culinaria.",
             popupImage: "relax-sabores-popup.jpg"
         },
@@ -417,7 +417,7 @@ const services = {
             icon: "relajacion-gourmet-icon.png",
             benefitsIcon: ["benefit-relajacion1-icon.png", "benefit-relajacion2-icon.png"],
             durationIcon: "duration-relajacion-icon.png",
-            image: "relajacion-gourmet-image.jpg",
+            image: "copas.jpg",
             popupDescription: "El Paquete Relajación y Gourmet ofrece una experiencia completa de bienestar y placer culinario. Comienza con un masaje sueco en pareja de 60 minutos, utilizando técnicas de presión suave y movimientos largos para aliviar la tensión muscular y promover la relajación. Después, disfruten de 30 minutos de indulgencia con una copa de vino selecto, fresas cubiertas de chocolate y una selección de quesos finos. Este paquete es ideal para parejas que buscan una combinación perfecta de relajación física y placer gastronómico en un ambiente lujoso y romántico.",
             popupImage: "relajacion-gourmet-popup.jpg"
         }
