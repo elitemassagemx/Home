@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             durationIcon: `${BASE_URL}duration-icon.png`,
             image: `${BASE_URL}aroma.jpg`,
             popupDescription: "La aromaterapia es una terapia holística que utiliza aceites esenciales naturales para promover la salud y el bienestar. Nuestras expertas terapeutas seleccionarán cuidadosamente los aceites más adecuados para ti, creando una experiencia personalizada que no solo relaja tu cuerpo, sino que también calma tu mente y eleva tu espíritu.",
-            popupImage: `${BASE_URL}aromaterapia-popup.jpg`
+            popupImage: `${BASE_URL}aroma.jpg`
         },
         {
             title: "Piedras Calientes",
