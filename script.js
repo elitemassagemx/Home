@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const BASE_URL = "https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/";
-    const BASE_IMAGE_URL = "https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/";
     const services = {
         individual: [
             {
