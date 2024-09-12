@@ -268,18 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
             popupDescription: "Sumérjanse juntos en una experiencia sensorial única con nuestro masaje de aromas y cera en pareja. Las ceras aromáticas cuidadosamente seleccionadas se calientan hasta convertirse en aceites tibios y se aplican suavemente sobre la piel, proporcionando una hidratación profunda y una relajación intensa. Los aromas envolventes crean una atmósfera de calma y bienestar, mientras que el calor de la cera ayuda a relajar los músculos tensos. Este tratamiento no solo nutre la piel, sino que también crea un momento íntimo y relajante para la pareja.",
             popupImage: `${BASE_IMAGE_URL}aromas-cera-pareja-popup.jpg`
         },
-{
-    title: "Masaje Lomi Lomi en Pareja",
-    description: "Este masaje hawaiano utiliza movimientos largos y fluidos, combinados con técnicas de estiramiento para relajar y revitalizar el cuerpo. Disfruta de una experiencia de conexión y armonía mientras ambos reciben el masaje simultáneamente.",
-    benefits: ["Relajación profunda", "aumento de la energía", "mejora de la circulación"],
-    duration: "60 min",
-    icon: `${BASE_URL}lomi-lomi-icon.png`,
-    benefitsIcon: [`${BASE_URL}benefits-icon.png`],
-    durationIcon: `${BASE_URL}duration-icon.png`,
-    image: `${BASE_IMAGE_URL}bat.jpg`,
-    popupDescription: "Experimenten juntos la magia del masaje hawaiano Lomi Lomi. Este tratamiento único utiliza movimientos largos, fluidos y rítmicos que recorren todo el cuerpo, imitando las olas del océano. Los terapeutas usan no solo las manos, sino también los antebrazos para aplicar una presión profunda y relajante. El Lomi Lomi no solo relaja los músculos, sino que también se cree que ayuda a liberar patrones de pensamiento y emociones negativas, promoviendo una sensación de armonía y bienestar total.",
-    popupImage: `${BASE_IMAGE_URL}aromas-cera-pareja-popup.jpg`
-}
 
         {
             title: "Masaje Shiatsu en Pareja",
