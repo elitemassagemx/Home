@@ -422,11 +422,7 @@ const services = {
             popupImage: "relajacion-gourmet-popup.jpg"
         }
     ]
-}};
-
-
-
-
+};
     
     // Funciones de utilidad
     function createElementFromHTML(htmlString) {
