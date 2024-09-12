@@ -129,18 +129,27 @@
         </div>
     </div>
 
-    <template id="service-template">
-        <div class="service-item">
-            <h3><span class="service-title"></span> <img class="service-icon" alt="Icono del servicio" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';"></h3>
-            <p class="service-description"></p>
-            <p><strong>Beneficios:</strong> <img class="benefits-icon" alt="Icono de beneficios" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';"> <span class="service-benefits"></span></p>
-            <p><strong>Duración:</strong> <img class="duration-icon" alt="Icono de duración" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';"> <span class="service-duration"></span></p>
-            <div class="service-buttons">
-                <button class="reserve-button">Reserva ahora</button>
-                <button class="info-button">Saber más</button>
-            </div>
+<template id="service-template">
+    <div class="service-item">
+        <div class="icon-text-container service-header">
+            <img class="service-icon" alt="Icono del servicio" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
+            <h3 class="service-title"></h3>
         </div>
-    </template>
+        <p class="service-description"></p>
+        <div class="icon-text-container">
+            <img class="benefits-icon" alt="Icono de beneficios" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
+            <p><strong>Beneficios:</strong> <span class="service-benefits"></span></p>
+        </div>
+        <div class="icon-text-container">
+            <img class="duration-icon" alt="Icono de duración" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
+            <p><strong>Duración:</strong> <span class="service-duration"></span></p>
+        </div>
+        <div class="service-buttons">
+            <button class="reserve-button">Reserva ahora</button>
+            <button class="info-button">Saber más</button>
+        </div>
+    </div>
+</template>
 
     <script src="script.js"></script>
 </body>
