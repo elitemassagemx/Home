@@ -69,8 +69,8 @@ a, button {
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     margin-right: 10px;
 }
@@ -87,11 +87,11 @@ h1 {
 }
 
 #translate-icon {
-    width: 25px;
-    height: 25px;
-    background-color: #e3c093;
+    width: 20px;
+    height: 20px;
+    background-color: #FFD700;
     border-radius: 50%;
-    padding: 3px;
+    padding: 2px;
 }
 
 .language-options {
@@ -185,7 +185,7 @@ h1 {
     background: linear-gradient(135deg, var(--item-background) 0%, #3a3a3a 100%);
     border: 2px solid var(--primary-color);
     border-radius: 15px;
-    padding: 2rem;
+    padding: 1rem 2rem 2rem;
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
@@ -211,28 +211,36 @@ h1 {
 
 .icon-text-container {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 0.5em;
 }
 
-.service-icon, .benefits-icon, .duration-icon {
-    margin-right: 0.5em;
+.service-icon {
+    width: 3em;
+    height: 3em;
+    margin-top: 0.5em;
     object-fit: contain;
 }
 
-.service-icon {
+.benefits-icon, .duration-icon {
+    width: 2em;
+    height: 2em;
+    margin-left: 0.5em;
+    margin-right: 0;
+    object-fit: contain;
+}
+
+.benefits-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5em;
+}
+
+.benefits-icons .benefits-icon {
     width: 2.5em;
     height: 2.5em;
-}
-
-.benefits-icon {
-    width: 1.8em;
-    height: 1.8em;
-}
-
-.duration-icon {
-    width: 1.5em;
-    height: 1.5em;
 }
 
 .service-buttons, .package-item .button-container {
@@ -488,7 +496,7 @@ footer a:hover {
     }
 
     .fixed-bar { height: 60px; }
-.main-nav li {
+    .main-nav li {
         position: relative;
         flex: 1;
         text-align: center;
@@ -504,9 +512,9 @@ footer a:hover {
         background-color: rgba(255, 255, 255, 0.3);
     }
 
-    .service-icon { width: 2em; height: 2em; }
-    .benefits-icon { width: 1.5em; height: 1.5em; }
-    .duration-icon { width: 1.2em; height: 1.2em; }
+    .service-icon { width: 2.5em; height: 2.5em; }
+    .benefits-icon { width: 2em; height: 2em; }
+    .duration-icon { width: 1.8em; height: 1.8em; }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -523,9 +531,9 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-    .service-icon { width: 1.8em; height: 1.8em; }
-    .benefits-icon { width: 1.3em; height: 1.3em; }
-    .duration-icon { width: 1em; height: 1em; }
+    .service-icon { width: 2.2em; height: 2.2em; }
+    .benefits-icon { width: 1.8em; height: 1.8em; }
+    .duration-icon { width: 1.5em; height: 1.5em; }
 }
 
 /* Estilos para impresión */
