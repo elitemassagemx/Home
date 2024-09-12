@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 };
 
-  function renderServices(category) {
+     function renderServices(category) {
         const servicesList = document.getElementById('services-list');
         servicesList.innerHTML = '';
         const template = document.getElementById('service-template');
@@ -537,4 +537,3 @@ document.addEventListener('DOMContentLoaded', () => {
     renderServices('individual');
     renderPackages();
 });
-Last edited hace 2 minuto
