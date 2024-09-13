@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: "Masaje con aceites de CBD para reducir la inflamación, aliviar el dolor y promover la relajación.",
             benefits: ["Alivio Dolor Muscular", "Reduce Ansiedad", "Calma Profunda"],
             duration: "60 min",
-            icon: `${BASE_URL}cbd-icon.png`,
+            icon: `${BASE_URL}sqfragancias.png`,
             benefitsIcon: [`${BASE_URL}benefits-icon.png`],
             durationIcon: `${BASE_URL}duration-icon.png`,
             image: `${BASE_URL}cbd-image.jpg`,
