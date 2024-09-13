@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: "90 min",
             icon: [`${BASE_URL}c30min.png`],
             benefitsIcon: [`${BASE_URL}benefits-icon.png`],
-            durationIcon: `${BASE_URL}duration-icon.png`c30min.png,
+            durationIcons: [`${BASE_URL}duration-icon.png`, `${BASE_URL}c30min.png`],  // Aquí agregas los dos íconos
             image: `${BASE_URL}envoltura-corporal-image.jpg`,
             popupDescription: "La envoltura corporal es un tratamiento de spa lujoso que comienza con un suave exfoliante para preparar la piel. Luego, se aplica una mezcla nutritiva de algas, arcilla o ingredientes botánicos en todo el cuerpo. Te envolvemos en una manta térmica para maximizar la absorción de los ingredientes beneficiosos. El tratamiento concluye con la aplicación de una loción hidratante, dejando tu piel suave, nutrida y radiante.",
             popupImage: `${BASE_URL}envoltura-corporal-popup.jpg`
