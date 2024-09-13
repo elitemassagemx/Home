@@ -87,18 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
             popupImage: `${BASE_URL}reflexologia-popup.jpg`
         },
         {
-            title: "Envoltura Corporal",
-            description: "Disfruta de un masaje completo seguido de una envoltura terapéutica con algas, barro y otros ingredientes naturales.",
-            benefits: ["Nutrición e Hidratación para tu Piel", "Desintoxicante"],
-            duration: "90 min",
-            icon: [`${BASE_URL}c30min.png`],
-            benefitsIcons: [`${BASE_URL}benefits-icon1.png`, `${BASE_URL}chidratacion.png`, `${BASE_URL}benefits-icon3.png`],
-            durationIcons: [`${BASE_URL}duration-icon.png`, `${BASE_URL}c30min.png`],  // Aquí agregas los dos íconos
-            image: `${BASE_URL}envoltura-corporal-image.jpg`,
-            popupDescription: "La envoltura corporal es un tratamiento de spa lujoso que comienza con un suave exfoliante para preparar la piel. Luego, se aplica una mezcla nutritiva de algas, arcilla o ingredientes botánicos en todo el cuerpo. Te envolvemos en una manta térmica para maximizar la absorción de los ingredientes beneficiosos. El tratamiento concluye con la aplicación de una loción hidratante, dejando tu piel suave, nutrida y radiante.",
-            popupImage: `${BASE_URL}envoltura-corporal-popup.jpg`
-        },
-        {
             title: "Aromas y Cera",
             description: "Disfruta de ceras aromáticas que se derriten y se aplican como aceites tibios sobre tu piel.",
             benefits: ["Hidratará tu Piel", "Relajación Profunda", "Multisensorial"],
@@ -145,18 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
             image: `${BASE_URL}cbd-image.jpg`,
             popupDescription: "Nuestro masaje con aceites de CBD combina las técnicas de masaje tradicionales con los beneficios terapéuticos del cannabidiol (CBD). El CBD es conocido por sus propiedades antiinflamatorias y calmantes. Este tratamiento puede ayudar a aliviar el dolor muscular crónico, reducir la ansiedad y promover una sensación de calma y bienestar general. Es ideal para aquellos que buscan alivio del estrés y las molestias físicas.",
             popupImage: `${BASE_URL}cbd-popup.jpg`
-        },
-        {
-            title: "Cuerpo Completo con Ventosas",
-            description: "Las ventosas en puntos específicos estimularán tu circulación sanguínea y linfática, liberando toxinas.",
-            benefits: ["Mejora Circulación", "Alivio de Tensiones", "Desintoxicante"],
-            duration: "90 min",
-            icon: `${BASE_URL}ventosas-icon.png`,
-            benefitsIcons: [`${BASE_URL}ccirculacion.png`, `${BASE_URL}benefits-icon2.png`, `${BASE_URL}benefits-icon3.png`],
-            durationIcon: `${BASE_URL}duration-icon.png`,
-            image: `${BASE_URL}ventosas-image.jpg`,
-            popupDescription: "El masaje con ventosas es una técnica antigua que utiliza copas de succión para crear un vacío en la piel. Esto ayuda a aumentar el flujo sanguíneo, liberar la fascia y promover la curación natural del cuerpo. Las ventosas pueden ayudar a aliviar el dolor muscular, reducir la inflamación y mejorar la circulación general. Este tratamiento de cuerpo completo combina las ventosas con técnicas de masaje tradicionales para una experiencia terapéutica integral.",
-            popupImage: `${BASE_URL}ventosas-popup.jpg`
         }
     ],
     pareja: [
@@ -243,18 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
             image: `${BASE_URL}reflexologia-image.jpg`,
             popupDescription: "Experimenten juntos los beneficios de la reflexología, una técnica que se centra en puntos de presión específicos en los pies que corresponden a diferentes partes del cuerpo. Este tratamiento no solo proporciona una relajación profunda, sino que también puede ayudar a mejorar la circulación, reducir el estrés y promover un sentido de bienestar en todo el cuerpo. Es una forma única y relajante de cuidarse mutuamente y disfrutar de un momento de tranquilidad compartida.",
             popupImage: `${BASE_URL}reflexologia-pareja-popup.jpg`
-        },
-        {
-            title: "Masaje de Envoltura Corporal en Pareja",
-            description: "Un masaje combinado con una envoltura corporal nutritiva. Ambos recibirán un masaje y luego serán envueltos en una envoltura terapéutica que puede estar basada en algas, barro o ingredientes naturales.",
-            benefits: ["Hidratación y nutrición de la piel", "desintoxicación", "relajación profunda"],
-            duration: "90 min",
-            icon: `${BASE_URL}envoltura-corporal-icon.png`,
-            benefitsIcons: [`${BASE_URL}benefits-icon1.png`, `${BASE_URL}benefits-icon2.png`, `${BASE_URL}benefits-icon3.png`],
-            durationIcon: `${BASE_URL}duration-icon.png`,
-            image: `${BASE_URL}envoltura-corporal-image.jpg`,
-            popupDescription: "Disfruten juntos de una experiencia de spa verdaderamente lujosa con nuestra envoltura corporal en pareja. Comenzamos con un suave exfoliante para preparar la piel, seguido de la aplicación de una mezcla nutritiva de algas, arcilla o ingredientes botánicos en todo el cuerpo. Luego, los envolvemos en mantas térmicas para maximizar la absorción de los ingredientes beneficiosos. Mientras están envueltos, disfrutarán de un relajante masaje facial. El tratamiento concluye con la aplicación de una loción hidratante, dejando su piel suave, nutrida y radiante. Es una experiencia perfecta para parejas que buscan un momento de indulgencia y cuidado mutuo.",
-            popupImage: `${BASE_URL}envoltura-corporal-pareja-popup.jpg`
         },
         {
             title: "Masaje con Aromas y Cera en Pareja",
