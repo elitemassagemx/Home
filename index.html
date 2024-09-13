@@ -125,18 +125,20 @@
 
     <template id="service-template">
         <div class="service-item">
-            <div class="icon-text-container service-header">
+            <div class="service-header">
                 <img class="service-icon" alt="Icono del servicio" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
                 <h3 class="service-title"></h3>
             </div>
             <p class="service-description"></p>
-            <div class="icon-text-container">
-                <img class="benefits-icon" alt="Icono de beneficios" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
-                <p><strong>Beneficios:</strong> <span class="service-benefits"></span></p>
+            <div class="benefits-container">
+                <span>Beneficios:</span>
+                <img src="path-to-benefits-icon.png" alt="Beneficios" class="benefits-icon" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
+                <span class="service-benefits"></span>
             </div>
-            <div class="icon-text-container">
-                <img class="duration-icon" alt="Icono de duración" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
-                <p><strong>Duración:</strong> <span class="service-duration"></span></p>
+            <div class="duration-container">
+                <span>Duración:</span>
+                <img src="path-to-duration-icon.png" alt="Duración" class="duration-icon" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/fallback-icon.png';">
+                <span class="service-duration"></span>
             </div>
             <div class="service-buttons">
                 <button class="reserve-button">Reserva ahora</button>
