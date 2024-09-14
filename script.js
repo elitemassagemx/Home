@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: `${BASE_URL}lujo-sabor-icon.png`,
             benefitsIcons: [`${BASE_URL}benefits-icon1.png`, `${BASE_URL}benefits-icon2.png`, `${BASE_URL}benefits-icon3.png`],
             durationIcon: `${BASE_URL}duration-lujo-icon.png`,
-            image: `${BASE_URL}copasg.jpg`,
+            image: `${BASE_URL}jamc.JPG`,
             popupDescription: "El Paquete Lujo y Sabor es una experiencia premium que combina el lujo de un masaje de piedras calientes con una degustación gourmet. Comienza con un relajante masaje de 90 minutos donde las piedras volcánicas calientes aliviarán profundamente la tensión muscular. Luego, disfruten de 30 minutos de pura indulgencia con una selección cuidadosamente curada de vinos finos, quesos artesanales y fresas bañadas en chocolate. Este paquete es perfecto para aquellos que buscan una experiencia que deleite todos los sentidos.",
             popupImage: `${BASE_URL}lujo-sabor-popup.jpg`
         },
