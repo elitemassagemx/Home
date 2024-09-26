@@ -26,46 +26,34 @@
         "popupImage": "${BASE_URL}piedras-calientes-popup.jpg"
       },
       {
-        "title": "Piedras Frías",
-        "description": "Las manos expertas de nuestras terapeutas usarán piedras frías para estimular la circulación y reducir la inflamación.",
-        "benefits": ["Reducirás Inflamación", "Estrés", "Dolores Musculares"],
-        "duration": "60 min",
-        "icon": "${BASE_URL}rhpiedrasfrias.png",
-        "benefitsIcons": ["${BASE_URL}cinflamacion", "${BASE_URL}ccirculacion.png", "${BASE_URL}benefits-icon3.png"],
-        "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}piedras-frias-image.jpg",
-        "popupDescription": "El masaje con piedras frías es una técnica refrescante que utiliza piedras de mármol enfriadas para reducir la inflamación, calmar los músculos y mejorar la circulación. Esta terapia es especialmente beneficiosa para aliviar el dolor muscular, reducir la hinchazón y proporcionar una sensación general de rejuvenecimiento.",
-        "popupImage": "${BASE_URL}piedras-frias-popup.jpg"
-      },
-      {
         "title": "Espalda y Cuello",
         "description": "Un enfoque especial para liberar tensiones acumuladas y relajarse profundamente.",
         "benefits": ["Relajación", "Alivio de Dolores en Espalda y Cuello"],
-        "duration": "45 min",
+        "duration": "30 min",
         "icon": "${BASE_URL}pinsuecia.png",
         "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png"],
         "durationIcon": "${BASE_URL}duration-icon.png",
         "image": "${BASE_URL}noche.jpg",
-        "popupDescription": "Este masaje focalizado se centra en las áreas que más comúnmente acumulan tensión: la espalda y el cuello. Utilizando una combinación de técnicas de masaje sueco y de puntos de presión, nuestros terapeutas trabajarán para liberar los nudos musculares, mejorar la flexibilidad y proporcionar un alivio inmediato del estrés y la tensión.",
+        "popupDescription": "Este masaje focalizado se centra en las áreas que más comúnmente acumulan tensión: la espalda y el cuello. Utilizando una combinación de técnicas de masaje sueco y de puntos de presión, nuestros terapeutas trabajarán para liberar los nudos musculares, mejorar la flexibilidad y proporcionar un alivio del estrés y la tensión.",
         "popupImage": "${BASE_URL}espalda-cuello-popup.jpg"
       },
       {
-        "title": "Sueco Relajante",
+        "title": "Relajante",
         "description": "Ideal para una relajación completa, nuestras especialistas usarán técnicas de presión suaves para calmar el estrés.",
         "benefits": ["Relajación Total", "Mejora Circulación Sanguínea"],
-        "duration": "80 min",
+        "duration": "60 min",
         "icon": "${BASE_URL}pinsuecia.png",
         "benefitsIcons": ["${BASE_URL}ccirculacion.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png"],
         "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}sueco-relajante-image.jpg",
-        "popupDescription": "El masaje sueco es conocido por su capacidad para inducir una relajación profunda y aliviar la tensión muscular. Nuestros terapeutas utilizan una combinación de movimientos largos y fluidos, amasamiento y fricción circular para mejorar la circulación, flexibilidad y bienestar general. Este masaje es perfecto para aquellos que buscan un escape relajante del estrés diario.",
+        "image": "${BASE_URL}relajante.jpg",
+        "popupDescription": "Conocido por su capacidad para inducir una relajación profunda y aliviar la tensión muscular. Nuestros terapeutas utilizan una combinación de movimientos largos y fluidos, para mejorar la circulación, flexibilidad y bienestar general. Este masaje es perfecto para aquellos que buscan un escape relajante del estrés diario.",
         "popupImage": "${BASE_URL}sueco-relajante-popup.jpg"
       },
       {
         "title": "Chocolaterapia",
         "description": "Disfruta de sus propiedades antioxidantes con nuestra selección de lociones hechas de chocolate.",
         "benefits": ["Hidratará tu Piel", "Multisensorial", "Relajación Profunda"],
-        "duration": "45 min",
+        "duration": "60 min",
         "icon": "${BASE_URL}choco.png",
         "benefitsIcons": ["${BASE_URL}chidratacion.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png"],
         "durationIcon": "${BASE_URL}duration-icon.png",
@@ -74,10 +62,10 @@
         "popupImage": "${BASE_URL}chocolaterapia-popup.jpg"
       },
       {
-        "title": "Reflexología",
+        "title": "Pies cansados",
         "description": "Centrado en tus pies, aplicando puntos de presión para estimular la salud general.",
         "benefits": ["Mejorarás tu Equilibrio", "Reducirás el Estrés"],
-        "duration": "45 min",
+        "duration": "30 min",
         "icon": "${BASE_URL}sqpieblanco.png",
         "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png"],
         "durationIcon": "${BASE_URL}duration-icon.png",
@@ -86,20 +74,8 @@
         "popupImage": "${BASE_URL}reflexologia-popup.jpg"
       },
       {
-        "title": "Aromas y Cera",
-        "description": "Disfruta de ceras aromáticas que se derriten y se aplican como aceites tibios sobre tu piel.",
-        "benefits": ["Hidratará tu Piel", "Relajación Profunda", "Multisensorial"],
-        "duration": "60 min",
-        "icon": "${BASE_URL}rcaromaterapia.png",
-        "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}chidratacion.png", "${BASE_URL}benefits-icon3.png"],
-        "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}aromas-cera-image.jpg",
-        "popupDescription": "El tratamiento de Aromas y Cera es una experiencia sensorial única que combina los beneficios de la aromaterapia con las propiedades hidratantes de las ceras naturales. Las ceras aromáticas se calientan hasta convertirse en aceites tibios y se aplican suavemente sobre la piel, proporcionando una hidratación profunda y una relajación intensa. Los aromas cuidadosamente seleccionados ayudan a calmar la mente y elevar el espíritu.",
-        "popupImage": "${BASE_URL}aromas-cera-popup.jpg"
-      },
-      {
         "title": "Lomi Lomi",
-        "description": "Masaje hawaiano con movimientos largos y fluidos, combinando estiramientos para relajar y revitalizar.",
+        "description": "El masaje Lomi Lomi es una técnica hawaiana tradicional que combina movimientos rítmicos y fluidos para promover la relajación y el bienestar físico, emocional y espiritual. Basado en los principios de Aloha y Mana, utiliza las manos, antebrazos y codos para realizar movimientos largos y continuos, siguiendo el flujo natural del cuerpo., . Este masaje busca no solo relajar los músculos y mejorar la circulación, sino también liberar bloqueos emocionales y reducir el estrés.",
         "benefits": ["Relajación Profunda", "Aumento de Energía", "Mejora Circulación"],
         "duration": "60 min",
         "icon": "${BASE_URL}lomi.png",
@@ -110,18 +86,6 @@
         "popupImage": "${BASE_URL}lomi-lomi-popup.jpg"
       },
       {
-        "title": "Shiatsu",
-        "description": "Inspirado en la medicina japonesa, este masaje utiliza presión de dedos y estiramientos para equilibrar la energía.",
-        "benefits": ["Estimulación de la Energía Vital", "Alivio de Tensiones"],
-        "duration": "90 min",
-        "icon": "${BASE_URL}shiatsu-icon.png",
-        "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png"],
-        "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}shiatsu-image.jpg",
-        "popupDescription": "El Shiatsu es una forma de terapia de presión originaria de Japón. Utiliza presión con los dedos, palmas, codos y a veces los pies en puntos específicos del cuerpo para equilibrar el flujo de energía vital o 'chi'. Este tratamiento no solo ayuda a aliviar la tensión muscular y el estrés, sino que también puede mejorar la circulación y promover una sensación general de bienestar y vitalidad.",
-        "popupImage": "${BASE_URL}shiatsu-popup.jpg"
-      },
-      {
         "title": "Aceites de CBD",
         "description": "Masaje con aceites de CBD para reducir la inflamación, aliviar el dolor y promover la relajación.",
         "benefits": ["Alivio Dolor Muscular", "Reduce Ansiedad", "Calma Profunda"],
@@ -130,7 +94,7 @@
         "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png"],
         "durationIcon": "${BASE_URL}duration-icon.png",
         "image": "${BASE_URL}cbd-image.jpg",
-        "popupDescription": "Nuestro masaje con aceites de CBD combina las técnicas de masaje tradicionales con los beneficios terapéuticos del cannabidiol (CBD). El CBD es conocido por sus propiedades antiinflamatorias y calmantes. Este tratamiento puede ayudar a aliviar el dolor muscular crónico, reducir la ansiedad y promover una sensación de calma y bienestar general. Es ideal para aquellos que buscan alivio del estrés y las molestias físicas.",
+        "popupDescription": "Nuestro masaje con aceites de CBD combina las técnicas de masaje tradicionales con los beneficios terapéuticos del cannabidiol (CBD). El CBD es conocido por sus propiedades antiinflamatorias y calmantes. Este tratamiento puede ayudar a aliviar el dolor muscular y promover una sensación de calma y bienestar general.",
         "popupImage": "${BASE_URL}cbd-popup.jpg"
       }
     ],
@@ -183,7 +147,7 @@
           "Alivia Dolores Espalda y Cuello",
           "Sensación Relajación Compartida"
         ],
-        "duration": "45 min",
+        "duration": "30 min",
         "icon": "${BASE_URL}cuello-espalda-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
@@ -196,34 +160,15 @@
         "popupImage": "${BASE_URL}cuello-espalda-pareja-popup.jpg"
       },
       {
-        "title": "Masaje de Piedras Frías en Pareja",
-        "description": "Revitaliza su piel y estimula la circulación seguido de técnicas de masaje que promueven la relajación. Ideal para una experiencia memorable de revitalización.",
-        "benefits": [
-          "Mejoras en la Piel",
-          "Reduce Inflamación Estrés",
-          "Alivio de Dolores Musculares"
-        ],
-        "duration": "60 min",
-        "icon": "${BASE_URL}piedras-frias-icon.png",
-        "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
-          "${BASE_URL}benefits-icon3.png"
-        ],
-        "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}piedras-frias-image.jpg",
-        "popupDescription": "Experimenten juntos la frescura revitalizante de nuestro masaje con piedras frías. Este tratamiento único combina el uso de piedras de mármol enfriadas con técnicas de masaje suave para estimular la circulación, reducir la inflamación y calmar los músculos cansados. Es especialmente refrescante después de un día caluroso o para aliviar el dolor muscular. Saldrán sintiéndose rejuvenecidos y con una sensación de frescura compartida.",
-        "popupImage": "${BASE_URL}piedras-frias-pareja-popup.jpg"
-      },
       {
-        "title": "Sueco Relajante para 2",
+        "title": " Relajante para 2",
         "description": "Masaje con técnicas de presión y fricción suaves que alivian el estrés y mejoran tu circulación. Experiencia simultánea que refuerza vínculos.",
         "benefits": [
           "Relajación General",
           "Mejora la Circulación",
           "Reduce Estrés"
         ],
-        "duration": "80 min",
+        "duration": "60 min",
         "icon": "${BASE_URL}sueco-relajante-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
@@ -232,7 +177,7 @@
         ],
         "durationIcon": "${BASE_URL}duration-icon.png",
         "image": "${BASE_URL}sueco-relajante-image.jpg",
-        "popupDescription": "Disfruten juntos de la relajación profunda que ofrece nuestro masaje sueco en pareja. Este tratamiento utiliza movimientos largos y fluidos, amasamiento suave y fricción circular para aliviar la tensión muscular, mejorar la circulación y promover una relajación total. Es una experiencia perfecta para parejas que buscan un escape del estrés diario y un momento de conexión en un ambiente tranquilo y lujoso.",
+        "popupDescription": "Este tratamiento utiliza movimientos largos y fluidos, amasamiento suave y fricción circular para aliviar la tensión muscular, mejorar la circulación y promover una relajación total. Es una experiencia perfecta para parejas que buscan un escape del estrés diario y un momento de conexión en un ambiente tranquilo y lujoso.",
         "popupImage": "${BASE_URL}sueco-relajante-pareja-popup.jpg"
       },
       {
@@ -243,7 +188,7 @@
           "sensación de lujo",
           "relajación profunda"
         ],
-        "duration": "45 min",
+        "duration": "60 min",
         "icon": "${BASE_URL}chocolaterapia-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
@@ -256,14 +201,14 @@
         "popupImage": "${BASE_URL}chocolaterapia-pareja-popup.jpg"
       },
       {
-        "title": "Masaje de Reflexología en Pareja",
+        "title": "Masaje de Pies Cansado en Pareja",
         "description": "Un enfoque en los pies que utiliza puntos de presión específicos para estimular la salud general del cuerpo. Ambos disfrutarán de este tratamiento revitalizante.",
         "benefits": [
           "Mejora del equilibrio corporal",
           "alivio del estrés",
           "mejora de la salud general"
         ],
-        "duration": "45 min",
+        "duration": "30 min",
         "icon": "${BASE_URL}reflexologia-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
@@ -274,26 +219,6 @@
         "image": "${BASE_URL}reflexologia-image.jpg",
         "popupDescription": "Experimenten juntos los beneficios de la reflexología, una técnica que se centra en puntos de presión específicos en los pies que corresponden a diferentes partes del cuerpo. Este tratamiento no solo proporciona una relajación profunda, sino que también puede ayudar a mejorar la circulación, reducir el estrés y promover un sentido de bienestar en todo el cuerpo. Es una forma única y relajante de cuidarse mutuamente y disfrutar de un momento de tranquilidad compartida.",
         "popupImage": "${BASE_URL}reflexologia-pareja-popup.jpg"
-      },
-      {
-        "title": "Masaje con Aromas y Cera en Pareja",
-        "description": "Disfruta de un masaje acompañado de ceras aromáticas que se derriten en aceites tibios aplicados sobre la piel. Proporciona una experiencia sensorial completa con aroma, calor y tacto.",
-        "benefits": [
-          "Hidratación de la piel",
-          "relajación profunda",
-          "experiencia sensorial enriquecida"
-        ],
-        "duration": "60 min",
-        "icon": "${BASE_URL}aromas-cera-icon.png",
-        "benefitsIcons": [
-          "${BASE_URL}chidratacion.png",
-          "${BASE_URL}benefits-icon2.png",
-          "${BASE_URL}benefits-icon3.png"
-        ],
-        "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}dif.jpg",
-        "popupDescription": "Sumérjanse juntos en una experiencia sensorial única con nuestro masaje de aromas y cera en pareja. Las ceras aromáticas cuidadosamente seleccionadas se calientan hasta convertirse en aceites tibios y se aplican suavemente sobre la piel, proporcionando una hidratación profunda y una relajación intensa. Los aromas envolventes crean una atmósfera de calma y bienestar, mientras que el calor de la cera ayuda a relajar los músculos tensos. Este tratamiento no solo nutre la piel, sino que también crea un momento íntimo y relajante para la pareja.",
-        "popupImage": "${BASE_URL}aromas-cera-pareja-popup.jpg"
       },
       {
         "title": "Masaje Lomi Lomi en Pareja",
@@ -316,26 +241,6 @@
         "popupImage": "${BASE_URL}lomi-lomi-pareja-popup.jpg"
       },
       {
-        "title": "Masaje Shiatsu en Pareja",
-        "description": "Basado en la medicina tradicional japonesa, este masaje utiliza la presión de los dedos y técnicas de estiramiento para equilibrar la energía del cuerpo. Se realiza en dos camillas o en una cama de masaje doble.",
-        "benefits": [
-          "Estimulación de la energía vital",
-          "alivio de tensiones",
-          "mejora del bienestar general"
-        ],
-        "duration": "90 min",
-        "icon": "${BASE_URL}shiatsu-icon.png",
-        "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
-          "${BASE_URL}benefits-icon3.png"
-        ],
-        "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}camas2.jpg",
-"popupDescription": "Descubran juntos los beneficios del Shiatsu, una forma de terapia japonesa que significa 'presión con los dedos'. En este tratamiento, los terapeutas aplican presión en puntos específicos del cuerpo para equilibrar el flujo de energía vital o 'chi'. El Shiatsu se realiza a través de la ropa cómoda y no utiliza aceites. Además de aliviar la tensión muscular y el estrés, este masaje puede mejorar la circulación, aliviar dolores de cabeza y promover una sensación general de bienestar y vitalidad. Es una experiencia única que les permitirá sentirse renovados y equilibrados juntos.",
-        "popupImage": "${BASE_URL}shiatsu-pareja-popup.jpg"
-      },
-      {
         "title": "Masaje con Aceites de CBD en Pareja",
         "description": "Un masaje que utiliza aceites infundidos con cannabidiol (CBD) para ayudar a reducir la inflamación, aliviar el dolor y promover la relajación.",
         "benefits": [
@@ -352,7 +257,7 @@
         ],
         "durationIcon": "${BASE_URL}duration-icon.png",
         "image": "${BASE_URL}cbd-image.jpg",
-        "popupDescription": "Experimenten juntos los beneficios terapéuticos del CBD con nuestro masaje en pareja. El cannabidiol (CBD) es conocido por sus propiedades antiinflamatorias y calmantes. Nuestros aceites de masaje infundidos con CBD se combinan con técnicas de masaje expertas para proporcionar un alivio profundo del dolor muscular y articular. Además de sus beneficios físicos, el CBD puede ayudar a reducir la ansiedad y promover una sensación de calma y bienestar. Este tratamiento es ideal para parejas que buscan una experiencia de relajación profunda y alivio del estrés físico y mental.",
+        "popupDescription": "Experimenten juntos los beneficios terapéuticos del CBD con nuestro masaje en pareja. El cannabidiol (CBD), es conocido por sus propiedades antiinflamatorias y calmantes. Nuestros aceites se combinan con técnicas de masaje expertas para proporcionar un alivio profundo del dolor muscular y articular. Además de sus beneficios físicos, el CBD puede ayudar a reducir la ansiedad y promover una sensación de calma y bienestar. Este tratamiento es ideal para parejas que buscan una experiencia de relajación profunda y alivio del estrés físico y mental.",
         "popupImage": "${BASE_URL}cbd-pareja-popup.jpg"
       }
     ],
@@ -384,18 +289,18 @@
         "popupImage": "${BASE_URL}romance-total-popup.jpg"
       },
       {
-        "title": "Paquete Romance Total 2",
-        "description": "Vivan una experiencia de masaje en pareja completa, con atención especial al detalle para un día inolvidable.",
+        "title": "Romance Dulzura",
+        "description": "Deseas un momento de relajación con tu pareja lleno de buena vibra y concluir esta experiencia acompañado de dulzura y sabor a café?",
         "includes": [
-          "Masaje en Pareja de Aromaterapia",
-          "Sabor de Café (Latte, Capuchino, Expreso)",
+          "Masaje en Pareja de Aromaterapia de café",
+          "Elige tu Café (Latte, Capuchino, Expreso) y",
           "Pastel o Tarta"
         ],
-        "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
-        "benefits": [
+        "duration": "60 minutos de masaje + 30 minutos para disfrutar de las dulzuras.",
+        "benefits" : [
           "Relajación profunda",
           "experiencia sensorial completa",
-          "momentos de disfrute compartido"
+          "para los amantes del café"
         ],
         "icon": "${BASE_URL}romance-total2-icon.png",
         "benefitsIcons": [
@@ -405,7 +310,7 @@
         ],
         "durationIcon": "${BASE_URL}duration-romance2-icon.png",
         "image": "${BASE_URL}rosao.jpg",
-        "popupDescription": "El Paquete Romance Total 2 ofrece una experiencia única de relajación y placer para parejas. Comienza con un lujoso masaje de aromaterapia en pareja de 90 minutos, donde los aceites esenciales cuidadosamente seleccionados crearán un ambiente de tranquilidad y bienestar. Después del masaje, disfruten de 30 minutos adicionales de indulgencia con su elección de café gourmet (Latte, Capuchino o Expreso) acompañado de un delicioso pastel o tarta. Este paquete combina perfectamente la relajación profunda con los placeres culinarios, creando un momento especial para compartir y conectar.",
+        "popupDescription": "Comienza con un lujoso masaje de aromaterapia en pareja de 60 minutos, donde cuidamos cada detalle para que la experiencia sea sensorial. Después del masaje disfruten las delicias dulces del café con pastel o tarta de su previamente elegidas por ti. Este paquete combina perfectamente la relajación profunda con los placeres culinarios, creando un momento especial para conectar.",
         "popupImage": "${BASE_URL}romance-total2-popup.jpg"
       },
       {
