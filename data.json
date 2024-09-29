@@ -75,7 +75,7 @@
       },
       {
         "title": "Lomi Lomi",
-        "description": "El masaje Lomi Lomi es una técnica hawaiana tradicional que combina movimientos rítmicos y fluidos para promover la relajación y el bienestar físico, emocional y espiritual. Basado en los principios de Aloha y Mana, utiliza las manos, antebrazos y codos para realizar movimientos largos y continuos, siguiendo el flujo natural del cuerpo., . Este masaje busca no solo relajar los músculos y mejorar la circulación, sino también liberar bloqueos emocionales y reducir el estrés.",
+        "description": "El masaje Lomi Lomi es una técnica hawaiana tradicional que combina movimientos rítmicos y fluidos para promover la relajación y el bienestar físico, emocional y espiritual. Basado en los principios de Aloha y Mana, utiliza las manos, antebrazos y codos para realizar movimientos largos y continuos, siguiendo el flujo natural del cuerpo., . Este masaje busca no solo relajar los músculos y mejorar la circulación, sino también liberar bloqueos emocionales y reducir el estrés.",
         "benefits": ["Relajación Profunda", "Aumento de Energía", "Mejora Circulación"],
         "duration": "60 min",
         "icon": "${BASE_URL}lomi.png",
@@ -156,12 +156,11 @@
         ],
         "durationIcon": "${BASE_URL}duration-icon.png",
         "image": "${BASE_URL}cuello-espalda-image.jpg",
-        "popupDescription": "Este masaje focalizado es ideal para parejas que buscan aliviar la tensión en las áreas que más lo necesitan. Nuestros terapeutas se centrarán en liberar el estrés acumulado en el cuello y la espalda, utilizando técnicas específicas para reducir la rigidez y aliviar el dolor. Disfruten juntos de esta experiencia relajante y salgan sintiéndose renovados y conectados.",
+"popupDescription": "Este masaje focalizado es ideal para parejas que buscan aliviar la tensión en las áreas que más lo necesitan. Nuestros terapeutas se centrarán en liberar el estrés acumulado en el cuello y la espalda, utilizando técnicas específicas para reducir la rigidez y aliviar el dolor. Disfruten juntos de esta experiencia relajante y salgan sintiéndose renovados y conectados.",
         "popupImage": "${BASE_URL}cuello-espalda-pareja-popup.jpg"
       },
       {
-      {
-        "title": " Relajante para 2",
+        "title": "Relajante para 2",
         "description": "Masaje con técnicas de presión y fricción suaves que alivian el estrés y mejoran tu circulación. Experiencia simultánea que refuerza vínculos.",
         "benefits": [
           "Relajación General",
@@ -290,7 +289,7 @@
       },
       {
         "title": "Romance Dulzura",
-        "description": "Deseas un momento de relajación con tu pareja lleno de buena vibra y concluir esta experiencia acompañado de dulzura y sabor a café?",
+        "description": "Deseas un momento de relajación con tu pareja lleno de buena vibra y concluir esta experiencia acompañado de dulzura y sabor a café?",
         "includes": [
           "Masaje en Pareja de Aromaterapia de café",
           "Elige tu Café (Latte, Capuchino, Expreso) y",
@@ -363,7 +362,7 @@
         "durationIcon": "${BASE_URL}duration-sensaciones-icon.png",
         "image": "${BASE_URL}chen.jpg",
         "popupDescription": "El Paquete Sensaciones Inolvidables es una experiencia diseñada para despertar todos sus sentidos. Comienza con un lujoso masaje de cuerpo completo en pareja de 90 minutos, que les dejará completamente relajados y renovados. Después, disfruten de 45 minutos de pura indulgencia con una copa de vino selecto, fresas cubiertas de chocolate y una exquisita tabla de quesos artísticos. Este paquete combina perfectamente la relajación profunda con una experiencia gastronómica refinada, creando recuerdos que perdurarán mucho después de que termine su visita.",
-        "popupImage": "${BASE_URL}sensaciones-inolvidables-popup.jpg"
+"popupImage": "${BASE_URL}sensaciones-inolvidables-popup.jpg"
       },
       {
         "title": "Paquete Escape de Lujo",
@@ -439,7 +438,7 @@
         ],
         "durationIcon": "${BASE_URL}duration-tranquilidad-icon.png",
         "image": "${BASE_URL}tranquilidad-gourmet-image.jpg",
-"popupDescription": "El Paquete Tranquilidad Gourmet combina los beneficios terapéuticos del CBD con una experiencia de café gourmet. Comienza con un masaje de 60 minutos utilizando aceites infundidos con CBD, conocidos por sus propiedades antiinflamatorias y relajantes. Después, disfruten de 30 minutos de placer culinario con su elección de café gourmet (Latte, Capuchino o Expreso) acompañado de un delicioso pastel o tarta. Este paquete es perfecto para parejas que buscan alivio del estrés y el dolor, junto con una experiencia de café de alta calidad.",
+        "popupDescription": "El Paquete Tranquilidad Gourmet combina los beneficios terapéuticos del CBD con una experiencia de café gourmet. Comienza con un masaje de 60 minutos utilizando aceites infundidos con CBD, conocidos por sus propiedades antiinflamatorias y relajantes. Después, disfruten de 30 minutos de placer culinario con su elección de café gourmet (Latte, Capuchino o Expreso) acompañado de un delicioso pastel o tarta. Este paquete es perfecto para parejas que buscan alivio del estrés y el dolor, junto con una experiencia de café de alta calidad.",
         "popupImage": "${BASE_URL}tranquilidad-gourmet-popup.jpg"
       },
       {
