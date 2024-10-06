@@ -7,13 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleImageError(img) {
         console.warn(`Failed to load image: ${img.src}`);
         img.style.display = 'none';
-        // Opcional: Mostrar una imagen de reemplazo
-        // img.src = 'path/to/fallback-image.png';
     }
 
     function buildImageUrl(iconPath) {
         if (!iconPath) return '';
-        return iconPath.replace('${BASE_URL}', BASE_URL);
+        return iconPath.startsWith('http') ? iconPath : `${BASE_URL}${iconPath}`;
     }
 
     function getElement(id) {
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return element;
     }
 
-    // Cargar los datos del JSON
     function loadJSONData() {
         fetch('data.json')
             .then(response => {
@@ -34,13 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.json();
             })
             .then(data => {
-                console.log('JSON data loaded successfully');
+                console.log('JSON data loaded successfully:', data);
                 services = data.services;
                 renderServices('individual');
                 renderPackages();
+                setupFilters();
+                setupServiceCategories();
             })
             .catch(error => {
-                console.error('Error loading the JSON file:', error);
+                console.error('Error loading or parsing the JSON file:', error);
                 const servicesList = getElement('services-list');
                 const packageList = getElement('package-list');
                 if (servicesList) servicesList.innerHTML = '<p>Error al cargar los servicios. Por favor, intente más tarde.</p>';
@@ -56,34 +55,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
         servicesList.innerHTML = '';
 
-        services[category].forEach(service => {
+        if (!Array.isArray(services[category])) {
+            console.error(`services[${category}] is not an array:`, services[category]);
+            servicesList.innerHTML = '<p>Error al cargar los servicios. Por favor, intente más tarde.</p>';
+            return;
+        }
+
+        services[category].forEach((service, index) => {
+            console.log(`Rendering service ${index + 1}:`, service);
             const serviceElement = template.content.cloneNode(true);
             
-            serviceElement.querySelector('.service-title').textContent = service.title;
+            serviceElement.querySelector('.service-title').textContent = service.title || 'Sin título';
             
             const serviceIcon = serviceElement.querySelector('.service-icon');
             serviceIcon.src = buildImageUrl(service.icon);
             serviceIcon.onerror = () => handleImageError(serviceIcon);
             
-            serviceElement.querySelector('.service-description').textContent = service.description;
+            serviceElement.querySelector('.service-description').textContent = service.description || 'Sin descripción';
             
             const benefitsIcon = serviceElement.querySelector('.benefits-icon');
             benefitsIcon.src = buildImageUrl(Array.isArray(service.benefitsIcons) ? service.benefitsIcons[0] : service.benefitsIcons);
             benefitsIcon.onerror = () => handleImageError(benefitsIcon);
             
-            serviceElement.querySelector('.service-benefits').textContent = service.benefits.join(', ');
+            serviceElement.querySelector('.service-benefits').textContent = Array.isArray(service.benefits) ? service.benefits.join(', ') : 'No especificado';
             
             const durationIcon = serviceElement.querySelector('.duration-icon');
             durationIcon.src = buildImageUrl(service.durationIcon);
             durationIcon.onerror = () => handleImageError(durationIcon);
             
-            serviceElement.querySelector('.service-duration').textContent = service.duration;
+            serviceElement.querySelector('.service-duration').textContent = service.duration || 'Duración no especificada';
 
             const reserveButton = serviceElement.querySelector('.reserve-button');
             reserveButton.addEventListener('click', () => sendWhatsAppMessage('Reservar', service.title));
 
-            const infoButton = serviceElement.querySelector('.info-button');
-            infoButton.addEventListener('click', () => showPopup(service));
+            const moreIcon = serviceElement.querySelector('.more-icon');
+            moreIcon.addEventListener('click', () => showPopup(service));
+
+            const serviceBackground = serviceElement.querySelector('.service-background');
+            if (service.backgroundImage) {
+                serviceBackground.style.backgroundImage = `url(${buildImageUrl(service.backgroundImage)})`;
+            }
+
+            const serviceItem = serviceElement.querySelector('.service-item');
+            if (Array.isArray(service.benefits)) {
+                service.benefits.forEach(benefit => {
+                    serviceItem.classList.add(benefit.toLowerCase().replace(/\s+/g, '-'));
+                });
+            }
 
             servicesList.appendChild(serviceElement);
         });
@@ -93,30 +111,50 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderPackages() {
         console.log('Rendering packages');
         const packageList = getElement('package-list');
-        if (!packageList) return;
+        const template = getElement('package-template');
+        if (!packageList || !template) {
+            console.error('Package list or template not found');
+            return;
+        }
 
         packageList.innerHTML = '';
-        services.paquetes.forEach(pkg => {
-            const packageElement = document.createElement('div');
-            packageElement.className = 'package-item';
-            packageElement.innerHTML = `
-                <h3>${pkg.title}</h3>
-                <p>${pkg.description}</p>
-                <p><strong>Incluye:</strong> ${pkg.includes.join(', ')}</p>
-                <p><strong>Duración:</strong> ${pkg.duration}</p>
-                <p><strong>Beneficios:</strong> ${pkg.benefits.join(', ')}</p>
-                <button class="reserve-button">Reservar</button>
-                <button class="info-button">Saber más</button>
-            `;
+        if (!Array.isArray(services.paquetes)) {
+            console.error('services.paquetes is not an array:', services.paquetes);
+            packageList.innerHTML = '<p>Error al cargar los paquetes. Por favor, intente más tarde.</p>';
+            return;
+        }
 
-            packageElement.querySelector('.reserve-button').addEventListener('click', () => sendWhatsAppMessage('Reservar', pkg.title));
-            packageElement.querySelector('.info-button').addEventListener('click', () => showPopup(pkg));
+        services.paquetes.forEach((pkg, index) => {
+            console.log(`Rendering package ${index + 1}:`, pkg);
+            const packageElement = template.content.cloneNode(true);
+            
+            packageElement.querySelector('.package-title').textContent = pkg.title || 'Sin título';
+            packageElement.querySelector('.package-description').textContent = pkg.description || 'Sin descripción';
+            packageElement.querySelector('.package-includes-list').textContent = Array.isArray(pkg.includes) ? pkg.includes.join(', ') : 'No especificado';
+            packageElement.querySelector('.package-duration-text').textContent = pkg.duration || 'Duración no especificada';
+            packageElement.querySelector('.package-benefits-list').textContent = Array.isArray(pkg.benefits) ? pkg.benefits.join(', ') : 'No especificado';
+
+            const reserveButton = packageElement.querySelector('.reserve-button');
+            reserveButton.addEventListener('click', () => sendWhatsAppMessage('Reservar', pkg.title));
+
+            const moreIcon = packageElement.querySelector('.more-icon');
+            moreIcon.addEventListener('click', () => showPopup(pkg));
+
+            const packageBackground = packageElement.querySelector('.package-background');
+            if (pkg.backgroundImage) {
+                packageBackground.style.backgroundImage = `url(${buildImageUrl(pkg.backgroundImage)})`;
+            }
+
+            const packageItem = packageElement.querySelector('.package-item');
+            if (pkg.type) {
+                packageItem.classList.add(pkg.type.toLowerCase().replace(/\s+/g, '-'));
+            }
 
             packageList.appendChild(packageElement);
         });
         console.log(`Rendered ${services.paquetes.length} packages`);
     }
-
+    
     function showPopup(data) {
         console.log('Showing popup for:', data.title);
         const popup = getElement('popup');
@@ -276,10 +314,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function init() {
         loadJSONData();
         setupLanguageSelector();
-        setupCategorySelector();
         setupPopup();
         setupGalleryAnimations();
-        window.addEventListener('beforeunload', cleanupEventListeners);
+        setupGalleryModal();
     }
 
     init();
