@@ -4,7 +4,7 @@ let currentPopupIndex = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded');
-
+ 
     function handleImageError(img) {
         console.warn(`Failed to load image: ${img.src}`);
         img.style.display = 'none';
