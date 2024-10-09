@@ -120,11 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (benefitsContainer && Array.isArray(service.benefitsIcons)) {
                 const benefitsIconsContainer = document.createElement('div');
                 benefitsIconsContainer.classList.add('benefits-icons');
-                service.benefitsIcons.slice(0, 3).forEach(iconUrl => {
+                service.benefitsIcons.forEach(iconUrl => {
                     const img = document.createElement('img');
                     img.src = buildImageUrl(iconUrl);
                     img.alt = 'Benefit icon';
                     img.classList.add('benefit-icon');
+                    img.style.width = '24px';
+                    img.style.height = '24px';
                     img.onerror = () => handleImageError(img);
                     benefitsIconsContainer.appendChild(img);
                 });
@@ -264,6 +266,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.src = buildImageUrl(iconUrl);
                 img.alt = 'Benefit icon';
                 img.classList.add('popup-benefit-icon');
+                img.style.width = '24px';
+                img.style.height = '24px';
                 img.onerror = () => handleImageError(img);
                 popupBenefitsIcons.appendChild(img);
             });
@@ -382,11 +386,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         benefitsNav.innerHTML = '';
         const allBenefits = new Set();
+        const benefitIcons = new Map();
 
         if (services[category]) {
             services[category].forEach(service => {
-                if (Array.isArray(service.benefits)) {
-                    service.benefits.forEach(benefit => allBenefits.add(benefit));
+                if (Array.isArray(service.benefits) && Array.isArray(service.benefitsIcons)) {
+                    service.benefits.forEach((benefit, index) => {
+                        if (!allBenefits.has(benefit)) {
+                            allBenefits.add(benefit);
+                            benefitIcons.set(benefit, service.benefitsIcons[index]);
+                        }
+                    });
                 }
             });
         }
@@ -395,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
         allButton.classList.add('benefit-btn', 'active');
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
-            <img src="${BASE_URL}todos.png" alt="Todos">
+            <img src="${BASE_URL}todos.png" alt="Todos" style="width: 24px; height: 24px;">
             <span>Todos</span>
         `;
         benefitsNav.appendChild(allButton);
@@ -405,14 +415,10 @@ document.addEventListener('DOMContentLoaded', () => {
             button.classList.add('benefit-btn');
             button.dataset.filter = benefit.toLowerCase().replace(/\s+/g, '-');
             
-            // Buscar el icono correspondiente en benefitsIcons
-            const iconUrl = services[category].find(service => 
-                service.benefits && service.benefits.includes(benefit) && 
-                service.benefitsIcons && service.benefitsIcons.length > 0
-            )?.benefitsIcons[0] || `${BASE_URL}${benefit.toLowerCase().replace(/\s+/g, '-')}.png`;
+            const iconUrl = benefitIcons.get(benefit) || `${BASE_URL}${benefit.toLowerCase().replace(/\s+/g, '-')}.png`;
             
             button.innerHTML = `
-                <img src="${buildImageUrl(iconUrl)}" alt="${benefit}">
+                <img src="${buildImageUrl(iconUrl)}" alt="${benefit}" style="width: 24px; height: 24px;">
                 <span>${benefit}</span>
             `;
             benefitsNav.appendChild(button);
@@ -438,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
         allButton.classList.add('package-btn', 'active');
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
-            <img src="${BASE_URL}todos.png" alt="Todos">
+            <img src="${BASE_URL}todos.png" alt="Todos" style="width: 24px; height: 24px;">
             <span>Todos</span>
         `;
         packageNav.appendChild(allButton);
@@ -448,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.classList.add('package-btn');
             button.dataset.filter = packageTitle.toLowerCase().replace(/\s+/g, '-');
             button.innerHTML = `
-                <img src="${BASE_URL}${packageTitle.toLowerCase().replace(/\s+/g, '-')}-icon.png" alt="${packageTitle}">
+                <img src="${BASE_URL}${packageTitle.toLowerCase().replace(/\s+/g, '-')}-icon.png" alt="${packageTitle}" style="width: 24px; height: 24px;">
                 <span>${packageTitle}</span>
             `;
             packageNav.appendChild(button);
