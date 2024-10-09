@@ -116,10 +116,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const descriptionElement = serviceElement.querySelector('.service-description');
             if (descriptionElement) descriptionElement.textContent = service.description || 'Sin descripción';
             
-            const benefitsIcon = serviceElement.querySelector('.benefits-icon');
-            if (benefitsIcon && service.benefitsIcons) {
-                benefitsIcon.src = buildImageUrl(Array.isArray(service.benefitsIcons) ? service.benefitsIcons[0] : service.benefitsIcons);
-                benefitsIcon.onerror = () => handleImageError(benefitsIcon);
+            const benefitsContainer = serviceElement.querySelector('.benefits-container');
+            if (benefitsContainer && Array.isArray(service.benefitsIcons)) {
+                const benefitsIconsContainer = document.createElement('div');
+                benefitsIconsContainer.classList.add('benefits-icons');
+                service.benefitsIcons.slice(0, 3).forEach(iconUrl => {
+                    const img = document.createElement('img');
+                    img.src = buildImageUrl(iconUrl);
+                    img.alt = 'Benefit icon';
+                    img.classList.add('benefit-icon');
+                    img.onerror = () => handleImageError(img);
+                    benefitsIconsContainer.appendChild(img);
+                });
+                benefitsContainer.insertBefore(benefitsIconsContainer, benefitsContainer.firstChild);
             }
             
             const benefitsElement = serviceElement.querySelector('.service-benefits');
@@ -245,6 +254,25 @@ document.addEventListener('DOMContentLoaded', () => {
         popupBenefits.textContent = Array.isArray(data.benefits) ? data.benefits.join(', ') : data.benefits || '';
         popupDuration.textContent = data.duration || '';
 
+        // Mostrar iconos de beneficios en el popup
+        const popupBenefitsIcons = popup.querySelector('.popup-benefits-icons') || document.createElement('div');
+        popupBenefitsIcons.className = 'popup-benefits-icons';
+        popupBenefitsIcons.innerHTML = '';
+        if (Array.isArray(data.benefitsIcons)) {
+            data.benefitsIcons.forEach(iconUrl => {
+                const img = document.createElement('img');
+                img.src = buildImageUrl(iconUrl);
+                img.alt = 'Benefit icon';
+                img.classList.add('popup-benefit-icon');
+                img.onerror = () => handleImageError(img);
+                popupBenefitsIcons.appendChild(img);
+            });
+        }
+        const popupDetails = popup.querySelector('.popup-details');
+        if (popupDetails) {
+            popupDetails.insertBefore(popupBenefitsIcons, popupDetails.firstChild);
+        }
+
         popupContent.style.backgroundImage = `url(${buildImageUrl(data.popupImage || data.image)})`;
         popupContent.style.backgroundSize = 'cover';
         popupContent.style.backgroundPosition = 'center';
@@ -363,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-const allButton = document.createElement('button');
+        const allButton = document.createElement('button');
         allButton.classList.add('benefit-btn', 'active');
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
@@ -376,8 +404,15 @@ const allButton = document.createElement('button');
             const button = document.createElement('button');
             button.classList.add('benefit-btn');
             button.dataset.filter = benefit.toLowerCase().replace(/\s+/g, '-');
+            
+            // Buscar el icono correspondiente en benefitsIcons
+            const iconUrl = services[category].find(service => 
+                service.benefits && service.benefits.includes(benefit) && 
+                service.benefitsIcons && service.benefitsIcons.length > 0
+            )?.benefitsIcons[0] || `${BASE_URL}${benefit.toLowerCase().replace(/\s+/g, '-')}.png`;
+            
             button.innerHTML = `
-                <img src="${BASE_URL}${benefit.toLowerCase().replace(/\s+/g, '-')}.png" alt="${benefit}">
+                <img src="${buildImageUrl(iconUrl)}" alt="${benefit}">
                 <span>${benefit}</span>
             `;
             benefitsNav.appendChild(button);
