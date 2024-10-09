@@ -98,168 +98,108 @@
         "popupImage": "${BASE_URL}cbd-popup.jpg"
       }
     ],
-    "pareja": [
+
+        "premium": [
       {
-        "title": "Aromaterapia para 2",
-        "description": "Disfruten de un masaje relajante mientras se sumergen en una atmósfera de calma con aceites esenciales que eligieron previamente. Este masaje combina técnicas suaves y aromaterapia promoviendo la relajación y el bienestar.",
-        "benefits": [
-          "Reducirán Estrés",
-          "Mejora en Estado de Ánimo",
-          "Alivia Tensiones Musculares"
-        ],
-        "duration": "60 min",
-        "icon": "${BASE_URL}cfragancia2.png",
-        "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
-          "${BASE_URL}benefits-icon3.png"
-        ],
+        "title": "Masaje de Lujo con Oro",
+        "description": "Un tratamiento exclusivo que combina un masaje relajante con la aplicación de partículas de oro para rejuvenecer la piel.\n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "benefits": ["Rejuvenecimiento de la piel", "Relajación profunda", "Experiencia de lujo"],
+        "duration": "90 min",
+        "icon": "${BASE_URL}gold-massage-icon.png",
+        "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png"],
         "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}aromaterapia-image.jpg",
-        "popupDescription": "Experimenten juntos el poder relajante de la aromaterapia. En este masaje para parejas, podrán elegir entre una variedad de aceites esenciales cuidadosamente seleccionados para crear su atmósfera perfecta. Nuestros terapeutas expertos utilizarán técnicas suaves de masaje mientras los aromas elegidos envuelven sus sentidos, proporcionando una experiencia de relajación profunda y conexión mutua.",
-        "popupImage": "${BASE_URL}aromaterapia-pareja-popup.jpg"
+        "image": "${BASE_URL}gold-massage-image.jpg",
+        "popupDescription": "LLENAR  \n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "popupImage": "${BASE_URL}gold-massage-popup.jpg"
       },
       {
-        "title": "Experiencia Piedras Calientes en Pareja",
-        "description": "Comparte el calor y relajación de un masaje con piedras lisas de Origen Volcánico colocadas sobre el cuerpo mientras reciben un masaje profundo. Ideal para momentos de unión, liberar tensiones y mejorar la circulación.",
-        "benefits": [
-          "Alivio de dolores musculares",
-          "mejora de la circulación sanguínea",
-          "profundo estado de relajación"
-        ],
-        "duration": "60 min",
-        "icon": "${BASE_URL}piedras-calientes-icon.png",
-        "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}ccirculacion.png",
-          "${BASE_URL}benefits-icon3.png"
-        ],
+        "title": "Ritual de Diamantes",
+        "description": "Un tratamiento facial y corporal de alta gama que utiliza polvo de diamante para exfoliar y rejuvenecer la piel.\n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "benefits": ["Exfoliación profunda", "Luminosidad de la piel", "Anti-envejecimiento"],
+        "duration": "120 min",
+        "icon": "${BASE_URL}diamond-ritual-icon.png",
+        "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png"],
         "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}piedras-calientes-image.jpg",
-        "popupDescription": "Sumérjanse juntos en una experiencia de calor y relajación profunda. Las piedras volcánicas calientes se colocan estratégicamente en puntos clave del cuerpo, combinadas con un masaje profundo que alivia la tensión muscular y mejora la circulación. Este tratamiento en pareja no solo proporciona beneficios físicos, sino que también crea un momento íntimo y relajante para compartir y conectar.",
-        "popupImage": "${BASE_URL}piedras-calientes-pareja-popup.jpg"
-      },
-      {
-        "title": "Liberan Cuello y Espalda",
-        "description": "Perfecto para liberar estrés y tensiones acumuladas. Masaje focalizado donde disfrutan y crean conexión.",
-        "benefits": [
-          "Reducirán Rigidez",
-          "Alivia Dolores Espalda y Cuello",
-          "Sensación Relajación Compartida"
-        ],
-        "duration": "30 min",
-        "icon": "${BASE_URL}cuello-espalda-icon.png",
-        "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
-          "${BASE_URL}benefits-icon3.png"
-        ],
-        "durationIcon": "${BASE_URL}c30min.png",
-        "image": "${BASE_URL}cuello-espalda-image.jpg",
-"popupDescription": "Este masaje focalizado es ideal para parejas que buscan aliviar la tensión en las áreas que más lo necesitan. Nuestros terapeutas se centrarán en liberar el estrés acumulado en el cuello y la espalda, utilizando técnicas específicas para reducir la rigidez y aliviar el dolor. Disfruten juntos de esta experiencia relajante y salgan sintiéndose renovados y conectados.",
-        "popupImage": "${BASE_URL}cuello-espalda-pareja-popup.jpg"
-      },
-      {
-        "title": "Relajante para 2",
-        "description": "Masaje con técnicas de presión y fricción suaves que alivian el estrés y mejoran tu circulación. Experiencia simultánea que refuerza vínculos.",
-        "benefits": [
-          "Relajación General",
-          "Mejora la Circulación",
-          "Reduce Estrés"
-        ],
-        "duration": "60 min",
-        "icon": "${BASE_URL}sueco-relajante-icon.png",
-        "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}ccirculacion.png",
-          "${BASE_URL}benefits-icon3.png"
-        ],
-        "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}sueco-relajante-image.jpg",
-        "popupDescription": "Este tratamiento utiliza movimientos largos y fluidos, amasamiento suave y fricción circular para aliviar la tensión muscular, mejorar la circulación y promover una relajación total. Es una experiencia perfecta para parejas que buscan un escape del estrés diario y un momento de conexión en un ambiente tranquilo y lujoso.",
-        "popupImage": "${BASE_URL}sueco-relajante-pareja-popup.jpg"
-      },
-      {
-        "title": "Chocolaterapia en Pareja",
-        "description": "Disfruta de un masaje indulgente con lociones a base de chocolate, conocido por sus propiedades antioxidantes. Este tratamiento es ideal para una experiencia sensorial completa.",
-        "benefits": [
-          "Hidratación de la piel",
-          "sensación de lujo",
-          "relajación profunda"
-        ],
-        "duration": "60 min",
-        "icon": "${BASE_URL}chocolaterapia-icon.png",
-        "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
-          "${BASE_URL}benefits-icon3.png"
-        ],
-        "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}chocolaterapia-image.jpg",
-        "popupDescription": "Sumérjanse en el lujo y el placer con nuestra chocolaterapia en pareja. Este tratamiento indulgente utiliza productos a base de chocolate rico en antioxidantes para nutrir y rejuvenecer la piel. El aroma del chocolate no solo es delicioso, sino que también estimula la liberación de endorfinas, creando una sensación de felicidad y relajación. Disfruten juntos de esta experiencia sensorial única que dejará su piel suave, hidratada y con un delicioso aroma.",
-        "popupImage": "${BASE_URL}chocolaterapia-pareja-popup.jpg"
-      },
-      {
-        "title": "Masaje de Pies Cansado en Pareja",
-        "description": "Un enfoque en los pies que utiliza puntos de presión específicos para estimular la salud general del cuerpo. Ambos disfrutarán de este tratamiento revitalizante.",
-        "benefits": [
-          "Mejora del equilibrio corporal",
-          "alivio del estrés",
-          "mejora de la salud general"
-        ],
-        "duration": "30 min",
-        "icon": "${BASE_URL}reflexologia-icon.png",
-        "benefitsIcons": [
-          "${BASE_URL}PIEFLECH.png",
-          "${BASE_URL}benefits-icon2.png",
-          "${BASE_URL}benefits-icon3.png"
-        ],
-        "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}reflexologia-image.jpg",
-        "popupDescription": "Experimenten juntos los beneficios de la reflexología, una técnica que se centra en puntos de presión específicos en los pies que corresponden a diferentes partes del cuerpo. Este tratamiento no solo proporciona una relajación profunda, sino que también puede ayudar a mejorar la circulación, reducir el estrés y promover un sentido de bienestar en todo el cuerpo. Es una forma única y relajante de cuidarse mutuamente y disfrutar de un momento de tranquilidad compartida.",
-        "popupImage": "${BASE_URL}reflexologia-pareja-popup.jpg"
-      },
-      {
-        "title": "Masaje Lomi Lomi en Pareja",
-        "description": "Este masaje hawaiano utiliza movimientos largos y fluidos, combinados con técnicas de estiramiento para relajar y revitalizar el cuerpo. Disfruta de una experiencia de conexión y armonía mientras ambos reciben el masaje simultáneamente.",
-        "benefits": [
-          "Relajación profunda",
-          "aumento de la energía",
-          "mejora de la circulación"
-        ],
-        "duration": " min",
-        "icon": "${BASE_URL}lomi-lomi-icon.png",
-        "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
-          "${BASE_URL}ccirculacion.png"
-        ],
-        "durationIcon": "${BASE_URL}c30min.png",
-        "image": "${BASE_URL}bat.jpg",
-        "popupDescription": "Experimenten juntos la magia del masaje hawaiano Lomi Lomi. Este tratamiento único utiliza movimientos largos, fluidos y rítmicos que recorren todo el cuerpo, imitando las olas del océano. Los terapeutas usan no solo las manos, sino también los antebrazos para aplicar una presión profunda y relajante. El Lomi Lomi no solo relaja los músculos, sino que también se cree que ayuda a liberar patrones de pensamiento y emociones negativas, promoviendo una sensación de armonía y bienestar total.",
-        "popupImage": "${BASE_URL}lomi-lomi-pareja-popup.jpg"
-      },
-      {
-        "title": "Masaje con Aceites de CBD en Pareja",
-        "description": "Un masaje que utiliza aceites infundidos con cannabidiol (CBD) para ayudar a reducir la inflamación, aliviar el dolor y promover la relajación.",
-        "benefits": [
-          "Alivio del dolor muscular y articular",
-          "reducción de la ansiedad",
-          "relajación profunda"
-        ],
-        "duration": "60 min",
-        "icon": "${BASE_URL}cbd-icon.png",
-        "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
-          "${BASE_URL}benefits-icon3.png"
-        ],
-        "durationIcon": "${BASE_URL}duration-icon.png",
-        "image": "${BASE_URL}cbd-image.jpg",
-        "popupDescription": "Experimenten juntos los beneficios terapéuticos del CBD con nuestro masaje en pareja. El cannabidiol (CBD), es conocido por sus propiedades antiinflamatorias y calmantes. Nuestros aceites se combinan con técnicas de masaje expertas para proporcionar un alivio profundo del dolor muscular y articular. Además de sus beneficios físicos, el CBD puede ayudar a reducir la ansiedad y promover una sensación de calma y bienestar. Este tratamiento es ideal para parejas que buscan una experiencia de relajación profunda y alivio del estrés físico y mental.",
-        "popupImage": "${BASE_URL}cbd-pareja-popup.jpg"
+        "image": "${BASE_URL}diamond-ritual-image.jpg",
+        "popupDescription": "LLENAR  \n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "popupImage": "${BASE_URL}diamond-ritual-popup.jpg"
       }
     ],
+    "experiencias": [
+      {
+        "title": "Día de Spa Completo",
+        "description": "Una experiencia de día completo que incluye múltiples tratamientos para una relajación total.\n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "includes": ["Masaje de cuerpo completo", "Facial personalizado", "Manicura y pedicura", "Almuerzo saludable"],
+        "duration": "6 horas",
+        "icon": "${BASE_URL}full-day-spa-icon.png",
+        "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png", "${BASE_URL}benefits-icon4.png"],
+        "durationIcon": "${BASE_URL}duration-icon.png",
+        "image": "${BASE_URL}full-day-spa-image.jpg",
+        "popupDescription": "LLENAR  \n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "popupImage": "${BASE_URL}full-day-spa-popup.jpg"
+      },
+      {
+        "title": "Retiro de Bienestar",
+        "description": "Un programa de varios días diseñado para rejuvenecer cuerpo y mente.\n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "includes": ["Tratamientos de spa diarios", "Clases de yoga y meditación", "Consultas nutricionales", "Alojamiento de lujo"],
+        "duration": "3 días / 2 noches",
+        "icon": "${BASE_URL}wellness-retreat-icon.png",
+        "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png", "${BASE_URL}benefits-icon4.png"],
+        "durationIcon": "${BASE_URL}duration-icon.png",
+        "image": "${BASE_URL}wellness-retreat-image.jpg",
+        "popupDescription": "LLENAR  \n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "popupImage": "${BASE_URL}wellness-retreat-popup.jpg"
+      },
+      {
+        "title": "Experiencia Termal",
+        "description": "Un recorrido por nuestras instalaciones termales para una experiencia de relajación completa.\n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "includes": ["Circuito de aguas", "Sauna y baño turco", "Piscina de hidromasaje", "Sala de relajación"],
+        "duration": "3 horas",
+        "icon": "${BASE_URL}thermal-experience-icon.png",
+        "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png", "${BASE_URL}benefits-icon4.png"],
+        "durationIcon": "${BASE_URL}duration-icon.png",
+        "image": "${BASE_URL}thermal-experience-image.jpg",
+        "popupDescription": "LLENAR  \n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "popupImage": "${BASE_URL}thermal-experience-popup.jpg"
+      },
+      {
+        "title": "Escapada Romántica",
+        "description": "Una experiencia diseñada para parejas que buscan relajarse y reconectar.\n\nPrecio: **$1,700**",
+        "includes": ["Masaje en pareja", "Baño de burbujas privado", "Cena a la luz de las velas", "Champagne y fresas"],
+        "duration": "4 horas",
+        "icon": "${BASE_URL}romantic-getaway-icon.png",
+        "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png", "${BASE_URL}benefits-icon4.png"],
+        "durationIcon": "${BASE_URL}duration-icon.png",
+        "image": "${BASE_URL}romantic-getaway-image.jpg",
+        "popupDescription": "LLENAR  \n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "popupImage": "${BASE_URL}romantic-getaway-popup.jpg"
+      },
+      {
+        "title": "Detox y Renovación",
+        "description": "Un programa integral diseñado para desintoxicar y revitalizar el cuerpo.\n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "includes": ["Envoltura corporal desintoxicante", "Masaje drenaje linfático", "Facial purificante", "Sesión de yoga"],
+        "duration": "5 horas",
+        "icon": "${BASE_URL}detox-renewal-icon.png",
+        "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png", "${BASE_URL}benefits-icon4.png"],
+        "durationIcon": "${BASE_URL}duration-icon.png",
+        "image": "${BASE_URL}detox-renewal-image.jpg",
+        "popupDescription": "LLENAR  \n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "popupImage": "${BASE_URL}detox-renewal-popup.jpg"
+      },
+      {
+        "title": "Viaje Sensorial",
+        "description": "Una experiencia única que estimula todos los sentidos para una relajación profunda.\n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "includes": ["Masaje aromático", "Terapia de sonido", "Degustación de tés exóticos", "Tratamiento de cromoterapia"],
+        "duration": "3 horas",
+        "icon": "${BASE_URL}sensory-journey-icon.png",
+        "benefitsIcons": ["${BASE_URL}benefits-icon1.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png", "${BASE_URL}benefits-icon4.png"],
+        "durationIcon": "${BASE_URL}duration-icon.png",
+        "image": "${BASE_URL}sensory-journey-image.jpg",
+        "popupDescription": "LLENAR  \n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "popupImage": "${BASE_URL}sensory-journey-popup.jpg"
+      }
+    ],
+   
     "paquetes": [
       {
         "title": "Paquete Romance Total",
