@@ -116,14 +116,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const descriptionElement = serviceElement.querySelector('.service-description');
             if (descriptionElement) descriptionElement.textContent = service.description || 'Sin descripción';
             
-            const benefitsIcon = serviceElement.querySelector('.benefits-icon');
-            if (benefitsIcon && service.benefitsIcons) {
-                benefitsIcon.src = buildImageUrl(Array.isArray(service.benefitsIcons) ? service.benefitsIcons[0] : service.benefitsIcons);
-                benefitsIcon.onerror = () => handleImageError(benefitsIcon);
+            const benefitsContainer = serviceElement.querySelector('.benefits-container');
+            if (benefitsContainer && Array.isArray(service.benefitsIcons)) {
+                benefitsContainer.innerHTML = '';
+                service.benefitsIcons.slice(0, 3).forEach(iconSrc => {
+                    const img = document.createElement('img');
+                    img.src = buildImageUrl(iconSrc);
+                    img.classList.add('benefits-icon');
+                    img.onerror = () => handleImageError(img);
+                    benefitsContainer.appendChild(img);
+                });
             }
-            
-            const benefitsElement = serviceElement.querySelector('.service-benefits');
-            if (benefitsElement) benefitsElement.textContent = Array.isArray(service.benefits) ? service.benefits.join(', ') : 'No especificado';
             
             const durationIcon = serviceElement.querySelector('.duration-icon');
             if (durationIcon && service.durationIcon) {
@@ -191,7 +194,18 @@ document.addEventListener('DOMContentLoaded', () => {
             packageElement.querySelector('.package-description').textContent = pkg.description || 'Sin descripción';
             packageElement.querySelector('.package-includes-list').textContent = Array.isArray(pkg.includes) ? pkg.includes.join(', ') : 'No especificado';
             packageElement.querySelector('.package-duration-text').textContent = pkg.duration || 'Duración no especificada';
-            packageElement.querySelector('.package-benefits-list').textContent = Array.isArray(pkg.benefits) ? pkg.benefits.join(', ') : 'No especificado';
+            
+            const benefitsContainer = packageElement.querySelector('.package-benefits');
+            if (benefitsContainer && Array.isArray(pkg.benefitsIcons)) {
+                benefitsContainer.innerHTML = '';
+                pkg.benefitsIcons.slice(0, 3).forEach(iconSrc => {
+                    const img = document.createElement('img');
+                    img.src = buildImageUrl(iconSrc);
+                    img.classList.add('benefits-icon');
+                    img.onerror = () => handleImageError(img);
+                    benefitsContainer.appendChild(img);
+                });
+            }
 
             const reserveButton = packageElement.querySelector('.reserve-button');
             reserveButton.addEventListener('click', (e) => {
@@ -242,7 +256,18 @@ document.addEventListener('DOMContentLoaded', () => {
         popupImage.alt = data.title || '';
         popupImage.onerror = () => handleImageError(popupImage);
         popupDescription.textContent = data.popupDescription || data.description || '';
-        popupBenefits.textContent = Array.isArray(data.benefits) ? data.benefits.join(', ') : data.benefits || '';
+        
+        popupBenefits.innerHTML = '';
+        if (Array.isArray(data.benefitsIcons)) {
+            data.benefitsIcons.forEach(iconSrc => {
+                const img = document.createElement('img');
+                img.src = buildImageUrl(iconSrc);
+                img.classList.add('benefits-icon');
+                img.onerror = () => handleImageError(img);
+                popupBenefits.appendChild(img);
+            });
+        }
+        
         popupDuration.textContent = data.duration || '';
 
         popupContent.style.backgroundImage = `url(${buildImageUrl(data.popupImage || data.image)})`;
@@ -342,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderServices(category);
                 setupBenefitsNav(category);
                 setupPackageNav();
-            });
+                });
         });
         setupBenefitsNav('individual');
         setupPackageNav();
@@ -353,17 +378,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!benefitsNav) return;
 
         benefitsNav.innerHTML = '';
-        const allBenefits = new Set();
+        const allBenefitsIcons = new Set();
 
         if (services[category]) {
             services[category].forEach(service => {
-                if (Array.isArray(service.benefits)) {
-                    service.benefits.forEach(benefit => allBenefits.add(benefit));
+                if (Array.isArray(service.benefitsIcons)) {
+                    service.benefitsIcons.forEach(icon => allBenefitsIcons.add(icon));
                 }
             });
         }
 
-const allButton = document.createElement('button');
+        const allButton = document.createElement('button');
         allButton.classList.add('benefit-btn', 'active');
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
@@ -372,13 +397,12 @@ const allButton = document.createElement('button');
         `;
         benefitsNav.appendChild(allButton);
 
-        allBenefits.forEach(benefit => {
+        allBenefitsIcons.forEach(icon => {
             const button = document.createElement('button');
             button.classList.add('benefit-btn');
-            button.dataset.filter = benefit.toLowerCase().replace(/\s+/g, '-');
+            button.dataset.filter = icon.toLowerCase().replace(/\s+/g, '-');
             button.innerHTML = `
-                <img src="${BASE_URL}${benefit.toLowerCase().replace(/\s+/g, '-')}.png" alt="${benefit}">
-                <span>${benefit}</span>
+                <img src="${buildImageUrl(icon)}" alt="Beneficio">
             `;
             benefitsNav.appendChild(button);
         });
