@@ -278,7 +278,7 @@
         ],
         "icon": "${BASE_URL}romance-total-icon.png",
         "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
+          "${BASE_URL}COPAVIN.png",
           "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
@@ -319,7 +319,7 @@
           "Masaje de Piedras Calientes en Pareja",
           "Copa de Vino",
           "Fresas con Chocolate",
-          "Selección de Quesos y Vino"
+          "Selección de Quesos"
         ],
         "duration": "90 minutos de masaje + 30 minutos para disfrutar de las delicias.",
         "benefits": [
@@ -329,7 +329,7 @@
         ],
         "icon": "${BASE_URL}lujo-sabor-icon.png",
         "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
+          "${BASE_URL}COPAVIN.png",
           "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
@@ -355,7 +355,7 @@
         ],
         "icon": "${BASE_URL}sensaciones-icon.png",
         "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
+          "${BASE_URL}COPAVIN.png",
           "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
@@ -381,7 +381,7 @@
         ],
         "icon": "${BASE_URL}escape-lujo-icon.png",
         "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
+          "${BASE_URL}COPAVIN.png",
           "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
@@ -407,7 +407,7 @@
         ],
         "icon": "${BASE_URL}relax-sabores-icon.png",
         "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
+          "${BASE_URL}COPAVIN.png",
           "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
@@ -458,7 +458,7 @@
         ],
         "icon": "${BASE_URL}relajacion-gourmet-icon.png",
         "benefitsIcons": [
-          "${BASE_URL}benefits-icon1.png",
+          "${BASE_URL}COPAVIN.png",
           "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
