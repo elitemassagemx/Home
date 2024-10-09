@@ -67,8 +67,8 @@
         "benefits": ["Mejorarás tu Equilibrio", "Reducirás el Estrés"],
         "duration": "30 min",
         "icon": "${BASE_URL}sqpieblanco.png",
-        "benefitsIcons": ["${BASE_URL}PIEFLECH.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png"],
-        "durationIcon": "${BASE_URL}duration-icon.png",
+        "benefitsIcons": ["${BASE_URL}cequilibrio.png", "${BASE_URL}benefits-icon2.png", "${BASE_URL}benefits-icon3.png"],
+        "durationIcon": "${BASE_URL}c30min.png",
         "image": "${BASE_URL}reflexologia-image.jpg",
         "popupDescription": "La reflexología es una técnica terapéutica que se centra en aplicar presión en puntos específicos de los pies que se corresponden con diferentes órganos y sistemas del cuerpo. Este tratamiento no solo proporciona una profunda relajación, sino que también puede ayudar a mejorar la circulación, reducir el estrés y promover un sentido general de bienestar en todo el cuerpo.",
         "popupImage": "${BASE_URL}reflexologia-popup.jpg"
@@ -154,7 +154,7 @@
           "${BASE_URL}benefits-icon2.png",
           "${BASE_URL}benefits-icon3.png"
         ],
-        "durationIcon": "${BASE_URL}duration-icon.png",
+        "durationIcon": "${BASE_URL}c30min.png",
         "image": "${BASE_URL}cuello-espalda-image.jpg",
 "popupDescription": "Este masaje focalizado es ideal para parejas que buscan aliviar la tensión en las áreas que más lo necesitan. Nuestros terapeutas se centrarán en liberar el estrés acumulado en el cuello y la espalda, utilizando técnicas específicas para reducir la rigidez y aliviar el dolor. Disfruten juntos de esta experiencia relajante y salgan sintiéndose renovados y conectados.",
         "popupImage": "${BASE_URL}cuello-espalda-pareja-popup.jpg"
@@ -227,14 +227,14 @@
           "aumento de la energía",
           "mejora de la circulación"
         ],
-        "duration": "60 min",
+        "duration": " min",
         "icon": "${BASE_URL}lomi-lomi-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
           "${BASE_URL}benefits-icon2.png",
           "${BASE_URL}ccirculacion.png"
         ],
-        "durationIcon": "${BASE_URL}duration-icon.png",
+        "durationIcon": "${BASE_URL}c30min.png",
         "image": "${BASE_URL}bat.jpg",
         "popupDescription": "Experimenten juntos la magia del masaje hawaiano Lomi Lomi. Este tratamiento único utiliza movimientos largos, fluidos y rítmicos que recorren todo el cuerpo, imitando las olas del océano. Los terapeutas usan no solo las manos, sino también los antebrazos para aplicar una presión profunda y relajante. El Lomi Lomi no solo relaja los músculos, sino que también se cree que ayuda a liberar patrones de pensamiento y emociones negativas, promoviendo una sensación de armonía y bienestar total.",
         "popupImage": "${BASE_URL}lomi-lomi-pareja-popup.jpg"
@@ -278,7 +278,7 @@
         ],
         "icon": "${BASE_URL}romance-total-icon.png",
         "benefitsIcons": [
-          "${BASE_URL}COPAVIN.png",
+          "${BASE_URL}sqquesoyvino.png",
           "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
@@ -304,8 +304,8 @@
         "icon": "${BASE_URL}romance-total2-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
-          "${BASE_URL}benefits-icon3.png"
+          "${BASE_URL}cpastel.png",
+          "${BASE_URL}ctarta.png"
         ],
         "durationIcon": "${BASE_URL}duration-romance2-icon.png",
         "image": "${BASE_URL}rosao.jpg",
@@ -329,7 +329,7 @@
         ],
         "icon": "${BASE_URL}lujo-sabor-icon.png",
         "benefitsIcons": [
-          "${BASE_URL}COPAVIN.png",
+          "${BASE_URL}sqquesoyvino.png",
           "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
@@ -409,7 +409,7 @@
         "benefitsIcons": [
           "${BASE_URL}COPAVIN.png",
           "${BASE_URL}FRESASC.png",
-          "${BASE_URL}benefits-icon3.png"
+          "${BASE_URL}sqquesoyvino.png"
         ],
         "durationIcon": "${BASE_URL}duration-relax-icon.png",
         "image": "${BASE_URL}jamc.jpg",
@@ -433,8 +433,8 @@
         "icon": "${BASE_URL}tranquilidad-gourmet-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
-          "${BASE_URL}benefits-icon3.png"
+          "${BASE_URL}cpastel.png",
+          "${BASE_URL}ctarta.png"
         ],
         "durationIcon": "${BASE_URL}duration-tranquilidad-icon.png",
         "image": "${BASE_URL}tranquilidad-gourmet-image.jpg",
@@ -460,7 +460,7 @@
         "benefitsIcons": [
           "${BASE_URL}COPAVIN.png",
           "${BASE_URL}FRESASC.png",
-          "${BASE_URL}benefits-icon3.png"
+          "${BASE_URL}sqquesoyvino.png"
         ],
         "durationIcon": "${BASE_URL}duration-relajacion-icon.png",
         "image": "${BASE_URL}copas.jpg",
