@@ -279,7 +279,7 @@
         "icon": "${BASE_URL}romance-total-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
+          "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
         "durationIcon": "${BASE_URL}duration-romance-icon.png",
@@ -330,7 +330,7 @@
         "icon": "${BASE_URL}lujo-sabor-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
+          "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
         "durationIcon": "${BASE_URL}duration-lujo-icon.png",
@@ -356,7 +356,7 @@
         "icon": "${BASE_URL}sensaciones-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
+          "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
         "durationIcon": "${BASE_URL}duration-sensaciones-icon.png",
@@ -382,7 +382,7 @@
         "icon": "${BASE_URL}escape-lujo-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
+          "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
         "durationIcon": "${BASE_URL}duration-escape-icon.png",
@@ -408,7 +408,7 @@
         "icon": "${BASE_URL}relax-sabores-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
+          "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
         "durationIcon": "${BASE_URL}duration-relax-icon.png",
@@ -459,7 +459,7 @@
         "icon": "${BASE_URL}relajacion-gourmet-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}benefits-icon2.png",
+          "${BASE_URL}FRESASC.png",
           "${BASE_URL}benefits-icon3.png"
         ],
         "durationIcon": "${BASE_URL}duration-relajacion-icon.png",
