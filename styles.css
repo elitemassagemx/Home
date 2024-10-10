@@ -9,14 +9,6 @@
     --gold: #FFD700;
 }
 
-/* Modo oscuro */
-body.dark-mode {
-    --text-color: #ffffff;
-    --background-color: #121212;
-    --item-background: #1e1e1e;
-    --header-background: #000000;
-}
-
 /* Reset y estilos base */
 body, h1, h2, h3, p, ul {
     margin: 0;
@@ -95,123 +87,15 @@ h1 {
     letter-spacing: -0.5px;
 }
 
-.header-controls {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1001;
-}
-
-.dark-mode-toggle {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
-    margin: 0 10px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-}
-
-input:checked + .slider {
-    background-color: var(--primary-color);
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-.language-selector {
-    position: relative;
-}
-
-#translate-icon {
-    width: 45px;
-    height: 45px;
-    background-color: transparent;
-    border-radius: 50%;
-    padding: 2px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.language-options {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: var(--item-background);
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.lang-option {
-    display: flex;
-    align-items: center;
-    padding: 8px 15px;
-    width: 100%;
-    border: none;
-    background-color: transparent;
-    color: var(--text-color);
-    transition: background-color 0.3s ease;
-}
-
-.lang-option:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.lang-option img {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-}
-
 /* Secciones */
 .section {
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
 .hero {
     background-color: transparent;
     text-align: center;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 .hero h2 {
@@ -535,7 +419,7 @@ input:checked + .slider:before {
 
 .popup-content {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--background-color);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -545,22 +429,6 @@ input:checked + .slider:before {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     color: var(--text-color);
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-}
-
-.popup-content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-    filter: blur(10px);
-    opacity: 0.3;
-    z-index: -1;
 }
 
 .popup-content h2 {
@@ -740,25 +608,11 @@ footer {
     .footer-content {
         flex-wrap: wrap;
     }
-
-    .header-controls {
-        top: 5px;
-        right: 5px;
-    }
-
-    #translate-icon {
-        width: 24px;
-        height: 24px;
-    }
 }
 
 @media (max-width: 480px) {
     .gallery-item {
         height: 100px;
-    }
-
-    .nav-text {
-        display: none;
     }
 
     .package-includes {
@@ -878,4 +732,52 @@ a:focus, button:focus {
 h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+}
+
+/* Ajustes para la barra de navegación fija */
+.fixed-bar {
+    background-color: var(--header-background);
+}
+
+.fixed-bar a {
+    color: white;
+}
+
+.nav-text {
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* Ajustes para el popup */
+.popup-content {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.popup-content h2 {
+    color: var(--primary-color);
+}
+
+.popup-details {
+    color: var(--text-color);
+}
+
+/* Reducción del espacio en blanco */
+.hero {
+    padding: 10px 0;
+}
+
+.services {
+    padding-top: 10px;
+}
+
+/* Ajustes de contraste adicionales */
+.service-item h3, .package-item h3 {
+    color: var(--gold);
+}
+
+.popup-content p, .popup-details {
+    color: var(--text-color);
+    text-shadow: none;
 }
