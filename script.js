@@ -8,10 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Elementos del DOM
     const verMasBtn = document.getElementById('ver-mas-galeria');
     const galleryGrid = document.querySelector('.gallery-grid');
-    const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
-    const translateIcon = document.getElementById('translate-icon');
-    const languageOptions = document.querySelector('.language-options');
     const header = document.getElementById('sticky-header');
     let isExpanded = false;
     let lastScrollTop = 0;
@@ -21,11 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function init() {
         loadJSONData();
-        setupLanguageSelector();
         setupPopup();
         setupGalleryAnimations();
         setupGalleryModal();
-        setupDarkMode();
         setupScrollHandling();
         initGallery();
     }
@@ -277,10 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
             popupDetails.insertBefore(popupBenefitsIcons, popupDetails.firstChild);
         }
 
-        popupContent.style.backgroundImage = `url(${buildImageUrl(data.popupImage || data.image)})`;
-        popupContent.style.backgroundSize = 'cover';
-        popupContent.style.backgroundPosition = 'center';
-
         whatsappButton.onclick = () => sendWhatsAppMessage('Reservar', data.title);
 
         setupPopupCarousel(isPackage);
@@ -327,43 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = encodeURIComponent(`Hola! Quiero ${action} un ${serviceTitle}`);
         const url = `https://wa.me/5215640020305?text=${message}`;
         window.open(url, '_blank');
-    }
-
-    function changeLanguage(lang) {
-        console.log(`Changing language to: ${lang}`);
-        var selectField = document.querySelector('.goog-te-combo');
-        if (selectField) {
-            selectField.value = lang;
-            selectField.dispatchEvent(new Event('change'));
-        } else {
-            console.error('Google Translate dropdown not found');
-        }
-    }
-
-    function setupLanguageSelector() {
-        const translateIcon = getElement('translate-icon');
-        const languageOptions = document.querySelector('.language-options');
-        if (!translateIcon || !languageOptions) return;
-
-        translateIcon.addEventListener('click', () => {
-            console.log('Translate icon clicked');
-            languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
-        });
-
-        document.querySelectorAll('.lang-option').forEach(option => {
-            option.addEventListener('click', (event) => {
-                const lang = event.currentTarget.dataset.lang;
-                console.log(`Language option clicked: ${lang}`);
-                changeLanguage(lang);
-                languageOptions.style.display = 'none';
-            });
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!translateIcon.contains(event.target) && !languageOptions.contains(event.target)) {
-                languageOptions.style.display = 'none';
-            }
-        });
     }
 
     function setupServiceCategories() {
@@ -638,21 +592,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             });
-        });
-    }
-
-    function setupDarkMode() {
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const body = document.body;
-
-        darkModeToggle.addEventListener('change', () => {
-            if (darkModeToggle.checked) {
-                body.classList.add('dark-mode');
-                body.classList.remove('light-mode');
-            } else {
-                body.classList.add('light-mode');
-                body.classList.remove('dark-mode');
-            }
         });
     }
 
