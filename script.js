@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setupGalleryAnimations();
         setupGalleryModal();
         setupScrollHandling();
-        initGallery();
+        setupGallery();
     }
 
     function handleImageError(img) {
@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function buildImageUrl(iconPath) {
         if (!iconPath) return '';
-        return iconPath.startsWith('http') ? iconPath : `${BASE_URL}${iconPath}`;
+        return iconPath.startsWith('
+                                   http') ? iconPath : `${BASE_URL}${iconPath}`;
     }
 
     function getElement(id) {
@@ -354,12 +355,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-const allButton = document.createElement('button');
+
+        const allButton = document.createElement('button');
         allButton.classList.add('benefit-btn', 'active');
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
             <img src="${BASE_URL}todos.png" alt="Todos" style="width: 24px; height: 24px;">
-            <span style="font-family: 'Quattrocento', serif;">Todos</span>
+            <span>Todos</span>
         `;
         benefitsNav.appendChild(allButton);
 
@@ -372,7 +374,7 @@ const allButton = document.createElement('button');
             
             button.innerHTML = `
                 <img src="${buildImageUrl(iconUrl)}" alt="${benefit}" style="width: 24px; height: 24px;">
-                <span style="font-family: 'Quattrocento', serif;">${benefit}</span>
+                <span>${benefit}</span>
             `;
             benefitsNav.appendChild(button);
         });
@@ -392,13 +394,12 @@ const allButton = document.createElement('button');
                 allPackages.add(pkg.title);
             });
         }
-
         const allButton = document.createElement('button');
         allButton.classList.add('package-btn', 'active');
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
             <img src="${BASE_URL}todos.png" alt="Todos" style="width: 24px; height: 24px;">
-            <span style="font-family: 'Quattrocento', serif;">Todos</span>
+            <span>Todos</span>
         `;
         packageNav.appendChild(allButton);
 
@@ -408,7 +409,7 @@ const allButton = document.createElement('button');
             button.dataset.filter = packageTitle.toLowerCase().replace(/\s+/g, '-');
             button.innerHTML = `
                 <img src="${BASE_URL}${packageTitle.toLowerCase().replace(/\s+/g, '-')}-icon.png" alt="${packageTitle}" style="width: 24px; height: 24px;">
-                <span style="font-family: 'Quattrocento', serif;">${packageTitle}</span>
+                <span>${packageTitle}</span>
             `;
             packageNav.appendChild(button);
         });
@@ -435,7 +436,7 @@ const allButton = document.createElement('button');
     }
 
     function setupGallery() {
-        const galleryCarousel = document.querySelector('.gallery-carousel');
+        const galleryCarousel = document.querySelector('.carousel-inner');
         const galleryGrid = document.querySelector('.gallery-grid');
         const verMasButton = getElement('ver-mas-galeria');
 
@@ -444,22 +445,60 @@ const allButton = document.createElement('button');
             return;
         }
 
-        // Definir las imágenes de la galería con sus rutas correctas
+        // Aquí deberías cargar las imágenes de la galería desde tu fuente de datos
         const galleryImages = [
-            { src: 'QUESOSAMH.png', title: 'Tabla Gourmet', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
-            // ... más imágenes
+            { src: 'QUESOSAHM.jpg', title: 'Tabla Gourmet', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'choco2.JPG', title: 'choco2', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'chococ.JPG', title: 'chococ', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'chococc.JPG', title: 'chococc', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'FRESASC.jpg', title: 'fresasc', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'QUESOS.jpg', title: 'quesos', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'QUESOSH.jpg', title: 'quesosh', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'QUESOSHM.jpg', title: 'quesoshm', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'QUESOSM.jpg', title: 'quesosm', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'QUESOSIG.jpg', title: 'quesosig', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'SILLAS.jpg', title: 'sillas', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'SILLASH.jpg', title: 'sillash', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'chen.JPG', title: 'chen', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'copas.JPG', title: 'copas', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'dif.JPG', title: 'dif', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'QUESOSAHM.jpg', title: 'quesosahm', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'jamc.JPG', title: 'jamc', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'jam.JPG', title: 'jam', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'lujo.JPG', title: 'lujo', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'lujo2.JPG', title: 'lujo2', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'noche.JPG', title: 'noche', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'noche1.JPG', title: 'noche1', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'paq1.JPG', title: 'paq1', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'paq2.JPG', title: 'paq2', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'paq41.JPG', title: 'paq41', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'rosa.JPG', title: 'rosa', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'rosal.JPG', title: 'rosal', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'rosao.JPG', title: 'rosao', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'semillas.JPG', title: 'semillas', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'sub.JPG', title: 'sub', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'spa.png', title: 'spa', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'buda2.png', title: 'buda2', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'mesap2.png', title: 'mesap2', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'papas.png', title: 'papas', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'mesa.png', title: 'mesa', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'buda.png', title: 'Buda', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
         ];
 
         // Configurar el carrusel
-        galleryImages.forEach(image => {
-            const img = document.createElement('img');
-            img.src = buildImageUrl(image.src);
-            img.alt = image.title;
-            img.onerror = () => {
-                console.error(`Failed to load image: ${img.src}`);
-                img.src = buildImageUrl('fallback-image.png');
-            };
-            galleryCarousel.appendChild(img);
+        galleryImages.forEach((image, index) => {
+            const carouselItem = document.createElement('div');
+            carouselItem.classList.add('carousel-item');
+            if (index === 0) carouselItem.classList.add('active');
+            
+            carouselItem.innerHTML = `
+                <img src="${buildImageUrl(image.src)}" class="d-block w-100" alt="${image.title}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>${image.title}</h5>
+                    <p>${image.description}</p>
+                </div>
+            `;
+            galleryCarousel.appendChild(carouselItem);
         });
 
         // Configurar la cuadrícula
@@ -467,10 +506,10 @@ const allButton = document.createElement('button');
             const galleryItem = document.createElement('div');
             galleryItem.classList.add('gallery-item');
             galleryItem.innerHTML = `
-                <img src="${buildImageUrl(image.src)}" alt="${image.title}" onerror="this.onerror=null; this.src='${buildImageUrl('fallback-image.png')}';">
+                <img src="${buildImageUrl(image.src)}" alt="${image.title}">
                 <div class="image-overlay">
-                    <h3 class="image-title" style="font-family: 'Tenor Sans', sans-serif;">${image.title}</h3>
-                    <p class="image-description" style="font-family: 'Quattrocento', serif;">${image.description}</p>
+                    <h3 class="image-title">${image.title}</h3>
+                    <p class="image-description">${image.description}</p>
                 </div>
             `;
             galleryGrid.appendChild(galleryItem);
@@ -480,37 +519,6 @@ const allButton = document.createElement('button');
             galleryGrid.style.display = galleryGrid.style.display === 'none' ? 'grid' : 'none';
             verMasButton.textContent = galleryGrid.style.display === 'none' ? 'Ver más' : 'Ver menos';
         });
-
-        // Configurar el popup de la galería
-        setupGalleryPopup(galleryImages);
-    }
-
-    function setupGalleryPopup(galleryImages) {
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const modalDescription = document.getElementById('modalDescription');
-        const closeBtn = modal.querySelector('.close');
-
-        document.querySelectorAll('.gallery-item').forEach((item, index) => {
-            item.addEventListener('click', function() {
-                modal.style.display = "block";
-                modalImg.src = this.querySelector('img').src;
-                modalDescription.innerHTML = `
-                    <h3 style="font-family: 'Tenor Sans', sans-serif;">${galleryImages[index].title}</h3>
-                    <p style="font-family: 'Quattrocento', serif;">${galleryImages[index].description}</p>
-                `;
-            });
-        });
-
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
     }
 
     function setupGalleryAnimations() {
@@ -574,6 +582,31 @@ const allButton = document.createElement('button');
         console.log(`Found ${images.length} images in the gallery`);
     }
 
+    function setupGalleryModal() {
+        const modal = getElement('imageModal');
+        const modalImg = getElement('modalImage');
+        const modalDescription = getElement('modalDescription');
+        const closeBtn = modal.querySelector('.close');
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.querySelector('img').src;
+                modalDescription.innerHTML = this.querySelector('.image-description').innerHTML;
+            });
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+
     function setupFilters() {
         setupFilterButtons('.benefits-nav', '#services-list', '.service-item');
         setupFilterButtons('.package-nav', '#package-list', '.package-item');
@@ -629,6 +662,3 @@ const allButton = document.createElement('button');
         });
     });
 });
-
-
-        
