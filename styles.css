@@ -335,19 +335,14 @@ h1 {
     margin-bottom: 20px;
 }
 
-.gallery-carousel img {
+.gallery-carousel .carousel-item img {
     width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-#ver-mas-galeria {
-    display: block;
-    margin: 20px auto;
+    height: 400px;
+    object-fit: cover;
 }
 
 .gallery-grid {
-    display: none;
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
     padding: 1rem 0;
@@ -379,11 +374,11 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.7);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -402,6 +397,15 @@ h1 {
 
 .image-description {
     font-size: 0.9rem;
+    display: none;
+}
+
+.gallery-item .more-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: var(--text-color);
 }
 
 /* Estilos para el popup */
