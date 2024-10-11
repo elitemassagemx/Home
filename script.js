@@ -354,8 +354,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-
-        const allButton = document.createElement('button');
+        
+    const allButton = document.createElement('button');
         allButton.classList.add('benefit-btn', 'active');
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
@@ -445,10 +445,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Aquí deberías cargar las imágenes de la galería desde tu fuente de datos
+        // Definir las imágenes de la galería con sus rutas correctas
         const galleryImages = [
-            { src: 'QUESOSAHM.jpg', title: 'Tabla Gourmet', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
-            { src: 'imagen2.jpg', title: 'Título 2', description: 'Descripción 2' },
+            { src: 'QUESOSAMH.png', title: 'Tabla Gourmet', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
             // ... más imágenes
         ];
 
@@ -457,6 +456,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const img = document.createElement('img');
             img.src = buildImageUrl(image.src);
             img.alt = image.title;
+            img.onerror = () => {
+                console.error(`Failed to load image: ${img.src}`);
+                img.src = buildImageUrl('fallback-image.png');
+            };
             galleryCarousel.appendChild(img);
         });
 
@@ -465,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const galleryItem = document.createElement('div');
             galleryItem.classList.add('gallery-item');
             galleryItem.innerHTML = `
-                <img src="${buildImageUrl(image.src)}" alt="${image.title}">
+                <img src="${buildImageUrl(image.src)}" alt="${image.title}" onerror="this.onerror=null; this.src='${buildImageUrl('fallback-image.png')}';">
                 <div class="image-overlay">
                     <h3 class="image-title">${image.title}</h3>
                     <p class="image-description">${image.description}</p>
