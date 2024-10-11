@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Aquí deberías cargar las imágenes de la galería desde tu fuente de datos
         const galleryImages = [
-            { src: 'imagen1.jpg', title: 'Título 1', description: 'Descripción 1' },
+            { src: 'QUESOSAMH', title: 'Tabla Gourmet', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
             { src: 'imagen2.jpg', title: 'Título 2', description: 'Descripción 2' },
             // ... más imágenes
         ];
