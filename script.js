@@ -354,13 +354,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-        
-    const allButton = document.createElement('button');
+const allButton = document.createElement('button');
         allButton.classList.add('benefit-btn', 'active');
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
             <img src="${BASE_URL}todos.png" alt="Todos" style="width: 24px; height: 24px;">
-            <span>Todos</span>
+            <span style="font-family: 'Quattrocento', serif;">Todos</span>
         `;
         benefitsNav.appendChild(allButton);
 
@@ -373,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             button.innerHTML = `
                 <img src="${buildImageUrl(iconUrl)}" alt="${benefit}" style="width: 24px; height: 24px;">
-                <span>${benefit}</span>
+                <span style="font-family: 'Quattrocento', serif;">${benefit}</span>
             `;
             benefitsNav.appendChild(button);
         });
@@ -399,7 +398,7 @@ document.addEventListener('DOMContentLoaded', () => {
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
             <img src="${BASE_URL}todos.png" alt="Todos" style="width: 24px; height: 24px;">
-            <span>Todos</span>
+            <span style="font-family: 'Quattrocento', serif;">Todos</span>
         `;
         packageNav.appendChild(allButton);
 
@@ -409,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.dataset.filter = packageTitle.toLowerCase().replace(/\s+/g, '-');
             button.innerHTML = `
                 <img src="${BASE_URL}${packageTitle.toLowerCase().replace(/\s+/g, '-')}-icon.png" alt="${packageTitle}" style="width: 24px; height: 24px;">
-                <span>${packageTitle}</span>
+                <span style="font-family: 'Quattrocento', serif;">${packageTitle}</span>
             `;
             packageNav.appendChild(button);
         });
@@ -447,7 +446,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Definir las imágenes de la galería con sus rutas correctas
         const galleryImages = [
-            { src: 'QUESOSAHM.jpg', title: 'Tabla Gourmet', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
+            { src: 'QUESOSAMH.png', title: 'Tabla Gourmet', description: 'Después de tu masaje en pareja saborea una exquisita selección de jamón curado, quesos gourmet, fresas cubiertas de chocolate y copas de vino. Un toque de lujo y placer compartido para complementar tu visita' },
             // ... más imágenes
         ];
 
@@ -470,8 +469,8 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryItem.innerHTML = `
                 <img src="${buildImageUrl(image.src)}" alt="${image.title}" onerror="this.onerror=null; this.src='${buildImageUrl('fallback-image.png')}';">
                 <div class="image-overlay">
-                    <h3 class="image-title">${image.title}</h3>
-                    <p class="image-description">${image.description}</p>
+                    <h3 class="image-title" style="font-family: 'Tenor Sans', sans-serif;">${image.title}</h3>
+                    <p class="image-description" style="font-family: 'Quattrocento', serif;">${image.description}</p>
                 </div>
             `;
             galleryGrid.appendChild(galleryItem);
@@ -481,6 +480,37 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryGrid.style.display = galleryGrid.style.display === 'none' ? 'grid' : 'none';
             verMasButton.textContent = galleryGrid.style.display === 'none' ? 'Ver más' : 'Ver menos';
         });
+
+        // Configurar el popup de la galería
+        setupGalleryPopup(galleryImages);
+    }
+
+    function setupGalleryPopup(galleryImages) {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalDescription = document.getElementById('modalDescription');
+        const closeBtn = modal.querySelector('.close');
+
+        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+            item.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.querySelector('img').src;
+                modalDescription.innerHTML = `
+                    <h3 style="font-family: 'Tenor Sans', sans-serif;">${galleryImages[index].title}</h3>
+                    <p style="font-family: 'Quattrocento', serif;">${galleryImages[index].description}</p>
+                `;
+            });
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     }
 
     function setupGalleryAnimations() {
@@ -544,31 +574,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`Found ${images.length} images in the gallery`);
     }
 
-    function setupGalleryModal() {
-        const modal = getElement('imageModal');
-        const modalImg = getElement('modalImage');
-        const modalDescription = getElement('modalDescription');
-        const closeBtn = modal.querySelector('.close');
-
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('click', function() {
-                modal.style.display = "block";
-                modalImg.src = this.querySelector('img').src;
-                modalDescription.innerHTML = this.querySelector('.image-description').innerHTML;
-            });
-        });
-
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    }
-
     function setupFilters() {
         setupFilterButtons('.benefits-nav', '#services-list', '.service-item');
         setupFilterButtons('.package-nav', '#package-list', '.package-item');
@@ -624,3 +629,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+        
