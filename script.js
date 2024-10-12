@@ -1,6 +1,6 @@
 const BASE_URL = "https://raw.githubusercontent.com/elitemassagemx/Home/main/ICONOS/";
 let services = {};
-let currentPopupIndex = 0;
+let currentPopupIndex = 0; 
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded');
