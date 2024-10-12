@@ -184,7 +184,7 @@
         "benefitsIcons": [
           "${BASE_URL}sqquesoyvino.png",
           "${BASE_URL}FRESASC.png",
-          "${BASE_URL}benefits-icon3.png"
+          "${BASE_URL}union.webp"
         ],
         "durationIcon": "${BASE_URL}duration-romance-icon.png",
         "image": "${BASE_URL}paq1.jpg",
@@ -208,8 +208,8 @@
         "icon": "${BASE_URL}romance-total2-icon.png",
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
-          "${BASE_URL}cpastel.png",
-          "${BASE_URL}ctarta.png"
+          "${BASE_URL}union.webp",
+          "${BASE_URL}cafep.webp"
         ],
         "durationIcon": "${BASE_URL}duration-romance2-icon.png",
         "image": "${BASE_URL}rosao.jpg",
@@ -313,7 +313,7 @@
         "benefitsIcons": [
           "${BASE_URL}COPAVIN.png",
           "${BASE_URL}FRESASC.png",
-          "${BASE_URL}sqquesoyvino.png"
+          "${BASE_URL}union.webp"
         ],
         "durationIcon": "${BASE_URL}duration-relax-icon.png",
         "image": "${BASE_URL}jamc.jpg",
@@ -338,7 +338,7 @@
         "benefitsIcons": [
           "${BASE_URL}benefits-icon1.png",
           "${BASE_URL}cpastel.png",
-          "${BASE_URL}ctarta.png"
+          "${BASE_URL}cafep.webp"
         ],
         "durationIcon": "${BASE_URL}duration-tranquilidad-icon.png",
         "image": "${BASE_URL}tranquilidad-gourmet-image.jpg",
