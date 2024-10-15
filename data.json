@@ -124,7 +124,6 @@
         "popupImage": "${BASE_URL}diamond-ritual-popup.jpg"
       }
     ],
-
     "experiencias": [
       {
         "title": "Día de Spa Completo",
@@ -152,7 +151,7 @@
       },
       {
         "title": "Detox y Renovación",
-        "description": "Un programa integral diseñado para desintoxicar y revitalizar el cuerpo.\n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
+        "description": "Un programa integral diseñado para desintoxicar y revitalizar el cuerpo.\n\nPrecio: **Individual $1,000**\n               **En pareja$1,700**",
         "includes": ["Envoltura corporal desintoxicante", "Masaje drenaje linfático", "Facial purificante", "Sesión de yoga"],
         "duration": "5 horas",
         "icon": "${BASE_URL}detox-renewal-icon.png",
@@ -163,7 +162,6 @@
         "popupImage": "${BASE_URL}detox-renewal-popup.jpg"
       }
     ],
-   
     "paquetes": [
       {
         "title": "Paquete Romance Total",
@@ -266,7 +264,7 @@
         "durationIcon": "${BASE_URL}duration-sensaciones-icon.png",
         "image": "${BASE_URL}chen.jpg",
         "popupDescription": "El Paquete Sensaciones Inolvidables es una experiencia diseñada para despertar todos sus sentidos. Comienza con un lujoso masaje de cuerpo completo en pareja de 90 minutos, que les dejará completamente relajados y renovados. Después, disfruten de 45 minutos de pura indulgencia con una copa de vino selecto, fresas cubiertas de chocolate y una exquisita tabla de quesos artísticos. Este paquete combina perfectamente la relajación profunda con una experiencia gastronómica refinada, creando recuerdos que perdurarán mucho después de que termine su visita.",
-"popupImage": "${BASE_URL}sensaciones-inolvidables-popup.jpg"
+        "popupImage": "${BASE_URL}sensaciones-inolvidables-popup.jpg"
       },
       {
         "title": "Paquete Escape de Lujo",
