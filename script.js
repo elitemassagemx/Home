@@ -68,8 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
             .catch(error => {
-
-            console.error('Error loading or parsing the JSON file:', error);
+                console.error('Error loading or parsing the JSON file:', error);
                 const servicesList = getElement('services-list');
                 const packageList = getElement('package-list');
                 if (servicesList) servicesList.innerHTML = '<p>Error al cargar los servicios. Por favor, intente más tarde.</p>';
@@ -498,10 +497,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function setupGallery() {
+        const galleryCarousel = document.querySelector('.carousel-inner');
         const galleryGrid = document.querySelector('.gallery-grid');
         const verMasButton = getElement('ver-mas-galeria');
 
-        if (!galleryGrid || !verMasButton) {
+        if (!galleryCarousel || !galleryGrid || !verMasButton) {
             console.error('Gallery elements not found');
             return;
         }
@@ -545,6 +545,25 @@ document.addEventListener('DOMContentLoaded', () => {
             { src: 'mesa.webp', title: 'mesa', description: 'LLENAR' },
             { src: 'buda.webp', title: 'Buda', description: 'LLENAR' },
         ];
+
+        // Configurar el carrusel
+        galleryImages.forEach((image, index) => {
+            const carouselItem = document.createElement('div');
+            carouselItem.classList.add('carousel-item');
+            if (index === 0) carouselItem.classList.add('active');
+            
+            carouselItem.innerHTML = `
+                <img src="${buildImageUrl(image.src)}" class="d-block w-100" alt="${image.title}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>${image.title}</h5>
+                    <p>${image.description}</p>
+                </div>
+            `;
+            carouselItem.addEventListener('click', () => {
+                showImageDetails(image);
+            });
+            galleryCarousel.appendChild(carouselItem);
+        });
 
         // Configurar la cuadrícula
         const gridImages = galleryImages.slice(0, 12); // Mostrar solo las primeras 12 imágenes en la cuadrícula
