@@ -52,8 +52,18 @@
         <section id="galeria" class="section gallery gallery-container">
             <div class="container">
                 <h2>Galería de Imágenes</h2>
-                <div class="gallery-grid">
-                    <!-- Las imágenes de la galería en cuadrícula se generarán dinámicamente con JavaScript -->
+                <div id="gallery-carousel" class="carousel slide" data-bs-ride="carousel" aria-label="Galería de imágenes">
+                    <div class="carousel-inner">
+                        <!-- Las imágenes del carrusel se generarán dinámicamente con JavaScript -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#gallery-carousel" data-bs-slide="prev" aria-label="Imagen anterior">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#gallery-carousel" data-bs-slide="next" aria-label="Imagen siguiente">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
                 </div>
             </div>
         </section>
