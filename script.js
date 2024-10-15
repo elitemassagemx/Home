@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
         allButton.classList.add('benefit-btn', 'active');
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
-            <img src="${BASE_URL}todos.webp" alt="Todos" style="width: 48px; height: 48px;">
+            <img src="${BASE_URL}all.webp" alt="Todos" style="width: 48px; height: 48px;">
             <span class="visible-text">Todos</span>
             <span class="hidden-text visually-hidden">all</span>
         `;
