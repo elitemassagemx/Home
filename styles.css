@@ -25,10 +25,16 @@ body {
     padding-bottom: 60px;
     text-size-adjust: 100%;
     transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 60px; /* Ajustado para el header fijo */
 }
 
 h1, h2, h3 {
     font-family: 'Tenor Sans', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 img {
@@ -52,12 +58,14 @@ a, button {
 }
 
 /* Header y navegación */
-#sticky-header {
+#main-header {
     background-color: var(--header-background);
     color: white;
     padding: 5px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -89,17 +97,18 @@ h1 {
 
 /* Secciones */
 .section {
-    padding: 30px 0;
+    padding: 10px 0;
+    margin-bottom: 10px;
 }
 
 .hero {
     background-color: transparent;
     text-align: center;
-    padding: 20px 0;
+    padding: 5px 0;
 }
 
 .hero h2 {
-    font-size: 32px;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
@@ -160,15 +169,17 @@ h1 {
 }
 
 .benefit-btn img, .package-btn img {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     margin-bottom: 5px;
 }
 
 .benefit-btn span, .package-btn span {
     font-size: 12px;
     text-align: center;
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.2;
+    max-width: 80px;
 }
 
 .benefit-btn.active, .package-btn.active {
@@ -228,23 +239,9 @@ h1 {
     align-items: center;
 }
 
-.service-icon {
-    width: 36px;
-    height: 36px;
-    margin-right: 10px;
-    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));
-}
-
-.benefits-icon {
-    width: 28.8px;
-    height: 28.8px;
-    margin-right: 10px;
-    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));
-}
-
-.duration-icon {
-    width: 21.6px;
-    height: 21.6px;
+.service-icon, .benefit-icon, .duration-icon {
+    width: 48px;
+    height: 48px;
     margin-right: 10px;
     filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));
 }
@@ -257,34 +254,17 @@ h1 {
 .benefits-container, .duration-container,
 .package-includes, .package-duration, .package-benefits {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0.5em;
 }
 
-.more-icon {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+.benefits-container img, .package-benefits img {
+    margin-right: 10px;
+    width: 48px;
+    height: 48px;
 }
 
-.service-buttons, .package-item .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
-}
-
-.reserve-button {
+.saber-mas-button {
     background-color: var(--primary-color);
     color: var(--background-color);
     border: none;
@@ -298,7 +278,7 @@ h1 {
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.reserve-button:hover {
+.saber-mas-button:hover {
     background-color: var(--gold);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -400,14 +380,6 @@ h1 {
     display: none;
 }
 
-.gallery-item .more-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    color: var(--text-color);
-}
-
 /* Estilos para el popup */
 .popup {
     display: none;
@@ -431,7 +403,7 @@ h1 {
     max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    text-align: left;
     color: var(--text-color);
 }
 
@@ -455,13 +427,32 @@ h1 {
 
 .popup-details {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     margin-top: 20px;
 }
 
-.popup-benefits, .popup-duration {
+.popup-benefits, .popup-includes {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.popup-benefits-item, .popup-includes-item {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.popup-benefits-item img, .popup-includes-item img {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+}
+
+.popup-duration {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
 }
 
 .whatsapp-button {
@@ -511,7 +502,7 @@ h1 {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--background-color);
+    background-color: var(--header-background);
     padding: 10px 0;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -530,7 +521,7 @@ h1 {
 }
 
 .fixed-bar a {
-    color: var(--text-color);
+    color: white;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -544,7 +535,11 @@ h1 {
 }
 
 .nav-text {
-    font-size: 12px;
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: normal;
+    max-width: 80px;
 }
 
 /* Footer styles */
@@ -596,9 +591,10 @@ footer {
     margin-top: 15px;
     color: white;
     text-align: center;
+    font-weight: bold;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .services-grid, #package-list {
         grid-template-columns: 1fr;
@@ -629,13 +625,13 @@ footer {
     }
 }
 
-/* Estilos de enfoque para accesibilidad */
+/* Accessibility focus styles */
 a:focus, button:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }
 
-/* Ajustes de contraste */
+/* Contrast adjustments */
 .service-buttons button, .package-item button, .whatsapp-button {
     color: var(--background-color);
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
@@ -647,16 +643,16 @@ a:focus, button:focus {
     border-radius: 8px;
 }
 
-/* Ajustes finales de espaciado y alineación */
+/* Final spacing and alignment adjustments */
 .section {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* Reduced space between sections */
 }
 
 .container > *:last-child {
     margin-bottom: 0;
 }
 
-/* Estilos para botones de acción principales */
+/* Main CTA button styles */
 .cta-button {
     background-color: var(--primary-color);
     color: var(--background-color);
@@ -676,7 +672,7 @@ a:focus, button:focus {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Animaciones */
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -686,7 +682,7 @@ a:focus, button:focus {
     animation: fadeIn 0.5s ease-in;
 }
 
-/* Ajustes de accesibilidad adicionales */
+/* Additional accessibility adjustments */
 .visually-hidden {
     position: absolute !important;
     height: 1px;
@@ -697,7 +693,7 @@ a:focus, button:focus {
     white-space: nowrap;
 }
 
-/* Ajustes para animaciones reducidas */
+/* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -709,12 +705,11 @@ a:focus, button:focus {
     }
 }
 
-/* Ajustes adicionales */
-.service-category-toggle.sticky,
-.benefits-nav.sticky,
-.package-nav.sticky {
-    position: sticky;
-    top: 70px;
+/* Additional adjustments */
+.service-category-toggle,
+.benefits-nav,
+.package-nav {
+    position: relative;
     background-color: var(--background-color);
     z-index: 100;
     padding: 10px 0;
@@ -732,56 +727,138 @@ a:focus, button:focus {
     margin-right: 5px;
 }
 
-/* Ajuste del tamaño de los títulos */
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+/* Ver más button styles */
+.ver-mas-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Ajustes para la barra de navegación fija */
-.fixed-bar {
-    background-color: var(--header-background);
+.ver-mas-btn:hover {
+    background-color: var(--gold);
 }
 
-.fixed-bar a {
+.conocenos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Carousel adjustments */
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+    transform: translateX(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+    transform: translateX(-100%);
+}
+
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end {
+    transform: translateX(0);
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
     color: white;
 }
 
-.nav-text {
-    font-size: 10px;
-    line-height: 1.2;
+/* Additional styles for gallery section */
+#galeria {
+    padding-top: 20px;
+}
+
+.gallery-container h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Ajustes para el popup */
-.popup-content {
-    background-color: var(--background-color);
-    color: var(--text-color);
+#conocenos {
+    padding-top: 40px;
 }
 
-.popup-content h2 {
-    color: var(--primary-color);
+#conocenos h3 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.popup-details {
-    color: var(--text-color);
+/* Ensure text contrast in gallery items */
+.image-overlay h3,
+.image-overlay p {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-/* Reducción del espacio en blanco */
-.hero {
-    padding: 10px 0;
+/* Additional styles to ensure text readability */
+.service-item p,
+.package-item p,
+.testimonial p {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-.services {
-    padding-top: 10px;
-}
-
-/* Ajustes de contraste adicionales */
-.service-item h3, .package-item h3 {
-    color: var(--gold);
-}
-
-.popup-content p, .popup-details {
+/* Ensure popup text is readable */
+.popup-content p,
+.popup-content h2,
+.popup-benefits-item span,
+.popup-includes-item span,
+.popup-duration span {
     color: var(--text-color);
     text-shadow: none;
 }
+
+/* Adjust font for service and package items to match project fonts */
+.service-item,
+.package-item {
+    font-family: 'Quattrocento', serif;
+}
+
+.service-item h3,
+.package-item h3 {
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+/* Fix for carousel image issue */
+.carousel-item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
+    position: relative;
+    opacity: 1;
+}
+
+/* Ensure white text in popup windows */
+#imageModal .modal-description,
+.popup-content * {
+    color: white;
+    font-weight: bold;
+}
+
+/* Import styles from galeria.css */
+@import url('galeria.css');
