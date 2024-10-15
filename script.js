@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const benefitsContainer = serviceElement.querySelector('.benefits-container');
             if (benefitsContainer && Array.isArray(service.benefitsIcons)) {
                 service.benefitsIcons.forEach((iconUrl, index) => {
-                       const benefitItem = document.createElement('div');
+                    const benefitItem = document.createElement('div');
                     benefitItem.classList.add('benefit-item');
                     const img = document.createElement('img');
                     img.src = buildImageUrl(iconUrl);
@@ -267,9 +267,11 @@ document.addEventListener('DOMContentLoaded', () => {
         popupImage.onerror = () => handleImageError(popupImage);
         popupDescription.textContent = data.popupDescription || data.description || '';
         
+        // Limpiar contenedores existentes
         popupBenefits.innerHTML = '';
         popupIncludes.innerHTML = '';
 
+        // Añadir beneficios
         if (Array.isArray(data.benefits) && Array.isArray(data.benefitsIcons)) {
             data.benefits.forEach((benefit, index) => {
                 const benefitItem = document.createElement('div');
@@ -285,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // Añadir incluye (solo para paquetes)
         if (isPackage && Array.isArray(data.includes)) {
             data.includes.forEach(item => {
                 const includeItem = document.createElement('div');
@@ -391,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
         allButton.classList.add('benefit-btn', 'active');
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
-            <img src="${BASE_URL}todos.webp" alt="Todos">
+            <img src="${BASE_URL}todos.webp" alt="Todos" style="width: 48px; height: 48px;">
             <span class="visible-text">Todos</span>
             <span class="hidden-text visually-hidden">all</span>
         `;
@@ -406,7 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const alternativeText = benefitAlternativeText.get(benefit);
             
             button.innerHTML = `
-                <img src="${buildImageUrl(iconUrl)}" alt="${benefit}">
+                <img src="${buildImageUrl(iconUrl)}" alt="${benefit}" style="width: 48px; height: 48px;">
                 <span class="visible-text">${alternativeText}</span>
                 <span class="hidden-text visually-hidden">${benefit}</span>
             `;
@@ -457,7 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
         allButton.classList.add('package-btn', 'active');
         allButton.dataset.filter = 'all';
         allButton.innerHTML = `
-            <img src="${BASE_URL}todos.webp" alt="Todos">
+            <img src="${BASE_URL}todos.webp" alt="Todos" style="width: 48px; height: 48px;">
             <span class="visible-text">Todos</span>
             <span class="hidden-text visually-hidden">all</span>
         `;
@@ -470,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const iconUrl = `${BASE_URL}${packageType.toLowerCase().replace(/\s+/g, '-')}-icon.webp`;
             const alternativeText = getAlternativeText(packageType);
             button.innerHTML = `
-                <img src="${iconUrl}" alt="${packageType}">
+                <img src="${iconUrl}" alt="${packageType}" style="width: 48px; height: 48px;">
                 <span class="visible-text">${alternativeText}</span>
                 <span class="hidden-text visually-hidden">${packageType}</span>
             `;
