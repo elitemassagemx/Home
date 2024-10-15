@@ -98,8 +98,7 @@
         "popupImage": "${BASE_URL}cbd-popup.jpg"
       }
     ],
-
-        "premium": [
+    "premium": [
       {
         "title": "Masaje de Lujo con Oro",
         "description": "Un tratamiento exclusivo que combina un masaje relajante con la aplicación de partículas de oro para rejuvenecer la piel.\n\nPrecio: **Individual $1,000**\n               **En pareja $1,700**",
@@ -125,6 +124,7 @@
         "popupImage": "${BASE_URL}diamond-ritual-popup.jpg"
       }
     ],
+
     "experiencias": [
       {
         "title": "Día de Spa Completo",
