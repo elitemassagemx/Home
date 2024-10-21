@@ -120,22 +120,58 @@ h1 {
     background-color: var(--item-background);
     border-radius: 20px;
     padding: 5px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.service-category-toggle::-webkit-scrollbar {
+    display: none;
 }
 
 .service-category-toggle input[type="radio"] {
     display: none;
 }
 
-.service-category-toggle label {
+.service-category-toggle label,
+.personaliza-link {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     border-radius: 15px;
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+    display: inline-block;
 }
 
-.service-category-toggle input[type="radio"]:checked + label {
+.service-category-toggle input[type="radio"]:checked + label,
+.service-category-toggle label:hover,
+.personaliza-link:hover {
     background-color: var(--primary-color);
     color: var(--background-color);
+}
+
+/* Estilo específico para el enlace "Personaliza" */
+.personaliza-link {
+    background-color: var(--item-background);
+    border: none;
+    margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .service-category-toggle {
+        justify-content: flex-start;
+        padding: 5px 10px;
+    }
+
+    .service-category-toggle label,
+    .personaliza-link {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
 }
 
 /* Estilos para las barras de navegación de beneficios y paquetes */
